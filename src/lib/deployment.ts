@@ -9,6 +9,7 @@ export function isServerlessDeployment() {
 
 export function isPreviewDeployment() {
   return (
+    process.env.SITE_NOINDEX === "true" ||
     process.env.VERCEL_ENV === "preview" ||
     process.env.CONTEXT === "deploy-preview" ||
     process.env.CONTEXT === "branch-deploy"

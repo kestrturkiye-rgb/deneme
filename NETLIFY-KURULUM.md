@@ -26,6 +26,7 @@ Netlify projesinin sunucu fonksiyonlarına ve build işlemine açık ortam deği
 | `SUPABASE_SERVICE_ROLE_KEY` | Sunucuya özel legacy `service_role` anahtarı |
 | `SUPABASE_STORAGE_BUCKET` | `site-media` |
 | `SITE_ORIGIN` | Verilen gerçek `https://...netlify.app` adresi; sonunda `/` olmadan |
+| `SITE_NOINDEX` | Canlı deneme için `true`; gerçek şirket yayınına geçerken kaldırın veya `false` yapın |
 | `CMS_BOOTSTRAP_USERNAME` | `yonetici` |
 | `CMS_BOOTSTRAP_PASSWORD` | İlk girişte değiştirilecek, en az 12 karakterlik geçici parola |
 
