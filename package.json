@@ -15,7 +15,8 @@
     "assets:inventory": "node scripts/fetch-assets.mjs --documents --inventory",
     "test:assets": "node scripts/test-assets.mjs",
     "test:site": "node scripts/test-site.mjs",
-    "test:video": "node scripts/test-video.mjs"
+    "test:video": "node scripts/test-video.mjs",
+    "test:product-images": "node --use-env-proxy scripts/test-product-images.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

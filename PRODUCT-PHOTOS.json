@@ -1,0 +1,141 @@
+{
+  "checkedAt": "2026-10-26",
+  "source": "https://kivancgroup.com",
+  "records": 187,
+  "recordsWithPhotos": 171,
+  "models": 133,
+  "modelsWithPhotos": 133,
+  "repairs": [
+    {
+      "product": "paulson-gozluk-510-arc-sn-12",
+      "target": "/images/source/b2a63b24c5-Paulson-510-ARC-SN-12.jpeg",
+      "sourceDocument": "https://kivancgroup.com/wp-content/uploads/2019/12/Paulson-International-510-arc-sn-12.pdf",
+      "sourcePage": 1,
+      "embeddedImageXref": 2,
+      "method": "Original embedded product photograph extracted without modification",
+      "bytes": 53013,
+      "sha256": "b2a63b24c504f154720bbd97bd7fc201b19ed673dd330996cade25c11db01e65"
+    },
+    {
+      "product": "yangin-battaniyesi",
+      "targets": [
+        "/images/source/56f15aa74b-Screenshot-2025-03-07-at-10-45-35.png",
+        "/images/source/b671b002d7-Yanginbattaniyesi2.png",
+        "/images/source/9e8d905f10-Yanginbattaniyesi.png",
+        "/images/source/b996af815e-yanginbattaniyesi3.png",
+        "/images/source/25e3f7191e-yb.jpg",
+        "/images/source/15303fd154-yb2.jpg"
+      ],
+      "method": "Same PROTEK product also listed under engineering; reuse the source product gallery",
+      "sourceImages": [
+        {
+          "source": "https://kivancgroup.com/wp-content/uploads/2025/03/Screenshot-2025-03-07-at-10.45.35.png",
+          "target": "/images/source/56f15aa74b-Screenshot-2025-03-07-at-10-45-35.png"
+        },
+        {
+          "source": "https://kivancgroup.com/wp-content/uploads/2025/03/Yanginbattaniyesi2.png",
+          "target": "/images/source/b671b002d7-Yanginbattaniyesi2.png"
+        },
+        {
+          "source": "https://kivancgroup.com/wp-content/uploads/2025/03/Yanginbattaniyesi.png",
+          "target": "/images/source/9e8d905f10-Yanginbattaniyesi.png"
+        },
+        {
+          "source": "https://kivancgroup.com/wp-content/uploads/2025/03/yanginbattaniyesi3.png",
+          "target": "/images/source/b996af815e-yanginbattaniyesi3.png"
+        },
+        {
+          "source": "https://kivancgroup.com/wp-content/uploads/2016/06/yb.jpg",
+          "target": "/images/source/25e3f7191e-yb.jpg"
+        },
+        {
+          "source": "https://kivancgroup.com/wp-content/uploads/2016/06/yb2.jpg",
+          "target": "/images/source/15303fd154-yb2.jpg"
+        }
+      ]
+    }
+  ],
+  "sourcePagesWithoutPhotos": [
+    {
+      "division": "is-guvenligi",
+      "name": "REFSTAR – Radyan Isıya Karşı Koruma – Tamamlayıcı Ekipman",
+      "slug": "refstar-tamamlayici-ekipman"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "METALSTAR – Ergimiş Metal Sıçramasına Karşı Koruma – Tamamlayıcı Ekipman",
+      "slug": "metalstar-tamamlayici-ekipman"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Ark Başlıkları ve Gözlükleri",
+      "slug": "ark-basliklari-ve-gozlukleri"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Çorap",
+      "slug": "corap"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Tamamlayıcı Ekipman",
+      "slug": "tamamlayici-ekipman"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "ARCSTAR – Elektrik Arkına Karşı Koruma – Tamamlayıcı Ekipman",
+      "slug": "arcstar-ic-giyim"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "INDUSTAR – Isı ve Aleve Karşı Koruma – Tamamlayıcı Ekipman",
+      "slug": "industar-ic-giyim"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Solunum Setleri",
+      "slug": "solunum-setleri"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Endüstriyel Eldiven",
+      "slug": "endustriyel-eldiven"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Endüstriyel Çizme",
+      "slug": "endustriyel-cizme"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Endüstriyel Baret",
+      "slug": "endustriyel-baret"
+    },
+    {
+      "division": "is-guvenligi",
+      "name": "Sektörel Çözümler",
+      "slug": "sektorel-cozumler"
+    },
+    {
+      "division": "muhendislik",
+      "name": "İzolasyon Malzemeleri",
+      "slug": "izolasyon-malzemeleri"
+    },
+    {
+      "division": "madencilik",
+      "name": "Silis Kumu Nedir?",
+      "slug": "silis-kumu-nedir"
+    },
+    {
+      "division": "madencilik",
+      "name": "Musselstone Nedir?",
+      "slug": "musselstone-nedir"
+    },
+    {
+      "division": "madencilik",
+      "name": "Musselstone Özellikleri",
+      "slug": "musselstone-ozellikleri"
+    }
+  ],
+  "deliveryFix": "Netlify image requests use /.netlify/images; /_next/image returned the same home hero photograph for different product URLs."
+}

@@ -17,7 +17,12 @@ export default function SiteImage({
     <Image
       {...props}
       src={src}
-      unoptimized={(!local && !managedRemote) || /\.svg(?:\?|$)/i.test(src)}
+      unoptimized={
+        (!local &&
+          (process.env.NEXT_PUBLIC_IMAGE_SERVICE === "netlify" ||
+            !managedRemote)) ||
+        /\.svg(?:\?|$)/i.test(src)
+      }
     />
   );
 }
