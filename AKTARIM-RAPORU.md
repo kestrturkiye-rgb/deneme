@@ -13,7 +13,7 @@
 | Ürün içeriği | Mevcut açıklamalar, öne çıkan özellikler, kaynakta varsa teknik tablolar, galeri ve broşür bağlantıları |
 | Haberler | 16 haberin tam metni ve kaynak fotoğrafları |
 | Belgeler | 136 doğrulanmış PDF; kataloglar, modele özel teknik föyler, mevzuat ve politika belgesi |
-| Görseller | Kaynak siteden kopyalanmış 509 dosya |
+| Görseller | Kaynak siteden kopyalanmış 509 dosya ve modele özel broşürden çıkarılan 1 özgün ürün fotoğrafı |
 | Videolar | Kaynak YouTube bağlantıları; ortak kütüphanede 24 bağlantı, ilgili ürün/kurumsal sayfalarda erişim |
 | Eski adresler | 322 kalıcı yönlendirme; eski ürün, alt bölüm ve PDF adresleri yeni karşılıklarına gider |
 
@@ -25,7 +25,7 @@ Belgelerde başlık araması yapılır. Birden fazla seride kullanılan modeller
 
 20 kaynak kayıt: örnek/test/boş sayfalar, içeriği olmayan üç ürün kaydı, bağlantısız eski yazı parçası ve temanın ayrı müşteri/logo kayıtları. Eski `/dokumanlar-2/` arşivi, güncel belge sayfasına yönlenir. Yalnızca bu arşivden eski `kivanc.irmtest.net` test alan adına giden 28 PDF bağlantısı güncel kütüphaneye eklenmedi. Aktif belge sayfasındaki katalogların tamamı kopyalandı.
 
-Kaynakta Paulson Gözlük 510-ARC-SN 12 ve eski Yangın Battaniyesi model kaydının fotoğraf adresleri boştu. Bu iki modele fotoğraf uydurulmadı; içerikleri ve mevcut belgeleri aktarıldı. Aynı battaniyenin güncel PROTEK sayfasındaki mevcut fotoğraflar korunur.
+Kaynak sayfalarda Paulson Gözlük 510-ARC-SN 12 ve eski Yangın Battaniyesi model kaydının fotoğraf adresleri boştu. Ürün fotoğrafı güncellemesinde Paulson modelinin kendi teknik broşüründeki özgün fotoğrafı çıkarıldı; mühendislikteki Yangın Battaniyesi aynı PROTEK ürününün mevcut galerisiyle eşleştirildi. 133 modelin tamamı artık fotoğraf içerir. Kaynakta boş olan 16 kategori/bilgi sayfasında ayrı fotoğraf bulunmadı. İzlenebilirlik [PRODUCT-PHOTOS.json](PRODUCT-PHOTOS.json) dosyasındadır.
 
 Kaynakta gerçek bir 360° kare dizisi bulunmadı. Ön/arka fotoğraflar normal galeride gösterilir. 360° altyapısı ayrı parça/renk kareleriyle çalışır; gerçek dönüş görselleri panelden yüklendiğinde etkinleşir. Açılıştaki temsili marka sahneleri [görsel kaynak notunda](PUBLIC-ASSET-NOTES.md) açıklanmıştır.
 

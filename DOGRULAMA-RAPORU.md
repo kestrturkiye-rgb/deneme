@@ -77,3 +77,15 @@ Gerçek HTTPS adresinde ana sayfa, üç faaliyet sayfası, kurumsal, Ar-Ge, habe
 Canlı Chromium kontrolü çalışma ortamının HTTPS vekil sertifikasına güvenmediği için başlatılamadı; TLS doğrulaması kapatılmadı. Yukarıdaki canlı doğrulamalar, sağlanan CA ile HTTPS sertifikasını doğrulayan Node/curl istekleridir. Masaüstü/mobil tarayıcı akışlarının önceki yerel 40 CMS kontrolü geçerlidir; bu yeni canlı Chromium kontrolü başarılı sayılmadı.
 
 `/api/admin/auth` gerçek yayında `configured:false, backend:unconfigured` döndürür; özel içerik API'si oturumsuz isteğe 401 verir. Supabase henüz bağlanmadığından yönetici girişi ve form kayıtları etkin değildir. Kullanıcının isteğiyle bu anahtar, deneme yayını açıldıktan sonra birlikte oluşturulacaktır. Ücretli abonelik başlatılmadı ve kivancgroup.com DNS kayıtlarına dokunulmadı.
+
+## Ürün fotoğrafları · 26 Ekim 2026
+
+Kullanıcı canlıda ürün fotoğraflarını göremediğini bildirdi. Orijinal ürün dosyaları erişilebilirken `/_next/image` bazı farklı ürün isteklerine aynı ana sayfa fotoğrafını döndürüyordu: örneğin 1000×1500 Maximus fotoğrafı yerine 1672×941 yangın sahnesi geliyordu. HTTP 200 kontrolü bu içerik hatasını yakalamıyordu.
+
+Netlify için Next.js'in desteklenen özel görsel yükleyicisi eklendi. Fotoğraflar kaynak URL, genişlik ve kalite korunarak doğrudan `/.netlify/images` servisine gider. Netlify dışındaki derlemelerde mevcut Next.js görsel yolu kullanılır. Harici CMS fotoğrafları Netlify'da kaynak URL'lerinden açılır. Geçersiz `/.netlify` yönlendirmeleri eklenmez.
+
+Kaynak site ve medya kütüphanesi yeniden kontrol edildi. Paulson 510-ARC-SN 12'nin kendi teknik broşüründeki özgün 358×358 ürün fotoğrafı değiştirilmeden çıkarıldı; eski mühendislik Yangın Battaniyesi kaydı aynı PROTEK ürününün kaynak galerisine bağlandı. Toplam 187 ürün/kategori kaydının 171'i fotoğraflıdır; 133 ayrı modelin tamamında görsel vardır. Kaynakta boş olan 16 kategori/bilgi kaydı için ürün fotoğrafı uydurulmadı. Kaynak, hedef, dosya özeti ve boş sayfa listesi `PRODUCT-PHOTOS.json` içindedir.
+
+Netlify yayını `6adf6908d0ea8dee5622c589` ile güncellendi. 133 modelin 128 farklı ana fotoğraf dosyasının tamamı canlıda HTTP 200 ve görsel türü döndürdü. Yedi temsilî modelin görüntülenen resmi kaynaktaki fotoğrafla karşılaştırıldı: boy/en oranları doğru, ortalama piksel farkı 1,38–4,00 (0–255 ölçeği). Maximus, Paulson gözlük, PROTEK battaniye, çizme, baret, eldiven ve solunum seti kontrolleri geçti. Yeni `test:product-images` testi bu içerik karşılaştırmasını tekrarlar. Yerel 40 CMS regresyon kontrolü ve üretim/Netlify paketlemesi başarılıdır.
+
+Masaüstü ürün sayfası, katalog ve 390 px mobil görünüm Chromium'da gerçek canlı içerikle kontrol edildi. Çalışma ortamının Chromium CA kısıtından dolayı tarayıcı, yukarı akıştaki HTTPS sertifikasını doğrulayan salt okunur yerel HTTP aktarımı üzerinden çalıştırıldı; TLS doğrulaması kapatılmadı, içerik/stil değiştirilmedi, POST istekleri aktarılmadı. Ürün fotoğrafı 792×1188 olarak doğru portre oranında yüklendi; taşma ve tarayıcı çalışma hatası bulunmadı.

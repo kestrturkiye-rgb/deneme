@@ -76,3 +76,15 @@ netlify deploy --prod --no-build --dir .netlify/static \
 ```
 
 Bu çalışma ortamında Netlify CLI hesabı zaten yetkilendirilmiştir; yeniden Netlify anahtarı oluşturmak gerekmez. GitHub'dan otomatik derleme, sağlayıcının SSH hazırlık hatası nedeniyle durdurulmuştur; doğrulanan yayın yolu yukarıdaki manuel CLI komutudur. Supabase anahtarı kullanıcıyla birlikte sonraki adımda oluşturulacaktır.
+
+## Ürün görsellerinin doğru yüklenmesi
+
+Netlify derlemesinde `netlify-image-loader.ts` kullanılır; resimler doğrudan `/.netlify/images` servisine gider. Eski `/_next/image` yönlendirmesi farklı ürün adreslerinde aynı ana sayfa fotoğrafını döndürebiliyordu. Yerel/Vercel derlemelerinde Next.js'in kendi görsel işleme yolu korunur. Netlify'da dış CMS/Supabase fotoğrafları doğrudan kaynaklarından yüklenir; bunların görüntülenmesi ek bir Image CDN uzak alan adı iznine bağlı değildir.
+
+Canlıdaki ürün fotoğrafını orijinal dosyanın en/boy oranı ve piksel içeriğiyle karşılaştırmak için:
+
+```bash
+SITE_TEST_ORIGIN=https://kivancgroup-deneme.netlify.app npm run test:product-images
+```
+
+Bu kontrol yalnızca HTTP 200 sonucuna bakmaz; kıyafet, çizme, baret, eldiven, solunum seti ve eklenen fotoğrafların gerçekten doğru görsel olduğunu da doğrular.
