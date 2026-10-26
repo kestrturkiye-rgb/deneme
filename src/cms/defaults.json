@@ -10367,18 +10367,19 @@
     "brand": "#d52d0c",
     "brandDark": "#af250a",
     "brandLight": "#ff5d3c",
-    "paper": "#ffffff",
-    "ink": "#202020",
-    "mist": "#f4f4f4",
-    "muted": "#747474",
-    "brick": "#202020",
+    "paper": "#202020",
+    "ink": "#f5f5f5",
+    "mist": "#272727",
+    "muted": "#bfbfbf",
+    "brick": "#191919",
     "bodyFont": "\"Open Sans\", system-ui, sans-serif",
     "headingFont": "\"Open Sans\", system-ui, sans-serif",
     "baseFontSize": 16,
     "containerWidth": 1560,
     "buttonRadius": 32,
     "customCss": "",
-    "motionEffects": true
+    "motionEffects": true,
+    "surfaceGlow": "#5a5a5a"
   },
   "home": {
     "sections": [

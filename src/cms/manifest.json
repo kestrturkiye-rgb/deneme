@@ -513,7 +513,8 @@
       "containerWidth": "İçerik genişliği (px)",
       "buttonRadius": "Düğme köşe yuvarlaklığı (px)",
       "customCss": "Gelişmiş CSS (yalnızca siteye uygulanır)",
-      "motionEffects": "Yumuşak hareketleri ve geçişleri etkinleştir"
+      "motionEffects": "Yumuşak hareketleri ve geçişleri etkinleştir",
+      "surfaceGlow": "Arka plan ışık tonu"
     }
   },
   "home": {

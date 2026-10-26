@@ -161,3 +161,7 @@ Gelen talepler e-posta ayarı olmadan da kalıcı olarak saklanır. Panelde kayd
 Mevcut sitenin 54 katalog/bilgi başlığı ve 133 modeli hazır gelir. Ürün listesindeki `Ana ürün ailesinin adresi` alanı bir modelin hangi aileye bağlı olduğunu belirler; ek aile ilişkileri aynı modeli farklı serilerde gösterir. Ana aile kayıtlarında bu alan boş bırakılır. Ürün detaylarında galeri, açıklama, teknik bilgiler, belgeler ve video bağlantıları düzenlenebilir.
 
 Kurumsal ve Ar-Ge bölümündeki kaynak metin, tesis/belge fotoğrafları ve bağlantılar `Kurumsal içerik, fotoğraflar ve belgeler` bloklarındadır. Üst menünün alt bağlantıları da düzenlenebilir. Belgeler bölümündeki 136 PDF başlangıç paketine dahildir. Kapsam ve kaynaklar [AKTARIM-RAPORU.md](AKTARIM-RAPORU.md) içinde açıklanır.
+
+## Koyu zemin ve ışık tonu
+
+Tasarım bölümündeki Sayfa arka planı, Bölüm arka planı, Ana metin ve İkincil metin alanları bütün ortak zemin ve metinleri yönetir. Arka plan ışık tonu, ürün sahnesine benzer yumuşak radyal ışığın rengini belirler. Varsayılan görünüm antrasit zemin, açık metin ve sıcak vurgu renkleridir. Ürün sahnesinin ayrı renkleri Ürün deneyimi bölümünde düzenlenebilir. Ürün fotoğrafının dosyasına gömülü beyaz fon, sayfa zemin ayarından bağımsızdır; şeffaf PNG/WebP ürün fotoğrafı ışıklı zeminle birleşir.

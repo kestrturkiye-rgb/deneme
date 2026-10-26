@@ -354,7 +354,7 @@
 .research-step p {
   font-size: 15px !important;
   line-height: 1.85;
-  color: #5d6569 !important;
+  color: var(--kg-muted) !important;
 }
 .news-visual {
   position: relative;

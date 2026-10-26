@@ -36,6 +36,7 @@ export default function SiteFrame({
     mist: d.mist,
     muted: d.muted,
     brick: d.brick,
+    "surface-glow": d.surfaceGlow,
   };
   for (const [key, hex] of Object.entries(colors))
     style["--color-" + key] = [1, 3, 5]
@@ -47,10 +48,10 @@ export default function SiteFrame({
         className={"site-shell kg-redesign" + (path === "/" ? " kg-home" : "")}
         style={style as CSSProperties}
       >
-        <style>{`html { font-size: ${d.baseFontSize}px; }`}</style>
+        <style>{`html { font-size: ${d.baseFontSize}px; } body { background: ${d.paper}; }`}</style>
         <a
           href={content["app-layout"].metin01}
-          className="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-paper"
+          className="sr-only focus:not-sr-only focus:absolute focus:z-[60] focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white"
         >
           {content["app-layout"].metin02}
         </a>

@@ -308,6 +308,7 @@ export function validateContent(value: unknown): string[] {
     "mist",
     "muted",
     "brick",
+    "surfaceGlow",
   ] as const)
     if (!/^#[0-9a-f]{6}$/i.test(design[key]))
       errors.push("Renkler #rrggbb biçiminde olmalı.");

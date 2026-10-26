@@ -1,0 +1,244 @@
+/* Shared surfaces follow the same charcoal and soft light as the product stage.
+   Palette and glow are editable in the CMS; administrative screens are separate. */
+.kg-redesign {
+  color-scheme: dark;
+  --kg-canvas: rgb(var(--color-paper));
+  --kg-surface: rgb(var(--color-mist));
+  --kg-border: rgb(var(--color-ink) / 0.16);
+  --kg-link: color-mix(in srgb, rgb(var(--color-brand-light)) 65%, white);
+  --kg-backdrop: radial-gradient(
+    ellipse at 28% 14%,
+    rgb(var(--color-surface-glow) / 0.5),
+    transparent 68%
+  );
+  --kg-card-light: radial-gradient(
+    ellipse at 50% 12%,
+    rgb(var(--color-surface-glow) / 0.38),
+    transparent 72%
+  );
+  background: var(--kg-backdrop), var(--kg-canvas);
+}
+
+.kg-redesign ::selection {
+  color: white;
+  background: var(--kg-accent);
+}
+
+.kg-redesign main .bg-paper,
+.kg-redesign .kg-divisions,
+.kg-redesign .kg-sector-section,
+.kg-redesign .kg-quality,
+.kg-redesign .kg-partners,
+.kg-redesign .product-details-section,
+.kg-redesign .product-document-section,
+.kg-redesign .news-article {
+  background: var(--kg-backdrop), var(--kg-canvas);
+}
+
+.kg-redesign main .bg-mist,
+.kg-redesign .kg-discovery,
+.kg-redesign .kg-news,
+.kg-redesign .news-index,
+.kg-redesign .product-spec-section,
+.kg-redesign .product-model-section,
+.kg-redesign .product-related {
+  background: var(--kg-backdrop), var(--kg-surface);
+}
+
+.kg-redesign .kg-product-card,
+.kg-redesign .news-index-card,
+.kg-redesign .kg-news article:not(.is-featured),
+.kg-redesign .inquiry-form,
+.kg-redesign .product-related-grid a,
+.kg-redesign .product-model-section li,
+.kg-redesign .kg-discovery-empty {
+  background: var(--kg-card-light), var(--kg-surface);
+  border-color: var(--kg-border);
+}
+
+.kg-redesign .kg-product-art:not(.is-technical) {
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgb(var(--color-surface-glow) / 0.8),
+    var(--kg-canvas) 78%
+  );
+}
+
+.kg-redesign .kg-product-card:hover,
+.kg-redesign .product-related-grid a:hover {
+  border-color: rgb(var(--color-ink) / 0.35);
+}
+
+.kg-redesign .catalog-group-nav,
+.kg-redesign .product-parent-nav {
+  background: var(--kg-canvas);
+  border-color: var(--kg-border);
+}
+
+.kg-redesign .catalog-group-nav a,
+.kg-redesign .catalog-card-tags li,
+.kg-redesign .inquiry-selected {
+  background: var(--kg-surface);
+  color: var(--kg-ink);
+  border-color: var(--kg-border);
+}
+
+.kg-redesign .catalog-group-nav a:hover {
+  background: rgb(var(--color-ink) / 0.08);
+  border-color: var(--kg-link);
+}
+
+.kg-redesign .kg-product-caption > small,
+.kg-redesign .catalog-card-summary,
+.kg-redesign .kg-discovery-count,
+.kg-redesign .kg-discovery-filters button,
+.kg-redesign .kg-discovery-empty p,
+.kg-redesign .kg-product-type,
+.kg-redesign .kg-product-caption > span,
+.kg-redesign .kg-sector-tabs button,
+.kg-redesign .kg-partners h2,
+.kg-redesign .kg-partners a,
+.kg-redesign .kg-news article:not(.is-featured) .kg-news-meta,
+.kg-redesign .kg-news article:not(.is-featured) > p,
+.kg-redesign .source-block p,
+.kg-redesign .document-library-search p,
+.kg-redesign .editorial-section-head p,
+.kg-redesign .editorial-facts dd,
+.kg-redesign .news-index-card p:not(.editorial-eyebrow),
+.kg-redesign .news-article header > p:last-child,
+.kg-redesign .news-article-body,
+.kg-redesign .product-all-features li,
+.kg-redesign .product-detail-article p,
+.kg-redesign .product-detail-article ul,
+.kg-redesign .product-detail-paragraph,
+.kg-redesign .product-spec-section dd,
+.kg-redesign .product-document-section a,
+.kg-redesign .product-document-section .document-unavailable,
+.kg-redesign .product-model-section li,
+.kg-redesign .product-detail-nav a {
+  color: var(--kg-muted);
+}
+
+.kg-redesign .kg-sector-tabs button[aria-selected="true"],
+.kg-redesign .kg-sector-tabs button[aria-pressed="true"],
+.kg-redesign .kg-discovery-filters button[aria-pressed="true"] {
+  background: rgb(var(--color-ink) / 0.08);
+  color: var(--kg-ink);
+  border-color: var(--kg-link);
+}
+
+.kg-redesign .kg-mega-panel .kg-sector-tabs button {
+  color: var(--kg-ink);
+}
+
+.kg-redesign .kg-news article.is-featured .kg-news-meta,
+.kg-redesign .kg-news article.is-featured > p {
+  color: white;
+}
+
+.kg-redesign .kg-product-caption > span,
+.kg-redesign .text-brand-500,
+.kg-redesign .text-brand-600,
+.kg-redesign .btn-outline,
+.kg-redesign .kg-discovery-empty button {
+  color: var(--kg-link);
+}
+
+.kg-redesign .btn-outline:hover {
+  color: white;
+}
+
+.kg-redesign .bg-brand-100,
+.kg-redesign .hover\:bg-brand-100:hover {
+  background: rgb(var(--color-brand) / 0.13);
+}
+
+.kg-redesign .hover\:text-brand-600:hover,
+.kg-redesign .kg-partners a:hover,
+.kg-redesign .product-document-section a:hover,
+.kg-redesign .product-detail-nav a:hover {
+  color: var(--kg-link);
+}
+
+.kg-redesign .kg-discovery-filters button,
+.kg-redesign .kg-discovery-search,
+.kg-redesign .kg-sector-tabs,
+.kg-redesign .kg-sector-tabs button,
+.kg-redesign .kg-product-caption > span,
+.kg-redesign .kg-news-read,
+.kg-redesign .source-block,
+.kg-redesign .editorial-facts,
+.kg-redesign .research-process,
+.kg-redesign .research-step,
+.kg-redesign .kg-quality-grid article,
+.kg-redesign .product-detail-nav,
+.kg-redesign .product-detail-article,
+.kg-redesign .product-spec-section dl > div,
+.kg-redesign .product-document-section a,
+.kg-redesign .product-document-section .document-unavailable,
+.kg-redesign .border-mist-dark,
+.kg-redesign .divide-mist-dark > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--kg-border);
+}
+
+.kg-redesign .kg-discovery-search input,
+.kg-redesign .document-library-search input,
+.kg-redesign .kg-search input {
+  color: var(--kg-ink);
+  background: var(--kg-canvas);
+  border-color: var(--kg-border);
+}
+
+.kg-redesign input::placeholder,
+.kg-redesign textarea::placeholder {
+  color: var(--kg-muted);
+  opacity: 1;
+}
+
+.kg-redesign input.bg-paper,
+.kg-redesign textarea.bg-paper,
+.kg-redesign select.bg-paper {
+  background: var(--kg-canvas);
+}
+
+.kg-redesign [role="alert"].bg-red-50 {
+  background: #352523;
+  border-color: #8a4c41;
+  color: #ffcec4;
+}
+
+.kg-redesign .product-reference .product-breadcrumb {
+  color: var(--kg-muted);
+  opacity: 1;
+}
+
+.kg-redesign .product-lightbox,
+.kg-redesign .product-lightbox-header,
+.kg-redesign .product-lightbox .product-photo,
+.kg-redesign .product-lightbox .p360-stage {
+  background: var(--kg-card-light), var(--kg-canvas);
+  color: var(--kg-ink);
+}
+
+.kg-redesign .p360-controls,
+.kg-redesign .p360-controls button,
+.kg-redesign .p360-drag-hint,
+.kg-redesign .p360-loading {
+  background: var(--kg-surface);
+  color: var(--kg-ink);
+  border-color: var(--kg-border);
+}
+
+.kg-redesign .product-lightbox .p360-image {
+  mix-blend-mode: normal;
+}
+
+.kg-redesign .p360-error {
+  background: #352820;
+  color: #ffd5be;
+}
+
+.kg-redesign .kg-footer {
+  background: rgb(var(--color-brick));
+  color: white;
+}
