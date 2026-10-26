@@ -1,0 +1,650 @@
+{
+  "components-About": {
+    "title": "Ana sayfa · Hakkımızda",
+    "group": "Bileşenler",
+    "labels": {
+      "facts": "Rakamlarla Kıvanç",
+      "metin01": "Kıvanç Group",
+      "metin02": "Biz kimiz?",
+      "metin03": "1980 yılında kurulan Kıvanç Group’un başlıca faaliyet alanları İş Güvenliği, Mühendis",
+      "metin04": "Isı ve fiziksel test laboratuvarlarımızda hammadde ve bitmiş ürün kontrolleri EN ve I",
+      "metin05": "Ürettiğimiz koruyucu elbiseler, Türkiye’de bir ilk olarak Ürün Sorumluluk Sigortası k",
+      "metin06": "href · /kurumsal",
+      "metin07": "Devamını oku",
+      "metin08": "→",
+      "image": "Kurumsal bölüm görseli",
+      "imageAlt": "Görsel açıklaması"
+    }
+  },
+  "components-AddToQuote": {
+    "title": "Teklif düğmesi",
+    "group": "Bileşenler",
+    "labels": {
+      "metin01": "Teklif sepetine ekle",
+      "metin02": "Sepetinizde.",
+      "metin03": "href · /teklif-sepeti",
+      "metin04": "Teklif sepetini aç"
+    }
+  },
+  "components-Divisions": {
+    "title": "Ana sayfa · Faaliyet alanları",
+    "group": "Bileşenler",
+    "labels": {
+      "divisions": "divisions",
+      "metin01": "Üç alanda tek çatı",
+      "metin02": "Bölüme git",
+      "metin03": "→",
+      "eyebrow": "Üst etiket",
+      "intro": "Bölüm giriş metni",
+      "selectorLabel": "Faaliyet vitrini seçim etiketi",
+      "detailLabel": "Vitrin çözüm listesi etiketi"
+    }
+  },
+  "components-Footer": {
+    "title": "Alt bilgi ve sosyal medya",
+    "group": "Bileşenler",
+    "labels": {
+      "corporate": "Kurumsal bağlantılar",
+      "social": "Sosyal medya",
+      "metin01": "Kurumsal",
+      "metin02": "href · https://www.belgemodul.com/sirket/1786",
+      "metin03": "Bilgi Toplumu Hizmetleri",
+      "metin04": "İletişim",
+      "metin05": "href · tel:+902126712800",
+      "metin06": "+90 (212) 671 28 00",
+      "metin07": "href · mailto:info@kivancgroup.com",
+      "metin08": "info@kivancgroup.com",
+      "metin09": "Faydalı linkler",
+      "metin10": "© ",
+      "metin11": "Kıvanç Group. Tüm hakları saklıdır.",
+      "contactEyebrow": "İletişim çağrısı üst etiket",
+      "contactTitle": "İletişim çağrısı başlık",
+      "contactHref": "İletişim çağrısı bağlantı",
+      "contactLabel": "İletişim çağrısı düğme metni",
+      "tagline": "Kurumsal kısa açıklama",
+      "established": "Kuruluş etiketi"
+    }
+  },
+  "components-Header": {
+    "title": "Üst menü ve duyurular",
+    "group": "Bileşenler",
+    "labels": {
+      "announcements": "Kayan duyurular",
+      "utilityLinks": "Üst bağlantılar",
+      "mainNav": "Ana menü",
+      "metin01": "✦",
+      "metin02": "href · mailto:info@kivancgroup.com",
+      "metin03": "info@kivancgroup.com",
+      "metin04": "href · tel:+902126712800",
+      "metin05": "+90 (212) 671 28 00",
+      "metin06": "placeholder · Ürün veya bölüm ara...",
+      "metin07": "href · /",
+      "metin08": "aria-label · Kıvanç Group",
+      "metin09": "src · /logo.png",
+      "metin10": "alt · Kıvanç Group",
+      "metin11": "href · /teklif-sepeti",
+      "metin12": "TEKLİF SEPETİ",
+      "showAnnouncements": "Kayan duyuru çubuğunu göster",
+      "utilityLabel": "Yardımcı menü etiketi",
+      "navigationLabel": "Ana menü etiketi",
+      "searchLabel": "Arama açma düğmesi",
+      "searchSubmit": "Arama gönderme düğmesi",
+      "closeProductsLabel": "Ürün menüsü kapatma etiketi"
+    }
+  },
+  "components-Hero": {
+    "title": "Ana sayfa · Karşılama",
+    "group": "Bileşenler",
+    "labels": {
+      "metin01": "1980’den beri",
+      "metin02": "Isıya ve aleve karşı",
+      "metin03": "güvenilir koruma",
+      "metin04": "CE belgeli koruyucu elbiselerimiz, Türkiye’nin ilk ısı laboratuvarında test edilir ve",
+      "metin05": "href · /is-guvenligi",
+      "metin06": "Ürünleri incele",
+      "metin07": "href · /teklif-sepeti",
+      "metin08": "Teklif iste",
+      "metin09": "alt · Yangına müdahale eden itfaiye ekibi",
+      "metin10": "Kıvanç Group 1980",
+      "heroImage": "Karşılama görseli",
+      "scrollLabel": "Aşağı kaydırma bağlantısı",
+      "categoryLabel": "Alt bölüm faaliyet etiketi",
+      "storyLabel": "Faaliyet seçim alanı etiketi",
+      "firstStoryLabel": "İlk faaliyet seçim etiketi",
+      "extraStories": "Diğer açılış hikâyeleri"
+    }
+  },
+  "components-MessageForm": {
+    "title": "İletişim ve teklif formu",
+    "group": "Bileşenler",
+    "labels": {
+      "metin01": "Teklif talebiniz alındı",
+      "metin02": "Mesajınız alındı",
+      "metin03": "En kısa sürede e-posta adresinizden size dönüş yapacağız.",
+      "metin04": "Web sitesi",
+      "metin05": "Ad soyad *",
+      "metin06": "Firma",
+      "metin07": "E-posta *",
+      "metin08": "Telefon",
+      "metin09": "Notunuz",
+      "metin10": "Mesajınız *",
+      "metin11": "href · /gizlilik-ve-guvenlik",
+      "metin12": "Gizlilik ve güvenlik",
+      "metin13": "metnini okudum, bilgilerimin talebime yanıt verilmesi amacıyla işlenmesini kabul ediy",
+      "metin14": "Gönderiliyor…",
+      "metin15": "Teklif iste",
+      "metin16": "Mesajı gönder",
+      "inquiryMessage": "Genel teklif mesajı etiketi",
+      "inquiryPlaceholder": "Genel teklif mesajı ipucu",
+      "inquirySubmit": "Genel teklif gönderme düğmesi",
+      "receivedTitle": "Talep alındı başlığı",
+      "receivedText": "Talep alındı açıklaması"
+    }
+  },
+  "components-MobileMenu": {
+    "title": "Mobil menü",
+    "group": "Bileşenler",
+    "labels": {
+      "metin01": "aria-label · Menüyü aç",
+      "metin02": "aria-label · Menü",
+      "metin03": "Menü",
+      "metin04": "aria-label · Menüyü kapat",
+      "metin05": "aria-label · Ana menü"
+    }
+  },
+  "components-Partners": {
+    "title": "Ana sayfa · İş ortakları",
+    "group": "Bileşenler",
+    "labels": {
+      "partners": "İş ortakları",
+      "metin01": "Çözüm ortaklarımız"
+    }
+  },
+  "components-Product360": {
+    "title": "360° görüntüleyici",
+    "group": "Bileşenler",
+    "labels": {
+      "metin01": "360°",
+      "metin02": "Yükleniyor… ",
+      "metin03": "%",
+      "metin04": "Döndürmek için sürükleyin",
+      "metin05": "Durdur",
+      "metin06": "Döndür",
+      "metin07": "aria-label · Ürünü döndür",
+      "instructions": "Klavye ve sürükleme açıklaması",
+      "unavailable": "Görselsiz durum",
+      "loadError": "Yükleme hatası mesajı",
+      "previous": "Önceki açı düğmesi",
+      "next": "Sonraki açı düğmesi",
+      "angle": "Açı seçim etiketi"
+    }
+  },
+  "components-Quality": {
+    "title": "Ana sayfa · Kalite",
+    "group": "Bileşenler",
+    "labels": {
+      "values": "Kalite değerleri",
+      "metin01": "Kalite standartları",
+      "eyebrow": "Üst etiket",
+      "href": "Ar-Ge bağlantısı",
+      "linkLabel": "Ar-Ge bağlantı metni"
+    }
+  },
+  "components-QuoteCart": {
+    "title": "Teklif sepeti",
+    "group": "Bileşenler",
+    "labels": {
+      "metin01": "Sepet yükleniyor…",
+      "metin02": "Teklif talebiniz alındı",
+      "metin03": "En kısa sürede e-posta adresinizden size dönüş yapacağız.",
+      "metin04": "href · /",
+      "metin05": "Ana sayfaya dön",
+      "metin06": "Teklif sepetiniz boş",
+      "metin07": "İlgilendiğiniz ürünleri sepete ekleyin, tek formla hepsi için teklif isteyin.",
+      "metin08": "href · /is-guvenligi",
+      "metin09": "İş güvenliği ürünleri",
+      "metin10": "href · /muhendislik",
+      "metin11": "Mühendislik ürünleri",
+      "metin12": "Seçilen ürünler",
+      "metin13": "Sepeti boşalt",
+      "metin14": "Adet",
+      "metin15": "Çıkar",
+      "metin16": "İletişim bilgileriniz"
+    }
+  },
+  "app-[division]-[slug]": {
+    "title": "Ürün sayfası",
+    "group": "Sayfalar",
+    "labels": {
+      "metin01": "aria-label · Konum",
+      "metin02": "/ ",
+      "metin03": "href · /iletisim",
+      "metin04": "Bilgi için bize ulaşın",
+      "metin05": "Modeller",
+      "metin06": "href · /iletisim",
+      "metin07": "Model için bilgi iste",
+      "fallbackIntro": "Varsayılan ürün açıklaması ({name}, {division}, {group})"
+    }
+  },
+  "app-[division]": {
+    "title": "Bölüm sayfası",
+    "group": "Sayfalar",
+    "labels": {
+      "metin01": "Diğer faaliyet alanları",
+      "catalogEyebrow": "Katalog üst etiketi",
+      "groupLabel": "Grup menüsü etiketi",
+      "productLabel": "Ürün kartı etiketi",
+      "infoLabel": "Bilgi kartı etiketi",
+      "viewLabel": "Ürün inceleme düğmesi",
+      "infoViewLabel": "Bilgi inceleme düğmesi",
+      "cardFallback": "Açıklaması olmayan kartın kısa metni"
+    }
+  },
+  "app-ar-ge": {
+    "title": "Ar-Ge",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "blocks": "blocks",
+      "tests": "tests",
+      "metin01": "title · Ar-Ge",
+      "metin02": "intro · Ürünlerimizi kendi laboratuvarımızda test eder, geliştirir ve izleriz.",
+      "metin03": "Laboratuvarımızda yapılan testler",
+      "metin04": "href · /iletisim",
+      "metin05": "Test ve geliştirme için bize ulaşın",
+      "heroImage": "Açılış görseli",
+      "heroAlt": "Görsel açıklaması",
+      "heroEyebrow": "Açılış üst etiketi",
+      "heroCaption": "Görsel alt yazısı",
+      "processTitle": "Süreç başlığı",
+      "processIntro": "Süreç açıklaması"
+    }
+  },
+  "app-arama": {
+    "title": "Arama",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "metin01": "title · Arama",
+      "metin02": "placeholder · Ürün veya bölüm ara…",
+      "metin03": "aria-label · Arama",
+      "metin04": "Ara",
+      "metin05": "Aramak istediğiniz ürünün adını yazın.",
+      "metin06": "Sonuç bulunamadı. Farklı bir kelime deneyin ya da",
+      "metin07": "href · /iletisim",
+      "metin08": "bize yazın",
+      "metin09": ".",
+      "metin10": "· "
+    }
+  },
+  "app-dokumanlar": {
+    "title": "Dokümanlar",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "metin01": "title · Dokümanlar",
+      "metin02": "intro · Ürün broşürleri ve tanıtım videoları.",
+      "metin03": "Broşürler",
+      "metin04": "PDF",
+      "metin05": "Videolar",
+      "metin06": "YouTube",
+      "metin07": "Aradığınız belge burada yok mu?",
+      "metin08": "Sertifika ve teknik bilgi talepleriniz için bize yazın. Yasal düzenlemeler için",
+      "metin09": "href · /mevzuat",
+      "metin10": "Mevzuat",
+      "metin11": "sayfasına bakabilirsiniz.",
+      "metin12": "href · /iletisim",
+      "metin13": "Belge talep et"
+    }
+  },
+  "app-error": {
+    "title": "Hata sayfası",
+    "group": "Sayfalar",
+    "labels": {
+      "metin01": "Bir sorun oluştu",
+      "metin02": "Sayfa yüklenirken beklenmeyen bir hata oldu. Tekrar deneyebilir ya da ana sayfaya dön",
+      "metin03": "Tekrar dene",
+      "metin04": "href · /",
+      "metin05": "Ana sayfa"
+    }
+  },
+  "app-gizlilik-ve-guvenlik": {
+    "title": "Gizlilik ve güvenlik",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "sections": "sections",
+      "metin01": "title · Gizlilik ve güvenlik",
+      "metin02": "intro · Bu sitede kişisel verilerinizin nasıl işlendiğini ve haklarınızı özetl"
+    }
+  },
+  "app-haberler": {
+    "title": "Haberler",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "metin01": "title · Haberler",
+      "metin02": "intro · Kıvanç Group’tan haberler ve duyurular.",
+      "metin03": "Şu an yayınlanmış bir haber bulunmuyor. Yeni gelişmeleri buradan duyuracağız.",
+      "metin04": "Devamını oku →",
+      "eyebrow": "Sayfa üst etiketi",
+      "featuredLabel": "Öne çıkan haber etiketi",
+      "backLabel": "Listeye dönüş etiketi",
+      "sourceLabel": "Kaynak bağlantısı etiketi",
+      "visualLabel": "Görselsiz haberin grafik etiketi",
+      "articleLabel": "Haber inceleme düğmesi"
+    }
+  },
+  "app-iletisim": {
+    "title": "İletişim",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "locations": "Adresler ve iletişim",
+      "metin01": "title · İletişim",
+      "metin02": "intro · Ürünlerimiz, teklif talepleriniz ve iş birlikleri için bize ulaşın.",
+      "metin03": ":",
+      "metin04": "Bize yazın"
+    }
+  },
+  "app-kariyer": {
+    "title": "Kariyer",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "metin01": "title · Kariyer",
+      "metin02": "intro · İş güvenliği, mühendislik ve madencilik alanlarında bizimle çalışmak i",
+      "metin03": "Açık pozisyonlar",
+      "metin04": "Şu an açık pozisyonumuz bulunmuyor. Aşağıdan açık başvuru yapabilirsiniz.",
+      "metin05": "Başvur",
+      "metin06": "Açık başvuru",
+      "metin07": "İlanlarda size uygun bir pozisyon yoksa kendinizi tanıtan bir mesajla bize yazın. Diğ",
+      "metin08": "href · /iletisim",
+      "metin09": "Bize yazın",
+      "metin10": "href · https://www.kariyer.net/firma-profil/kivanc-group-4597-29480",
+      "metin11": "Kariyer.net profilimiz"
+    }
+  },
+  "app-kurumsal": {
+    "title": "Kurumsal",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "areas": "areas",
+      "metin01": "title · Kurumsal",
+      "metin02": "intro · 1980 yılında kurulan Kıvanç Group; iş güvenliği, mühendislik ve madenc",
+      "metin03": "Firmamız, kişisel koruyucu elbiseler ile ilgili Türkiye’nin ilk ısı laboratuvarını ku",
+      "metin04": "Ar-Ge amacıyla da hizmet veren laboratuvarımızda yeni ürünler geliştirilir ve CE sert",
+      "metin05": "2009 yılından bu yana kullandığımız ERP (Kurumsal Kaynak Planlaması) yazılımına enteg",
+      "metin06": "Ürettiğimiz koruyucu elbiseler, Türkiye’de bir ilk olarak Ürün Sorumluluk Sigortası’n",
+      "metin07": "Faaliyet alanlarımız",
+      "metin08": "href · /iletisim",
+      "metin09": "Bize ulaşın",
+      "heroImage": "Sayfa açılış görseli",
+      "heroAlt": "Görsel açıklaması",
+      "heroEyebrow": "Açılış üst etiketi",
+      "heroCaption": "Görsel alt yazısı",
+      "storyTitle": "Hikâye başlığı",
+      "storyEyebrow": "Hikâye üst etiketi"
+    }
+  },
+  "app-layout": {
+    "title": "SEO ve kuruluş bilgileri",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "organizationJsonLd": "Kuruluş bilgileri",
+      "metin01": "href · #icerik",
+      "metin02": "İçeriğe geç",
+      "shareEyebrow": "Paylaşım görseli üst etiketi",
+      "shareFooter": "Paylaşım görseli alt metni"
+    }
+  },
+  "app-mevzuat": {
+    "title": "Mevzuat",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "metin01": "title · Mevzuat",
+      "metin02": "intro · İş sağlığı ve güvenliği, kişisel koruyucu donanım ve ürün güvenliği il",
+      "metin03": "PDF"
+    }
+  },
+  "app-not-found": {
+    "title": "404 sayfası",
+    "group": "Sayfalar",
+    "labels": {
+      "metin01": "title · Sayfa bulunamadı",
+      "metin02": "intro · Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir.",
+      "metin03": "href · /",
+      "metin04": "Ana sayfa",
+      "metin05": "href · /iletisim",
+      "metin06": "İletişim"
+    }
+  },
+  "app-satis-kanallari": {
+    "title": "Satış kanalları",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "dealers": "Bayiler",
+      "channels": "Satış kanalları",
+      "metin01": "title · Satış kanalları",
+      "metin02": "intro · Ürünlerimize bayilerimiz üzerinden ya da doğrudan bizden ulaşabilirsin",
+      "metin03": "Bayilerimiz",
+      "metin04": "Web sitesi",
+      "metin05": "Doğrudan teklif",
+      "metin06": "E-posta ile ulaşmak için:",
+      "metin07": "href · mailto:info@kivancgroup.com",
+      "metin08": "info@kivancgroup.com"
+    }
+  },
+  "app-tarihce": {
+    "title": "Tarihçe",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "milestones": "Tarihçe kayıtları",
+      "metin01": "title · Tarihçe",
+      "metin02": "intro · 1980’den bugüne Kıvanç Group’un önemli adımları."
+    }
+  },
+  "app-teklif-sepeti": {
+    "title": "Teklif sepeti",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "Arama motoru ayarları",
+      "metin01": "title · Teklif sepeti",
+      "metin02": "intro · İlgilendiğiniz ürünleri seçtiniz mi? Bilgilerinizi bırakın, size tekli"
+    }
+  },
+  "data-careers": {
+    "title": "Kariyer ilanları",
+    "group": "İçerik",
+    "labels": {
+      "openPositions": "openPositions"
+    }
+  },
+  "data-details": {
+    "title": "Ürün detayları",
+    "group": "İçerik",
+    "labels": {
+      "details": "details"
+    }
+  },
+  "data-divisions": {
+    "title": "Bölümler ve ürün listesi",
+    "group": "İçerik",
+    "labels": {
+      "divisions": "divisions"
+    }
+  },
+  "data-documents": {
+    "title": "Dokümanlar ve mevzuat",
+    "group": "İçerik",
+    "labels": {
+      "legislation": "legislation",
+      "brochures": "brochures",
+      "videos": "videos"
+    }
+  },
+  "data-news": {
+    "title": "Haberler",
+    "group": "İçerik",
+    "labels": {
+      "news": "Haberler · görsel, metin ve bağlantılar"
+    }
+  },
+  "design": {
+    "title": "Renkler, yazı ve görünüm",
+    "group": "Tasarım",
+    "labels": {
+      "brand": "Ana renk",
+      "brandDark": "Koyu vurgu",
+      "brandLight": "Açık vurgu",
+      "paper": "Sayfa arka planı",
+      "ink": "Ana metin",
+      "mist": "Bölüm arka planı",
+      "muted": "İkincil metin",
+      "brick": "Koyu bölüm",
+      "bodyFont": "Metin yazı tipi",
+      "headingFont": "Başlık yazı tipi",
+      "baseFontSize": "Temel yazı boyutu (px)",
+      "containerWidth": "İçerik genişliği (px)",
+      "buttonRadius": "Düğme köşe yuvarlaklığı (px)",
+      "customCss": "Gelişmiş CSS (yalnızca siteye uygulanır)",
+      "motionEffects": "Yumuşak hareketleri ve geçişleri etkinleştir"
+    }
+  },
+  "home": {
+    "title": "Ana sayfa sırası ve görünürlük",
+    "group": "Tasarım",
+    "labels": {
+      "sections": "Ana sayfa bölümleri"
+    }
+  },
+  "customPages": {
+    "title": "Yeni sayfalar",
+    "group": "İçerik",
+    "labels": {
+      "pages": "Özel sayfalar"
+    }
+  },
+  "components-ProductExperience": {
+    "title": "Ürün sayfası · Galeri ve 360°",
+    "group": "Bileşenler",
+    "labels": {
+      "home": "Ana sayfa bağlantısı",
+      "breadcrumb": "Konum alanı etiketi",
+      "variantLabel": "Ceket / pantolon seçim etiketi",
+      "fullscreen": "Tam ekran düğmesi",
+      "close": "Kapatma düğmesi",
+      "spinLabel": "360° seçim düğmesi",
+      "photo": "Fotoğraf etiketi",
+      "noImage": "Görsel yokken gösterilen metin",
+      "spinHint": "360° kullanım açıklaması",
+      "contact": "Bilgi talebi düğmesi",
+      "ask": "İletişim bağlantısı",
+      "details": "Detay başlığı",
+      "detailKicker": "Detay üst etiketi",
+      "technical": "Teknik bilgiler başlığı",
+      "documents": "Belgeler başlığı",
+      "related": "İlgili ürünler başlığı",
+      "composition": "Bileşim alanı etiketi",
+      "outerLayer": "Dış katman alanı etiketi",
+      "sizes": "Beden alanı etiketi",
+      "compositionCode": "Bileşim kodu etiketi",
+      "articleNumber": "Ürün kodu etiketi",
+      "color": "Renk seçimi etiketi",
+      "readMore": "Açıklamayı açma düğmesi",
+      "readLess": "Açıklamayı kapatma düğmesi",
+      "share": "Paylaşım düğmesi",
+      "shared": "Paylaşım başarı mesajı",
+      "shareError": "Paylaşım hata mesajı",
+      "relatedProduct": "İlgili ürün etiketi",
+      "productBackground": "Ürün alanı arka planı",
+      "productText": "Ürün alanı yazı rengi",
+      "productAccent": "Ürün alanı vurgu rengi",
+      "productGlow": "Ürün arkasındaki ışık rengi",
+      "mobileQuote": "Mobil sabit teklif düğmesi",
+      "mobileAsk": "Mobil bilgi düğmesi"
+    }
+  },
+  "components-NewsPreview": {
+    "title": "Ana sayfa · Haberler",
+    "group": "Bileşenler",
+    "labels": {
+      "eyebrow": "Üst etiket",
+      "title": "Bölüm başlığı",
+      "href": "Tüm haberler bağlantısı",
+      "linkLabel": "Tüm haberler bağlantı metni",
+      "readLabel": "Haber bağlantı metni"
+    }
+  },
+  "components-ProductDiscovery": {
+    "title": "Ana sayfa · Ürün keşif vitrini",
+    "group": "Bileşenler",
+    "labels": {
+      "eyebrow": "Üst etiket",
+      "title": "Vitrin başlığı",
+      "intro": "Vitrin açıklaması",
+      "filterLabel": "Faaliyet filtresi etiketi",
+      "allLabel": "Tümü düğmesi",
+      "searchLabel": "Arama etiketi",
+      "searchPlaceholder": "Arama ipucu",
+      "resultsLabel": "Sonuç sayısı etiketi",
+      "moreLabel": "Daha fazla düğmesi",
+      "emptyTitle": "Sonuç bulunamadı başlığı",
+      "emptyDescription": "Sonuç bulunamadı açıklaması",
+      "clearLabel": "Filtre temizleme düğmesi",
+      "productLabel": "Ürün kartı etiketi",
+      "infoLabel": "Bilgi kartı etiketi",
+      "viewLabel": "Ürün bağlantısı",
+      "infoViewLabel": "Bilgi bağlantısı",
+      "spinLabel": "360° etiketi",
+      "limit": "İlk gösterilen ürün sayısı (1–12)",
+      "featuredSlugs": "Öncelikli ürün adresleri (slug)"
+    }
+  },
+  "components-BrandStatement": {
+    "title": "Ana sayfa · Marka mesajı",
+    "group": "Bileşenler",
+    "labels": {
+      "eyebrow": "Üst etiket",
+      "title": "Büyük marka mesajı",
+      "description": "Kısa açıklama",
+      "href": "Bağlantı adresi",
+      "linkLabel": "Bağlantı metni",
+      "marquee": "Kayan marka mesajı"
+    }
+  },
+  "components-VisualEffects": {
+    "title": "Görsel hareket ve gezinme",
+    "group": "Bileşenler",
+    "labels": {
+      "backToTopLabel": "Sayfa başına dön düğmesi etiketi"
+    }
+  },
+  "components-DocumentLink": {
+    "title": "Belge bağlantıları",
+    "group": "Bileşenler",
+    "labels": {
+      "unavailable": "Henüz yüklenmemiş belge metni"
+    }
+  },
+  "app-teklif-al": {
+    "title": "Teklif talep sayfası",
+    "group": "Sayfalar",
+    "labels": {
+      "metadata": "SEO bilgileri",
+      "eyebrow": "Üst etiket",
+      "title": "Başlık",
+      "intro": "Giriş metni",
+      "formTitle": "Form başlığı",
+      "selectedLabel": "Seçilen ürün etiketi",
+      "image": "Görsel",
+      "imageAlt": "Görsel açıklaması",
+      "steps": "Talep süreci adımları"
+    }
+  }
+}

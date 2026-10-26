@@ -1,0 +1,2673 @@
+{
+  "components-About": {
+    "facts": [
+      {
+        "value": "1980",
+        "label": "Kuruluş yılı"
+      },
+      {
+        "value": "2012",
+        "label": "Türkiye’nin ilk ısı laboratuvarı kuruldu"
+      },
+      {
+        "value": "2011",
+        "label": "Barkod sistemiyle ürün izlenebilirliği"
+      },
+      {
+        "value": "CE",
+        "label": "Avrupa standartlarına uygun belgeli ürünler"
+      }
+    ],
+    "metin01": "Kıvanç Group",
+    "metin02": "Biz kimiz?",
+    "metin03": "1980 yılında kurulan Kıvanç Group’un başlıca faaliyet alanları İş Güvenliği, Mühendislik ve Madenciliktir. Teknik tekstiller alanında faaliyet gösteren Akatek de bağlı kuruluşlarımız arasındadır.",
+    "metin04": "Isı ve fiziksel test laboratuvarlarımızda hammadde ve bitmiş ürün kontrolleri EN ve ISO standartlarına uygun yapılır. Üretim plan numarası sayesinde her elbisenin hangi tarihte, hangi malzemelerle üretildiği izlenebilir.",
+    "metin05": "Ürettiğimiz koruyucu elbiseler, Türkiye’de bir ilk olarak Ürün Sorumluluk Sigortası kapsamındadır.",
+    "metin06": "/kurumsal",
+    "metin07": "Devamını oku",
+    "metin08": "→",
+    "image": "/images/hero-brand.png",
+    "imageAlt": "Koruyucu kıyafet temalı temsili marka görseli"
+  },
+  "components-AddToQuote": {
+    "metin01": "Teklif sepetine ekle",
+    "metin02": "Sepetinizde.",
+    "metin03": "/teklif-sepeti",
+    "metin04": "Teklif sepetini aç"
+  },
+  "components-Divisions": {
+    "divisions": [
+      {
+        "title": "İş Güvenliği",
+        "href": "/is-guvenligi",
+        "text": "Isıya, aleve, ark patlamasına, eriyik metale, kaynak sıçramasına ve kesilmeye karşı kişisel koruyucu elbiseler.",
+        "items": [
+          "İtfaiye Ürünleri",
+          "Endüstri Ürünleri",
+          "Ormancı Ürünleri",
+          "Askeriye ve Polis Ürünleri",
+          "Arama Kurtarma Ürünleri"
+        ],
+        "image": "/images/hero-brand.png",
+        "imageAlt": "Koruyucu iş kıyafetlerini temsil eden marka görseli"
+      },
+      {
+        "title": "Mühendislik",
+        "href": "/muhendislik",
+        "text": "Yüksek sıcaklıkta çalışan makine ve ekipmanlarda ısı kaybını önleyen izolasyon çözümleri.",
+        "items": [
+          "Cam Elyaf Kumaşlar ve İzolasyon Malzemeleri",
+          "Makine Ekipman İzolasyonu",
+          "Tekstil Kompansatör",
+          "PROTEK® Yangın Battaniyesi"
+        ],
+        "image": "/images/engineering-brand.png",
+        "imageAlt": "İzolasyon ekipmanlarını gösteren temsili mühendislik sahnesi"
+      },
+      {
+        "title": "Madencilik",
+        "href": "/madencilik",
+        "text": "Silis kumu (kuvars kumu) ve Musselstone (midye taşı) üretimi.",
+        "items": ["Silis Kumu", "Musselstone"],
+        "image": "/images/mining-brand.png",
+        "imageAlt": "Doğal taş katmanlarını gösteren temsili madencilik sahnesi"
+      }
+    ],
+    "metin01": "Üç alanda tek çatı",
+    "metin02": "Bölüme git",
+    "metin03": "→",
+    "eyebrow": "UZMANLIK ALANLARIMIZ",
+    "intro": "Farklı sektörler. Aynı sorumluluk. İş güvenliği, mühendislik ve madencilikte ihtiyacınıza uygun çözümler.",
+    "selectorLabel": "Faaliyet vitrinini seçin",
+    "detailLabel": "Bu alandaki çözümler"
+  },
+  "components-Footer": {
+    "corporate": [
+      {
+        "label": "Hakkımızda",
+        "href": "/kurumsal"
+      },
+      {
+        "label": "Tarihçe",
+        "href": "/tarihce"
+      },
+      {
+        "label": "Mevzuat",
+        "href": "/mevzuat"
+      },
+      {
+        "label": "Gizlilik ve Güvenlik",
+        "href": "/gizlilik-ve-guvenlik"
+      }
+    ],
+    "social": [
+      {
+        "label": "Facebook",
+        "href": "https://www.facebook.com/KIVANCGROUP"
+      },
+      {
+        "label": "X",
+        "href": "https://twitter.com/kivancgroup"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/company/kivancgroup/"
+      },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/kivancgroup/"
+      }
+    ],
+    "metin01": "Kurumsal",
+    "metin02": "https://www.belgemodul.com/sirket/1786",
+    "metin03": "Bilgi Toplumu Hizmetleri",
+    "metin04": "İletişim",
+    "metin05": "tel:+902126712800",
+    "metin06": "+90 (212) 671 28 00",
+    "metin07": "mailto:info@kivancgroup.com",
+    "metin08": "info@kivancgroup.com",
+    "metin09": "Faydalı linkler",
+    "metin10": "© ",
+    "metin11": "Kıvanç Group. Tüm hakları saklıdır.",
+    "contactEyebrow": "BİRLİKTE DAHA GÜVENLİ",
+    "contactTitle": "İhtiyacınıza uygun\nçözümü birlikte bulalım.",
+    "contactHref": "/iletisim",
+    "contactLabel": "Bizimle iletişime geçin",
+    "tagline": "İş güvenliği, mühendislik ve madencilikte 1980’den beri güvenilir çözümler.",
+    "established": "1980’DEN BERİ"
+  },
+  "components-Header": {
+    "announcements": [
+      "1980’DEN BERİ İŞ GÜVENLİĞİ, MÜHENDİSLİK VE MADENCİLİK",
+      "CE BELGELİ ISI VE ALEVE DAYANIKLI ELBİSELER",
+      "TÜRKİYE’NİN İLK ISI LABORATUVARI",
+      "ÜRÜN SORUMLULUK SİGORTALI KORUYUCU ELBİSELER"
+    ],
+    "utilityLinks": [
+      {
+        "label": "Satış Kanalları",
+        "href": "/satis-kanallari"
+      },
+      {
+        "label": "Dokümanlar",
+        "href": "/dokumanlar"
+      },
+      {
+        "label": "Kariyer",
+        "href": "/kariyer"
+      },
+      {
+        "label": "İletişim",
+        "href": "/iletisim"
+      }
+    ],
+    "mainNav": [
+      {
+        "label": "İş Güvenliği",
+        "href": "/is-guvenligi"
+      },
+      {
+        "label": "Mühendislik",
+        "href": "/muhendislik"
+      },
+      {
+        "label": "Madencilik",
+        "href": "/madencilik"
+      },
+      {
+        "label": "Ar-Ge",
+        "href": "/ar-ge"
+      },
+      {
+        "label": "Haberler",
+        "href": "/haberler"
+      },
+      {
+        "label": "Kurumsal",
+        "href": "/kurumsal"
+      }
+    ],
+    "metin01": "✦",
+    "metin02": "mailto:info@kivancgroup.com",
+    "metin03": "info@kivancgroup.com",
+    "metin04": "tel:+902126712800",
+    "metin05": "+90 (212) 671 28 00",
+    "metin06": "Ürün veya bölüm ara...",
+    "metin07": "/",
+    "metin08": "Kıvanç Group",
+    "metin09": "/logo.png",
+    "metin10": "Kıvanç Group",
+    "metin11": "/teklif-sepeti",
+    "metin12": "TEKLİF SEPETİ",
+    "showAnnouncements": false,
+    "utilityLabel": "Yardımcı bağlantılar",
+    "navigationLabel": "Ana menü",
+    "searchLabel": "Aramayı aç",
+    "searchSubmit": "Ara",
+    "closeProductsLabel": "Ürün menüsünü kapat"
+  },
+  "components-Hero": {
+    "metin01": "1980’den beri",
+    "metin02": "Isıya ve aleve karşı",
+    "metin03": "güvenilir koruma",
+    "metin04": "CE belgeli koruyucu elbiselerimiz, Türkiye’nin ilk ısı laboratuvarında test edilir ve ürün sorumluluk sigortasıyla güvence altındadır.",
+    "metin05": "/is-guvenligi",
+    "metin06": "Ürünleri incele",
+    "metin07": "/teklif-al",
+    "metin08": "Teklif iste",
+    "metin09": "Koruyucu kıyafetli itfaiyecileri gösteren temsili marka görseli",
+    "metin10": "Kıvanç Group 1980",
+    "heroImage": "/images/hero-brand.png",
+    "scrollLabel": "Keşfetmeye devam edin",
+    "categoryLabel": "İŞ GÜVENLİĞİ / MÜHENDİSLİK / MADENCİLİK",
+    "storyLabel": "Faaliyet alanını seçin",
+    "extraStories": [
+      {
+        "id": "engineering",
+        "label": "Mühendislik",
+        "eyebrow": "ISI KAYBINA KARŞI AKILLI ÇÖZÜMLER",
+        "title": "Performansın arkasında",
+        "accent": "güçlü mühendislik.",
+        "description": "Yüksek sıcaklıkta çalışan makine ve ekipmanlar için, ihtiyaca özel izolasyon çözümleri.",
+        "image": "/images/engineering-brand.png",
+        "imageAlt": "Endüstriyel izolasyon ekipmanlarını gösteren temsili marka görseli",
+        "href": "/muhendislik",
+        "linkLabel": "Mühendisliği keşfet"
+      },
+      {
+        "id": "mining",
+        "label": "Madencilik",
+        "eyebrow": "DOĞADAN ÜRETİME",
+        "title": "Doğanın gücünü",
+        "accent": "geleceğe taşıyoruz.",
+        "description": "Silis kumu ve Musselstone ile malzemenin karakterini üretimin gücüne dönüştürüyoruz.",
+        "image": "/images/mining-brand.png",
+        "imageAlt": "Doğal taş ocağını gösteren temsili marka görseli",
+        "href": "/madencilik",
+        "linkLabel": "Madenciliği keşfet"
+      }
+    ],
+    "firstStoryLabel": "İş Güvenliği"
+  },
+  "components-MessageForm": {
+    "metin01": "Teklif talebiniz alındı",
+    "metin02": "Mesajınız alındı.",
+    "metin03": "Mesajınız ilgili ekibimize iletildi. Paylaştığınız iletişim bilgileri üzerinden size dönüş yapacağız.",
+    "metin04": "Web sitesi",
+    "metin05": "Ad soyad *",
+    "metin06": "Firma",
+    "metin07": "E-posta *",
+    "metin08": "Telefon",
+    "metin09": "Notunuz",
+    "metin10": "Mesajınız *",
+    "metin11": "/gizlilik-ve-guvenlik",
+    "metin12": "Gizlilik ve güvenlik",
+    "metin13": "metnini okudum, bilgilerimin talebime yanıt verilmesi amacıyla işlenmesini kabul ediyorum. *",
+    "metin14": "Gönderiliyor…",
+    "metin15": "Teklif iste",
+    "metin16": "Mesajı gönder",
+    "inquiryMessage": "İlgilendiğiniz ürün ve ihtiyacınız *",
+    "inquiryPlaceholder": "Ürün, kullanım alanı, adet ve özel taleplerinizi yazabilirsiniz.",
+    "inquirySubmit": "Teklif talebini ilet",
+    "receivedTitle": "Talebiniz alındı.",
+    "receivedText": "Talebiniz ilgili ekibimize iletildi. Paylaştığınız iletişim bilgileri üzerinden size dönüş yapacağız."
+  },
+  "components-MobileMenu": {
+    "metin01": "Menüyü aç",
+    "metin02": "Menü",
+    "metin03": "Menü",
+    "metin04": "Menüyü kapat",
+    "metin05": "Ana menü"
+  },
+  "components-Partners": {
+    "partners": [
+      {
+        "name": "INTERSPIRO",
+        "href": "http://www.interspiro.com/"
+      },
+      {
+        "name": "PBI",
+        "href": "https://www.pbi-int.com/"
+      },
+      {
+        "name": "3M",
+        "href": "http://www.3m.com.tr/"
+      },
+      {
+        "name": "HARVIK",
+        "href": "http://www.harvik.com/"
+      },
+      {
+        "name": "KLEVERS",
+        "href": "http://www.klevers.de/"
+      },
+      {
+        "name": "SEIZ",
+        "href": "https://www.seiz.de/"
+      },
+      {
+        "name": "BULLARD",
+        "href": "http://www.bullard.com/europe/en/"
+      },
+      {
+        "name": "HAIX",
+        "href": "http://www.haix.com/en/"
+      },
+      {
+        "name": "YKK",
+        "href": "https://www.ykk.com.tr/"
+      }
+    ],
+    "metin01": "Çözüm ortaklarımız"
+  },
+  "components-Product360": {
+    "metin01": "360°",
+    "metin02": "Yükleniyor… ",
+    "metin03": "%",
+    "metin04": "Döndürmek için sürükleyin",
+    "metin05": "Durdur",
+    "metin06": "Döndür",
+    "metin07": "Ürünü döndür",
+    "instructions": "Sol ve sağ ok tuşlarıyla veya sürükleyerek döndürün.",
+    "unavailable": "Görsel henüz eklenmedi.",
+    "loadError": "360° kareleri yüklenemedi. Sayfayı yenileyin veya diğer fotoğrafları inceleyin.",
+    "previous": "Önceki açı",
+    "next": "Sonraki açı",
+    "angle": "Görüş açısı"
+  },
+  "components-Quality": {
+    "values": [
+      {
+        "title": "Titiz üretim",
+        "text": "Kusursuz ürün için ürünlerimizi büyük bir titizlikle inceliyoruz."
+      },
+      {
+        "title": "Sektöre rehberlik",
+        "text": "Mühendislik ve iş güvenliğinde piyasa ihtiyacını önceden belirleyip ilkleri biz yapıyoruz."
+      },
+      {
+        "title": "Müşteri odaklılık",
+        "text": "Doğru müşteriye, doğru zamanda, doğru fiyat prensibiyle hizmet veriyoruz."
+      },
+      {
+        "title": "Yeniliklere açıklık",
+        "text": "Ürünlerimizi uzman Ar-Ge ekibimizle sürekli geliştiriyoruz."
+      }
+    ],
+    "metin01": "Kalite standartları",
+    "eyebrow": "GÜVENİN ARKASINDAKİ STANDART",
+    "href": "/ar-ge",
+    "linkLabel": "Ar-Ge çalışmalarımız"
+  },
+  "components-QuoteCart": {
+    "metin01": "Sepet yükleniyor…",
+    "metin02": "Teklif talebiniz alındı",
+    "metin03": "En kısa sürede e-posta adresinizden size dönüş yapacağız.",
+    "metin04": "/",
+    "metin05": "Ana sayfaya dön",
+    "metin06": "Teklif sepetiniz boş",
+    "metin07": "İlgilendiğiniz ürünleri sepete ekleyin, tek formla hepsi için teklif isteyin.",
+    "metin08": "/is-guvenligi",
+    "metin09": "İş güvenliği ürünleri",
+    "metin10": "/muhendislik",
+    "metin11": "Mühendislik ürünleri",
+    "metin12": "Seçilen ürünler",
+    "metin13": "Sepeti boşalt",
+    "metin14": "Adet",
+    "metin15": "Çıkar",
+    "metin16": "İletişim bilgileriniz"
+  },
+  "app-[division]-[slug]": {
+    "metin01": "Konum",
+    "metin02": "/ ",
+    "metin03": "/iletisim",
+    "metin04": "Bilgi için bize ulaşın",
+    "metin05": "Modeller",
+    "metin06": "/iletisim",
+    "metin07": "Model için bilgi iste",
+    "fallbackIntro": "{name}, Kıvanç Group’un {division} bölümünde {group} grubunda yer alır. Teknik özellikler, standartlar ve fiyat bilgisi için teklif talebi oluşturabilirsiniz."
+  },
+  "app-[division]": {
+    "metin01": "Diğer faaliyet alanları",
+    "catalogEyebrow": "ÇÖZÜM PORTFÖYÜ",
+    "groupLabel": "Ürün grupları",
+    "productLabel": "ÜRÜN",
+    "infoLabel": "BİLGİ",
+    "viewLabel": "Ürünü incele",
+    "infoViewLabel": "Bilgileri incele",
+    "cardFallback": "Ürün detaylarını ve kullanımınıza uygun seçenekleri inceleyin."
+  },
+  "app-ar-ge": {
+    "metadata": {
+      "title": "Ar-Ge",
+      "description": "Kıvanç Group Ar-Ge ve kalite kontrol laboratuvarı: ısı ve fiziksel testler, yeni ürün geliştirme ve ürün izlenebilirliği."
+    },
+    "blocks": [
+      {
+        "title": "Laboratuvarımız",
+        "text": "Türkiye’de bir ilki gerçekleştirerek geniş kapsamlı Ar-Ge ve Kalite Kontrol Laboratuvarını kurduk. Laboratuvar, ısı ve fiziksel testlerin yapıldığı iki ayrı bölümden oluşur."
+      },
+      {
+        "title": "Test ve standartlar",
+        "text": "Isı ve fiziksel test laboratuvarında hammadde (kumaş, aksesuar vb.) ve bitmiş ürün (koruyucu elbise) kontrolleri EN ve ISO standartlarına uygun olarak yapılır."
+      },
+      {
+        "title": "Yeni ürün geliştirme",
+        "text": "Yapılan testler sonucunda yeni ürünler geliştirilir ve CE sertifikasyonu öncesi tüm kontroller yapılır. Bu kontroller ürün güvenilirliğini artırır ve süreçleri hızlandırır."
+      },
+      {
+        "title": "İzlenebilirlik",
+        "text": "2009 yılından bu yana kullandığımız ERP yazılımına entegre barkod sistemi sayesinde tüm ürün süreçleri takip edilebilir. Elbise etiketindeki üretim plan numarasından üretim tarihine, kullanılan malzemelere ve tedarikçi lot numaralarına ulaşılır."
+      }
+    ],
+    "tests": [
+      [
+        "TS EN ISO 15025",
+        "Sınırlandırılmış alev sıçraması için deney metodu (sınırlı alev yayılması – A)"
+      ],
+      [
+        "TS EN 367",
+        "Aleve maruz kalmada ısı geçişinin tayini (alevli ısı transferi – B)"
+      ],
+      [
+        "TS EN ISO 6942",
+        "Işıma yoluyla yayılan ısı kaynaklarına maruz kalan malzemelerin değerlendirilmesi (radyan ısı transferi – C)"
+      ],
+      [
+        "TS EN ISO 14116",
+        "Sınırlı alev yayma özelliğine sahip malzemeler, malzeme grupları ve giyecekler"
+      ],
+      [
+        "TS EN ISO 13934-1",
+        "En büyük kuvvetin ve en büyük kuvvet altında boyca uzamanın şerit yöntemiyle tayini (kopma mukavemeti)"
+      ],
+      [
+        "TS EN ISO 13937-2",
+        "Pantolon biçimindeki deney numunelerinin yırtılma kuvvetinin tayini (tek dil yırtılma mukavemeti)"
+      ],
+      [
+        "TS EN ISO 13937-4",
+        "Dil şeklindeki test numunelerinin yırtılma kuvvetinin belirlenmesi (çift dil yırtılma mukavemeti)"
+      ],
+      [
+        "TS EN ISO 12945-2",
+        "Martindale metoduyla kumaşlarda yüzey tüylenmesi ve boncuklanma yatkınlığının tayini"
+      ],
+      [
+        "TS EN ISO 12947-2",
+        "Martindale metoduyla kumaşların aşınmaya karşı dayanımının tayini – iplik kopmasının tayini"
+      ],
+      ["ISO 811", "Su geçirmezlik tayini (hidrostatik basınç deneyi)"],
+      ["TS 391 EN ISO 9237", "Kumaşlarda hava geçirgenliğinin tayini"],
+      [
+        "TS EN ISO 4920",
+        "Yüzey ıslanmasına karşı direncin tayini (püskürtme deneyi)"
+      ],
+      [
+        "ISO 3801",
+        "Birim uzunluk ve birim alan kütlesinin tayini (gramaj tayini)"
+      ],
+      ["TS EN ISO 105 X12", "Sürtünmeye karşı renk haslığı tayini"],
+      ["ISO 6330", "Ev tipi çamaşır makinesi ile yıkama ve kurutma işlemleri"],
+      [
+        "TS EN ISO 5077",
+        "Yıkama ve kurutmadan sonra boyut değişmesinin tayini"
+      ],
+      ["TS 250 EN 1049-2", "Birim uzunluktaki iplik sayısının tayini"],
+      [
+        "TS EN 1049-2 (A)",
+        "Dokuma kumaşlar – yapı analiz yöntemleri, Metot A: birim uzunluk başına iplik sayısının belirlenmesi"
+      ],
+      [
+        "TS 244 EN ISO 2060",
+        "Doğrusal yoğunluk tayini – çile metodu (kumaştan iplik numarası tayini)"
+      ],
+      [
+        "ISO 7211-5",
+        "Kumaştan çıkarılan ipliğin doğrusal yoğunluğunun belirlenmesi (iplik numarası tayini)"
+      ],
+      [
+        "ISO 7211-1",
+        "Dokuma kumaşlar – yapı analiz yöntemleri (doku türü tayini)"
+      ],
+      [
+        "Spektrofotometre",
+        "Renk koordinatlarının belirlenmesi (renk kontrolü)"
+      ],
+      ["Dijital mikroskop", "Elyaf analizi"]
+    ],
+    "metin01": "Ar-Ge",
+    "metin02": "Ürünlerimizi kendi laboratuvarımızda test eder, geliştirir ve izleriz.",
+    "metin03": "Laboratuvarımızda yapılan testler",
+    "metin04": "/iletisim",
+    "metin05": "Test ve geliştirme için bize ulaşın",
+    "heroImage": "/images/laboratory-brand.png",
+    "heroAlt": "Teknik kumaş testi temalı temsili laboratuvar sahnesi",
+    "heroEyebrow": "ARAŞTIRMA · TEST · GELİŞTİRME",
+    "heroCaption": "Temsili marka görseli",
+    "processTitle": "Malzemeden bitmiş ürüne.",
+    "processIntro": "Kumaştan koruyucu elbiseye uzanan süreci kendi laboratuvarlarımızda inceliyor, test ediyor ve geliştiriyoruz."
+  },
+  "app-arama": {
+    "metadata": {
+      "title": "Arama",
+      "robots": {
+        "index": false
+      }
+    },
+    "metin01": "Arama",
+    "metin02": "Ürün veya bölüm ara…",
+    "metin03": "Arama",
+    "metin04": "Ara",
+    "metin05": "Aramak istediğiniz ürünün adını yazın.",
+    "metin06": "Sonuç bulunamadı. Farklı bir kelime deneyin ya da",
+    "metin07": "/iletisim",
+    "metin08": "bize yazın",
+    "metin09": ".",
+    "metin10": "· "
+  },
+  "app-dokumanlar": {
+    "metadata": {
+      "title": "Dokümanlar",
+      "description": "Kıvanç Group ürün broşürleri ve videoları."
+    },
+    "metin01": "Dokümanlar",
+    "metin02": "Ürün broşürleri ve tanıtım videoları.",
+    "metin03": "Broşürler",
+    "metin04": "PDF",
+    "metin05": "Videolar",
+    "metin06": "YouTube",
+    "metin07": "Aradığınız belge burada yok mu?",
+    "metin08": "Sertifika ve teknik bilgi talepleriniz için bize yazın. Yasal düzenlemeler için",
+    "metin09": "/mevzuat",
+    "metin10": "Mevzuat",
+    "metin11": "sayfasına bakabilirsiniz.",
+    "metin12": "/iletisim",
+    "metin13": "Belge talep et"
+  },
+  "app-error": {
+    "metin01": "Bir sorun oluştu",
+    "metin02": "Sayfa yüklenirken beklenmeyen bir hata oldu. Tekrar deneyebilir ya da ana sayfaya dönebilirsiniz.",
+    "metin03": "Tekrar dene",
+    "metin04": "/",
+    "metin05": "Ana sayfa"
+  },
+  "app-gizlilik-ve-guvenlik": {
+    "metadata": {
+      "title": "Gizlilik ve Güvenlik",
+      "description": "Kıvanç Group web sitesinde kişisel verilerin nasıl işlendiği ve 6698 sayılı KVKK kapsamındaki haklarınız."
+    },
+    "sections": [
+      {
+        "title": "Veri sorumlusu",
+        "text": [
+          "www.kivancgroup.com adresindeki internet sitesini Kıvanç Kimya San. ve Tic. A.Ş. (“Şirket”) işletmektedir. 6698 sayılı Kişisel Verilerin Korunması Kanunu (“Kanun”) kapsamında veri sorumlusu Şirket’tir.",
+          "İletişim: İkitelli OSB Mah. Aykosan 2. Kısım 5C Blok Sk. Aykosan San. Sit. 5C Blok Dış Kapı No:1 İç Kapı No:1 Başakşehir / İstanbul · info@kivancgroup.com"
+        ]
+      },
+      {
+        "title": "Hangi kişisel verileri topluyoruz?",
+        "text": [
+          "İletişim ve teklif formları aracılığıyla gönderdiğiniz ad soyad, firma, e-posta, telefon, mesajınız ve teklif istediğiniz ürünler. Talebiniz sunucumuzdaki yönetici gelen kutusuna kaydedilir; e-posta bildirimi yapılandırılmışsa ilgili ekibe ayrıca iletilir."
+        ]
+      },
+      {
+        "title": "Verilerinizi hangi amaçlarla işliyoruz?",
+        "items": [
+          "Mesajlarınıza ve taleplerinize yanıt vermek",
+          "Ürün ve hizmetlerimiz için teklif hazırlamak ve ilgili iş süreçlerini yürütmek",
+          "Sizinle kurulan ticari ilişkinin hukuki, teknik ve ticari güvenliğini sağlamak",
+          "Yetkili kuruluşlara mevzuattan kaynaklanan bilgi vermek",
+          "Olası hak ve alacak taleplerini tesis etmek ve hukuki uyuşmazlıklarda savunma hakkını kullanmak"
+        ],
+        "text": [
+          "Verileriniz, Kanun’un 5. maddesindeki işleme şartları çerçevesinde ve formlardaki onayınıza dayanarak işlenir. Bilgileriniz pazarlama listelerine eklenmez."
+        ]
+      },
+      {
+        "title": "Verileriniz kimlerle paylaşılabilir?",
+        "text": [
+          "Kanun’un 8. ve 9. maddelerindeki şartlar çerçevesinde; Şirket yetkilileri, iştirakler, iş ortakları ve tedarikçiler, kanunen yetkili kamu kurum ve kuruluşları ile özel kurumlarla paylaşılabilir. Form mesajları e-posta altyapısı hizmet sağlayıcımız üzerinden iletilir; bu sağlayıcının sunucuları yurt dışında bulunabilir."
+        ]
+      },
+      {
+        "title": "Çerezler ve tarayıcı depolaması",
+        "text": [
+          "Bu sitede analiz, reklam veya yeniden pazarlama amaçlı çerez kullanılmaz. Teklif sepetinizdeki ürünler kendi tarayıcınızda saklanır; formu gönderdiğinizde talebinizle birlikte sunucumuza iletilir. Sayfa yazı tipleri sitemizin kendi sunucusundan yüklenir. Yönetim panelinde güvenli oturum ve taslak önizlemesi için gerekli çerezler kullanılır."
+        ]
+      },
+      {
+        "title": "Saklama süreleri",
+        "text": [
+          "Kişisel veriler, ilgili mevzuatta bir süre öngörülmüşse bu süre boyunca; öngörülmemişse işleme amacının gerektirdiği süre kadar saklanır. Süre sona erdiğinde veriler silinir, yok edilir veya anonim hale getirilir. Olası hukuki uyuşmazlıklarda delil olması veya savunma hakkının kullanılması amacıyla, zamanaşımı süreleriyle sınırlı olarak saklama yapılabilir."
+        ]
+      },
+      {
+        "title": "Kanun kapsamındaki haklarınız",
+        "text": [
+          "Kanun’un 11. maddesi uyarınca veri sahibi olarak şu haklara sahipsiniz:"
+        ],
+        "items": [
+          "Kişisel verilerinizin işlenip işlenmediğini öğrenme",
+          "İşlenmişse buna ilişkin bilgi talep etme",
+          "İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme",
+          "Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme",
+          "Eksik veya yanlış işlenmişse düzeltilmesini isteme",
+          "İşlenmesini gerektiren sebepler ortadan kalkmışsa silinmesini veya yok edilmesini isteme",
+          "Yapılan düzeltme, silme ve yok etme işlemlerinin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme",
+          "Verilerin münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhinize bir sonuç çıkmasına itiraz etme",
+          "Kanuna aykırı işlenmesi nedeniyle zarara uğramanız halinde zararın giderilmesini talep etme"
+        ]
+      },
+      {
+        "title": "Başvuru",
+        "text": [
+          "Taleplerinizi info@kivancgroup.com adresine veya yukarıdaki posta adresine iletebilirsiniz. Başvurularınız en geç 30 gün içinde sonuçlandırılır.",
+          "Bu metin, hukuki ve teknolojik gelişmeler doğrultusunda güncellenebilir."
+        ]
+      }
+    ],
+    "metin01": "Gizlilik ve güvenlik",
+    "metin02": "Bu sitede kişisel verilerinizin nasıl işlendiğini ve haklarınızı özetliyoruz."
+  },
+  "app-haberler": {
+    "metadata": {
+      "title": "Haberler",
+      "description": "Kıvanç Group haberleri ve duyuruları."
+    },
+    "metin01": "Haberler",
+    "metin02": "Kıvanç Group’tan haberler ve duyurular.",
+    "metin03": "Şu an yayınlanmış bir haber bulunmuyor. Yeni gelişmeleri buradan duyuracağız.",
+    "metin04": "Devamını oku →",
+    "eyebrow": "KIVANÇ GROUP GÜNDEMİ",
+    "featuredLabel": "ÖNE ÇIKAN",
+    "backLabel": "Tüm haberlere dön",
+    "sourceLabel": "Orijinal kaynağı görüntüle",
+    "visualLabel": "KIVANÇ GROUP",
+    "articleLabel": "Haberi incele"
+  },
+  "app-iletisim": {
+    "metadata": {
+      "title": "İletişim",
+      "description": "Kıvanç Group genel merkez, Sinop fabrika ve Edirne tesis iletişim bilgileri."
+    },
+    "locations": [
+      {
+        "title": "Genel Merkez",
+        "address": "İkitelli OSB Mah. Aykosan 2. Kısım 5C Blok Sk. Aykosan San. Sit. 5C Blok Dış Kapı No:1 İç Kapı No:1 Başakşehir / İstanbul",
+        "lines": [
+          {
+            "label": "E-posta",
+            "text": "info@kivancgroup.com",
+            "href": "mailto:info@kivancgroup.com"
+          },
+          {
+            "label": "Telefon",
+            "text": "+90 (212) 671 28 00",
+            "href": "tel:+902126712800"
+          },
+          {
+            "label": "Faks",
+            "text": "+90 (212) 671 99 27"
+          }
+        ]
+      },
+      {
+        "title": "Sinop Fabrika",
+        "subtitle": "İş Güvenliği",
+        "address": "Sinop Organize Sanayi Bölgesi Demirci Köyü Mevki OSB Mahallesi 5. Cad. No:5 Merkez / Sinop",
+        "lines": []
+      },
+      {
+        "title": "Edirne Tesis",
+        "subtitle": "Madencilik ve Mühendislik",
+        "address": "Edirne Cad. Şafak Mah. No:107 Süloğlu / Edirne",
+        "lines": [
+          {
+            "label": "E-posta",
+            "text": "info@kozatek.com.tr",
+            "href": "mailto:info@kozatek.com.tr"
+          },
+          {
+            "label": "Telefon",
+            "text": "+90 (532) 637 08 12",
+            "href": "tel:+905326370812"
+          }
+        ]
+      }
+    ],
+    "metin01": "İletişim",
+    "metin02": "Ürünlerimiz, teklif talepleriniz ve iş birlikleri için bize ulaşın.",
+    "metin03": ":",
+    "metin04": "Bize yazın"
+  },
+  "app-kariyer": {
+    "metadata": {
+      "title": "Kariyer",
+      "description": "Kıvanç Group’ta açık pozisyonlar ve açık başvuru."
+    },
+    "metin01": "Kariyer",
+    "metin02": "İş güvenliği, mühendislik ve madencilik alanlarında bizimle çalışmak ister misiniz?",
+    "metin03": "Açık pozisyonlar",
+    "metin04": "Şu an açık pozisyonumuz bulunmuyor. Aşağıdan açık başvuru yapabilirsiniz.",
+    "metin05": "Başvur",
+    "metin06": "Açık başvuru",
+    "metin07": "İlanlarda size uygun bir pozisyon yoksa kendinizi tanıtan bir mesajla bize yazın. Diğer ilanlarımıza Kariyer.net firma profilimizden de ulaşabilirsiniz.",
+    "metin08": "/iletisim",
+    "metin09": "Bize yazın",
+    "metin10": "https://www.kariyer.net/firma-profil/kivanc-group-4597-29480",
+    "metin11": "Kariyer.net profilimiz"
+  },
+  "app-kurumsal": {
+    "metadata": {
+      "title": "Kurumsal",
+      "description": "1980 yılından beri iş güvenliği, mühendislik ve madencilik alanlarında faaliyet gösteren Kıvanç Group hakkında."
+    },
+    "areas": [
+      {
+        "title": "İş Güvenliği",
+        "href": "/is-guvenligi",
+        "text": "Isıya ve aleve, statik yüklenmelere, ark patlamasına, eriyik metale, kaynak sıçramalarına ve kesilmelere karşı kişisel koruyucu elbiseler, balistik yelek, balistik kalkan ve bomba imha elbisesi."
+      },
+      {
+        "title": "Mühendislik",
+        "href": "/muhendislik",
+        "text": "Türbin, makine ve ekipman izolasyonu, plastik enjeksiyon makinaları izolasyonu, egzoz izolasyon yastığı ve kazan ayna izolasyonu uygulamaları."
+      },
+      {
+        "title": "Madencilik",
+        "href": "/madencilik",
+        "text": "Silis Kumu (Kuvars Kumu) ve Musselstone (Midye Taşı - Küfeki) çıkarılması."
+      },
+      {
+        "title": "Akatek",
+        "text": "Bağlı kuruluşumuz Akatek Teknik Tekstil, elyaftan başlayarak teknik iplikleri (Meta-Aramid, Para-Aramid, Antistatik, FR Viscose, Modacrylic, PBI) ve karışımlarını üretir."
+      }
+    ],
+    "metin01": "Kurumsal",
+    "metin02": "1980 yılında kurulan Kıvanç Group; iş güvenliği, mühendislik ve madencilik alanlarında faaliyet gösterir.",
+    "metin03": "Firmamız, kişisel koruyucu elbiseler ile ilgili Türkiye’nin ilk ısı laboratuvarını kurmuştur. İkinci yatırımımızla birlikte fiziksel test laboratuvarımız da hizmet vermeye başlamıştır. Isı ve fiziksel test laboratuvarımızda hammadde (kumaş, aksesuar vb.) ve bitmiş ürün (koruyucu elbise) kontrolleri EN ve ISO standartlarına uygun olarak gerçekleştirilir.",
+    "metin04": "Ar-Ge amacıyla da hizmet veren laboratuvarımızda yeni ürünler geliştirilir ve CE sertifikasyonu öncesi tüm kontroller yapılır. Bu kontroller ürün güvenilirliğini artırır ve süreçleri hızlandırır.",
+    "metin05": "2009 yılından bu yana kullandığımız ERP (Kurumsal Kaynak Planlaması) yazılımına entegre ettiğimiz barkod sistemi sayesinde izlenebilirlik mümkündür ve tüm ürün süreçleri takip edilebilir. Elbise etiketindeki üretim plan numarasından üretimin hangi tarihte yapıldığına, hangi malzemelerin kullanıldığına, hangi tarihte hangi tedarikçiden hangi lot numarasıyla alındığına ulaşılabilir.",
+    "metin06": "Ürettiğimiz koruyucu elbiseler, Türkiye’de bir ilk olarak Ürün Sorumluluk Sigortası’na sahiptir. Malzeme ve işçilik hataları nedeniyle elbiseleri kullanan kişilerin başına gelebilecek kazalardan oluşan zararlar bu sigorta kapsamında güvence altına alınmıştır.",
+    "metin07": "Faaliyet alanlarımız",
+    "metin08": "/iletisim",
+    "metin09": "Bize ulaşın",
+    "heroImage": "/images/engineering-brand.png",
+    "heroAlt": "Mühendislik ve üretim temalı temsili marka sahnesi",
+    "heroEyebrow": "1980’DEN BERİ",
+    "heroCaption": "Temsili marka görseli",
+    "storyTitle": "Üretimden sahaya uzanan güven.",
+    "storyEyebrow": "KIVANÇ GROUP’UN HİKÂYESİ"
+  },
+  "app-layout": {
+    "metadata": {
+      "title": {
+        "default": "Kıvanç Group – İş Güvenliği, Mühendislik, Madencilik",
+        "template": "%s | Kıvanç Group"
+      },
+      "description": "Kıvanç Group, Avrupa standartlarına uygun CE belgeli ısı ve aleve dayanıklı koruyucu elbiselerin üretimini yapmaktadır.",
+      "metadataBase": "https://kivancgroup.com/",
+      "openGraph": {
+        "type": "website",
+        "locale": "tr_TR",
+        "siteName": "Kıvanç Group",
+        "title": "Kıvanç Group – İş Güvenliği, Mühendislik, Madencilik",
+        "description": "Kıvanç Group, Avrupa standartlarına uygun CE belgeli ısı ve aleve dayanıklı koruyucu elbiselerin üretimini yapmaktadır.",
+        "images": ["/paylasim?path=%2F"]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Kıvanç Group – İş Güvenliği, Mühendislik, Madencilik",
+        "description": "Kıvanç Group, Avrupa standartlarına uygun CE belgeli ısı ve aleve dayanıklı koruyucu elbiselerin üretimini yapmaktadır.",
+        "images": ["/paylasim?path=%2F"]
+      }
+    },
+    "organizationJsonLd": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kıvanç Group",
+      "url": "https://kivancgroup.com",
+      "logo": "https://kivancgroup.com/logo.png",
+      "email": "info@kivancgroup.com",
+      "foundingDate": "1980"
+    },
+    "metin01": "#icerik",
+    "metin02": "İçeriğe geç",
+    "shareEyebrow": "İŞ GÜVENLİĞİ · MÜHENDİSLİK · MADENCİLİK",
+    "shareFooter": "1980’den beri güvenilir çözümler."
+  },
+  "app-mevzuat": {
+    "metadata": {
+      "title": "Mevzuat",
+      "description": "İş sağlığı ve güvenliği, KKD ve ürün güvenliği ile ilgili kanun ve yönetmelikler."
+    },
+    "metin01": "Mevzuat",
+    "metin02": "İş sağlığı ve güvenliği, kişisel koruyucu donanım ve ürün güvenliği ile ilgili temel düzenlemeler.",
+    "metin03": "PDF"
+  },
+  "app-not-found": {
+    "metin01": "Sayfa bulunamadı",
+    "metin02": "Aradığınız sayfa taşınmış ya da hiç var olmamış olabilir.",
+    "metin03": "/",
+    "metin04": "Ana sayfa",
+    "metin05": "/iletisim",
+    "metin06": "İletişim"
+  },
+  "app-satis-kanallari": {
+    "metadata": {
+      "title": "Satış Kanalları",
+      "description": "Kıvanç Group bayileri ve doğrudan teklif kanalları."
+    },
+    "dealers": [
+      {
+        "name": "Global HSE",
+        "address": "Atatürk Mah. Mustafa Kemal Cad. 34758 No:14 Ataşehir / İstanbul",
+        "phone": "0216 415 28 64",
+        "phoneHref": "tel:+902164152864",
+        "site": "https://www.globalhse.com.tr/"
+      },
+      {
+        "name": "Gülem Ticaret",
+        "address": "Döşeme Mah. 60075 Sk. Panora Plaza No:6 Kat:6 D:33 Seyhan / Adana",
+        "phone": "0850 303 00 24",
+        "phoneHref": "tel:+908503030024",
+        "site": "https://gulemticaret.com/"
+      }
+    ],
+    "channels": [
+      {
+        "title": "Teklif sepeti",
+        "text": "İlgilendiğiniz ürünleri sepete ekleyin, tek formla hepsi için teklif isteyin.",
+        "href": "/teklif-sepeti",
+        "cta": "Teklif sepetine git"
+      },
+      {
+        "title": "İletişim formu",
+        "text": "Ürün seçimi, özel talepler ve iş birlikleri için formu doldurun.",
+        "href": "/iletisim",
+        "cta": "Forma git"
+      }
+    ],
+    "metin01": "Satış kanalları",
+    "metin02": "Ürünlerimize bayilerimiz üzerinden ya da doğrudan bizden ulaşabilirsiniz.",
+    "metin03": "Bayilerimiz",
+    "metin04": "Web sitesi",
+    "metin05": "Doğrudan teklif",
+    "metin06": "E-posta ile ulaşmak için:",
+    "metin07": "mailto:info@kivancgroup.com",
+    "metin08": "info@kivancgroup.com"
+  },
+  "app-tarihce": {
+    "metadata": {
+      "title": "Tarihçe",
+      "description": "1980’den bugüne Kıvanç Group’un önemli adımları."
+    },
+    "milestones": [
+      {
+        "year": "1980",
+        "items": [
+          "Kıvanç Ticaret adı altında şahıs şirketi olarak kurulan firmamız kimyevi maddeler ticareti ile faaliyetlerine başlamıştır."
+        ]
+      },
+      {
+        "year": "1984",
+        "items": ["Kıvanç Kimya San. Tic A.Ş olarak yoluna devam etmiştir."]
+      },
+      {
+        "year": "1986",
+        "items": [
+          "Cam Elyaf izolasyon malzemelerinin ithalat ve satışına başlanmıştır."
+        ]
+      },
+      {
+        "year": "1988",
+        "items": [
+          "Türkiye’de ilk defa yangın battaniyesi üretimi firmamız tarafından gerçekleştirilmiştir."
+        ]
+      },
+      {
+        "year": "1989",
+        "items": [
+          "Edirne Süloğlu ilçesinde Silis Kumu madenciliği faaliyetine başlanmıştır."
+        ]
+      },
+      {
+        "year": "1995",
+        "items": [
+          "İş güvenliği bölümümüzde askeri kurumlarımıza alüminize elbise üretimine başlanmıştır."
+        ]
+      },
+      {
+        "year": "1996",
+        "items": [
+          "Türkiye’de ilk vana ceketi üretimine başlanmıştır. KIVANÇ ve PROTEK markalarımız tescil edilmiştir."
+        ]
+      },
+      {
+        "year": "1998",
+        "items": [
+          "Türkiye’de ilk olarak Çözülebilir yastık sistemi ile Türbin İzolasyonu firmamız tarafından yapılmıştır."
+        ]
+      },
+      {
+        "year": "1999",
+        "items": [
+          "Tekstil kompansatörü imalatına başlanmıştır. İlk uygulamasını Tüpraş Aliağa tesislerinde yapmıştır."
+        ]
+      },
+      {
+        "year": "2000",
+        "items": [
+          "Kaynak ve metal sıçramaları için kaynak örtüsü üretimine başlanmıştır.",
+          "Mühendislik bölümümüzde ısı kayıplarını hesaplayan bir yazılım kullanılmaya başlanmıştır."
+        ]
+      },
+      {
+        "year": "2001",
+        "items": [
+          "Edirne Süloğlu ilçesinde mühendislik ve madencilik için yeni tesis kurulumu tamamlanmıştır. Silis kumu yıkama eleme yerine taşınmış, mühendislik bölümümüz için ise ayrı bir fabrika binası yatırımı tamamlanmıştır."
+        ]
+      },
+      {
+        "year": "2002",
+        "items": [
+          "Belediye, askeriye ve itfaiye teşkilatları için EN 469 standardına uygun itfaiyeci elbiseleri üretim ve satışına başlanmıştır."
+        ]
+      },
+      {
+        "year": "2003",
+        "items": [
+          "Endüstriyel Alev Almaz ve Anti Statik elbiselerin üretimine başlanmıştır."
+        ]
+      },
+      {
+        "year": "2004",
+        "items": [
+          "ISO 9001 kalite sistem belgesi alınmıştır.",
+          "PBI Performance Products Partneri olunmuştur.",
+          "Gemi sanayiinde yük gemisinde çözülebilir yastık sistemi ile izolasyon yapılmıştır."
+        ]
+      },
+      {
+        "year": "2007",
+        "items": [
+          "İş Güvenliği ürünlerinin ihracatına başlanmıştır.",
+          "Ergimiş Metal Sıçramalarına dayanıklı elbise üretimine başlanmıştır.",
+          "Mittal Steel firmasına 2800 adetlik ihracat yapılmıştır."
+        ]
+      },
+      {
+        "year": "2009",
+        "items": [
+          "Yapmış olduğumuz çalışmalar ile ERP (Kurumsal Kaynak Planlaması) yazılımı hayata geçirilmiştir."
+        ]
+      },
+      {
+        "year": "2010",
+        "items": [
+          "İkitelli OSB’de satın alınan 2500 m²’lik yeni binamıza genel müdürlüğümüz ve İş Güvenliği üretim bölümümüz taşınmıştır.",
+          "Elektrik Arkına karşı koruyucu elbise üretimine başlanmıştır.",
+          "Püskürtme Türbin izolasyonu yapılmaya başlanmıştır."
+        ]
+      },
+      {
+        "year": "2011",
+        "items": [
+          "ERP yazılımında geliştirmeye gidilerek barkod sistemi kullanılmaya başlanmış, bu sayede koruyucu elbiselerde izlenebilirlik sağlanmıştır."
+        ]
+      },
+      {
+        "year": "2012",
+        "items": [
+          "Kişisel Koruyucu elbiseler ile ilgili Türkiye’nin ilk Isı laboratuvarı bünyemizde kurulmuştur.",
+          "Ar-Ge ve Kalite Kontrol laboratuvarımız açılmıştır.",
+          "Akıllı tekstiller konusunda ilk Santez Projemiz gerçekleştirilmiştir."
+        ]
+      },
+      {
+        "year": "2013",
+        "items": ["Fiziksel test laboratuvarımız devreye alınmıştır."]
+      },
+      {
+        "year": "2015",
+        "items": [
+          "Dünya’da ilk olma özelliği taşıyan “Design Asistant Model Tasarım Yazılımı” gerçekleştirilmiştir.",
+          "AB Horizon 2020 Çerçeve Programı bünyesinde ETexWeld projesi kapsamında yerli ve yabancı üniversitelerin iş birliği ile başlatılan çalışmada firmamız da yer almıştır."
+        ]
+      },
+      {
+        "year": "2016",
+        "items": [
+          "Antalya OSB’de 20.000 m²’lik iplik üretim fabrikası üretim faaliyetine başlamıştır.",
+          "Türkiye’de bir ilk olarak akaryakıt istasyonlarına alev almaz ve antistatik elbiselerinin üretimine başlanmıştır (Tüpraş, Opet)."
+        ]
+      },
+      {
+        "year": "2020",
+        "items": [
+          "Kumaş dokuma fabrikası, Antalya OSB’de üretim faaliyetine başlamıştır."
+        ]
+      },
+      {
+        "year": "2022",
+        "items": [
+          "Antalya fabrikamızın çatısında GES (Güneş Enerjisi Santrali) kurulumu gerçekleşti, güneş enerjisi üretimi başladı.",
+          "Antalya – GRS (Global Recycled Standard) Sertifikası",
+          "Antalya – RCS (Recycled Claim Standard) Sertifikası"
+        ]
+      },
+      {
+        "year": "2023",
+        "items": [
+          "Sinop’ta konfeksiyon üretimi için 7.400 m² alanda yeni fabrika yatırımı yapıldı.",
+          "Antalya – OCS (Organic Content Standard) Sertifikası"
+        ]
+      },
+      {
+        "year": "2024",
+        "items": [
+          "Antalya – GES yatırımı 2. etabı tamamlandı. Fabrika alanı yatırımıyla kapasite 12.000 m²’ye çıkarıldı.",
+          "AKATEK, Türkiye Kalite Derneği (KalDer) üyesi oldu."
+        ]
+      }
+    ],
+    "metin01": "Tarihçe",
+    "metin02": "1980’den bugüne Kıvanç Group’un önemli adımları."
+  },
+  "app-teklif-sepeti": {
+    "metadata": {
+      "title": "Teklif Sepeti",
+      "robots": {
+        "index": false
+      }
+    },
+    "metin01": "Teklif sepeti",
+    "metin02": "İlgilendiğiniz ürünleri seçtiniz mi? Bilgilerinizi bırakın, size teklifimizle dönelim."
+  },
+  "data-careers": {
+    "openPositions": [
+      {
+        "title": "ERP Uzmanı",
+        "href": "https://www.kariyer.net/is-ilani/kivanc-group-erp-uzmani-2736255"
+      },
+      {
+        "title": "Üretim Planlama Mühendisi (Sinop)",
+        "href": "https://www.kariyer.net/is-ilani/kivanc-group-uretim-planlama-muhendisi-sinop-2999809"
+      }
+    ]
+  },
+  "data-details": {
+    "details": {
+      "sektorel-cozumler": {
+        "description": [
+          "Kıvanç Group olarak farklı sektörlerde yer alan müşterilerimizin farklı talepleri için riske uygun ham maddeler kullanarak doğru çözümler geliştiriyoruz. Tasarım ofisimiz ürünleri kurumsal çizginizle giydirerek farklılığınızı vurguluyor."
+        ],
+        "sections": [
+          {
+            "title": "Çalışma sürecimiz",
+            "items": [
+              "Sektördeki risklerin belirlenmesi",
+              "Risk analizi sonrası gerekli koruyucu ekipmanın ilgili standartlarının belirlenmesi",
+              "Standartlara uygun malzeme seçimi (dış kumaş, ısı bariyeri, nem bariyeri vb.)",
+              "Model tasarımı",
+              "Saha çalışması",
+              "Test ve sertifikasyon",
+              "Üretim"
+            ]
+          },
+          {
+            "title": "Hizmet verdiğimiz başlıca sektörler",
+            "text": [
+              "Türkiye’de ve dünyada başlıca hizmet verdiğimiz sektörlerden bazıları:"
+            ],
+            "items": [
+              "İtfaiye",
+              "Petrol ve gaz",
+              "Demir ve çelik",
+              "Enerji dağıtım",
+              "Askeriye ve polis",
+              "Çimento",
+              "Kimya ve petrokimya"
+            ]
+          }
+        ]
+      },
+      "arama-kurtarma-urunleri": {
+        "models": [
+          "Jaguar (837429)",
+          "CAPELLA 805102",
+          "Tytan Neo HTM 103 – Arama Kurtarma Bareti",
+          "SEIZ 800295 SPECTER",
+          "SEIZ 800185 MECHANIC",
+          "Haix® 605207 AIRPOWER XR91",
+          "Haix® 605117 AIRPOWER XR1"
+        ]
+      },
+      "katman-alternatifleri": {
+        "description": [
+          "Firestar itfaiye elbiseleri ve Alustar alüminize elbiseler için katman seçeneklerini ve katman detaylarını aşağıdaki belgelerde bulabilirsiniz."
+        ],
+        "documents": [
+          {
+            "title": "Firestar – İtfaiye katmanları (PDF)",
+            "href": "/docs/Firestar-Layer-Options-LR.pdf"
+          },
+          {
+            "title": "Firestar – İtfaiye katman detayları (PDF)",
+            "href": "/docs/Firestar-Layer-Details-LR.pdf"
+          },
+          {
+            "title": "Alustar – Alüminize katmanlar (PDF)",
+            "href": "/docs/Aluminized-Layer-Options-LR.pdf"
+          },
+          {
+            "title": "Alustar – Alüminize katman detayları (PDF)",
+            "href": "/docs/Aluminized-Layer-Details-LR.pdf"
+          }
+        ]
+      },
+      "solunum-seti": {
+        "models": [
+          "Worthington Çelik Tüp 6 L 300 Bar (vanasız)",
+          "Ultra Hafif Safer Para-Aramid/Karbon Kompozit PET Liner 6.8 L – 300 bar (vanasız)",
+          "VTI Vana (Manometreli ve EFV’li)",
+          "VTI Vana (Manometreli)",
+          "VTI Vana",
+          "VTI EFV",
+          "Spirocom",
+          "Spiromatic 90U",
+          "QSII"
+        ]
+      },
+      "termal-kameralar": {
+        "models": ["DXT", "QXT Pro", "TXS"]
+      },
+      "itfaiyeci-orme-baslik": {
+        "models": [
+          "NICK – 825105 Örme Başlık (Aramid/Viscose FR)",
+          "NICK – 825105 Örme Başlık (PBI)",
+          "NICK – 825105 Örme Başlık (Aramid)",
+          "BLOCK-HOOD – 825126 Örme Başlık"
+        ]
+      },
+      "itfaiyeci-eldiveni": {
+        "models": [
+          "REACTOR S 810220110",
+          "TURAN 810220001",
+          "SEKUR 810220000",
+          "SEIZ 1564420-FF-P Fire Fighter Premium Long Cuff"
+        ]
+      },
+      "itfaiyeci-cizmesi": {
+        "models": [
+          "Haix® 507601 Fire Eagle 3.0",
+          "Haix® 507007 Fire Hero 3.1",
+          "Haix® 507538 Fire Eagle 2.0 Pro",
+          "Haix® 507501 Fire Eagle",
+          "Haix® 507506 Fire Eagle Vario",
+          "Haix® 503007 Fire Flash 2.0",
+          "HARVIK® 9687L"
+        ]
+      },
+      "itfaiyeci-bareti": {
+        "models": [
+          "Vulcan NEO",
+          "CALISIA VULCAN type CV 102",
+          "Iskra LED Fener (Baret Adaptörsüz)"
+        ]
+      },
+      "itfaiyeci-ic-giyim": {
+        "models": [
+          "LEE – 812100 Çok Fonksiyonlu Koruma Çorap",
+          "ERIC – 854106 Alev Almaz İçlik"
+        ]
+      },
+      "aluminize-elbise": {
+        "models": ["ALUSTAR ULTRA LIGHT – 830100", "ALUSTAR – 830102"]
+      },
+      "serit-fitil-makaron": {
+        "description": [
+          "1000 °C’ye kadar kullanılabilen şeritler farklı genişlik ve kalınlıklarda üretilebilir. Talep edildiğinde bir tarafı yapışkanlı olarak da üretilir.",
+          "Cam elyaf ve para-aramid (Kevlar) fitil ve iplikler ürün gamımızda mevcuttur. Conta ve boğdurma ipi olarak kullanılır, farklı çaplarda üretilir.",
+          "Cam elyaf iplikler özel dokuma sistemiyle hortum makaron olarak üretilir. Özellikle kablo kılıfı olarak kullanılan bu ürünler farklı çap ve kalınlıklarda üretilir."
+        ],
+        "specs": [
+          {
+            "label": "Şeritler",
+            "value": "1000 °C’ye kadar; farklı genişlik ve kalınlıkta, isteğe bağlı tek tarafı yapışkanlı"
+          },
+          {
+            "label": "Fitil ve iplikler",
+            "value": "Cam elyaf, para-aramid (Kevlar); conta ve boğdurma ipi olarak"
+          },
+          {
+            "label": "Makaron",
+            "value": "Cam elyaf iplikten hortum makaron; kablo kılıfı olarak"
+          }
+        ]
+      },
+      "dikis-iplikleri": {
+        "description": [
+          "Birçok farklı noktada ihtiyaç duyulan dikiş iplikleri yüksek sıcaklıklarda kullanılabilir. PTFE veya poliüretan kaplı olarak üretilebildiği gibi paslanmaz çelik tel takviyeli olarak da tedarik edilebilir."
+        ],
+        "sections": [
+          {
+            "title": "Çeşitleri",
+            "items": [
+              "Cam elyaf",
+              "Tel takviyeli cam elyaf",
+              "Kevlar",
+              "Tel takviyeli Kevlar"
+            ]
+          },
+          {
+            "title": "Sıcaklık dayanımı",
+            "text": [
+              "1000 °C’ye kadar silika dikiş iplikleri, daha yüksek sıcaklıklar için Sestonit dikiş iplikleri kullanılır."
+            ]
+          }
+        ]
+      },
+      "izolasyon-malzemeleri": {
+        "description": [
+          "İzolasyon uygulamalarımızda KlevoMat, KlevoSat, Klevowool ve Rockwool gibi izolasyon malzemeleri kullanılır."
+        ],
+        "specs": [
+          {
+            "label": "KlevoMat (iğnelenmiş cam lifi keçe)",
+            "value": "500 – 550 °C"
+          },
+          {
+            "label": "KlevoSat (iğnelenmiş cam lifi keçe)",
+            "value": "1000 °C"
+          },
+          {
+            "label": "KlevoMat / KlevoSat kalınlık ve yoğunluk",
+            "value": "3 – 25 mm, 100 – 180 kg/m³"
+          },
+          {
+            "label": "Klevowool",
+            "value": "1260 °C’ye kadar; ağırlıklı olarak 25 ve 50 mm kalınlık, 610 mm genişlik"
+          },
+          {
+            "label": "Taş yünü",
+            "value": "750 °C’ye kadar; plaka, rabitz telli, telsiz, granül ve sanayi şiltesi"
+          }
+        ],
+        "sections": [
+          {
+            "title": "KlevoMat ve KlevoSat",
+            "text": [
+              "Yüksek yoğunluklu ürünlerdir ve herhangi bir kimyasal bağlayıcı olmadan iğneleme metoduyla üretilmiştir."
+            ]
+          },
+          {
+            "title": "Klevowool",
+            "text": [
+              "Yeni jenerasyon izolasyon malzemesidir. Seramik battaniye gibi kanserojen özellikte değildir ve farklı yoğunluk ve kalınlıkta üretilebilir."
+            ]
+          },
+          {
+            "title": "Taş yünü",
+            "text": [
+              "Plaka, rabitz telli, telsiz, granül ve sanayi şiltesi halinde üretilir. Farklı kalınlık ve yoğunlukta üretilebilir."
+            ]
+          }
+        ]
+      },
+      "protek-kaynak-ortusu": {
+        "description": [
+          "Kaynak yapılırken sıçrayan kıvılcımlar makine ve ekipmanlara zarar verebilir; cüruflar ekipmana yapışıp zamanla paslanmaya yol açabilir. Etrafta bulunan kişiler zarar görebilir, iş kazaları yaşanabilir. Kıvılcımlar çevredeki yağ, yakıt ve benzeri maddelere sıçrayarak yangın çıkarabilir.",
+          "İstenen ölçülere göre imal edilen PROTEK® kaynak perdeleri bu sorunları ortadan kaldırır. Kenarlarındaki kapsüller sayesinde her yerde kolayca kullanılabilir, istenen yere asılabilir veya gerilebilir. Kaynak perdesi demirbaş olarak kullanılabilir; iş bittiğinde kaldırılır, ihtiyaç olduğunda tekrar kullanılır. Kaynak örtüsü sayesinde hem insan hem makine ve ekipman korunur, yangın çıkma ihtimali ortadan kalkar."
+        ],
+        "sections": [
+          {
+            "title": "Nasıl kullanılır?",
+            "items": [
+              "Makine ve ekipmanın üstüne örtülerek kaynak sıçramasından doğan zararlardan korunabilir.",
+              "Çalışılan yere serilip üzerinde kaynak yapmada kullanılabilir.",
+              "Çalışılan yerin etrafına asılarak perde şeklinde kullanılır; çevredeki makine, ekipman ve kişilerin zarar görmesi engellenir.",
+              "Yüksekte kaynak yapılırken aşağıda başka kişiler çalışıyorsa, kaynak yapılan yerin altına gerilerek onlara kaynak sıçramasını engeller.",
+              "Dış ortamlarda kullanıma uygun kaynak çadırları üretilebilir."
+            ]
+          }
+        ]
+      },
+      "protek-duman-perdesi": {
+        "description": [
+          "Yüksek sıcaklığa dayanıklı özel kompozit malzemeden üretilen duman perdeleri ve yangın kapıları alev almaz özelliktedir. Yangın sırasında kapı geçişlerinde dumanın diğer odalara geçmesini engellemek için kullanılan duman perdeleri, üzerlerindeki kuşgözleri sayesinde asılabileceği gibi otomatik kapı sistemi olarak da tasarlanabilir.",
+          "Duman perdeleri, dumanlı ortamlarda kolay görülebilmesi için yüksek görünürlüklü özel renkle üretilir. İsteğe bağlı olarak farklı ölçülerde üretim yapılabilir."
+        ],
+        "sections": [
+          {
+            "title": "Kullanım alanları",
+            "items": [
+              "Gemiler",
+              "Askeri araçlar",
+              "Fabrikalar",
+              "Laboratuvarlar",
+              "Oteller",
+              "Hastaneler",
+              "Okullar",
+              "Akaryakıt istasyonları",
+              "Mağazalar",
+              "Restoranlar",
+              "Ofisler"
+            ]
+          }
+        ]
+      },
+      "kazan-ayna-izolasyonu": {
+        "description": [
+          "Klevostar çözülebilir yastık sistemi ile izolasyon; enerji tasarrufunun yanı sıra işçi sağlığı ve iş güvenliğini sağlaması, kolay sökülüp takılabilmesi nedeniyle zaman tasarrufu sunması (üretim kayıplarının minimum olması) ve son teknoloji ürünlerin kullanımına olanak vermesi açısından en çok tercih edilen izolasyon sistemi olmuştur.",
+          "Buhar kazanlarının ön ve arka kapaklarında, duman sandığında içeriden yapılmış eski izolasyon zaman içinde etkisini kaybettiği için bu kapak bölgelerinde ciddi bir ısı kaybı oluşur. Buhar veya sıcak su üretiminin yapıldığı ve yakıtın yakıldığı bu kazanlarda daha ilk noktada enerji kaybı yaşanır.",
+          "Çözülebilir yastık sistemi, yüksek sıcaklığa dayanıklı ve ısı iletim katsayısı düşük malzemelerle üretilen izolasyon yastıklarından oluşur. Yastıklar, makineye manto giydirir gibi yan yana ve üst üste konarak her tarafa sarılır ve ısı kaçışı engellenir. Periyodik bakım ya da onarım sırasında yastıklar kolayca sökülür; tamirattan sonra yerlerine konarak makine çok kısa sürede çalışmaya hazır hale gelir."
+        ],
+        "sections": [
+          {
+            "title": "Avantajları",
+            "items": [
+              "İzolasyon ömrü malzeme ömrüne eşittir; söküldüğünde tekrar kullanılabilir.",
+              "Montajı ve demontajı çok daha kolaydır.",
+              "Sabit izolasyona oranla ısı kayıpları daha azdır.",
+              "Sabit izolasyondan farklı olarak tekrar tekrar sökülüp takılabilir.",
+              "Düşük iletim katsayılı malzemeler sayesinde ısı izolasyonu yüksek verimle gerçekleşir.",
+              "İzolasyon uygulanmasının zor olduğu noktalarda kolaylıkla uygulanabilir.",
+              "Uzun yıllar sorunsuz çalışır, ekstra bakım gerektirmez.",
+              "Başlangıç maliyeti yüksek olsa da uzun vadede çok daha ekonomik ve verimlidir."
+            ]
+          }
+        ]
+      },
+      "egzoz-izolasyon-yastigi": {
+        "description": [
+          "Araç motorları, jeneratör ve türbin gibi yüksek sıcaklıklarda çalışan makinelerin çıkışlarında bulunan egzoz ve susturucu gibi ekipmanların izolasyonları, çözülebilir yastık sistemi ile uzun yıllardır firmamız tarafından yapılmaktadır.",
+          "Egzoz izolasyon yastıkları, sistemdeki mevcut sıcaklığa bağlı olarak, yüksek sıcaklığa dayanıklı ve ısı iletim katsayısı düşük malzemelerle üretilen izolasyon yastıklarından oluşur."
+        ],
+        "sections": [
+          {
+            "title": "Teknik özellikleri",
+            "items": [
+              "Tekrar tekrar sökülüp takılabilir.",
+              "Düşük ısı iletim katsayılı malzemeler sayesinde ısı izolasyonu yüksek verimle gerçekleşir.",
+              "İzolasyon uygulanmasının zor olduğu noktalarda kolaylıkla uygulanabilir.",
+              "Uzun yıllar sorunsuz çalışır, ekstra bakım gerektirmez.",
+              "Başlangıç maliyeti yüksek olsa da uzun vadede çok daha ekonomik ve verimlidir.",
+              "Birçok renkte üretilebilir.",
+              "Ekipmanın boyut ve şekline göre özel boyutlarda üretilebilir."
+            ]
+          }
+        ]
+      },
+      "vanomat-vana-ceketi": {
+        "description": [
+          "Vanomat vana ceketleri çözülebilir yastık sistemi ile geliştirilmiştir. Enerji tasarrufunun yanı sıra işçi sağlığı ve iş güvenliğini sağlaması, kolay sökülüp takılabilmesi nedeniyle zaman tasarrufu sunması (üretim kayıplarının minimum olması) ve son teknoloji ürünlerin kullanımına olanak vermesi açısından en çok tercih edilen izolasyon sistemlerinden biridir. İzolasyonsuz sıcak hat vanalarında ciddi miktarda enerji tasarrufu sağlar.",
+          "Bir vanadaki ısı kaybı, o vananın bağlı bulunduğu en az 1 metre uzunluğundaki borudaki ısı kaybına eşdeğerdir (kaynak: Department of Environment Energy Efficiency Programme). Fabrikalardaki vana miktarı düşünüldüğünde, yüzlerce metre borunun izolasyonsuz olması kadar ısı kaybı oluştuğu görülür. Sökülüp takılabilir tasarlanan vana ceketleri, bakım ve arıza durumlarına göre tekrar tekrar sökülüp takılabilir."
+        ],
+        "specs": [
+          {
+            "label": "Dış kumaş",
+            "value": "Silikon veya PTFE kaplı cam elyaf kumaş"
+          },
+          {
+            "label": "Cam elyaf kumaş kullanım sıcaklığı",
+            "value": "500 – 550 °C (özel kumaşlarla 1000 °C’ye kadar)"
+          },
+          {
+            "label": "Silikon kaplı kumaş (sürekli)",
+            "value": "230 °C"
+          },
+          {
+            "label": "PTFE kaplı kumaş (sürekli)",
+            "value": "300 °C"
+          },
+          {
+            "label": "Yanmazlık sınıfı",
+            "value": "DIN 4102 – A1, A2, B1 (kumaş); A sınıfı (izolasyon keçesi)"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Avantajları",
+            "items": [
+              "Isı kayıplarını azaltır.",
+              "Dış yüzey sıcaklığını düşürdüğü için yanıklardan doğan iş kayıplarını önler, iş güvenliğini artırır.",
+              "Montajı kolaydır, özel bir bilgi gerektirmeden takılabilir.",
+              "Demontajı kolaydır, çok kısa sürede sökülüp tekrar yerine takılabilir.",
+              "Defalarca sökülüp takılabilir. Sabit izolasyon gibi her seferinde yeni malzeme gerekmez.",
+              "İzolasyona bir kez masraf yapılır, uzun süre kullanılır.",
+              "Dış kumaşı silikon kaplı olduğundan dış ortamlarda kullanılabilir; sıvı, yağ, yakıt gibi maddelerin içeri girip izolasyon keçesine zarar vermesini engeller."
+            ]
+          },
+          {
+            "title": "Cam elyaf kumaşlar",
+            "text": [
+              "Vana ceketlerinde ağırlıklı olarak silikon veya PTFE kaplı cam elyaf kumaşlar kullanılır. Dokunmuş cam elyaf kumaşın üzeri silikon ya da PTFE ile kaplanarak sıvı, yağ ve yakıtın içeri girmesi engellenir. Çalışma şartlarına bağlı olarak daha yüksek sıcaklıklara dayanıklı cam elyaf kumaşlar da kullanılabilir. Kumaşlar Alman Normu DIN 4102’ye göre A1, A2, B1 sınıfı yanmaz malzemeler grubundadır."
+            ]
+          },
+          {
+            "title": "İzolasyon malzemesi",
+            "text": [
+              "Isı kaybını azaltmak için ceketin içine uygun kalınlıkta izolasyon keçesi konur. Vananın çalışma sıcaklığına ve istenen ısı kaybına göre, bilgisayarda yapılan ısı hesaplamalarıyla uygun keçe ve kalınlık teknik ekibimiz tarafından belirlenir. Farklı yoğunluk ve kalınlıklarda cam yünü, taş yünü ve Filomat izolasyon keçesi kullanılır. Keçeler DIN 4102’ye göre A sınıfı yanmaz malzemeler grubundadır."
+            ]
+          },
+          {
+            "title": "Aksesuarlar ve dikiş",
+            "text": [
+              "Ceketi monte etmek ve keçenin dağılmasını engellemek için paslanmaz çelik kopçalar ve bağlama teli kullanılır. İsteğe bağlı olarak ceketler cırt cırtlı da üretilebilir. Dikişte yüksek sıcaklığa dayanıklı cam dikiş ipliği ya da para-aramid dikiş ipliği kullanılır. Kenarlardaki ısı kaçaklarını önlemek ve montajı kolaylaştırmak için ceketin kenarlarında cam elyaf bağlama ipleri bulunur."
+            ]
+          }
+        ]
+      },
+      "tekos-flans-siperi": {
+        "description": [
+          "TEKOS, zararlı kimyasal malzemelerin kaçak durumlarında sızdırmazlık ve kimyasal ataklara karşı direnç açısından koruyucu kılıf olarak önemli bir görev üstlenir. Birçok malzeme kaçaklara karşı siper olarak kullanılsa da bu malzemelerin yetersiz kalması nedeniyle gövdesi ve bağlama ipleri özel malzemeden üretilen TEKOS koruyucu siperler geliştirilmiştir. Ürettiğimiz TEKOS koruyucu siperler PTFE malzemeden yapılır.",
+          "Bu siperler tüm flanş çevresi ve bağlantı elemanlarında meydana gelecek kaçaklarda etkili olacak şekilde tasarlanmıştır. Yarı saydam modelleri kaçakların gözle tespit edilmesine de imkan verir. Flanşlarda sızıntı tespit edilirse kimyasal ataklardan etkilenmeden çıkarılıp temizlenebilir ve tekrar tekrar kullanılabilir.",
+          "Çok yönlülüğü ve düşük maliyetiyle yüksek verimle uygulanabilen TEKOS; gemi, kimya, offshore, kriyojenik, temizlik malzemeleri ve ilaç endüstrisinde kullanılır."
+        ],
+        "specs": [
+          {
+            "label": "Malzeme",
+            "value": "PTFE"
+          },
+          {
+            "label": "pH aralığı",
+            "value": "1 – 14"
+          },
+          {
+            "label": "Kullanım sıcaklığı",
+            "value": "-73 °C ile 288 °C arası (-100 °F – 550 °F)"
+          },
+          {
+            "label": "Sürekli çalışma sıcaklığı",
+            "value": "288 °C (550 °F)"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Teknik özellikleri",
+            "items": [
+              "Islak ve kimyasal etkilere karşı dayanıklıdır.",
+              "Ultraviyole (morötesi) ışıklardan etkilenmez.",
+              "Sıfır porozitelidir.",
+              "Tek parça olarak tasarlanmıştır.",
+              "Yarı saydam olması kaçakların gözlenmesine imkan sağlar.",
+              "Bağlama (boğma) ipi özel malzemedendir.",
+              "Sarılarak uygulama, yan taraflardan kaçaklara engel olur.",
+              "Tekrar tekrar kullanılabilir.",
+              "Birçok renkte üretilebilir.",
+              "Birçok opsiyonel uygulama yapılabilir (örneğin boşaltım vanası).",
+              "Ekipmanın boyut ve şekline göre özel boyutlarda üretilebilir."
+            ]
+          }
+        ]
+      },
+      "peomat-plastik-enjeksiyon-makinalari-izolasyonu": {
+        "description": [
+          "Yüksek sıcaklıklarda çalışan plastik enjeksiyon makinelerinin kovan yüzeyleri çözülebilir yastık sistemi ile izole edilerek enerji tasarrufu sağlanır. Çıplak olarak 150-200 °C sıcaklıklarda çalışan makinelerin rezistans kısımları işçi sağlığı açısından ciddi tehlikeler oluşturur ve önemli miktarda elektrik harcanmasına neden olur.",
+          "Kıvanç Group’un ürettiği PROTEK marka izolasyon yastıkları sökülüp takılabilir ve tekrar tekrar kullanılabilir. Plastik enjeksiyon makineleri farklı kapasite ve özellikte olduğundan her makineye özel izolasyon yastıkları üretilir. Ölçüleri uzman ekibimiz tarafından alınır, özel üretimi yapılır ve yine ekibimiz tarafından monte edilir. Sağladığı elektrik tasarrufu sayesinde izolasyon yastıkları kendini sadece birkaç ayda amorte eder."
+        ],
+        "specs": [
+          {
+            "label": "Isı kaybı tasarrufu",
+            "value": "%90"
+          },
+          {
+            "label": "Elektrik tasarrufu",
+            "value": "%40"
+          },
+          {
+            "label": "Elektrik tüketimi (izolasyondan önce)",
+            "value": "12 kW/saat"
+          },
+          {
+            "label": "Elektrik tüketimi (izolasyondan sonra)",
+            "value": "6,7 – 7,2 kW/saat"
+          },
+          {
+            "label": "Kendini amorte etme süresi",
+            "value": "1,5 – 2 ay"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Avantajları",
+            "items": [
+              "Isı kayıplarını azaltır, ciddi miktarda elektrik tasarrufu sağlar.",
+              "Dış yüzey sıcaklığını düşürdüğü için yanıklardan doğan iş kayıplarını önler, iş güvenliğini artırır.",
+              "Montajı kolaydır, özel bir bilgi gerektirmeden takılabilir.",
+              "Demontajı kolaydır, çok kısa sürede sökülüp tekrar yerine takılabilir.",
+              "Defalarca sökülüp takılabilir. Sabit izolasyondaki gibi her seferinde yeni malzeme gerekmez.",
+              "İzolasyona bir kez masraf yapılır, uzun süre kullanılır."
+            ]
+          }
+        ]
+      },
+      "puskurtme-yontemi-ile-turbin-makine-ve-ekipman-izolasyonu": {
+        "description": [
+          "Püskürtme yöntemi ile izolasyon; enerji tasarrufu sağlamasının yanı sıra işçi sağlığı ve iş güvenliğini sağlaması, sağlam ve rijit bir izolasyon yüzeyi oluşturması açısından tercih edilen bir sistemdir. Özellikle uzun süre demontaj yapılmayan, bakım gerektirmeyen ve sık sık açılmayan buhar türbinlerinde tercih edilir.",
+          "Yöntemde yüksek sıcaklığa dayanıklı granül haldeki malzemeler (özellikle taş yünü) özel bir makineden geçirilerek uygulanır. Türbin veya ekipmanların yüzeylerine püskürtme yapılabilmesi için önce bağlantı elemanları ve kafes telleri monte edilir. Gövde, hiçbir aralık ve boşluk kalmayacak şekilde yüksek yoğunlukta taş yünü ile kaplanır. Taş yününün üzerine yüksek sıcaklığa dayanıklı özel sıva ve sıvı yağ itici özellikteki boya uygulanarak işlem tamamlanır."
+        ],
+        "sections": [
+          {
+            "title": "Avantajları",
+            "items": [
+              "Türbin gövdesi ve makine izolasyonlarında devreye giriş süreleri düşüktür, izolasyon özellikleri homojen ve yüksektir.",
+              "Makine ve ekipmanda yekpare, aralıksız bir izolasyon uygulanır.",
+              "Kullanılan malzemeler düşük iletim katsayısına sahip olduğundan ısı izolasyonu yüksek verimle gerçekleşir.",
+              "Uzun yıllar sorunsuz çalışır, ekstra bakım gerektirmez."
+            ]
+          }
+        ]
+      },
+      "klevostar-cozulebilir-yastik-sistemi-ile-turbin-makine-ve-ekipman-izolasyonu": {
+        "description": [
+          "Gerek fabrikalardaki gerekse günlük hayatımızdaki birçok makine sürekli enerji harcayarak çalışır. 1970’li yıllardaki enerji krizinden sonra yapılan araştırmalar, enerji tasarrufunun en etkin yönteminin izolasyonla enerji kayıplarını en aza indirmek olduğunu göstermiştir. Enerjinin pahalı olduğu ülkemizde enerji tasarrufu büyük önem taşır.",
+          "Klevostar – Çözülebilir Yastık Sistemi ile izolasyon; enerji tasarrufunun yanı sıra işçi sağlığı ve iş güvenliğini sağlaması, kolay sökülüp takılabildiği için zaman tasarrufu sunması (üretim kayıplarının minimum olması) ve son teknoloji ürünlerin kullanımına olanak vermesi nedeniyle en çok tercih edilen izolasyon sistemlerinden biridir.",
+          "Sistem, yüksek sıcaklığa dayanıklı ve ısı iletim katsayısı düşük malzemelerle üretilen izolasyon yastıklarından oluşur. Yastıklar, makineye manto giydirir gibi yan yana ve üst üste konarak makinenin her tarafına sarılır ve ısı kaçağı engellenir. Periyodik bakım veya onarım sırasında yastıklar kolayca sökülür; tamirat sonrası yerlerine konarak makine kısa sürede çalışmaya hazır hale gelir."
+        ],
+        "sections": [
+          {
+            "title": "Avantajları",
+            "items": [
+              "İzolasyon ömrü malzeme ömrüne eşittir; söküldüğünde tekrar kullanılabilir.",
+              "Montajı ve demontajı çok daha kolaydır.",
+              "Türbin gövdesi ve makine izolasyonlarında devreye giriş süresi düşük, izolasyon özellikleri homojen ve yüksektir.",
+              "Sabit izolasyona oranla ısı kayıpları daha azdır.",
+              "Sabit izolasyondan farklı olarak tekrar tekrar sökülüp takılabilir.",
+              "Düşük iletim katsayılı malzemeler sayesinde ısı izolasyonu yüksek verimle gerçekleşir.",
+              "İzolasyonun uygulanmasının zor olduğu noktalarda kolayca uygulanabilir.",
+              "Uzun yıllar sorunsuz çalışır, ekstra bakım gerektirmez.",
+              "Uzun vadede çok daha ekonomik ve verimlidir."
+            ]
+          }
+        ]
+      },
+      "tekstil-kompansator": {
+        "description": [
+          "Tekstil kompansatörler (expansion joint), sıcaklık değişimleri nedeniyle kanallarda ortaya çıkan hareketleri ve titreşimleri engellemek için kullanılan esnek bağlantı elemanlarıdır. Sızdırmazlık elemanı bir kompansatörün en önemli parçasıdır; sistem basıncına, içten ve dıştan gelen kimyasal ataklara karşı dayanıklı olmalı ve aynı zamanda termal hareketleri emebilecek şekilde esnek olmalıdır.",
+          "Halihazırda üç çeşit kompansatör kullanılmaktadır ve çok katlı tekstil kompansatörlerin diğerlerine göre büyük avantajları vardır."
+        ],
+        "sections": [
+          {
+            "title": "Kompansatör çeşitleri",
+            "items": [
+              "Tekstil kompansatörler",
+              "Kauçuk kompansatörler",
+              "Metalik kompansatörler"
+            ]
+          },
+          {
+            "title": "Avantajları",
+            "items": [
+              "Büyük hareketler: Çok yönlü hareketleri daha kısa mesafelerde absorbe edebilir.",
+              "Korozyona karşı dayanıklılık: Elastomerlerden floroplastiklere, kumaşlardan keçelere kadar geniş malzeme seçeneği her uygulamada uygun malzemenin seçilmesini sağlar; floroplastik gibi malzemeler kompansatörün ömrünü uzatır.",
+              "Ses ve titreşimin engellenmesi: Metalik kompansatörlerin aksine ses ve titreşimi azaltır, titreşimden etkilenmediği için daha uzun süre çalışır.",
+              "Ekonomik tasarım maliyeti: Her tür hareketi aynı anda absorbe edebildiği için daha az sayıda kompansatör gerekir, sistem geometrisi kolaylaşır, maliyetli bağlantı elemanları azalır ve mühendislik süresi kısalır.",
+              "Ekonomik malzeme maliyeti: Korozyona dayanıklı yüksek alaşımlı metaller gerekmez; elastomer ve floroplastik çeşitliliği en düşük maliyetli doğru malzemeyi seçmeyi mümkün kılar.",
+              "Ekonomik taşıma ve montaj maliyeti: Monte edilmesi en kolay şekilde teslim edilir; metal kompansatörlere göre çok hafiftir.",
+              "Contaya ihtiyaç yoktur: Montajların çoğu kaynakla yapıldığı veya tek parça flanştan oluştuğu için conta gerekmez (cıvatalanan metal flanş kullanılan durumlar hariç).",
+              "Ekonomik yenileme maliyeti: Çok kısa sürede değiştirilebilir; birleştirilmiş veya açık halde alınıp işletmede birleştirilebilir."
+            ]
+          }
+        ]
+      },
+      "wildstar-orman-yangin-mudahale": {
+        "models": ["Markus (837515)", "Jaguar (837429)", "Ignis (837480)"]
+      },
+      "itfaiyeci-elbisesi": {
+        "models": [
+          "Maximus 2.0 (832551)",
+          "Optimus 2.0 (832536)",
+          "Stefan III (832507)",
+          "Stefan II (832356)",
+          "Primus 2.0 (832548)",
+          "Salvator (832330)",
+          "Mare (833115)",
+          "Alexus (832346)",
+          "Cool Vest (Soğuk Yelek)"
+        ],
+        "documents": [
+          {
+            "title": "Ürün karşılaştırma (PDF)",
+            "href": "/docs/Kivanc-Group-Itfaiyeci-Elbiseleri-Karsilastirma-2026.pdf"
+          },
+          {
+            "title": "FIRESTAR broşürü (PDF)",
+            "href": "/docs/KIVANC-GROUP-Firestar-Firefighting-Garments-Equipments-LR.pdf"
+          }
+        ]
+      },
+      "industar-isi-ve-aleve-karsi-koruma": {
+        "description": [
+          "Petrol ve gaz endüstrisindeki yüksek sağlık ve güvenlik standartlarına rağmen; işçiler, parlama durumları dahil olmak üzere çok sayıda tehlikeyle karşı karşıya kalabilir ve bu parlama sırasında işçiler, ısı ve aleve maruz kalır.",
+          "Pamuk veya polyester gibi geleneksel kumaşlar, sadece 3-4 saniyelik bir alev yalamasında yanmaya devam eder, erir veya damlar.",
+          "INDUSTAR koruyucu elbiseler ise daimi olarak aleve dayanıklıdır; erimez, tutuşmaz ve yanmaya devam etmez. Bu sayede kişinin yanık riskini azaltır, kaçış için zaman sağlar; hayatta kalma şansını artırır."
+        ],
+        "sections": [
+          {
+            "title": "Uygulama alanları",
+            "items": [
+              "Petrol ve gaz",
+              "Rafineriler",
+              "Off-shore",
+              "Petrokimya tesisleri",
+              "Mühimmat tesisleri",
+              "Havai fişek üreticileri",
+              "Çimento endüstrisi",
+              "Cam endüstrisi",
+              "Askeriye ve polis",
+              "Demiryolları",
+              "Gemi endüstrisi"
+            ]
+          },
+          {
+            "title": "ISO 11612 – Isı ve aleve karşı koruma",
+            "text": [
+              "Bu standardın amacı ısı ve aleve karşı koruma sağlayan giysi için asgari performans gereksinimlerini belirlemektir. Bu standartta listelenen birçok tehlike arasında üç performans seviyesi (dördüncü bir performans seviyesine sahip radyan ısı dışında) bulunmaktadır. Seviye 1 düşük, seviye 2 orta, seviye 3 yüksek risk algılamasına maruz kalındığını gösterir."
+            ],
+            "items": [
+              "Kod A: Sınırlı alev yayılması (A1, A2)",
+              "Kod B: Konvektif ısı (B1, B2, B3)",
+              "Kod C: Radyan ısı (C1, C2, C3, C4)",
+              "Kod D: Ergimiş alüminyum (D1, D2, D3)",
+              "Kod E: Ergimiş demir (E1, E2, E3)",
+              "Kod F: Kontak ısı (F1, F2, F3)"
+            ]
+          },
+          {
+            "title": "EN 1149-5 – Elektrostatik özellikler",
+            "text": [
+              "Bu Avrupa standardı, elektrostatik yük boşalmaları sırasında oluşabilecek patlamaların engellenebilmesi için topraklama sistemine ilave olarak kullanılan antistatik koruyucu giysilerin malzeme ve tasarım gereksinimlerini belirtmektedir. Bu gereksinimler oksijenle zenginleştirilmiş yanıcı atmosferlerde yeterli olmayabilir. Standart, şebeke voltajlarına karşı koruma için geçerli değildir."
+            ]
+          }
+        ],
+        "models": [
+          "RYAN – 839197 Gömlek (Class 1)",
+          "JASPER – 844117 Pantolon",
+          "DANNY – 822131 Sweatshirt (Class 1)",
+          "BENSON – 822144 Dik Yaka Sweatshirt",
+          "BARRY – 822143 Bisiklet Yaka Sweatshirt",
+          "ALBERTO – 834112 Alev Almaz Takım",
+          "ALBERT – 835103 Alev Almaz Yağmurluk",
+          "SIMON – 839116 Gömlek (Class 1)",
+          "HAWKINS – 839199 Gömlek (Class 1)",
+          "ROGER – 838167 Tulum",
+          "PASCAL – 829242 Su Geçirmez Kaban",
+          "LUCAS – 829257 Kaban (Class 2)",
+          "ADAM – 837275 Ceket & Pantolon (8,7)",
+          "KELVIN – 837277 Ceket & Pantolon",
+          "SERGIO – 839198 Gömlek (Class 1)",
+          "ALEX – 838282 Tulum (Class 1)",
+          "LUIS – 816158 Yelek (7,5 cal/cm²)",
+          "MARCO – 837270 Ceket & Pantolon (7,5)",
+          "ERIC – 854106 Alev Almaz İçlik",
+          "NICK – 825105 Çift Katlı Örme Başlık",
+          "LEE – 812100 Çorap"
+        ],
+        "documents": [
+          {
+            "title": "INDUSTAR broşürü (PDF)",
+            "href": "/docs/Industar-TR-LR.pdf"
+          }
+        ]
+      },
+      "arcstar-elektrik-arkina-karsi-koruma": {
+        "description": [
+          "Elektrik arkı, iletkenler arasında yüksek akımlı kesintisiz bir elektrik deşarjıdır ve çok parlak bir ışık ve yoğun ısı oluşturur. Yoğun sıcaklık sonucu ciddi yanık ve ölümcül sonuçlar doğurabilecek ciddi bir tehdittir. Elektrik arkı; yoğun ışık, basınç dalgası, gürültü veya toksik dumanlar gibi başka potansiyel tehlikeler de doğurabilmektedir.",
+          "Enerji iletim ve dağıtım tesislerinde çalışan kişiler ile fabrikalarda görev alan bakım ekibi personeli için yüksek gerilim sürekli bir tehdit oluşturmaktadır.",
+          "Pamuk, polyester gibi geleneksel kumaşlar elektrik arkına maruz kaldığında tutuşur, delinir ve alev alarak kişinin vücudunda yaralanmalara sebebiyet verir.",
+          "ARCSTAR koruyucu elbiseler, elektrik arkı ve benzer şartlar altında çalışanların uzun süreli yaralanma riskini azaltır ve hayatta kalma şansını artırır."
+        ],
+        "sections": [
+          {
+            "title": "Uygulama alanları",
+            "items": [
+              "Elektrik şirketleri",
+              "Enerji dağıtım",
+              "Enerji santralleri",
+              "Demiryolları",
+              "Mühendislik projeleri",
+              "Rafineriler",
+              "Gemi endüstrisi",
+              "Otomotiv endüstrisi"
+            ]
+          },
+          {
+            "title": "Elektrik arkına karşı koruma sağlayan giysi gereksinimleri",
+            "text": [
+              "Elektrik arkının termal etkilerine karşı koruma için gereksinimler bulunmaktadır. Standarda göre bu iki yolla yapılabilir; kullanıcının ihtiyaçlarına göre bir veya iki metot da kullanılabilir.",
+              "Açık ark metodu EN 61482-1-1, açık kutu testi ise EN 61482-1-2 kapsamına düşmektedir.",
+              "Açık ark testi, Ark Termal Performans Değeri (ATPV) ile gerçekleşir ve en az 167,5 kJ/m² (4 cal/cm²) olmalıdır. Yüksek değer daha iyi koruma anlamına gelir. Gerekli ATPV değeri risk analiziyle belirlenir.",
+              "Kutu testinde sınıf, test şartlarına ve ölçülen termal korumaya göre belirlenir. Sınıf 1 minimumdur ve 4 kA’lık bir akım, 500 ms ve 30 cm uzaklığı kapsar. Sınıf 2 testi için bu değer 7 kA’dır."
+            ]
+          }
+        ],
+        "models": [
+          "Paulson – Başlık için Yedek Vizör",
+          "3M H-700N-VI Beyaz Baret",
+          "Eureka 13-4 Heat FR-AF – ATPV >12",
+          "RUSSELL – 805106 Eldiven (Class 1)",
+          "DEAN – 834244 Takım (40 cal/cm²)",
+          "JASPER – 844117 Pantolon",
+          "BRICE – 839114 Gömlek (Class 1)",
+          "DUSTIN – 835108 Pardesü (25 cal/cm²)",
+          "HENRY – 834220 Takım (Class 2)",
+          "DANNY – 822131 Sweatshirt (Class 1)",
+          "MARCO – 837270 Ceket & Pantolon (7,5)",
+          "RYAN – 839197 Gömlek (Class 1)",
+          "LUIS – 816158 Yelek (7,5 cal/cm²)",
+          "HAWKINS – 839199 Gömlek (Class 1)",
+          "LUCAS – 829257 Kaban (Class 2)",
+          "ADAM – 837275 Ceket & Pantolon (8,7)",
+          "ALEX – 838282 Tulum (Class 1)",
+          "SIMON – 839116 Gömlek (Class 1)",
+          "SERGIO – 839198 Gömlek (Class 1)",
+          "LEO – 827110 Başlık (40 cal/cm²)",
+          "Paulson – Elektrik Ark Vizörü",
+          "Paulson – Elektrik Ark Gözlüğü",
+          "TED – 896107 Aramid Kemer",
+          "RONALD – 805101 Eldiven (40 cal/cm²)",
+          "LUKE – 827119 Başlık (25 cal/cm²)",
+          "ERIC – 854106 Alev Almaz İçlik",
+          "NICK – 825105 Çift Katlı Örme Başlık"
+        ],
+        "documents": [
+          {
+            "title": "ARCSTAR broşürü (PDF)",
+            "href": "/docs/Arcstar-TR-LR.pdf"
+          }
+        ]
+      },
+      "metalstar-ergimis-metal-sicramasina-karsi-koruma": {
+        "description": [
+          "Metalleri basınç, ısı, alev veya elektrik arkı ile birleştirme işlemine kaynak denir. Potansiyel tehlikelere karşı yeterli önlemler alınırsa kaynak çalışması güvenli bir iştir. Bu önlemler göz ardı edilirse kaynakçılar kıvılcımlara, ergimiş metal sıçramalarına, radyasyona, ısıya, sıcak metale, dumana, gaza ve hatta elektrik çarpmasına maruz kalabilir.",
+          "Kaynakçılar da itfaiyeciler ve diğer birçok meslek grubu gibi yaralanmalardan koruyan bir giysi giymelidir. En sık rastlanan yaralanma, kaynak sıçramasıyla oluşan yanıklardır. Ciddi yanıklar ise cilde kısa süreli çok yoğun ark temasında meydana gelir.",
+          "Demir ve çelik tesislerinde karşılaşılan ergimiş metal sıçramaları çok tehlikeli olabilir. Ergimiş metal iş giysisinin dış kumaşına yapışabilir ve kişinin cildini yakarak çok ciddi yaralanmalara sebep olabilir. Pamuk veya polyester gibi geleneksel kumaşlar kaynak veya ergimiş metal sıçraması sırasında yanmaya, erimeye veya damlamaya başlar ve yaralanmaları artırır.",
+          "METALSTAR koruyucu elbiseler, ergimiş metal ve kaynak sıçramaları meydana geldiğinde metalin kumaşın üzerinden akmasına imkan sağlar ve yanmaya devam etmez. Kişinin yanık riskini azaltır ve hayatta kalma şansını artırır."
+        ],
+        "sections": [
+          {
+            "title": "Uygulama alanları",
+            "items": [
+              "Demir ve çelik endüstrisi",
+              "Otomotiv endüstrisi",
+              "Mühendislik projeleri",
+              "Dökümhaneler",
+              "Demiryolları",
+              "Gemi endüstrisi",
+              "Kaynak işletmeleri"
+            ]
+          },
+          {
+            "title": "ISO 11612 – Isı ve aleve karşı koruma",
+            "text": [
+              "Bu standardın amacı ısı ve aleve karşı koruma sağlayan giysi için asgari performans gereksinimlerini belirlemektir. Bu standartta listelenen birçok tehlike arasında üç performans seviyesi (dördüncü bir performans seviyesine sahip radyan ısı dışında) bulunmaktadır. Seviye 1 düşük, seviye 2 orta, seviye 3 yüksek risk algılamasına maruz kalındığını gösterir."
+            ],
+            "items": [
+              "Kod A: Sınırlı alev yayılması (A1, A2)",
+              "Kod B: Konvektif ısı (B1, B2, B3)",
+              "Kod C: Radyan ısı (C1, C2, C3, C4)",
+              "Kod D: Ergimiş alüminyum (D1, D2, D3)",
+              "Kod E: Ergimiş demir (E1, E2, E3)",
+              "Kod F: Kontak ısı (F1, F2, F3)"
+            ]
+          },
+          {
+            "title": "ISO 11611 – Kaynak ve benzeri işlemlerde koruma",
+            "text": [
+              "ISO 11611; giyen kişinin başı (başlık) ve ayakları (tozluk) dahil vücudunu korumak için tasarlanan, kaynak ve benzeri risk taşıyan yardımcı işlemler sırasında giyilen başlık, önlük, kolluk ve tozluk dahil koruyucu giysilerin asgari temel güvenlik gereksinimlerini ve test metotlarını tanımlar.",
+              "Standart, spesifik performans gereksinimlerine sahip iki koruma sınıfı tanımlar: düşük seviye için Sınıf 1, yüksek seviye için Sınıf 2.",
+              "Sınıf 1: Düşük seviyelerde sıçrama ve radyan ısıya neden olan düşük tehlikeli kaynak işlerine karşı korumadır.",
+              "Sınıf 2: Yüksek seviyelerde sıçrama ve radyan ısıya neden olan daha tehlikeli kaynak işlerine karşı korumadır."
+            ]
+          }
+        ],
+        "models": [
+          "CASE – 838101 Tulum",
+          "LEROY – 827122 Başlık",
+          "TRAVIS – 834188 Ceket & Pantolon",
+          "AXIS – 837113 Ceket & Pantolon",
+          "VINCE – 819101 Kolluk",
+          "VINCENT – 817116 Tozluk",
+          "Bullard 911C Baret",
+          "KELVIN – 837277 Ceket & Pantolon"
+        ],
+        "documents": [
+          {
+            "title": "METALSTAR broşürü (PDF)",
+            "href": "/docs/Metalstar-TR-LR.pdf"
+          }
+        ]
+      },
+      "refstar-radyan-isiya-karsi-koruma": {
+        "description": [
+          "Demir ve çelik fabrikaları, cam fabrikaları gibi yüksek sıcaklıktaki tesislerde çalışan kişiler yüksek oranda radyan ısıya maruz kalır ve bu yaralanmalara sebep olabilir. Pamuk, polyester gibi geleneksel kumaşlar tutuşur, alev alır. Ayrıca yüksek radyan ısı kişinin çalışma imkanını kısıtlar.",
+          "REFSTAR koruyucu elbiseler, radyan ısıyı geri yansıtarak daha konforlu ve güvenli bir çalışma ortamı için tasarlanmıştır.",
+          "REFSTAR elbiseler ilave bir koruma sağlamak amacıyla diğer koruyucu elbiselerin üzerine giyilmelidir. Koruyucu elbiselerin yerine değil, onların tamamlayıcısı olarak kullanılmalıdır."
+        ],
+        "sections": [
+          {
+            "title": "Uygulama alanları",
+            "items": [
+              "Havalimanı personeli",
+              "Alüminyum işçileri",
+              "Otomotiv endüstrisi",
+              "Çimento endüstrisi",
+              "Seramik endüstrisi",
+              "Demiryolları",
+              "Cam endüstrisi",
+              "Demir ve çelik endüstrisi",
+              "Gemi endüstrisi",
+              "Kaynak işletmeleri"
+            ]
+          },
+          {
+            "title": "ISO 11612 – Isı ve aleve karşı koruma",
+            "text": [
+              "Bu standardın amacı ısı ve aleve karşı koruma sağlayan giysi için asgari performans gereksinimlerini belirlemektir. Bu standartta listelenen birçok tehlike arasında üç performans seviyesi (dördüncü bir performans seviyesine sahip radyan ısı dışında) bulunmaktadır. Seviye 1 düşük, seviye 2 orta, seviye 3 yüksek risk algılamasına maruz kalındığını gösterir."
+            ],
+            "items": [
+              "Kod A: Sınırlı alev yayılması (A1, A2)",
+              "Kod B: Konvektif ısı (B1, B2, B3)",
+              "Kod C: Radyan ısı (C1, C2, C3, C4)",
+              "Kod D: Ergimiş alüminyum (D1, D2, D3)",
+              "Kod E: Ergimiş demir (E1, E2, E3)",
+              "Kod F: Kontak ısı (F1, F2, F3)"
+            ]
+          },
+          {
+            "title": "Sertifikasyon ve koruma seviyeleri",
+            "text": [
+              "REFSTAR elbiseler ISO 11612’ye göre sertifikalıdır. Alüminize elbiselerin radyan ısı transfer değeri, dokuma koruyucu kumaşlara kıyasla çok daha yüksektir. ISO 11612’ye göre radyan ısı transfer kodu C olarak belirlenmiştir. 4 seviye bulunur: C1 en düşük, C4 en yüksek koruma seviyesidir.",
+              "Alüminize elbiseler ergimiş metal sıçramalarına karşı da koruma sağlar. Ergimiş alüminyum sıçraması Kod D, ergimiş demir sıçraması Kod E altında ele alınır. D1 ve E1 en düşük koruma seviyesiyken D3 ve E3 en yüksek koruma seviyesidir."
+            ]
+          }
+        ],
+        "models": [
+          "WOLF – 827100 Başlık",
+          "PAUL – 827103 Başlık",
+          "JACK – 827101 Başlık",
+          "TYLER – 805100 Eldiven",
+          "TERRY – 805105 Eldiven",
+          "HARVEY – 817100 Tozluk",
+          "CURTIS – 817101 Tozluk",
+          "ALUSTAR ULTRA LIGHT – 830100 Set",
+          "ALUSTAR – 830102 Alüminize Elbise Seti",
+          "FELIX – 837114 Ceket & Pantolon",
+          "GLEEN – 837157 Ceket & Pantolon",
+          "CLIFF – 834109 Ceket & Pantolon",
+          "COOPER – 818112 Panço",
+          "BRUNO – 835105 Pardesü",
+          "MELVIN – 818102 Önlük",
+          "TROY – 818103 Önlük"
+        ],
+        "documents": [
+          {
+            "title": "REFSTAR broşürü (PDF)",
+            "href": "/docs/Refstar-TR-LR.pdf"
+          }
+        ]
+      },
+      "forestar-kesilmeye-karsi-koruyucu-elbiseler-ve-ekipman": {
+        "description": [
+          "Zincirli testereler büyük yaralanmalara yol açabilir. Zincirli el testeresi kullanan herkesin yeterli eğitimi almış ve gerekli yetkinliklere sahip olması önemlidir. Ayrıca zincirli testereyi kullanırken uygun kesilmeye karşı koruyucu giysi giymeleri gerekmektedir.",
+          "Forestar kesilmeye dayanıklı kıyafet, ağaç kesme ve boylama operatörleri için tasarlanmış olup özel koruyucu katmanı sayesinde motorlu testereyi durdurup kişinin zarar görmesini engeller.",
+          "Forestar kesilmeye dayanıklı elbiseler, Türkiye’de üretilmiş ilk EN 381 sertifikalı üründür.",
+          "Kesilmeye dayanıklı elbiseler tam koruma için doğru ekipmanla beraber kullanılmalıdır. Bu ekipmanlar; kesilmeye dayanıklı çizme, kesilmeye dayanıklı eldiven, baret, vizör ve kulak koruyucudur."
+        ],
+        "sections": [
+          {
+            "title": "Uygulama alanları",
+            "items": ["Fidancılık", "Ormancılık", "Enerji dağıtım", "Tarım"]
+          },
+          {
+            "title": "Zincirli testereye karşı koruma sağlayan giysi gereksinimleri",
+            "text": [
+              "Zincirli testere KKD’lerinden bazıları Sınıf 1, Sınıf 2 ve Sınıf 3 olarak etiketlenmiştir. Bu etiket, ürünün test edildiği motorlu testere hızını ve dolayısıyla testereyi etkin bir şekilde durdurabileceği hızı tanımlar. Sınıf 1 ürünler 20 m/s, Sınıf 2 ürünler 24 m/s ve Sınıf 3 ürünler 28 m/s testere hızıyla test edilir.",
+              "Bacak koruması, zincirli testere kullanırken önemli bir KKD parçasıdır ve EN 381-5 ile uyumlu olmalıdır.",
+              "Baret EN 397, kulak koruma EN 352-1’e göre uyumlu olmalıdır. Gözlerin korunması ise EN 1731 ile uyumlu vizör veya EN 166 ile uyumlu güvenlik gözlüğü ile sağlanır.",
+              "Kesilmeye karşı dayanıklı ceketler EN 381-11’e uygun olmalıdır.",
+              "Kesilmeye dayanıklı eldivenler, mekanik tehlikeler için EN 388 ve zincirli el testeresi için EN 381-7 ile uyumlu olmalıdır; zincirli testere kesilmelerine, dikenli malzemelere ve soğuk/ıslak koşullara karşı koruma sağlamalıdır.",
+              "Kesilmeye dayanıklı çizmeler için özel gereksinimler EN ISO 20345:2011’de yer almaktadır."
+            ]
+          }
+        ],
+        "models": [
+          "Ormancı Baret Seti (820803019)",
+          "Ormancı Baret Seti (G3001 NUV-OR)",
+          "Ormancı Baret Seti (820854013)",
+          "HAIX® PROTECTOR ULTRA 2.0 GTX",
+          "Haix® PROTECTOR FOREST 2.1 GTX red",
+          "Haix® PROTECTOR FOREST 2.1 GTX orange",
+          "Soft Touch SPSCS100.31C1 Eldiven",
+          "ARBOR – 829163 Ceket",
+          "TIMBER – 848126 Pantolon",
+          "MILES – 843147 Tek Katlı Ceket",
+          "HARVIK 9794 – Kesilmeye Dayanıklı Çizme",
+          "HAIX PROTECTOR LIGHT 2.0 – Bot"
+        ],
+        "documents": [
+          {
+            "title": "FORESTAR broşürü (PDF)",
+            "href": "/docs/Forestar-TR-LR.pdf"
+          }
+        ]
+      },
+      "polis-urunleri": {
+        "models": [
+          "Polis Tulumu – PBI",
+          "Polis Tulumu – Aramid",
+          "Pilot Montu"
+        ],
+        "documents": [
+          {
+            "title": "MILSTAR broşürü (PDF)",
+            "href": "/docs/2022-MILSTAR-Askeriye-ve-Polis-Urunleri-LR.pdf"
+          }
+        ]
+      },
+      "askeriye-urunleri": {
+        "models": ["Pilot Tulumu", "Pilot Montu", "Tankçı Tulumu"],
+        "documents": [
+          {
+            "title": "MILSTAR broşürü (PDF)",
+            "href": "/docs/2022-MILSTAR-Askeriye-ve-Polis-Urunleri-LR.pdf"
+          }
+        ]
+      },
+      "protek-yangin-battaniyesi": {
+        "description": [
+          "PROTEK® Yangın Battaniyesi, EN 1869 ve DIN 14155 standartlarına uygun olarak üretilmektedir. Çeşitli boyutları mevcuttur ve yangınla mücadelede birçok yarar sağlar.",
+          "Kullanılan özel kumaş sayesinde yangın bölgesinin oksijenle temasını keserek yangınları büyümeden söndürür.",
+          "Asbest içermeyen cam elyaf kumaştan üretilmiştir. Tek parça kumaştan imal edilmiştir ve üretiminde yüksek sıcaklığa dayanıklı dikiş ipliği kullanılmıştır. Kumaşı, sarıldığı yüzeyden kaymayı önleyen bukle dokulu yapıya sahiptir.",
+          "Kullanım kolaylığı sağlayan, yüksek sıcaklığa dayanıklı kumaştan üretilmiş tutma ceplerine sahiptir. Yangın esnasında mutlaka bu cepleri kullanarak müdahale edin.",
+          "Kişisel ve endüstriyel kullanım için, kullanım ortamında pratik şekilde asılabilecek, üzerinde kullanma talimatı yazılı, orijinal çantası içinde sunulur."
+        ],
+        "specs": [
+          {
+            "label": "Malzeme",
+            "value": "Özel bukle dokulu cam elyaf kumaş (asbest içermez)"
+          },
+          {
+            "label": "Standart boyutlar",
+            "value": "90 x 150 cm, 160 x 180 cm, 100 x 140 cm (isteğe bağlı farklı boyutlarda üretilir)"
+          },
+          {
+            "label": "Standartlar",
+            "value": "EN 1869, DIN 14155"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Ne için kullanılır?",
+            "items": [
+              "Yangın başlangıcında alevin üzerine atılarak yangınların söndürülmesinde",
+              "Yangında mahsur kalan insanların sarınarak yangın ortamından uzaklaşmasında",
+              "Yangından kurtarılması gereken ekipmanların sarılarak tahliyesinde"
+            ]
+          },
+          {
+            "title": "Kullanım alanları",
+            "text": [
+              "Fabrikalar, oteller, hastaneler, okullar, akaryakıt istasyonları, toplu taşıma araçları, otomobiller, mağazalar, restoranlar ve ofisler gibi yangına duyarlı ortamlarda kullanıma uygundur."
+            ]
+          },
+          {
+            "title": "Kullanım talimatları",
+            "items": [
+              "Yangın battaniyesini çantasında muhafaza edin.",
+              "Çantası üzerindeki askı sayesinde asabilirsiniz.",
+              "Battaniye çanta içine özel bir katlama yöntemiyle yerleştirilmiştir. Ceplere ellerinizi sokarak çantadan çıkardığınızda yangına müdahaleye uygun şekilde tamamen açılmış olur. Kullandıktan sonra aynı şekilde katlayarak yerine koyun.",
+              "Kendinden alev almaz bir ürün olduğu için müdahaleden önce ekstra uygulama gerektirmez. Müdahaleden önce ıslatmayın veya suya sokmayın."
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "title": "Yangın battaniyesi broşürü (PDF)",
+            "href": "/docs/Yangin-Battaniyesi.pdf"
+          }
+        ]
+      },
+      "silis-kumu-nedir": {
+        "description": [
+          "Silis kumu (kuvars kumu), büyük oranda silikon dioksitten (SiO₂) oluşan doğal bir kum türüdür. Sert yapısı ve kimyasal kararlılığı sayesinde birçok sanayi kolunda hammadde olarak kullanılır."
+        ]
+      },
+      "silis-kumu-kullanim-alanlari": {
+        "description": [
+          "Silis kumu; cam üretimi, döküm, yapı malzemeleri, filtrasyon ve seramik gibi alanlarda kullanılır. Tane boyutu ve saflık gereksinimleri kullanım amacına göre değişir."
+        ]
+      },
+      "musselstone-nedir": {
+        "description": [
+          "Musselstone (midye taşı, küfeki), deniz kabuklarının zaman içinde sıkışıp çimentolanmasıyla oluşan, gözenekli yapıda doğal bir yapı taşıdır."
+        ],
+        "documents": [
+          {
+            "title": "Musselstone broşürü (PDF)",
+            "href": "/docs/Musselstone-2025.pdf"
+          }
+        ]
+      },
+      "musselstone-kullanim-alanlari": {
+        "description": [
+          "Musselstone; yapı ve cephe kaplamasında, duvar işlerinde ve peyzaj uygulamalarında kullanılabilir."
+        ]
+      },
+      "musselstone-ozellikleri": {
+        "description": [
+          "Musselstone’un en belirgin özellikleri gözenekli dokusu ve kabuk izleri taşıyan doğal görünümüdür. Teknik değerler için bizimle iletişime geçebilirsiniz."
+        ],
+        "documents": [
+          {
+            "title": "Musselstone broşürü (PDF)",
+            "href": "/docs/Musselstone-2025.pdf"
+          }
+        ]
+      }
+    }
+  },
+  "data-divisions": {
+    "divisions": [
+      {
+        "slug": "is-guvenligi",
+        "title": "İş Güvenliği",
+        "intro": "Isıya, aleve, statik yüklenmelere, ark patlamasına, eriyik metale, kaynak sıçramalarına ve kesilmelere karşı kişisel koruyucu elbiseler. Ürünlerimiz CE belgelidir ve Ürün Sorumluluk Sigortası kapsamındadır.",
+        "groups": [
+          {
+            "title": "İtfaiye Ürünleri",
+            "items": [
+              {
+                "name": "İtfaiyeci Elbisesi",
+                "slug": "itfaiyeci-elbisesi"
+              },
+              {
+                "name": "Alüminize Elbise",
+                "slug": "aluminize-elbise"
+              },
+              {
+                "name": "İstasyon Üniforması",
+                "slug": "istasyon-uniformasi"
+              },
+              {
+                "name": "İtfaiyeci İç Giyim",
+                "slug": "itfaiyeci-ic-giyim"
+              },
+              {
+                "name": "İtfaiyeci Örme Başlık",
+                "slug": "itfaiyeci-orme-baslik"
+              },
+              {
+                "name": "İtfaiyeci Bareti",
+                "slug": "itfaiyeci-bareti"
+              },
+              {
+                "name": "İtfaiyeci Çizmesi",
+                "slug": "itfaiyeci-cizmesi"
+              },
+              {
+                "name": "İtfaiyeci Eldiveni",
+                "slug": "itfaiyeci-eldiveni"
+              },
+              {
+                "name": "Termal Kameralar",
+                "slug": "termal-kameralar"
+              },
+              {
+                "name": "Solunum Seti",
+                "slug": "solunum-seti"
+              },
+              {
+                "name": "Katman Alternatifleri",
+                "slug": "katman-alternatifleri"
+              }
+            ]
+          },
+          {
+            "title": "Endüstri Ürünleri",
+            "items": [
+              {
+                "name": "INDUSTAR – Isı ve Aleve Karşı Koruma",
+                "slug": "industar-isi-ve-aleve-karsi-koruma"
+              },
+              {
+                "name": "ARCSTAR – Elektrik Arkına Karşı Koruma",
+                "slug": "arcstar-elektrik-arkina-karsi-koruma"
+              },
+              {
+                "name": "METALSTAR – Ergimiş Metal Sıçramasına Karşı Koruma",
+                "slug": "metalstar-ergimis-metal-sicramasina-karsi-koruma"
+              },
+              {
+                "name": "REFSTAR – Radyan Isıya Karşı Koruma",
+                "slug": "refstar-radyan-isiya-karsi-koruma"
+              }
+            ]
+          },
+          {
+            "title": "Ormancı Ürünleri",
+            "items": [
+              {
+                "name": "WILDSTAR – Orman Yangın Müdahale",
+                "slug": "wildstar-orman-yangin-mudahale"
+              },
+              {
+                "name": "FORESTAR – Kesilmeye Karşı Koruyucu Elbiseler ve Ekipman",
+                "slug": "forestar-kesilmeye-karsi-koruyucu-elbiseler-ve-ekipman"
+              }
+            ]
+          },
+          {
+            "title": "Askeriye ve Polis Ürünleri",
+            "items": [
+              {
+                "name": "Polis Ürünleri",
+                "slug": "polis-urunleri"
+              },
+              {
+                "name": "Askeriye Ürünleri",
+                "slug": "askeriye-urunleri"
+              }
+            ]
+          },
+          {
+            "title": "Arama Kurtarma Ürünleri",
+            "items": [
+              {
+                "name": "Arama Kurtarma Ürünleri",
+                "slug": "arama-kurtarma-urunleri"
+              }
+            ]
+          },
+          {
+            "title": "Sektörel Çözümler",
+            "items": [
+              {
+                "name": "Sektörel Çözümler",
+                "slug": "sektorel-cozumler"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "muhendislik",
+        "title": "Mühendislik",
+        "intro": "İşletmelerde oluşabilecek ısı kayıplarını önlemek için yüksek sıcaklıkta çalışan makine ve ekipmanlara modern yöntemlerle izolasyon uyguluyoruz.",
+        "groups": [
+          {
+            "title": "Cam Elyaf Kumaşlar ve İzolasyon Malzemeleri",
+            "items": [
+              {
+                "name": "İzolasyon Malzemeleri",
+                "slug": "izolasyon-malzemeleri"
+              },
+              {
+                "name": "Dikiş İplikleri",
+                "slug": "dikis-iplikleri"
+              },
+              {
+                "name": "Şerit, Fitil, Makaron",
+                "slug": "serit-fitil-makaron"
+              }
+            ]
+          },
+          {
+            "title": "Makine Ekipman İzolasyonu",
+            "items": [
+              {
+                "name": "Klevostar – Çözülebilir Yastık Sistemi ile Türbin, Makine ve Ekipman İzolasyonu",
+                "slug": "klevostar-cozulebilir-yastik-sistemi-ile-turbin-makine-ve-ekipman-izolasyonu"
+              },
+              {
+                "name": "Püskürtme Yöntemi ile Türbin, Makine ve Ekipman İzolasyonu",
+                "slug": "puskurtme-yontemi-ile-turbin-makine-ve-ekipman-izolasyonu"
+              },
+              {
+                "name": "Peomat Plastik Enjeksiyon Makinaları İzolasyonu",
+                "slug": "peomat-plastik-enjeksiyon-makinalari-izolasyonu"
+              },
+              {
+                "name": "Tekos Flanş Siperi",
+                "slug": "tekos-flans-siperi"
+              },
+              {
+                "name": "Vanomat Vana Ceketi",
+                "slug": "vanomat-vana-ceketi"
+              },
+              {
+                "name": "Egzoz İzolasyon Yastığı",
+                "slug": "egzoz-izolasyon-yastigi"
+              },
+              {
+                "name": "Kazan Ayna İzolasyonu",
+                "slug": "kazan-ayna-izolasyonu"
+              }
+            ]
+          },
+          {
+            "title": "Diğer Ürünler",
+            "items": [
+              {
+                "name": "Tekstil Kompansatör",
+                "slug": "tekstil-kompansator"
+              },
+              {
+                "name": "PROTEK® Yangın Battaniyesi",
+                "slug": "protek-yangin-battaniyesi"
+              },
+              {
+                "name": "PROTEK® Duman Perdesi",
+                "slug": "protek-duman-perdesi"
+              },
+              {
+                "name": "PROTEK® Kaynak Örtüsü",
+                "slug": "protek-kaynak-ortusu"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "slug": "madencilik",
+        "title": "Madencilik",
+        "intro": "Madencilik bölümümüzde Silis Kumu (Kuvars Kumu) ve Musselstone (Midye Taşı - Küfeki) çıkarılmaktadır.",
+        "groups": [
+          {
+            "title": "Silis Kumu",
+            "items": [
+              {
+                "name": "Silis Kumu Nedir?",
+                "slug": "silis-kumu-nedir"
+              },
+              {
+                "name": "Silis Kumu Kullanım Alanları",
+                "slug": "silis-kumu-kullanim-alanlari"
+              }
+            ]
+          },
+          {
+            "title": "Musselstone",
+            "items": [
+              {
+                "name": "Musselstone Nedir?",
+                "slug": "musselstone-nedir"
+              },
+              {
+                "name": "Musselstone Kullanım Alanları",
+                "slug": "musselstone-kullanim-alanlari"
+              },
+              {
+                "name": "Musselstone Özellikleri",
+                "slug": "musselstone-ozellikleri"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "data-documents": {
+    "legislation": [
+      {
+        "title": "6331 Sayılı İş Sağlığı ve Güvenliği Kanunu",
+        "href": "/docs/6331-is-sagligi-ve-guvenligi-kanunu.pdf"
+      },
+      {
+        "title": "KKD Yönetmeliği",
+        "href": "/docs/kkd-yonetmeligi.pdf"
+      },
+      {
+        "title": "KKD’nin İşyerlerinde Kullanılması Hakkındaki Yönetmelik",
+        "href": "/docs/kkd-isyerinde-kullanilmasi-hakkinda-yonetmelik.pdf"
+      },
+      {
+        "title": "Belediye İtfaiye Yönetmeliği",
+        "href": "/docs/belediye-itfaiye-yonetmeligi.pdf"
+      },
+      {
+        "title": "7223 Ürün Güvenliği ve Teknik Düzenlemeler Kanunu",
+        "href": "/docs/7223-urun-guvenligi-ve-teknik-duzenlemeler-kanunu.pdf"
+      }
+    ],
+    "brochures": [
+      {
+        "title": "Firestar – İtfaiye katmanları",
+        "href": "/docs/Firestar-Layer-Options-LR.pdf",
+        "date": "2026-06-01"
+      },
+      {
+        "title": "Firestar – İtfaiye katman detayları",
+        "href": "/docs/Firestar-Layer-Details-LR.pdf",
+        "date": "2026-06-01"
+      },
+      {
+        "title": "Alustar – Alüminize katmanlar",
+        "href": "/docs/Aluminized-Layer-Options-LR.pdf",
+        "date": "2026-06-01"
+      },
+      {
+        "title": "Alustar – Alüminize katman detayları",
+        "href": "/docs/Aluminized-Layer-Details-LR.pdf",
+        "date": "2026-06-01"
+      },
+      {
+        "title": "Kıvanç Group İtfaiyeci Elbiseleri – Ürün Karşılaştırma",
+        "href": "/docs/Kivanc-Group-Itfaiyeci-Elbiseleri-Karsilastirma-2026.pdf",
+        "date": "2026-07-01"
+      },
+      {
+        "title": "FIRESTAR – İtfaiyeci Kıyafetleri",
+        "href": "/docs/KIVANC-GROUP-Firestar-Firefighting-Garments-Equipments-LR.pdf",
+        "date": "2026-06-01"
+      },
+      {
+        "title": "Fire Blanket – Yangın Battaniyesi",
+        "href": "/docs/Yangin-Battaniyesi.pdf",
+        "date": "2025-08-29"
+      },
+      {
+        "title": "Musselstone – Midye Taşı (Küfeki)",
+        "href": "/docs/Musselstone-2025.pdf",
+        "date": "2025-06-20"
+      },
+      {
+        "title": "INDUSTAR – Isı ve Aleve Karşı Koruma",
+        "href": "/docs/Industar-TR-LR.pdf",
+        "date": "2022-04-01"
+      },
+      {
+        "title": "ARCSTAR – Elektrik Arkına Karşı Koruma",
+        "href": "/docs/Arcstar-TR-LR.pdf",
+        "date": "2022-04-01"
+      },
+      {
+        "title": "METALSTAR – Ergimiş Metal Sıçramalarına Karşı Koruma",
+        "href": "/docs/Metalstar-TR-LR.pdf",
+        "date": "2022-04-01"
+      },
+      {
+        "title": "REFSTAR – Radyan Isıya Karşı Koruma",
+        "href": "/docs/Refstar-TR-LR.pdf",
+        "date": "2022-04-01"
+      },
+      {
+        "title": "FORESTAR – Kesilmeye Karşı Koruma",
+        "href": "/docs/Forestar-TR-LR.pdf",
+        "date": "2022-04-01"
+      },
+      {
+        "title": "MILSTAR – Askeriye ve Polis Ürünleri",
+        "href": "/docs/2022-MILSTAR-Askeriye-ve-Polis-Urunleri-LR.pdf",
+        "date": "2022-04-01"
+      },
+      {
+        "title": "Opti-Syn Multi-norm Kumaş",
+        "href": "/docs/Opti-Syn-Multi-norm-Kumas-1.pdf",
+        "date": "2020-02-01"
+      },
+      {
+        "title": "Endüstriyel Çözümler",
+        "href": "/docs/YOU_INDUSTRY.pdf",
+        "date": "2020-02-01"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Alev Almaz ve Antistatik Elbiseler | Merak Edilenler",
+        "href": "https://www.youtube.com/watch?v=1rYuL8NCZBQ&list=PLI1TSS3WBTdYXv3SPY8MlZrBcRPRVOTtM&index=12"
+      },
+      {
+        "title": "Kıvanç Group Kurucusu Bedri Koza Anlatıyor",
+        "href": "https://www.youtube.com/playlist?list=PLI1TSS3WBTdaLeMervGzF7JgEfnp4NJD_"
+      }
+    ]
+  },
+  "data-news": {
+    "news": [
+      {
+        "title": "Sinop’ta bizim için çok özel bir gün",
+        "date": "2026-09-24",
+        "summary": "Yönetim Kurulu Başkanımız Bedri Koza tarafından yaptırılan ve eşi Doç. Dr. Güneş Koza’nın adını taşıyan anaokulunun açılışını yaptık. Sinop OSB’deki 6 derslikli okul, bölgede çalışan ailelerin çocuklarına okul öncesi eğitim imkanı sunacak.",
+        "href": "https://www.youtube.com/watch?v=7tVY6KYUm84&t=5s",
+        "slug": "sinopta-bizim-icin-cok-ozel-bir-gun"
+      },
+      {
+        "title": "Edirne’den çıkarılan küfeki taşımız Ayasofya restorasyonunda",
+        "date": "2026-07-01",
+        "summary": "Edirne Süloğlu’ndaki taş ocağımızdan çıkarılan küfeki taşı, Vakıflar Genel Müdürlüğü’nün sürdürdüğü Ayasofya-i Kebir Cami-i Şerifi restorasyonunda kullanılıyor. Taş, fiziki ve mekanik dayanıklılık testlerinden ve laboratuvar analizlerinden geçti.",
+        "href": "https://www.aa.com.tr/tr/kultur/edirneden-cikan-kufeki-tasi-ilk-kez-ayasofya-restorasyonunda-kullaniliyor/3982972",
+        "slug": "edirneden-cikarilan-kufeki-tasimiz-ayasofya-restorasyonunda"
+      },
+      {
+        "title": "Kıvanç Group INTERSCHUTZ 2026’da",
+        "date": "2026-06-06",
+        "summary": "1–6 Haziran 2026’da Hannover’de düzenlenen INTERSCHUTZ’ta itfaiyeci elbiselerimizi, arama kurtarma ve orman yangını kıyafetlerimizi ve yeni FR hi-vis iş kıyafeti koleksiyonumuzu ziyaretçilerle buluşturduk.",
+        "href": "https://www.youtube.com/shorts/s3MJIUZEwZ0",
+        "slug": "kivanc-group-interschutz-2026da"
+      },
+      {
+        "title": "Sinop’ta en değerli yatırımımızın temelini attık",
+        "date": "2025-11-25",
+        "summary": "Sinop OSB’de inşa edilecek Doç. Dr. Güneş Koza Anaokulu’nun temelini attık. Anaokulu, bölgede çalışanların çocuklarına güvenli ve nitelikli bir eğitim ortamı sunacak.",
+        "href": "https://youtube.com/shorts/gxLTfBD2j8A?feature=share",
+        "slug": "sinopta-en-degerli-yatirimimizin-temelini-attik"
+      },
+      {
+        "title": "Otomasyonla güçlenen üretim hattımızla tanışın",
+        "date": "2025-10-22",
+        "summary": "Yeni otomatik sistemlerle kalite standardımız yükseldi, üretim süresi kısaldı ve ölçülerde milimetrik hassasiyet sağlandı.",
+        "href": "https://www.youtube.com/shorts/iGfafo74y2E",
+        "slug": "otomasyonla-guclenen-uretim-hattimizla-tanisin"
+      },
+      {
+        "title": "Sinop üretim üssümüze yakından bakın",
+        "date": "2025-10-16",
+        "summary": "Sinop OSB’de 7.000 m² alanda hayata geçirdiğimiz üretim üssümüzde koruyucu kıyafet üretimimizi sürdürüyoruz.",
+        "href": "https://www.youtube.com/watch?v=IqB3B9oWQb8",
+        "slug": "sinop-uretim-ussumuze-yakindan-bakin"
+      },
+      {
+        "title": "Burası Sinop",
+        "date": "2025-09-24",
+        "summary": "İplikten kumaşa, kumaştan kıyafete uzanan entegre üretim gücümüzü ve kırk yılı aşkın deneyimimizi Sinop’taki tesisimizde en ileri teknolojiyle buluşturduk.",
+        "href": "https://www.youtube.com/watch?v=ZQ7nFCoYF3c",
+        "slug": "burasi-sinop"
+      },
+      {
+        "title": "IDEF’25’te yerimizi aldık",
+        "date": "2025-07-28",
+        "summary": "22–27 Temmuz’da İstanbul Fuar Merkezi’nde düzenlenen 17. IDEF Uluslararası Savunma Sanayii Fuarı’na katıldık.",
+        "slug": "idef25te-yerimizi-aldik"
+      },
+      {
+        "title": "NPPES 2025’te yerimizi aldık",
+        "date": "2025-07-03",
+        "summary": "1–2 Temmuz’da İstanbul’da düzenlenen 11. Nükleer Santraller Fuarı ve Zirvesi’ne partnerimiz Matisec ile birlikte katıldık.",
+        "slug": "nppes-2025te-yerimizi-aldik"
+      },
+      {
+        "title": "ECPC 2025’in Platin Sponsoruyuz",
+        "date": "2025-05-24",
+        "summary": "20–23 Mayıs’ta Kuşadası’nda düzenlenen 11. Avrupa Koruyucu Giysiler Konferansı’na (“Koruyucu, Akıllı, Sürdürülebilir” teması) Platin Sponsor olarak katıldık.",
+        "slug": "ecpc-2025in-platin-sponsoruyuz"
+      },
+      {
+        "title": "Sinop OSB’de geleceğe birlikte umut oluyoruz: Doç. Dr. Güneş Koza Anaokulu",
+        "date": "2025-02-21",
+        "summary": "Sinop Valiliği koordinasyonunda Milli Eğitim Müdürlüğü, Sinop OSB ve Kıvanç Group arasında anaokulu projesi için iş birliği protokolü imzalandı. 100 öğrenci kapasiteli okul, sanayi bölgesinde çalışan annelerin çocuklarına hizmet verecek.",
+        "href": "https://www.youtube.com/watch?v=7lzw89ycbuc",
+        "slug": "sinop-osbde-gelecege-birlikte-umut-oluyoruz-doc-dr-gunes-koza-anaokulu"
+      },
+      {
+        "title": "Tarih yeniden canlanıyor: Edirne Sarayı’nda Musselstone dokunuşu",
+        "date": "2025-02-19",
+        "summary": "Edirne Sarayı’nın restorasyonunda, Süloğlu’ndaki tesislerimizden çıkarılan Musselstone kullanılıyor.",
+        "slug": "tarih-yeniden-canlaniyor-edirne-sarayinda-musselstone-dokunusu"
+      },
+      {
+        "title": "Silis kumlarımız TRT Haber’de",
+        "date": "2025-02-17",
+        "summary": "Madencilik Şube Müdürümüz Ali Çildoğan, Süloğlu’ndaki tesislerimizde çıkarılan silis kumunun Irak, Senegal ve Katar’a ihraç edildiğini ve TS 12904 standardına göre üretildiğini anlattı.",
+        "href": "https://www.youtube.com/watch?v=2dkRdoxt2Rs",
+        "slug": "silis-kumlarimiz-trt-haberde"
+      },
+      {
+        "title": "Bedri Koza Anadolu Ajansı’na yangın battaniyelerimizi anlattı",
+        "date": "2025-02-03",
+        "summary": "Yönetim Kurulu Başkanımız Bedri Koza, Edirne-Süloğlu tesisimizde ürettiğimiz yangın battaniyeleri ve yangın önleyici ekipmanların yerli imkanlarla geliştirilmesi hakkında Anadolu Ajansı’na bilgi verdi.",
+        "href": "https://www.aa.com.tr/tr/yasam/edirnede-uretilen-yangin-battaniyesi-ve-koruyucu-urunler-talep-goruyor/3470017",
+        "slug": "bedri-koza-anadolu-ajansina-yangin-battaniyelerimizi-anlatti"
+      },
+      {
+        "title": "Intersec 2025’teydik",
+        "date": "2025-01-16",
+        "summary": "Fuarda Opti-Syn Elastane’dan yapılmış endüstriyel giysimizi, itfaiyeci elbisemiz Optimus’u ve F1 güvenlik ekipleri için geliştirdiğimiz yüksek görünürlüklü itfaiyeci elbisemizi sergiledik.",
+        "slug": "intersec-2025teydik"
+      },
+      {
+        "title": "TOS+H Expo 2024 Fuarı’ndaydık",
+        "date": "2024-05-09",
+        "summary": "İş sağlığı ve güvenliği fuarında multi-norm Opti-Syn kumaşımızı; INDUSTAR, ARCSTAR, METALSTAR, REFSTAR serilerimizi, Neonstar yüksek görünürlüklü elbiselerimizi ve Alüminize Elbiselerimizi tanıttık.",
+        "slug": "tos-h-expo-2024-fuarindaydik"
+      }
+    ]
+  },
+  "design": {
+    "brand": "#d52d0c",
+    "brandDark": "#af250a",
+    "brandLight": "#ff5d3c",
+    "paper": "#ffffff",
+    "ink": "#202020",
+    "mist": "#f4f4f4",
+    "muted": "#747474",
+    "brick": "#202020",
+    "bodyFont": "\"Open Sans\", system-ui, sans-serif",
+    "headingFont": "\"Open Sans\", system-ui, sans-serif",
+    "baseFontSize": 16,
+    "containerWidth": 1560,
+    "buttonRadius": 32,
+    "customCss": "",
+    "motionEffects": true
+  },
+  "home": {
+    "sections": [
+      {
+        "id": "hero",
+        "title": "Karşılama",
+        "visible": true
+      },
+      {
+        "id": "divisions",
+        "title": "Faaliyet alanları",
+        "visible": true
+      },
+      {
+        "id": "discovery",
+        "title": "Ürün keşif vitrini",
+        "visible": true
+      },
+      {
+        "id": "about",
+        "title": "Hakkımızda",
+        "visible": true
+      },
+      {
+        "id": "statement",
+        "title": "Marka mesajı",
+        "visible": true
+      },
+      {
+        "id": "quality",
+        "title": "Kalite",
+        "visible": true
+      },
+      {
+        "id": "news",
+        "title": "Haberler",
+        "visible": true
+      },
+      {
+        "id": "partners",
+        "title": "İş ortakları",
+        "visible": true
+      }
+    ]
+  },
+  "customPages": {
+    "pages": []
+  },
+  "components-ProductExperience": {
+    "home": "Ana sayfa",
+    "breadcrumb": "Sayfa konumu",
+    "variantLabel": "Ürün parçasını seçin",
+    "fullscreen": "Tam ekran incele",
+    "close": "Tam ekranı kapat",
+    "spinLabel": "360° incele",
+    "photo": "Fotoğraf",
+    "noImage": "Ürün görselleri yakında eklenecek.",
+    "spinHint": "Ürünü sağa veya sola sürükleyerek her açıdan inceleyin.",
+    "contact": "Bilgi için bize ulaşın",
+    "ask": "Ürün hakkında bilgi alın",
+    "details": "Ürün detayları",
+    "detailKicker": "DETAYLARDAKİ FARK",
+    "technical": "Teknik bilgiler",
+    "documents": "Kataloglar ve belgeler",
+    "related": "Bu gruptaki diğer ürünler",
+    "composition": "Malzeme bileşimi",
+    "outerLayer": "Dış katman",
+    "sizes": "Bedenler",
+    "compositionCode": "Bileşim kodu",
+    "articleNumber": "Ürün kodu",
+    "color": "Renk",
+    "readMore": "Devamını oku",
+    "readLess": "Daha az göster",
+    "share": "Ürünü paylaş",
+    "shared": "Bağlantı kopyalandı",
+    "shareError": "Bağlantı kopyalanamadı; tarayıcınızın adres çubuğundan kopyalayabilirsiniz.",
+    "relatedProduct": "İlgili ürün",
+    "productBackground": "#202020",
+    "productText": "#ffffff",
+    "productAccent": "#d52d0c",
+    "productGlow": "#737373",
+    "mobileQuote": "Teklif iste",
+    "mobileAsk": "Bilgi iste"
+  },
+  "components-NewsPreview": {
+    "eyebrow": "KIVANÇ GROUP GÜNDEM",
+    "title": "Bizden haberler",
+    "href": "/haberler",
+    "linkLabel": "Tüm haberler",
+    "readLabel": "Haberi incele"
+  },
+  "components-ProductDiscovery": {
+    "eyebrow": "DOĞRU ÇÖZÜMÜ KEŞFEDİN",
+    "title": "İhtiyacınız farklı.\nÇözümünüz burada.",
+    "intro": "Faaliyet alanını seçin, ürünleri keşfedin ve projenize uygun çözüm için teklif isteyin.",
+    "filterLabel": "Ürünleri faaliyet alanına göre filtreleyin",
+    "allLabel": "Tümü",
+    "searchLabel": "Ürün vitrininde ara",
+    "searchPlaceholder": "Bir ürün veya çözüm arayın…",
+    "resultsLabel": "sonuç",
+    "moreLabel": "Daha fazla ürün göster",
+    "emptyTitle": "Aradığınız ürünü bulamadık.",
+    "emptyDescription": "Farklı bir kelime deneyin veya filtreleri temizleyin.",
+    "clearLabel": "Filtreleri temizle",
+    "productLabel": "ÜRÜN",
+    "infoLabel": "BİLGİ",
+    "viewLabel": "Ürünü keşfet",
+    "infoViewLabel": "İncele",
+    "spinLabel": "360° incele",
+    "limit": 4,
+    "featuredSlugs": [
+      "itfaiyeci-elbisesi",
+      "aluminize-elbise",
+      "izolasyon-malzemeleri",
+      "silis-kumu-nedir"
+    ]
+  },
+  "components-BrandStatement": {
+    "eyebrow": "KIVANÇ GROUP / TASARIMDAN ÜRETİME",
+    "title": "Güven,\nayrıntıda başlar.",
+    "description": "Doğru malzeme, doğru tasarım ve titiz üretim. Yaptığımız her işin merkezinde güvenilir çözümler var.",
+    "href": "/ar-ge",
+    "linkLabel": "Ar-Ge yaklaşımımız",
+    "marquee": "İNSAN İÇİN. ÜRETİM İÇİN. GELECEK İÇİN."
+  },
+  "components-VisualEffects": {
+    "backToTopLabel": "Sayfanın başına dön"
+  },
+  "components-DocumentLink": {
+    "unavailable": "Belge hazırlanıyor"
+  },
+  "app-teklif-al": {
+    "metadata": {
+      "title": "Teklif isteyin",
+      "description": "İhtiyacınızı anlatın; ürün ve çözümlerimiz için teklif talebinizi Kıvanç Group’a iletin."
+    },
+    "eyebrow": "BİRLİKTE DOĞRU ÇÖZÜMÜ BULALIM",
+    "title": "İhtiyacınızı anlatın. Birlikte ilerleyelim.",
+    "intro": "İlgilendiğiniz ürünü veya çözüm aradığınız alanı yazın. Talebinizi ilgili ekibimize iletelim.",
+    "formTitle": "Teklif talebi oluşturun",
+    "selectedLabel": "İlgilendiğiniz ürün",
+    "image": "/images/engineering-brand.png",
+    "imageAlt": "Mühendislik temalı temsili marka sahnesi",
+    "steps": [
+      {
+        "title": "İhtiyacınızı paylaşın",
+        "text": "Ürün, kullanım alanı ve varsa adet bilgisini yazın."
+      },
+      {
+        "title": "Talebinizi inceleyelim",
+        "text": "İlgili ekibimiz size uygun çözüm için bilgilerinizi değerlendirsin."
+      },
+      {
+        "title": "Birlikte netleştirelim",
+        "text": "Teknik ayrıntılar ve teklif için sizinle iletişime geçelim."
+      }
+    ]
+  }
+}

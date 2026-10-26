@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+next-env.d.ts
+*.tsbuildinfo
+
+# CMS persistent state, credentials and uploads
+.cms/
+*.tsbuildinfo
+
+# Local deployment credentials
+.env*
+!.env.example
+.vercel/
+.backups/
