@@ -10,6 +10,8 @@ Yönetici hesabı, taslaklar, yayınlar ve gelen talepler yalnızca sunucu anaht
 
 ## 2. Projeyi Vercel'e aktarın
 
+Uygulama kodu **`main` dalındadır**. Bu depoda eski PDF paylaşımı için oluşturulmuş `site-goruntuleri` dalı varsayılan görünebilir. İçe aktarmadan önce GitHub depo ayarlarındaki **Default branch** alanını `main` yapın. Vercel'deki Production Branch seçiminin de `main` olduğundan emin olun; PDF dalını uygulama kaynağı olarak seçmeyin.
+
 Vercel'de **Add New → Project** yoluyla `kestrturkiye-rgb/deneme` deposunu seçin. Framework **Next.js**, kök klasör depo kökü, Node.js **24.x**, kurulum `npm ci`, derleme `npm run build` olmalıdır. `vercel.json` ve `package.json` bunları içerir.
 
 **Environment Variables** bölümüne şu değerleri ekleyin:
