@@ -19,6 +19,7 @@ export async function GET(request: Request) {
     },
   };
   const staticKeys = {
+    "/urunler": "app-urunler",
     "/kurumsal": "app-kurumsal",
     "/ar-ge": "app-ar-ge",
     "/haberler": "app-haberler",

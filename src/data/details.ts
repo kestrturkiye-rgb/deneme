@@ -48,6 +48,7 @@ export type Detail = {
   images?: { src: string; alt: string }[];
   /** İndirilebilir belgeler (katalog, sertifika, föy) */
   documents?: { title: string; href: string }[];
+  videos?: { title: string; href: string }[];
 };
 
 // Ürün sayfalarında gösterilecek özel içerikler.

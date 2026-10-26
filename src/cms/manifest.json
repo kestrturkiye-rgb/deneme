@@ -646,5 +646,10 @@
       "imageAlt": "Görsel açıklaması",
       "steps": "Talep süreci adımları"
     }
+  },
+  "app-urunler": {
+    "title": "Ürünlerimiz · Genel bakış",
+    "group": "Sayfalar",
+    "labels": {}
   }
 }

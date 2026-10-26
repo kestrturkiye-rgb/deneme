@@ -1,6 +1,6 @@
 # Vercel üzerinden yayınlama
 
-Bu sürüm Vercel için kalıcı Supabase veritabanı ve dosya deposuyla hazırlanmıştır. Ürün görselleri yayın sonrasında panelden eklenebilir. Vercel'e veya Supabase hesabınıza bu çalışma ortamından erişim bulunmadığı için aşağıdaki proje bağlantıları kullanıcı hesabınızda tamamlanmalıdır.
+Bu sürüm Vercel için kalıcı Supabase veritabanı ve dosya deposuyla hazırlanmıştır. Mevcut sitedeki fotoğraflar ve 136 PDF depoya dahil edilmiştir; yeni görseller ve 360° kareleri yayın sonrasında panelden eklenebilir. Vercel'e veya Supabase hesabınıza bu çalışma ortamından erişim bulunmadığı için aşağıdaki proje bağlantıları kullanıcı hesabınızda tamamlanmalıdır.
 
 ## 1. Kalıcı veri deposunu oluşturun
 
@@ -37,7 +37,7 @@ Bu çalışma ortamında oluşturulan yerel hesap ve içerikleri aynen taşımak
 
 ## 4. Ürünleri ve görselleri yükleyin
 
-Panelin **Ürün detayları** bölümünden fotoğrafları ve 360° karelerini yükleyin. Yükleme tamamlandıktan sonra taslağı kaydedip önizleyin ve yayınlayın. Ürün fotoğrafları katalog kartlarında da görünür. Ceket, pantolon ve renkler için ayrı kare dizileri kullanılabilir.
+Panelin **Ürün detayları** bölümünde aktarılan 133 modeli ve mevcut aileleri düzenleyebilirsiniz. Yeni fotoğrafları ve gerçek 360° karelerini buradan yükleyin. Yükleme tamamlandıktan sonra taslağı kaydedip önizleyin ve yayınlayın. Ürün fotoğrafları katalog kartlarında da görünür. Ceket, pantolon ve renkler için ayrı kare dizileri kullanılabilir.
 
 Vercel'de dosyalar uygulama fonksiyonundan geçirilmez: tarayıcı, yönetici oturumu doğrulandıktan sonra verilen imzalı bağlantıyla doğrudan Supabase'e yükler. Böylece 10 MB'a kadar dosyalar Vercel'in fonksiyon istek boyutu sınırına takılmaz. Sunucu tamamlanan yüklemenin boyutunu ve dosya imzasını kontrol eder.
 
@@ -60,3 +60,7 @@ Vercel projesinin **Settings → Domains** ekranına alan adını ekleyin ve Ver
 Ana adresi belirledikten sonra Vercel'e `SITE_ORIGIN=https://kivancgroup.com` (www kullanacaksanız tam www adresi) ekleyin ve yeniden deploy edin. Site haritası, canonical ve paylaşım adresleri bu kökü kullanır. Alternatif www/non-www adresini Vercel üzerinden ana adrese yönlendirin. Eski sitedeki adreslerin korunması veya gerektiğinde 301 yönlendirmeleri alan adı geçişinde ayrıca kontrol edilmelidir.
 
 Preview ortamlarında arama motoru indeksleme kapalıdır; Production yayını normal site haritasını sunar. Yönetim paneli ve API yolları indekslemeye kapalı kalır.
+
+## Aktarılan sabit dosyalar
+
+Mevcut fotoğraflar ve kataloglar `public/` altında Git ile taşınır. Vercel bunları statik olarak sunar; büyük PDF ve kaynak görsel klasörleri sunucu fonksiyonlarına dahil edilmez. PDF kullanılabilirliği derleme sırasında oluşturulan `src/cms/bundled-documents.json` envanteriyle doğrulanır. İlk deploy için `npm run assets` çalıştırmanız gerekmez. Panelden sonradan eklenen dosyalar Supabase Storage üzerinde tutulur.

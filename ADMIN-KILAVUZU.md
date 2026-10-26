@@ -155,3 +155,9 @@ Koruyucu giyim, mühendislik ve madencilik için oluşturulan geniş sahneler te
 Kurumsal ve Ar-Ge sayfalarının açılış görselleri, alt yazıları ve metinleri kendi sayfa bölümlerinden düzenlenir. Haber kayıtlarında isteğe bağlı **Görsel**, **Görsel açıklaması**, **Görsel alt yazısı**, **Adres** ve **İçerik paragrafları** alanlarını ekleyebilirsiniz. Her haberin site içinde kendi detay sayfası vardır. Gerçek haber fotoğrafı yoksa tarih temalı dekoratif grafik kullanılır.
 
 Gelen talepler e-posta ayarı olmadan da kalıcı olarak saklanır. Panelde kaydın okundu durumunu değiştirebilir ve gerektiğinde kaydı silebilirsiniz. E-posta bildirimi yapılandırılmışsa iletim durumu görünür; bildirimin başarısız olması talebi silmez.
+
+## Aktarılan içerikleri düzenleme
+
+Mevcut sitenin 54 katalog/bilgi başlığı ve 133 modeli hazır gelir. Ürün listesindeki `Ana ürün ailesinin adresi` alanı bir modelin hangi aileye bağlı olduğunu belirler; ek aile ilişkileri aynı modeli farklı serilerde gösterir. Ana aile kayıtlarında bu alan boş bırakılır. Ürün detaylarında galeri, açıklama, teknik bilgiler, belgeler ve video bağlantıları düzenlenebilir.
+
+Kurumsal ve Ar-Ge bölümündeki kaynak metin, tesis/belge fotoğrafları ve bağlantılar `Kurumsal içerik, fotoğraflar ve belgeler` bloklarındadır. Üst menünün alt bağlantıları da düzenlenebilir. Belgeler bölümündeki 136 PDF başlangıç paketine dahildir. Kapsam ve kaynaklar [AKTARIM-RAPORU.md](AKTARIM-RAPORU.md) içinde açıklanır.

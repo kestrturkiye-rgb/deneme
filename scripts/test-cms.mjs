@@ -688,9 +688,44 @@ try {
   ]) {
     const response = await request(route, { authenticated: false });
     const markup = await response.text();
-    assert(markup.includes("Belge hazırlanıyor"), route);
-    assert(!/<a\b[^>]*href="\/docs\//.test(markup), route);
+    const bundledLinks = [
+      ...markup.matchAll(/<a\b[^>]*href="(\/docs\/[^"?#]+)"/g),
+    ].map((match) => match[1]);
+    assert(
+      bundledLinks.length > 0,
+      route + ": copied documents are downloadable",
+    );
+    for (const href of bundledLinks) {
+      assert(
+        (
+          await stat(
+            path.join(process.cwd(), "public", decodeURIComponent(href)),
+          )
+        ).isFile(),
+        href,
+      );
+    }
   }
+  const missingDocument = structuredClone(state.published);
+  missingDocument["data-documents"].brochures[0].href =
+    "/docs/absent-test-document.pdf";
+  result = await json("/api/admin/content", {
+    method: "POST",
+    body: {
+      action: "publish",
+      version: state.version,
+      content: missingDocument,
+    },
+  });
+  assert.equal(result.res.status, 200, JSON.stringify(result.data));
+  state = result.data;
+  const missingMarkup = await (
+    await request("/dokumanlar", { authenticated: false })
+  ).text();
+  assert(missingMarkup.includes("Belge hazırlanıyor"));
+  assert(
+    !/<a\b[^>]*href="\/docs\/absent-test-document.pdf"/.test(missingMarkup),
+  );
   const brochureContent = structuredClone(state.published);
   const pdfBody = new FormData();
   pdfBody.set(
@@ -1016,9 +1051,7 @@ try {
       );
       await page.setViewportSize({ width: 390, height: 844 });
       await page.getByRole("button", { name: "Menüyü aç" }).click();
-      await page
-        .getByRole("button", { name: "Genel bakış", exact: false })
-        .click();
+      await page.getByRole("button", { name: /Genel bakış$/ }).click();
       await page.screenshot({
         path: "/tmp/kivanc-admin-mobile.png",
         fullPage: true,

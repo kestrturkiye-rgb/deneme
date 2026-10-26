@@ -1,21 +1,8 @@
-// Eski siteden (kivancgroup.com) PDF ve görselleri public/ altına indirir.
-// Kullanım: npm run assets
-// Var olan dosyalar atlanır. Test için ASSET_BASE ile başka bir adres verilebilir.
-
-import { mkdir, stat, writeFile } from "node:fs/promises";
+// Eski sitedeki bilinen dosyaları doğrulayarak public/ altına aktarır.
+import { mkdir, readFile, stat, writeFile, rename, rm } from "node:fs/promises";
+import { createHash, randomUUID } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-
-const BASE = (process.env.ASSET_BASE ?? "https://kivancgroup.com").replace(
-  /\/$/,
-  "",
-);
-const PUBLIC_DIR = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  "..",
-  "public",
-);
-
 // [eski sitedeki adres, public/ altındaki hedef]
 export const manifest = [
   [
@@ -97,50 +84,194 @@ export const manifest = [
   ],
 ];
 
-async function exists(file) {
-  try {
-    return (await stat(file)).size > 0;
-  } catch {
-    return false;
-  }
-}
-
-async function download([source, target]) {
-  const dest = path.join(PUBLIC_DIR, target);
-  if (await exists(dest)) return "skipped";
-
-  const res = await fetch(BASE + source, { redirect: "follow" });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-  // Bazı sunucular bulunamayan dosya için HTML hata sayfası döndürür
-  const type = res.headers.get("content-type") ?? "";
-  if (type.includes("text/html"))
-    throw new Error("dosya yerine HTML sayfası geldi");
-
-  const data = Buffer.from(await res.arrayBuffer());
-  if (data.length === 0) throw new Error("boş dosya");
-
-  await mkdir(path.dirname(dest), { recursive: true });
-  await writeFile(dest, data);
-  return "downloaded";
-}
-
-const counts = { downloaded: 0, skipped: 0, failed: 0 };
-
-for (const entry of manifest) {
-  try {
-    const result = await download(entry);
-    counts[result] += 1;
-    console.log(
-      `${result === "downloaded" ? "indirildi" : "atlandı  "} ${entry[1]}`,
+export function fileValid(bytes, target) {
+  if (target.toLowerCase().endsWith(".pdf"))
+    return (
+      /^%PDF-\d\.\d/.test(bytes.subarray(0, 8).toString("ascii")) &&
+      bytes.subarray(-4096).includes(Buffer.from("%%EOF"))
     );
-  } catch (err) {
-    counts.failed += 1;
-    console.error(`HATA      ${entry[1]}: ${err.message}`);
-  }
+  if (/\.jpe?g$/i.test(target))
+    return bytes[0] === 255 && bytes[1] === 216 && bytes[2] === 255;
+  if (/\.png$/i.test(target))
+    return bytes.subarray(0, 8).toString("hex") === "89504e470d0a1a0a";
+  throw new Error("Desteklenmeyen dosya türü.");
 }
-
-console.log(
-  `\nBitti: ${counts.downloaded} indirildi, ${counts.skipped} atlandı, ${counts.failed} hata.`,
-);
-process.exitCode = counts.failed > 0 ? 1 : 0;
+function targetPath(root, target) {
+  if (
+    typeof target !== "string" ||
+    target.includes("\\") ||
+    path.isAbsolute(target)
+  )
+    throw new Error("Geçersiz hedef yolu.");
+  const file = path.resolve(root, target);
+  if (!file.startsWith(path.resolve(root) + path.sep))
+    throw new Error("Hedef, public klasörü dışında olamaz.");
+  return file;
+}
+function baseUrl(base) {
+  const url = new URL(base);
+  if (
+    !["http:", "https:"].includes(url.protocol) ||
+    url.username ||
+    url.password
+  )
+    throw new Error(
+      "Kaynak adresi http(s) olmalı ve kimlik bilgisi içermemeli.",
+    );
+  return url;
+}
+export async function transferAssets({
+  base = "https://kivancgroup.com",
+  publicDir,
+  entries = manifest,
+  timeoutMs = 20000,
+  maxBytes = 80_000_000,
+  concurrency = 3,
+}) {
+  const baseURL = baseUrl(base);
+  const seen = new Set();
+  for (const [source, target] of entries) {
+    targetPath(publicDir, target);
+    if (!source.startsWith("/") || source.startsWith("//") || seen.has(target))
+      throw new Error("Kaynak/hedef listesi geçersiz veya hedef tekrarlanmış.");
+    seen.add(target);
+  }
+  const results = new Array(entries.length);
+  let cursor = 0;
+  await Promise.all(
+    Array.from({ length: Math.max(1, Math.min(concurrency, 8)) }, async () => {
+      while (cursor < entries.length) {
+        const index = cursor++;
+        const [source, target] = entries[index];
+        const dest = targetPath(publicDir, target);
+        const url = new URL(source, baseURL).href;
+        let tmp;
+        try {
+          let current;
+          try {
+            if ((await stat(dest)).isFile()) current = await readFile(dest);
+          } catch (error) {
+            if (error.code !== "ENOENT") throw error;
+          }
+          if (current && fileValid(current, target)) {
+            results[index] = {
+              source: url,
+              target,
+              status: "existing",
+              bytes: current.length,
+              sha256: createHash("sha256").update(current).digest("hex"),
+            };
+            continue;
+          }
+          const response = await fetch(url, {
+            redirect: "follow",
+            signal: AbortSignal.timeout(timeoutMs),
+          });
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          const type = response.headers.get("content-type") || "";
+          if (/text\/html|application\/xhtml/i.test(type))
+            throw new Error("Dosya yerine HTML sayfası geldi.");
+          if (Number(response.headers.get("content-length") || 0) > maxBytes) {
+            await response.body?.cancel();
+            throw new Error("Dosya boyut sınırını aşıyor.");
+          }
+          const chunks = [];
+          let size = 0;
+          for await (const chunk of response.body || []) {
+            size += chunk.length;
+            if (size > maxBytes)
+              throw new Error("Dosya boyut sınırını aşıyor.");
+            chunks.push(chunk);
+          }
+          const bytes = Buffer.concat(chunks);
+          if (!fileValid(bytes, target))
+            throw new Error("Dosya imzası veya PDF sonlandırıcısı geçersiz.");
+          await mkdir(path.dirname(dest), { recursive: true });
+          tmp = dest + "." + randomUUID() + ".tmp";
+          await writeFile(tmp, bytes, { flag: "wx" });
+          await rename(tmp, dest);
+          tmp = undefined;
+          results[index] = {
+            source: url,
+            target,
+            status: "downloaded",
+            bytes: bytes.length,
+            sha256: createHash("sha256").update(bytes).digest("hex"),
+          };
+        } catch (error) {
+          results[index] = {
+            source: url,
+            target,
+            status: "failed",
+            error: String(error.message).replace(
+              /(https?:\/\/)[^/\s@]+@/g,
+              "$1[redacted]@",
+            ),
+          };
+        } finally {
+          if (tmp) await rm(tmp, { force: true });
+        }
+      }
+    }),
+  );
+  return {
+    source: baseURL.origin,
+    downloaded: results.filter((r) => r.status === "downloaded").length,
+    existing: results.filter((r) => r.status === "existing").length,
+    failed: results.filter((r) => r.status === "failed").length,
+    results,
+  };
+}
+export async function inventoryAssets({
+  publicDir,
+  entries = manifest,
+  base = "https://kivancgroup.com",
+}) {
+  const results = [];
+  for (const [source, target] of entries) {
+    let bytes;
+    try {
+      bytes = await readFile(targetPath(publicDir, target));
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+    results.push({
+      source: new URL(source, baseUrl(base)).href,
+      target,
+      status: bytes && fileValid(bytes, target) ? "available" : "missing",
+      bytes: bytes?.length || 0,
+    });
+  }
+  return results;
+}
+async function main() {
+  const root = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
+  const args = process.argv.slice(2);
+  const publicDir = process.env.ASSET_PUBLIC_DIR
+    ? path.resolve(process.env.ASSET_PUBLIC_DIR)
+    : path.join(root, "public");
+  const entries = args.includes("--documents")
+    ? manifest.filter(([, target]) => target.endsWith(".pdf"))
+    : manifest;
+  const base = process.env.ASSET_BASE || "https://kivancgroup.com";
+  const report = args.includes("--inventory")
+    ? {
+        source: base,
+        results: await inventoryAssets({ base, publicDir, entries }),
+      }
+    : await transferAssets({ base, publicDir, entries });
+  const reportFile = path.join(root, ".migration", "asset-report.json");
+  await mkdir(path.dirname(reportFile), { recursive: true });
+  await writeFile(reportFile, JSON.stringify(report, null, 2) + "\n");
+  for (const item of report.results)
+    console.log(
+      `${item.status.padEnd(10)} ${item.target}${item.error ? " · " + item.error : ""}`,
+    );
+  console.log("Rapor: .migration/asset-report.json");
+  if (report.failed) process.exitCode = 1;
+}
+if (
+  process.argv[1] &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)
+)
+  await main();

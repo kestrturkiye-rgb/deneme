@@ -3,7 +3,11 @@ import ArrowUpRight from "./ArrowUpRight";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSection } from "@/cms/context";
-type Item = { label: string; href: string };
+type Item = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+};
 export default function MobileMenu({
   primary,
   secondary,
@@ -84,6 +88,19 @@ export default function MobileMenu({
                     <ArrowUpRight />
                   </span>
                 </Link>
+                {Boolean(item.children?.length) && (
+                  <div className="kg-mobile-children">
+                    {item.children!.map((child) => (
+                      <Link
+                        href={child.href}
+                        key={child.href}
+                        onClick={() => setOpen(false)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </li>
             ))}
           </ol>

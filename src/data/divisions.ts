@@ -1,7 +1,12 @@
 import { getSection } from "@/cms/server";
 export type Group = {
   title: string;
-  items: { name: string; slug: string }[];
+  items: {
+    name: string;
+    slug: string;
+    parentSlug?: string;
+    relatedFamilies?: string[];
+  }[];
 };
 
 export type Division = {

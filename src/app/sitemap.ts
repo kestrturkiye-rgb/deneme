@@ -9,6 +9,7 @@ import { siteBase } from "@/lib/site-base";
 const staticPaths = [
   "",
   "/kurumsal",
+  "/urunler",
   "/tarihce",
   "/ar-ge",
   "/haberler",

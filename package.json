@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/index-documents.mjs && next build",
     "start": "next start",
-    "assets": "node scripts/fetch-assets.mjs",
+    "assets": "node --use-env-proxy scripts/fetch-assets.mjs",
     "admin:setup": "node scripts/admin-user.mjs",
     "typecheck": "tsc --noEmit",
     "test:cms": "node scripts/test-cms.mjs",
     "cms:import": "node scripts/import-cloud.mjs",
-    "test:cloud": "node scripts/test-cloud.mjs"
+    "test:cloud": "node scripts/test-cloud.mjs",
+    "assets:inventory": "node scripts/fetch-assets.mjs --documents --inventory",
+    "test:assets": "node scripts/test-assets.mjs",
+    "test:site": "node scripts/test-site.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

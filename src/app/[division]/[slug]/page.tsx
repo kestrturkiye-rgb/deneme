@@ -5,6 +5,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductExperience from "@/components/ProductExperience";
 import DocumentLink from "@/components/DocumentLink";
+import ProductCard from "@/components/ProductCard";
+import ArrowUpRight from "@/components/ArrowUpRight";
 import { getProduct, productHref, getProducts } from "@/data/catalog";
 import { getDetails } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
@@ -55,14 +57,30 @@ export default async function ProductPage({ params }: Props) {
     product.divisionTitle,
     slug,
   );
-  const related = (await getProducts()).filter(
+  const allProducts = await getProducts();
+  const models = allProducts.filter(
+    (p) => p.parentSlug === slug || p.relatedFamilies?.includes(slug),
+  );
+  const parent = allProducts.find((p) => p.slug === product.parentSlug);
+  const related = allProducts.filter(
     (p) =>
       p.divisionSlug === product.divisionSlug &&
       p.groupTitle === product.groupTitle &&
-      p.slug !== product.slug,
+      p.slug !== product.slug &&
+      (product.parentSlug
+        ? p.parentSlug === product.parentSlug
+        : !p.parentSlug),
   );
   return (
     <>
+      {parent && (
+        <nav
+          className="product-parent-nav container-site"
+          aria-label={cms.parentLabel}
+        >
+          <Link href={productHref(parent)}>← {parent.name}</Link>
+        </nav>
+      )}
       <ProductExperience
         {...product}
         href={productHref(product)}
@@ -89,6 +107,7 @@ export default async function ProductPage({ params }: Props) {
       />
       <div className="product-detail-nav">
         <div className="container-site">
+          {models.length > 0 && <a href="#modeller">{cms.metin05}</a>}
           <a href="#urun-detaylari">{labels.details}</a>
           {Boolean(detail?.specs?.length) && (
             <a href="#teknik-bilgiler">{labels.technical}</a>
@@ -96,8 +115,39 @@ export default async function ProductPage({ params }: Props) {
           {Boolean(detail?.documents?.length) && (
             <a href="#urun-belgeleri">{labels.documents}</a>
           )}
+          {Boolean(detail?.videos?.length) && (
+            <a href="#urun-videolari">{cms.videosTitle}</a>
+          )}
         </div>
       </div>
+      {models.length > 0 && (
+        <section id="modeller" className="product-model-section">
+          <div className="container-site">
+            <h2>{cms.metin05}</h2>
+            <ul className="kg-product-grid catalog-grid mt-8">
+              {models.map((model, index) => {
+                const data = allDetails[model.slug];
+                return (
+                  <li key={model.slug}>
+                    <ProductCard
+                      href={productHref(model)}
+                      name={model.name}
+                      category={product.name}
+                      image={data?.images?.[0]?.src}
+                      index={index}
+                      hasSpin={Boolean(data?.spin)}
+                      label={cms.modelLabel}
+                      action={cms.modelAction}
+                      summary={(data?.description?.[0] || "").slice(0, 145)}
+                      tags={[]}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+      )}
       <section id="urun-detaylari" className="product-details-section">
         <div className="container-site product-details-grid">
           <div>
@@ -164,6 +214,26 @@ export default async function ProductPage({ params }: Props) {
                 <DocumentLink key={i} href={d.href} action="↓">
                   <span>{d.title}</span>
                 </DocumentLink>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {Boolean(detail?.videos?.length) && (
+        <section id="urun-videolari" className="product-document-section">
+          <div className="container-site product-details-grid">
+            <h2>{cms.videosTitle}</h2>
+            <div>
+              {detail!.videos!.map((video) => (
+                <a
+                  key={video.href}
+                  href={video.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>{video.title}</span>
+                  <ArrowUpRight />
+                </a>
               ))}
             </div>
           </div>

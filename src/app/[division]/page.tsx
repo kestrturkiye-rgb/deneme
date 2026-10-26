@@ -11,6 +11,7 @@ import { getDetails } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
 import { frameUrls } from "@/lib/spin";
 import ProductCard from "@/components/ProductCard";
+import ContentBlocks from "@/components/ContentBlocks";
 
 type Props = {
   params: Promise<{ division: string }>;
@@ -48,37 +49,7 @@ export default async function DivisionPage({ params }: Props) {
     return (
       <>
         <PageBanner title={custom.title} intro={custom.intro} />
-        {custom.blocks.map((block, i) => (
-          <section
-            key={i}
-            className={i % 2 ? "bg-mist py-16" : "bg-paper py-16"}
-          >
-            <div className="container-site grid gap-8 md:grid-cols-2">
-              <div>
-                {block.title && (
-                  <h2 className="text-3xl font-semibold">{block.title}</h2>
-                )}
-                {block.text && (
-                  <p className="mt-5 whitespace-pre-line leading-relaxed text-muted">
-                    {block.text}
-                  </p>
-                )}
-                {block.buttonLabel && block.buttonHref && (
-                  <Link href={block.buttonHref} className="btn-primary mt-7">
-                    {block.buttonLabel}
-                  </Link>
-                )}
-              </div>
-              {block.image && (
-                <img
-                  src={block.image}
-                  alt={block.alt}
-                  className="w-full self-center object-contain"
-                />
-              )}
-            </div>
-          </section>
-        ))}
+        <ContentBlocks blocks={custom.blocks} />
       </>
     );
   const data = await getDivision(division);
@@ -121,50 +92,55 @@ export default async function DivisionPage({ params }: Props) {
                 {group.title}
               </h2>
               <ul className="kg-product-grid catalog-grid mt-8">
-                {group.items.map((item, index) => {
-                  const detail = details[item.slug];
-                  const media = getProductMedia(item.slug, item.name);
-                  const variant = detail?.variants?.[0];
-                  const color = detail?.colors?.[0] || variant?.colors?.[0];
-                  const spin =
-                    color?.spin || variant?.spin || detail?.spin || media.spin;
-                  const frames = spin ? frameUrls(spin) : [];
-                  const image =
-                    color?.images?.[0]?.src ||
-                    detail?.images?.[0]?.src ||
-                    variant?.images?.[0]?.src ||
-                    media.images[0]?.src ||
-                    frames[0];
-                  return (
-                    <li key={item.slug}>
-                      <ProductCard
-                        href={`/${data.slug}/${item.slug}`}
-                        name={item.name}
-                        category={group.title}
-                        image={image}
-                        index={index}
-                        hasSpin={frames.length >= 2}
-                        label={
-                          data.slug === "madencilik"
-                            ? cms.infoLabel
-                            : cms.productLabel
-                        }
-                        action={
-                          data.slug === "madencilik"
-                            ? cms.infoViewLabel
-                            : cms.viewLabel
-                        }
-                        summary={(
-                          detail?.description?.[0] || cms.cardFallback
-                        ).slice(0, 145)}
-                        tags={[
-                          detail?.line,
-                          detail?.configurations?.[0]?.sizes,
-                        ].filter((value): value is string => Boolean(value))}
-                      />
-                    </li>
-                  );
-                })}
+                {group.items
+                  .filter((item) => !item.parentSlug)
+                  .map((item, index) => {
+                    const detail = details[item.slug];
+                    const media = getProductMedia(item.slug, item.name);
+                    const variant = detail?.variants?.[0];
+                    const color = detail?.colors?.[0] || variant?.colors?.[0];
+                    const spin =
+                      color?.spin ||
+                      variant?.spin ||
+                      detail?.spin ||
+                      media.spin;
+                    const frames = spin ? frameUrls(spin) : [];
+                    const image =
+                      color?.images?.[0]?.src ||
+                      detail?.images?.[0]?.src ||
+                      variant?.images?.[0]?.src ||
+                      media.images[0]?.src ||
+                      frames[0];
+                    return (
+                      <li key={item.slug}>
+                        <ProductCard
+                          href={`/${data.slug}/${item.slug}`}
+                          name={item.name}
+                          category={group.title}
+                          image={image}
+                          index={index}
+                          hasSpin={frames.length >= 2}
+                          label={
+                            data.slug === "madencilik"
+                              ? cms.infoLabel
+                              : cms.productLabel
+                          }
+                          action={
+                            data.slug === "madencilik"
+                              ? cms.infoViewLabel
+                              : cms.viewLabel
+                          }
+                          summary={(
+                            detail?.description?.[0] || cms.cardFallback
+                          ).slice(0, 145)}
+                          tags={[
+                            detail?.line,
+                            detail?.configurations?.[0]?.sizes,
+                          ].filter((value): value is string => Boolean(value))}
+                        />
+                      </li>
+                    );
+                  })}
               </ul>
             </div>
           ))}

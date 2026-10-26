@@ -7,6 +7,8 @@ export type Product = {
   divisionSlug: string;
   divisionTitle: string;
   groupTitle: string;
+  parentSlug?: string;
+  relatedFamilies?: string[];
 };
 export async function getProducts(): Promise<Product[]> {
   return (await getDivisions()).flatMap((division) =>
@@ -14,6 +16,8 @@ export async function getProducts(): Promise<Product[]> {
       group.items.map((item) => ({
         slug: item.slug,
         name: item.name,
+        parentSlug: item.parentSlug,
+        relatedFamilies: item.relatedFamilies,
         kind:
           division.slug === "madencilik"
             ? ("info" as const)

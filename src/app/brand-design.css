@@ -147,7 +147,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 29px;
+  gap: clamp(12px, 1.35vw, 24px);
   flex: 1;
 }
 .kg-desktop-nav > a,

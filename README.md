@@ -18,6 +18,8 @@ Tam kurulum ve kullanım: **[ADMIN-KILAVUZU.md](ADMIN-KILAVUZU.md)**.
 
 ## Özellikler
 
+- kivancgroup.com menüsündeki sekmeler ve alt bölümler; 54 ürün ailesi/bilgi başlığı, 133 ayrı model, 16 tam haber, 136 PDF ve 509 kaynak görseli.
+- Kaynak belgelerin başlıkla aranması, ailelere göre model kartları ve 322 eski adres yönlendirmesi.
 - Mevcut sayfalar, menüler, metinler, görseller, dokümanlar, haberler, ürünler, SEO ve tasarım ayarları.
 - Bloklarla yeni sayfa oluşturma; ana sayfa bölümlerini sıralama ve gizleme.
 - Taslak, oturuma özel gerçek site önizlemesi, yayınlama, sürüm geçmişi ve yedekleme.
@@ -40,7 +42,7 @@ npm run start
 
 **Dağıtım:** Vercel’de `SUPABASE_URL` ve `SUPABASE_SERVICE_ROLE_KEY` ile kalıcı Supabase deposu kullanılır. Kurulum SQL’i `supabase/setup.sql` içindedir. Aynı veritabanını paylaşan uygulama işlemleri sürüm kontrolü ve ortak giriş sınırlarıyla çalışır. Supabase olmadan yerel kullanımda `.cms/` kalıcı diski desteklenir; Vercel’de geçici diske sessizce kayıt yapılmaz.
 
-**Görseller:** orijinal ZIP'te logo dışında ürün fotoğrafı, 360° kare dizisi ve PDF yoktur. Panelden yükleyin. Gerçek dönüş için her ürün/parça başına aynı ölçü ve arka planla çekilmiş 24–72 farklı açı önerilir; tek fotoğraftan 360° üretilemez.
+**İçerik aktarımı:** kaynak sitedeki gerçek ürün fotoğrafları ve belgeler depoya dahil edildi; yeniden indirilmeleri gerekmez. [Aktarım raporu](AKTARIM-RAPORU.md) kapsamı ve istisnaları açıklar. Yeni fotoğraflar ve dönüş kareleri panelden eklenebilir. Gerçek dönüş için her ürün/parça başına aynı ölçü ve arka planla çekilmiş 24–72 farklı açı önerilir; tek fotoğraftan 360° üretilemez.
 
 İletişim ve teklif talepleri paneldeki **Gelen talepler** bölümüne kaydedilir. İsteğe bağlı e-posta bildirimi için `.env.example` içindeki Resend ayarlarını kullanın.
 
@@ -61,3 +63,5 @@ Fotoğraflı ürün kartları, mobilde başlığı öne alan ürün sayfası ve 
 `npm run test:cms` yerel CMS akışlarını; `npm run test:cloud` gerçek PostgreSQL motoru (PGlite) ve yerel Supabase REST/Storage sözleşme servisiyle bulut adaptörünü sınar. Gerçek Vercel/Supabase hesabı bu testlerde kullanılmaz. `CMS_BROWSER_MODULE` bir Playwright modül yoluna ayarlanırsa tarayıcı kontrolleri de çalışır.
 
 Güncel tasarımın 8 sayfalık ekran görüntüsü albümü: [PDF önizleme](goruntuler/vercel-hazir-tasarim.pdf) (yaklaşık 1,34 MB).
+
+Kaynak aktarımı için menü, galeri, belge araması ve 322 yönlendirmeyi çalışan site üzerinde kontrol etmek için: `npm run start` çalışırken başka terminalde `CMS_BROWSER_MODULE=/tam/yol/playwright/index.mjs npm run test:site`. Farklı bir yayın/port için `SITE_TEST_ORIGIN` ayarlanabilir. Test yalnızca okuma ve sayfa gezintisi yapar.

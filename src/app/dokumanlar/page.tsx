@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import DocumentLink from "@/components/DocumentLink";
+import DocumentLibrary from "@/components/DocumentLibrary";
 import { getBrochures, getVideos } from "@/data/documents";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -39,9 +40,12 @@ export default async function DocumentsPage() {
             <h2 className="text-3xl font-semibold text-ink md:text-4xl">
               {cms.metin03}
             </h2>
-            <ul className="mt-6 divide-y divide-mist-dark border-y border-mist-dark bg-paper">
-              {sorted.map((doc) => (
-                <li key={doc.href}>
+            <DocumentLibrary
+              labels={cms}
+              items={sorted.map((doc) => ({
+                title: doc.title,
+                href: doc.href,
+                node: (
                   <DocumentLink
                     href={doc.href}
                     className={rowClass}
@@ -60,9 +64,9 @@ export default async function DocumentsPage() {
                       </time>
                     </span>
                   </DocumentLink>
-                </li>
-              ))}
-            </ul>
+                ),
+              }))}
+            />
           </div>
 
           <div>

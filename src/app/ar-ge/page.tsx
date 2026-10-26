@@ -3,6 +3,7 @@ import { getSection } from "@/cms/server";
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
+import ContentBlocks from "@/components/ContentBlocks";
 
 export async function generateMetadata(): Promise<Metadata> {
   return pageMetadata("/ar-ge", (await getSection("app-ar-ge")).metadata);
@@ -48,6 +49,9 @@ export default async function RdPage() {
         </div>
       </section>
 
+      <section className="bg-paper py-16" aria-label={cms.sourceTitle}>
+        <ContentBlocks blocks={cms.sourceBlocks} />
+      </section>
       <section className="bg-paper py-16 md:py-24">
         <div className="container-site max-w-5xl">
           <h2 className="text-3xl font-semibold text-ink md:text-4xl">

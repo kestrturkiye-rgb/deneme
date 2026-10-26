@@ -59,6 +59,13 @@ for (const key of ["image", "imageAlt"])
   schemas["components-Divisions"].fields!.divisions.item!.fields![
     key
   ].optional = true;
+const catalogItem =
+  schemas["data-divisions"].fields!.divisions.item!.fields!.groups.item!.fields!
+    .items.item!;
+catalogItem.fields!.parentSlug = { ...string, optional: true };
+catalogItem.fields!.relatedFamilies = { ...strings, optional: true };
+schemas["components-Header"].fields!.mainNav.item!.fields!.children.optional =
+  true;
 for (const key of ["slug", "image", "imageAlt", "imageCaption"])
   schemas["data-news"].fields!.news.item!.fields![key] = {
     ...string,
@@ -94,6 +101,7 @@ const detail = object({
   specs: list({ label: string, value: string }),
   images: list({ src: string, alt: string }),
   documents: list({ title: string, href: string }),
+  videos: list({ title: string, href: string }),
   spin: object({ alt: string, frames: strings }),
 });
 for (const field of Object.values(detail.fields!)) field.optional = true;
@@ -352,6 +360,7 @@ export function validateContent(value: unknown): string[] {
     "teklif-sepeti",
     "teklif-al",
     "paylasim",
+    "urunler",
   ];
   for (const page of c.customPages.pages as Array<{ slug: string }>) {
     if (
@@ -385,6 +394,7 @@ export function validateContent(value: unknown): string[] {
         "teklif-sepeti",
         "teklif-al",
         "paylasim",
+        "urunler",
       ].includes(d.slug) ||
       seen.has("d:" + d.slug)
     )
@@ -405,6 +415,19 @@ export function validateContent(value: unknown): string[] {
           );
         seen.add("p:" + slug);
       }
+    const items = d.groups.flatMap((group) => group.items);
+    for (const item of items) {
+      for (const family of [
+        item.parentSlug,
+        ...(item.relatedFamilies || []),
+      ].filter(Boolean)) {
+        const parent = items.find((candidate) => candidate.slug === family);
+        if (!parent || parent.slug === item.slug || parent.parentSlug)
+          errors.push(
+            "Ürün modeli aynı faaliyet alanındaki bir ana ürün ailesine bağlanmalı.",
+          );
+      }
+    }
   }
   for (const item of Object.values(c["data-details"].details) as Array<{
     variants?: Array<{ id: string; label: string; spin?: unknown }>;
@@ -562,6 +585,11 @@ export function slugify(text: string) {
     .replace(/^-+|-+$/g, "");
 }
 export const fieldLabels: Record<string, string> = {
+  parentSlug: "Ana ürün ailesinin adresi (model için)",
+  relatedFamilies: "Modelin yer aldığı diğer ürün aileleri",
+  children: "Alt menü bağlantıları",
+  sourceBlocks: "Kurumsal içerik, fotoğraflar ve belgeler",
+  sourceTitle: "İçerik bölüm etiketi",
   line: "Ürün serisi",
   configurations: "Malzeme ve dış katman seçenekleri",
   composition: "Malzeme bileşimi",

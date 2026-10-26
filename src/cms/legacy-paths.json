@@ -1,0 +1,1290 @@
+[
+  {
+    "source": "/kivanc-ar-ge",
+    "destination": "/ar-ge"
+  },
+  {
+    "source": "/is-guvenligi/itfaiye-urunleri",
+    "destination": "/is-guvenligi#itfaiye-urunleri"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri",
+    "destination": "/is-guvenligi#endustri-urunleri"
+  },
+  {
+    "source": "/is-guvenligi/ormanci-urunleri",
+    "destination": "/is-guvenligi#ormanci-urunleri"
+  },
+  {
+    "source": "/is-guvenligi/askeriye-ve-polis-urunleri",
+    "destination": "/is-guvenligi#askeriye-ve-polis-urunleri"
+  },
+  {
+    "source": "/muhendislik/cam-elyaf-kumaslar-ve-izolasyon-malzemeleri",
+    "destination": "/muhendislik#cam-elyaf-kumaslar-ve-izolasyon-malzemeleri"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu",
+    "destination": "/muhendislik#makine-ekipman-izolasyonu"
+  },
+  {
+    "source": "/istasyon-uniformasi",
+    "destination": "/is-guvenligi/istasyon-uniformasi"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/refstar",
+    "destination": "/is-guvenligi/refstar-radyan-isiya-karsi-koruma"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/metalstar",
+    "destination": "/is-guvenligi/metalstar-ergimis-metal-sicramasina-karsi-koruma"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/arcstar",
+    "destination": "/is-guvenligi/arcstar-elektrik-arkina-karsi-koruma"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/industar",
+    "destination": "/is-guvenligi/industar-isi-ve-aleve-karsi-koruma"
+  },
+  {
+    "source": "/madencilik/mussel-stone-ozellikleri",
+    "destination": "/madencilik/musselstone-ozellikleri"
+  },
+  {
+    "source": "/katman-nedir",
+    "destination": "/is-guvenligi/katman-alternatifleri"
+  },
+  {
+    "source": "/is-guvenligi/itfaiye-urunleri/solunum-seti",
+    "destination": "/is-guvenligi/solunum-seti"
+  },
+  {
+    "source": "/is-guvenligi/itfaiye-urunleri/termal-kameralar",
+    "destination": "/is-guvenligi/termal-kameralar"
+  },
+  {
+    "source": "/is-guvenligi/itfaiye-urunleri/itfaiyeci-cizmesi",
+    "destination": "/is-guvenligi/itfaiyeci-cizmesi"
+  },
+  {
+    "source": "/is-guvenligi/itfaiye-urunleri/itfaiyeci-eldiveni",
+    "destination": "/is-guvenligi/itfaiyeci-eldiveni"
+  },
+  {
+    "source": "/is-guvenligi/itfaiye-urunleri/itfaiyeci-bareti",
+    "destination": "/is-guvenligi/itfaiyeci-bareti"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu/kazan-ayna-izolasyonu",
+    "destination": "/muhendislik/kazan-ayna-izolasyonu"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu/egzoz-izolasyon-yastigi",
+    "destination": "/muhendislik/egzoz-izolasyon-yastigi"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu/tekos-flans-siperi",
+    "destination": "/muhendislik/tekos-flans-siperi"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu/vanomat-vana-ceketi",
+    "destination": "/muhendislik/vanomat-vana-ceketi"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu/peomat-plastik-enjeksiyon-makinalari-izolasyonu",
+    "destination": "/muhendislik/peomat-plastik-enjeksiyon-makinalari-izolasyonu"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu/puskurtme-yontemi-ile-turbin-makine-ve-ekipman-izolasyonu",
+    "destination": "/muhendislik/puskurtme-yontemi-ile-turbin-makine-ve-ekipman-izolasyonu"
+  },
+  {
+    "source": "/muhendislik/makine-ekipman-izolasyonu/klevostar-cozulebilir-yastik-sistemi-ile-turbin-makine-ve-ekipman-izolasyonu",
+    "destination": "/muhendislik/klevostar-cozulebilir-yastik-sistemi-ile-turbin-makine-ve-ekipman-izolasyonu"
+  },
+  {
+    "source": "/muhendislik/cam-elyaf-kumaslar-ve-izolasyon-malzemeleri/serit-fitil-makaron",
+    "destination": "/muhendislik/serit-fitil-makaron"
+  },
+  {
+    "source": "/muhendislik/cam-elyaf-kumaslar-ve-izolasyon-malzemeleri/dikis-iplikleri",
+    "destination": "/muhendislik/dikis-iplikleri"
+  },
+  {
+    "source": "/muhendislik/cam-elyaf-kumaslar-ve-izolasyon-malzemeleri/izolasyon-malzemeleri",
+    "destination": "/muhendislik/izolasyon-malzemeleri"
+  },
+  {
+    "source": "/is-guvenligi/itfaiye-urunleri/itfaiyeci-elbisesi",
+    "destination": "/is-guvenligi/itfaiyeci-elbisesi"
+  },
+  {
+    "source": "/is-guvenligi/orman-yangin-mudahale",
+    "destination": "/is-guvenligi/wildstar-orman-yangin-mudahale"
+  },
+  {
+    "source": "/is-guvenligi/kesilmeye-karsi-koruyucu-elbiseler",
+    "destination": "/is-guvenligi/forestar-kesilmeye-karsi-koruyucu-elbiseler-ve-ekipman"
+  },
+  {
+    "source": "/itfaiyeci-orme-baslik",
+    "destination": "/is-guvenligi/itfaiyeci-orme-baslik"
+  },
+  {
+    "source": "/itfayeci-ic-giyim-2",
+    "destination": "/is-guvenligi/itfaiyeci-ic-giyim"
+  },
+  {
+    "source": "/aluminize-elbise",
+    "destination": "/is-guvenligi/aluminize-elbise"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/refstar-tamamlayici-ekipman",
+    "destination": "/is-guvenligi/refstar-tamamlayici-ekipman"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/metalstar-tamamlayici-ekipman",
+    "destination": "/is-guvenligi/metalstar-tamamlayici-ekipman"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/ark-basliklari-ve-gozlukleri",
+    "destination": "/is-guvenligi/ark-basliklari-ve-gozlukleri"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/corap",
+    "destination": "/is-guvenligi/corap"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/orme-urunler",
+    "destination": "/is-guvenligi/orme-urunler"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/tamamlayici-ekipman",
+    "destination": "/is-guvenligi/tamamlayici-ekipman"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/arcstar-ic-giyim",
+    "destination": "/is-guvenligi/arcstar-ic-giyim"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/industar-ic-giyim",
+    "destination": "/is-guvenligi/industar-ic-giyim"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/solunum-setleri",
+    "destination": "/is-guvenligi/solunum-setleri"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/endustriyel-eldiven",
+    "destination": "/is-guvenligi/endustriyel-eldiven"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/endustriyel-cizme",
+    "destination": "/is-guvenligi/endustriyel-cizme"
+  },
+  {
+    "source": "/is-guvenligi/endustri-urunleri/endustriyel-baret",
+    "destination": "/is-guvenligi/endustriyel-baret"
+  },
+  {
+    "source": "/endustriyel-elbiseler",
+    "destination": "/is-guvenligi/endustriyel-elbiseler"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/maximus-2-0-832551",
+    "destination": "/is-guvenligi/maximus-2-0-832551"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/optimus-2-0-832536",
+    "destination": "/is-guvenligi/optimus-2-0-832536"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/stefan-iii-832507",
+    "destination": "/is-guvenligi/stefan-iii-832507"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/stefanii-832356",
+    "destination": "/is-guvenligi/stefanii-832356"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/aramid-viscose-fr-orme-baslik-825105",
+    "destination": "/is-guvenligi/aramid-viscose-fr-orme-baslik-825105"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/block-hood-825126-hood",
+    "destination": "/is-guvenligi/block-hood-825126-hood"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/pbi-orme-baslik-825105",
+    "destination": "/is-guvenligi/pbi-orme-baslik-825105"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/830100",
+    "destination": "/is-guvenligi/830100"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/830102",
+    "destination": "/is-guvenligi/830102"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/cool_vest",
+    "destination": "/is-guvenligi/cool-vest"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/cok-fonksiyonlu-koruma-corap",
+    "destination": "/is-guvenligi/cok-fonksiyonlu-koruma-corap"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/aramid-orme-baslik-825105",
+    "destination": "/is-guvenligi/aramid-orme-baslik-825105"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/835103-ic-giyim",
+    "destination": "/is-guvenligi/835103-ic-giyim"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/istasyon-uniformasi",
+    "destination": "/is-guvenligi/itfaiyeci-elbisesi-istasyon-uniformasi"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/primus-2-0-832548",
+    "destination": "/is-guvenligi/primus-2-0-832548"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/salvator-832330",
+    "destination": "/is-guvenligi/salvator-832330"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/mare-833115",
+    "destination": "/is-guvenligi/mare-833115"
+  },
+  {
+    "source": "/itfaiyeci-elbisesi/alexus-832346",
+    "destination": "/is-guvenligi/alexus-832346"
+  },
+  {
+    "source": "/itfaiyeci-bareti/calisia-vulcan-type-cv-102",
+    "destination": "/is-guvenligi/calisia-vulcan-type-cv-102"
+  },
+  {
+    "source": "/itfaiyeci-bareti/iskra-led-fener-baret-adaptorsuz",
+    "destination": "/is-guvenligi/iskra-led-fener-baret-adaptorsuz"
+  },
+  {
+    "source": "/itfaiyeci-bareti/vulcan-neo",
+    "destination": "/is-guvenligi/vulcan-neo"
+  },
+  {
+    "source": "/itfaiyeci-cizmesi/harvik-9687l",
+    "destination": "/is-guvenligi/harvik-9687l"
+  },
+  {
+    "source": "/itfaiyeci-cizmesi/haix-507501-fire-eagle",
+    "destination": "/is-guvenligi/haix-507501-fire-eagle"
+  },
+  {
+    "source": "/itfaiyeci-cizmesi/haix-503007-fire-flash-20",
+    "destination": "/is-guvenligi/haix-503007-fire-flash-20"
+  },
+  {
+    "source": "/itfaiyeci-cizmesi/haix-507506-fire-eagle-vario",
+    "destination": "/is-guvenligi/haix-507506-fire-eagle-vario"
+  },
+  {
+    "source": "/itfaiyeci-cizmesi/haix-507007-fire-hero-3-1",
+    "destination": "/is-guvenligi/haix-507007-fire-hero-3-1"
+  },
+  {
+    "source": "/itfaiyeci-cizmesi/haix-507601-fire-eagle-3-0",
+    "destination": "/is-guvenligi/haix-507601-fire-eagle-3-0"
+  },
+  {
+    "source": "/itfaiyeci-cizmesi/haix-507538-fire-eagle-2-0-pro",
+    "destination": "/is-guvenligi/haix-507538-fire-eagle-2-0-pro"
+  },
+  {
+    "source": "/itfaiyeci-eldiveni/seiz-1564420-ff-p-fire-fighter-premium-long-cuff",
+    "destination": "/is-guvenligi/seiz-1564420-ff-p-fire-fighter-premium-long-cuff"
+  },
+  {
+    "source": "/itfaiyeci-eldiveni/sekur-810220000",
+    "destination": "/is-guvenligi/sekur-810220000"
+  },
+  {
+    "source": "/itfaiyeci-eldiveni/turan-810220001",
+    "destination": "/is-guvenligi/turan-810220001"
+  },
+  {
+    "source": "/itfaiyeci-eldiveni/reactor-s-810220110",
+    "destination": "/is-guvenligi/reactor-s-810220110"
+  },
+  {
+    "source": "/solunum-seti/qsii",
+    "destination": "/is-guvenligi/qsii"
+  },
+  {
+    "source": "/solunum-seti/spiromatic-90u",
+    "destination": "/is-guvenligi/spiromatic-90u"
+  },
+  {
+    "source": "/solunum-seti/ultra-light-safer-composite-cylinders",
+    "destination": "/is-guvenligi/ultra-light-safer-composite-cylinders"
+  },
+  {
+    "source": "/solunum-seti/spirocom",
+    "destination": "/is-guvenligi/spirocom"
+  },
+  {
+    "source": "/solunum-seti/vti-vana-manometreli-ve-efvli",
+    "destination": "/is-guvenligi/vti-vana-manometreli-ve-efvli"
+  },
+  {
+    "source": "/solunum-seti/vti-vana-manometreli",
+    "destination": "/is-guvenligi/vti-vana-manometreli"
+  },
+  {
+    "source": "/solunum-seti/vti-vana",
+    "destination": "/is-guvenligi/vti-vana"
+  },
+  {
+    "source": "/solunum-seti/vti-efv",
+    "destination": "/is-guvenligi/vti-efv"
+  },
+  {
+    "source": "/solunum-seti/worthington-celik-tup-6-l-300-bar-vanasiz",
+    "destination": "/is-guvenligi/worthington-celik-tup-6-l-300-bar-vanasiz"
+  },
+  {
+    "source": "/termal-kamera/txs",
+    "destination": "/is-guvenligi/txs"
+  },
+  {
+    "source": "/termal-kamera/qxt-pro",
+    "destination": "/is-guvenligi/qxt-pro"
+  },
+  {
+    "source": "/termal-kamera/dxt",
+    "destination": "/is-guvenligi/dxt"
+  },
+  {
+    "source": "/yangin-battaniyesi/yangin-battaniyesi",
+    "destination": "/muhendislik/yangin-battaniyesi"
+  },
+  {
+    "source": "/endustriyel/wolf-baslik",
+    "destination": "/is-guvenligi/wolf-baslik"
+  },
+  {
+    "source": "/endustriyel/paul-baslik",
+    "destination": "/is-guvenligi/paul-baslik"
+  },
+  {
+    "source": "/endustriyel/jack-baslik",
+    "destination": "/is-guvenligi/jack-baslik"
+  },
+  {
+    "source": "/endustriyel/tyler-eldiven",
+    "destination": "/is-guvenligi/tyler-eldiven"
+  },
+  {
+    "source": "/endustriyel/terry-eldiven",
+    "destination": "/is-guvenligi/terry-eldiven"
+  },
+  {
+    "source": "/endustriyel/harvey-tozluk",
+    "destination": "/is-guvenligi/harvey-tozluk"
+  },
+  {
+    "source": "/endustriyel/curtis-tozluk",
+    "destination": "/is-guvenligi/curtis-tozluk"
+  },
+  {
+    "source": "/endustriyel/russell-805106-eldiven",
+    "destination": "/is-guvenligi/russell-805106-eldiven"
+  },
+  {
+    "source": "/endustriyel/case-838101-coverall",
+    "destination": "/is-guvenligi/case-838101-coverall"
+  },
+  {
+    "source": "/endustriyel/leroy-827122-hood",
+    "destination": "/is-guvenligi/leroy-827122-hood"
+  },
+  {
+    "source": "/endustriyel/travis-834188-jacket-trousers",
+    "destination": "/is-guvenligi/travis-834188-jacket-trousers"
+  },
+  {
+    "source": "/endustriyel/axis-837113-jacket-trousers",
+    "destination": "/is-guvenligi/axis-837113-jacket-trousers"
+  },
+  {
+    "source": "/endustriyel/vince-819101-arm-protector",
+    "destination": "/is-guvenligi/vince-819101-arm-protector"
+  },
+  {
+    "source": "/endustriyel/vincent-817116-gaiters",
+    "destination": "/is-guvenligi/vincent-817116-gaiters"
+  },
+  {
+    "source": "/endustriyel/bullard-911c-helmet",
+    "destination": "/is-guvenligi/bullard-911c-helmet"
+  },
+  {
+    "source": "/endustriyel/eureka-13-4-heat-fr-af-atpv-12-cal-cm%C2%B2",
+    "destination": "/is-guvenligi/eureka-13-4-heat-fr-af-atpv-12-cal-cm2"
+  },
+  {
+    "source": "/endustriyel/3m-h-700n-vi-beyaz-baret",
+    "destination": "/is-guvenligi/3m-h-700n-vi-beyaz-baret"
+  },
+  {
+    "source": "/endustriyel/paulson-baslik-icin-yedek-vizor",
+    "destination": "/is-guvenligi/paulson-baslik-icin-yedek-vizor"
+  },
+  {
+    "source": "/endustriyel/industar-arcstar-marco-ceket-pantolon",
+    "destination": "/is-guvenligi/industar-arcstar-marco-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/industar-arcstar-luis-yelek",
+    "destination": "/is-guvenligi/industar-arcstar-luis-yelek"
+  },
+  {
+    "source": "/endustriyel/industar-arcstar-alex-tulum",
+    "destination": "/is-guvenligi/industar-arcstar-alex-tulum"
+  },
+  {
+    "source": "/endustriyel/sergio-839198-gomlek",
+    "destination": "/is-guvenligi/sergio-839198-gomlek"
+  },
+  {
+    "source": "/endustriyel/kelvin-837277-ceket-pantolon",
+    "destination": "/is-guvenligi/kelvin-837277-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/industar-arcstar-adam-ceket-pantolon",
+    "destination": "/is-guvenligi/industar-arcstar-adam-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/lucas-829257-su-gecirmez-kaban",
+    "destination": "/is-guvenligi/lucas-829257-su-gecirmez-kaban"
+  },
+  {
+    "source": "/endustriyel/pascal-829242-su-gecirmez-kaban",
+    "destination": "/is-guvenligi/pascal-829242-su-gecirmez-kaban"
+  },
+  {
+    "source": "/endustriyel/roger-838167-tulum",
+    "destination": "/is-guvenligi/roger-838167-tulum"
+  },
+  {
+    "source": "/endustriyel/hawkins-839199-gomlek",
+    "destination": "/is-guvenligi/hawkins-839199-gomlek"
+  },
+  {
+    "source": "/endustriyel/ryan-839197-gomlek",
+    "destination": "/is-guvenligi/ryan-839197-gomlek"
+  },
+  {
+    "source": "/endustriyel/simon-839116-gomlek",
+    "destination": "/is-guvenligi/simon-839116-gomlek"
+  },
+  {
+    "source": "/endustriyel/albert-835103-antistatik-alev-almaz-yagmurluk",
+    "destination": "/is-guvenligi/albert-835103-antistatik-alev-almaz-yagmurluk"
+  },
+  {
+    "source": "/endustriyel/alberto-834112-antistatik-alev-almaz-takim",
+    "destination": "/is-guvenligi/alberto-834112-antistatik-alev-almaz-takim"
+  },
+  {
+    "source": "/endustriyel/barry-822143-bisiklet-yaka-sweatshirt",
+    "destination": "/is-guvenligi/barry-822143-bisiklet-yaka-sweatshirt"
+  },
+  {
+    "source": "/endustriyel/benson-822144-dik-yaka-sweatshirt",
+    "destination": "/is-guvenligi/benson-822144-dik-yaka-sweatshirt"
+  },
+  {
+    "source": "/endustriyel/danny-822131-bisiklet-yaka-sweatshirt",
+    "destination": "/is-guvenligi/danny-822131-bisiklet-yaka-sweatshirt"
+  },
+  {
+    "source": "/endustriyel/alustar-ultra-light-830100",
+    "destination": "/is-guvenligi/alustar-ultra-light-830100"
+  },
+  {
+    "source": "/endustriyel/alustar-830102",
+    "destination": "/is-guvenligi/alustar-830102"
+  },
+  {
+    "source": "/endustriyel/felix-ceket-pantolon",
+    "destination": "/is-guvenligi/felix-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/gleen-ceket-pantolon",
+    "destination": "/is-guvenligi/gleen-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/cliff-ceket-pantolon",
+    "destination": "/is-guvenligi/cliff-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/cooper-panco",
+    "destination": "/is-guvenligi/cooper-panco"
+  },
+  {
+    "source": "/endustriyel/bruno-pardesu",
+    "destination": "/is-guvenligi/bruno-pardesu"
+  },
+  {
+    "source": "/endustriyel/melvin-onluk",
+    "destination": "/is-guvenligi/melvin-onluk"
+  },
+  {
+    "source": "/endustriyel/troy-onluk",
+    "destination": "/is-guvenligi/troy-onluk"
+  },
+  {
+    "source": "/endustriyel/henry-834220-ceket-pantolon",
+    "destination": "/is-guvenligi/henry-834220-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/dean-ceket-pantolon",
+    "destination": "/is-guvenligi/dean-ceket-pantolon"
+  },
+  {
+    "source": "/endustriyel/dustin-835108-pardesu",
+    "destination": "/is-guvenligi/dustin-835108-pardesu"
+  },
+  {
+    "source": "/endustriyel/brice-gomlek",
+    "destination": "/is-guvenligi/brice-gomlek"
+  },
+  {
+    "source": "/endustriyel/jasper-pantolon",
+    "destination": "/is-guvenligi/jasper-pantolon"
+  },
+  {
+    "source": "/endustriyel/protek-tulum-838101",
+    "destination": "/is-guvenligi/protek-tulum-838101"
+  },
+  {
+    "source": "/endustriyel/eric-854106-alev-almaz-iclik-2",
+    "destination": "/is-guvenligi/eric-854106-alev-almaz-iclik-2"
+  },
+  {
+    "source": "/endustriyel/nick-825105-cift-katli-orme-baslik",
+    "destination": "/is-guvenligi/nick-825105-cift-katli-orme-baslik"
+  },
+  {
+    "source": "/endustriyel/lee-812100-corap",
+    "destination": "/is-guvenligi/lee-812100-corap"
+  },
+  {
+    "source": "/endustriyel/protek-yangin-battaniyesi",
+    "destination": "/is-guvenligi/endustriyel-protek-yangin-battaniyesi"
+  },
+  {
+    "source": "/endustriyel/protek-kaynak-perdesi",
+    "destination": "/is-guvenligi/protek-kaynak-perdesi"
+  },
+  {
+    "source": "/endustriyel/luke-baslik",
+    "destination": "/is-guvenligi/luke-baslik"
+  },
+  {
+    "source": "/endustriyel/leo-baslik",
+    "destination": "/is-guvenligi/leo-baslik"
+  },
+  {
+    "source": "/endustriyel/ronald-eldiven",
+    "destination": "/is-guvenligi/ronald-eldiven"
+  },
+  {
+    "source": "/endustriyel/ted-aramid-kemer",
+    "destination": "/is-guvenligi/ted-aramid-kemer"
+  },
+  {
+    "source": "/endustriyel/paulson-elektrik-ark-gozlugu",
+    "destination": "/is-guvenligi/paulson-elektrik-ark-gozlugu"
+  },
+  {
+    "source": "/endustriyel/paulson-elektrik-ark-vizoru",
+    "destination": "/is-guvenligi/paulson-elektrik-ark-vizoru"
+  },
+  {
+    "source": "/endustriyel-ekipman/paulson-gozluk-510-arc-sn-12",
+    "destination": "/is-guvenligi/paulson-gozluk-510-arc-sn-12"
+  },
+  {
+    "source": "/elbise/polis-tulumu-aramid",
+    "destination": "/is-guvenligi/polis-tulumu-aramid"
+  },
+  {
+    "source": "/elbise/polis-tulumu-pbi",
+    "destination": "/is-guvenligi/polis-tulumu-pbi"
+  },
+  {
+    "source": "/elbise/haix-605117-airpower-xr1",
+    "destination": "/is-guvenligi/haix-605117-airpower-xr1"
+  },
+  {
+    "source": "/elbise/haix-605207-airpower-xr91",
+    "destination": "/is-guvenligi/haix-605207-airpower-xr91"
+  },
+  {
+    "source": "/elbise/arbor-829163-ceket",
+    "destination": "/is-guvenligi/arbor-829163-ceket"
+  },
+  {
+    "source": "/elbise/timber-848126-pantolon",
+    "destination": "/is-guvenligi/timber-848126-pantolon"
+  },
+  {
+    "source": "/elbise/miles-843147-ceket",
+    "destination": "/is-guvenligi/miles-843147-ceket"
+  },
+  {
+    "source": "/elbise/harvik-9794-kesilmeye-dayanikli-cizme",
+    "destination": "/is-guvenligi/harvik-9794-kesilmeye-dayanikli-cizme"
+  },
+  {
+    "source": "/elbise/haix-protector-light-2-0-kesilmeye-dayanikli-bot",
+    "destination": "/is-guvenligi/haix-protector-light-2-0-kesilmeye-dayanikli-bot"
+  },
+  {
+    "source": "/elbise/haix-603112-protector-forest-2-1-gtx-orange",
+    "destination": "/is-guvenligi/haix-603112-protector-forest-2-1-gtx-orange"
+  },
+  {
+    "source": "/elbise/soft-touch-spscs100-31c1-kesilmeye-dayanikli-eldiven",
+    "destination": "/is-guvenligi/soft-touch-spscs100-31c1-kesilmeye-dayanikli-eldiven"
+  },
+  {
+    "source": "/elbise/seiz-800185-mechanic",
+    "destination": "/is-guvenligi/seiz-800185-mechanic"
+  },
+  {
+    "source": "/elbise/seiz-800295-specter",
+    "destination": "/is-guvenligi/seiz-800295-specter"
+  },
+  {
+    "source": "/elbise/haix-protector-forest-2-1-gtx-red-yellow",
+    "destination": "/is-guvenligi/haix-protector-forest-2-1-gtx-red-yellow"
+  },
+  {
+    "source": "/elbise/haix-protector-ultra-2-0-gtx",
+    "destination": "/is-guvenligi/haix-protector-ultra-2-0-gtx"
+  },
+  {
+    "source": "/elbise/tytan-neo-htm-103-arama-kurtarma-bareti",
+    "destination": "/is-guvenligi/tytan-neo-htm-103-arama-kurtarma-bareti"
+  },
+  {
+    "source": "/elbise/capella-805102",
+    "destination": "/is-guvenligi/capella-805102"
+  },
+  {
+    "source": "/elbise/orman-yangin-ignis-837480",
+    "destination": "/is-guvenligi/orman-yangin-ignis-837480"
+  },
+  {
+    "source": "/elbise/ormanci-baret-seti-820854013",
+    "destination": "/is-guvenligi/ormanci-baret-seti-820854013"
+  },
+  {
+    "source": "/elbise/ormanci-baret-seti-g3001-nuv-or",
+    "destination": "/is-guvenligi/ormanci-baret-seti-g3001-nuv-or"
+  },
+  {
+    "source": "/elbise/ormanci-baret-seti-x5507vmrxfh15j-ce-820803019",
+    "destination": "/is-guvenligi/ormanci-baret-seti-x5507vmrxfh15j-ce-820803019"
+  },
+  {
+    "source": "/elbise/jaguar-837429",
+    "destination": "/is-guvenligi/jaguar-837429"
+  },
+  {
+    "source": "/elbise/orman-yangin-markus-837515",
+    "destination": "/is-guvenligi/orman-yangin-markus-837515"
+  },
+  {
+    "source": "/elbise/pilot-tulumu",
+    "destination": "/is-guvenligi/pilot-tulumu"
+  },
+  {
+    "source": "/elbise/pilot-ceketi",
+    "destination": "/is-guvenligi/pilot-ceketi"
+  },
+  {
+    "source": "/elbise/tankci-tulumu",
+    "destination": "/is-guvenligi/tankci-tulumu"
+  },
+  {
+    "source": "/alexus",
+    "destination": "/is-guvenligi/alexus-832346"
+  },
+  {
+    "source": "/gizlilik",
+    "destination": "/gizlilik-ve-guvenlik"
+  },
+  {
+    "source": "/vizyon",
+    "destination": "/kurumsal"
+  },
+  {
+    "source": "/kariyer-3",
+    "destination": "/kariyer"
+  },
+  {
+    "source": "/dokumanlar-2",
+    "destination": "/dokumanlar"
+  },
+  {
+    "source": "/kariyer-2",
+    "destination": "/kariyer"
+  },
+  {
+    "source": "/wp-content/uploads/2018/10/EP01-EYS-Politika001.pdf",
+    "destination": "/docs/source/36572405af-EP01-EYS-Politika001.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/1-6331_is_sagligi_ve_guvenligi_kanunu.pdf",
+    "destination": "/docs/6331-is-sagligi-ve-guvenligi-kanunu.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/2-KKD_YONETMELIGI.pdf",
+    "destination": "/docs/kkd-yonetmeligi.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/3-KKD_is_yerinde_kullanilmasi_hakkinda_yonetmelik.pdf",
+    "destination": "/docs/kkd-isyerinde-kullanilmasi-hakkinda-yonetmelik.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/4-belediye_itfaiye_yonetmeligi.pdf",
+    "destination": "/docs/belediye-itfaiye-yonetmeligi.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/Firestar-Layer-Options-LR.pdf",
+    "destination": "/docs/Firestar-Layer-Options-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/Firestar-Layer-Details-LR.pdf",
+    "destination": "/docs/Firestar-Layer-Details-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/Aluminized-Layer-Options-LR.pdf",
+    "destination": "/docs/Aluminized-Layer-Options-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/Aluminized-Layer-Details-LR.pdf",
+    "destination": "/docs/Aluminized-Layer-Details-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/10/KIVANC-GROUP-Firestar-Firefighting-Garments-Equipments-LR.pdf",
+    "destination": "/docs/KIVANC-GROUP-Firestar-Firefighting-Garments-Equipments-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/07/Kivanc-Group-Itfaiyeci-Elbiseleri-Karsilastirma-2026.pdf",
+    "destination": "/docs/Kivanc-Group-Itfaiyeci-Elbiseleri-Karsilastirma-2026.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2019/10/YOU_INDUSTRY.pdf",
+    "destination": "/docs/YOU_INDUSTRY.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2023/02/Industar-TR-LR.pdf",
+    "destination": "/docs/Industar-TR-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2023/02/Arcstar-TR-LR.pdf",
+    "destination": "/docs/Arcstar-TR-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2023/02/Metalstar-TR-LR.pdf",
+    "destination": "/docs/Metalstar-TR-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2023/02/Refstar-TR-LR.pdf",
+    "destination": "/docs/Refstar-TR-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2023/02/Forestar-TR-LR.pdf",
+    "destination": "/docs/Forestar-TR-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2022/04/2022-MILSTAR-Askeriye-ve-Polis-Urunleri-LR.pdf",
+    "destination": "/docs/2022-MILSTAR-Askeriye-ve-Polis-Urunleri-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2022/05/Opti-Syn-Multi-norm-Kumas-1.pdf",
+    "destination": "/docs/Opti-Syn-Multi-norm-Kumas-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/Musselstone-2025.pdf",
+    "destination": "/docs/Musselstone-2025.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/08/Yangin-Battaniyesi.pdf",
+    "destination": "/docs/Yangin-Battaniyesi.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/Alexus-Brocure-LR.pdf",
+    "destination": "/docs/source/8fcb85fc09-Alexus-Brocure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/02/Itfaiyeci-Elbisesinin-Temizligi-2026_compressed-2.pdf",
+    "destination": "/docs/source/b1a9269cca-Itfaiyeci-Elbisesinin-Temizligi-2026-compressed-2.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/02/Decontamination-of-the-Firefighter-Garment-2026_compressed.pdf",
+    "destination": "/docs/source/2f27a35fcd-Decontamination-of-the-Firefighter-Garment-2026-compressed.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/Maximus-2.0-Brochure-LR.pdf",
+    "destination": "/docs/source/53f0b26d9d-Maximus-2-0-Brochure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/Optimus-2.0-Brochure-LR.pdf",
+    "destination": "/docs/source/99097537bc-Optimus-2-0-Brochure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/Stefan-III-Brochure-LR.pdf",
+    "destination": "/docs/source/a274150ecc-Stefan-III-Brochure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/STEFAN-II-Brochure-LR.pdf",
+    "destination": "/docs/source/8df324e079-STEFAN-II-Brochure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_alustar-ultra-light-LR.pdf",
+    "destination": "/docs/source/e2486841d6-refstar-alustar-ultra-light-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_alustar-LRTR.pdf",
+    "destination": "/docs/source/7e314292bf-refstar-alustar-LRTR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2017/03/Protek-Cok-Fonksiyonlu-Koruma-Corap.pdf",
+    "destination": "/docs/source/bfe9ef6168-Protek-Cok-Fonksiyonlu-Koruma-Corap.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/Primus-2.0-Brochure-LR.pdf",
+    "destination": "/docs/source/8a54a62f38-Primus-2-0-Brochure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/Salvator-Brochure-LR.pdf",
+    "destination": "/docs/source/9f476350aa-Salvator-Brochure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/10/Mare-Brochure-LR.pdf",
+    "destination": "/docs/source/e14f1d7bee-Mare-Brochure-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2022/03/KZPT_VulcanB_EN-US_2019.pdf",
+    "destination": "/docs/source/8da07f8cb8-KZPT-VulcanB-EN-US-2019.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2018/03/harvik.pdf",
+    "destination": "/docs/source/e155563071-harvik.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/08/507501_fire-eagle_bla_tr.pdf",
+    "destination": "/docs/source/e0958d1a8f-507501-fire-eagle-bla-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/06/503007_Fire-Flash2_TR.pdf",
+    "destination": "/docs/source/02aef6cd3e-503007-Fire-Flash2-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/06/507506_fire-eagle-vario_tr.pdf",
+    "destination": "/docs/source/921d0b9523-507506-fire-eagle-vario-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/507007_fire-hero-3-1_en.pdf",
+    "destination": "/docs/source/8d5baf436c-507007-fire-hero-3-1-en.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/507601_fire-eagle-3-0_en.pdf",
+    "destination": "/docs/source/a10512985b-507601-fire-eagle-3-0-en.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/06/507538_fire-eagle-2-0-pro_en.pdf",
+    "destination": "/docs/source/ee8125c842-507538-fire-eagle-2-0-pro-en.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/08/DAT_1564420-FF-P-FF-PREMIUM.pdf",
+    "destination": "/docs/source/6398595b3f-DAT-1564420-FF-P-FF-PREMIUM.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/02/SEKUR_810220000_TR.pdf",
+    "destination": "/docs/source/b015bc22c2-SEKUR-810220000-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/02/2022_07_01_Turan_TR-1.pdf",
+    "destination": "/docs/source/9752fb37f1-2022-07-01-Turan-TR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2022/07/REACTOR_S_810220110_TR-2.pdf",
+    "destination": "/docs/source/9a3c4760c5-REACTOR-S-810220110-TR-2.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/08/QSII-A4brochure_TURKEY.pdf",
+    "destination": "/docs/source/82d8e2d41e-QSII-A4brochure-TURKEY.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/08/31883A19-QS-II-S-Face-Mask-hatch_TURKEY_PROOF-READ-2013-05-13.pdf",
+    "destination": "/docs/source/504b5ae7a2-31883A19-QS-II-S-Face-Mask-hatch-TURKEY-PROOF-READ-2013-05-13.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/08/31888A19-QS-II-Harness_TURKEY_PROOF-READ-2013-05-13.pdf",
+    "destination": "/docs/source/f884a8d783-31888A19-QS-II-Harness-TURKEY-PROOF-READ-2013-05-13.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/08/31892A19-SpiroGuide-II-Digital-Display-Unit_TURKEY_PROOF.pdf",
+    "destination": "/docs/source/63451e1e02-31892A19-SpiroGuide-II-Digital-Display-Unit-TURKEY-PROOF.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/08/SpiroComA4brochure_TURKEY.pdf",
+    "destination": "/docs/source/dcd72d30bc-SpiroComA4brochure-TURKEY.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/11/97503A01-Spiromatic-90U-Product-Leaflet_S-mask_H-TR.pdf",
+    "destination": "/docs/source/4b40a6b413-97503A01-Spiromatic-90U-Product-Leaflet-S-mask-H-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/11/safer-cat-TR.pdf",
+    "destination": "/docs/source/68c51fef1a-safer-cat-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2016/09/SpiroComA4brochure_TURKEY.pdf",
+    "destination": "/docs/source/55358a7bd9-SpiroComA4brochure-TURKEY.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/11/VTI-Valve-Cylinder-300-bar-Outlet-G58-RH-fem-inlet-M18x15-brass-chrome-plated-Manometreli-data-sheet-K632-3x-K632-5x-inline-valve-with-pressure-gauge.pdf",
+    "destination": "/docs/source/e0a1ef1fa4-VTI-Valve-Cylinder-300-bar-Outlet-G58-RH-fem-inlet-M18x15-brass-chrome-plated-Manometreli-data-sheet.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/11/VTI-HAVA-AKIS-KONTROL-SISTEMI-EFV-data-sheet-K19-277.0-S1-efv-with-sinterfilter.pdf",
+    "destination": "/docs/source/0cec91c6f7-VTI-HAVA-AKIS-KONTROL-SISTEMI-EFV-data-sheet-K19-277-0-S1-efv-with-sinterfilter.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/11/VTI-MANOMETRESIZ-VANA-data-sheet-K44-inline-valve.pdf",
+    "destination": "/docs/source/84903ebd8b-VTI-MANOMETRESIZ-VANA-data-sheet-K44-inline-valve.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2022/01/TXS-Tu%CC%88rkc%CC%A7e-web.pdf",
+    "destination": "/docs/source/677fb50aff-TXS-Turkce-web.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2024/09/X-Factor-Image-Enhancement.pdf",
+    "destination": "/docs/source/3cbf13c59f-X-Factor-Image-Enhancement.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2026/07/Ozellikler-web.pdf",
+    "destination": "/docs/source/0c422f2a84-Ozellikler-web.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2024/09/QXT_Pro-Turkce-web.pdf",
+    "destination": "/docs/source/f5b3d64d22-QXT-Pro-Turkce-web.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2024/09/DXT-Tu%CC%88rkc%CC%A7e-web.pdf",
+    "destination": "/docs/source/ee6b32a472-DXT-Turkce-web.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_wolf_LR_TR.pdf",
+    "destination": "/docs/source/387276c620-refstar-wolf-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_paul_LR_TR.pdf",
+    "destination": "/docs/source/f75d0b7aba-refstar-paul-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_jack_LR_TR.pdf",
+    "destination": "/docs/source/8e93b6b46b-refstar-jack-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_tyler_LR_TR-1.pdf",
+    "destination": "/docs/source/1db1df5a68-refstar-tyler-LR-TR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_terry_LR_TR.pdf",
+    "destination": "/docs/source/bc72a57cc4-refstar-terry-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_harvey_LR_TR.pdf",
+    "destination": "/docs/source/f69dca495f-refstar-harvey-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_curtis_LR-2.pdf",
+    "destination": "/docs/source/c1d1a22a08-refstar-curtis-LR-2.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/04/92arcstar_russell_LR.pdf",
+    "destination": "/docs/source/0af90c1171-92arcstar-russell-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/07/metalstar_case-LR-1.pdf",
+    "destination": "/docs/source/923df19c6a-metalstar-case-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/06/metalstar_leroy-LR-tr.pdf",
+    "destination": "/docs/source/157cae64cc-metalstar-leroy-LR-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/08/metalstar_travis-LR-1.pdf",
+    "destination": "/docs/source/8529b2c594-metalstar-travis-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/09/metalstar_axis-LR.pdf",
+    "destination": "/docs/source/6ef41c57a3-metalstar-axis-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/05/metalstar_vince-LR-1.pdf",
+    "destination": "/docs/source/0cfa13066c-metalstar-vince-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/04/metalstar_vincent-LR-1.pdf",
+    "destination": "/docs/source/3605273984-metalstar-vincent-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/02/metalstar_911C-Helmet-LR.pdf",
+    "destination": "/docs/source/e33111445b-metalstar-911C-Helmet-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/02-industar-marco-tr.pdf",
+    "destination": "/docs/source/fdb59753a0-02-industar-marco-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/03-industar-luis-tr.pdf",
+    "destination": "/docs/source/fcab8f3819-03-industar-luis-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/04-industar-alex-tr.pdf",
+    "destination": "/docs/source/e8628af7fc-04-industar-alex-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/05industar_sergio_tr_a.pdf",
+    "destination": "/docs/source/c39b5cf9b8-05industar-sergio-tr-a.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/10/metalstar_kelvin-LR.pdf",
+    "destination": "/docs/source/cc6e3f094b-metalstar-kelvin-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/07-industar-adam-tr.pdf",
+    "destination": "/docs/source/5c10fc70b3-07-industar-adam-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/08-industar-lucas-tr.pdf",
+    "destination": "/docs/source/acb7c038e2-08-industar-lucas-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/22-23industar_pascal_LR-2.pdf",
+    "destination": "/docs/source/14589b766f-22-23industar-pascal-LR-2.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/11-industar-roger-tr.pdf",
+    "destination": "/docs/source/41324fc43b-11-industar-roger-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/12-industar-hawkins-tr.pdf",
+    "destination": "/docs/source/8be9e3b71a-12-industar-hawkins-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/28-29industar_ryan_LR-1.pdf",
+    "destination": "/docs/source/b43b84476a-28-29industar-ryan-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/30-31industar_simon_LR-1.pdf",
+    "destination": "/docs/source/a1f6b04a07-30-31industar-simon-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/15-industar-albert-tr.pdf",
+    "destination": "/docs/source/9179d004b3-15-industar-albert-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/34-35industar_alberto_LR-1.pdf",
+    "destination": "/docs/source/d3c7e39b6f-34-35industar-alberto-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/17-industar-barry-tr.pdf",
+    "destination": "/docs/source/d095710620-17-industar-barry-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/18-industar-benson-tr.pdf",
+    "destination": "/docs/source/0cbaf52bec-18-industar-benson-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2020/11/21-industar-danny-tr.pdf",
+    "destination": "/docs/source/c29b78f439-21-industar-danny-tr.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_felix_LR_TR.pdf",
+    "destination": "/docs/source/458f357fe8-refstar-felix-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_gleen_LR_TR.pdf",
+    "destination": "/docs/source/ffef44d6f0-refstar-gleen-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_cliff_LR_TR.pdf",
+    "destination": "/docs/source/e51b4ea416-refstar-cliff-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_cooper_LR_TR.pdf",
+    "destination": "/docs/source/2696d27e8f-refstar-cooper-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_bruno_LR_TR.pdf",
+    "destination": "/docs/source/e16316aabe-refstar-bruno-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_melvin_TR.pdf",
+    "destination": "/docs/source/8d5dcb0399-refstar-melvin-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/06/refstar_troy_LR_TR.pdf",
+    "destination": "/docs/source/c8fe887548-refstar-troy-LR-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/02/53-54arcstar_henry_LR.pdf",
+    "destination": "/docs/source/24931de8dc-53-54arcstar-henry-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/02/63-64arcstar_dean_LR.pdf",
+    "destination": "/docs/source/a3b3a5f068-63-64arcstar-dean-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/02/65-66arcstar_dustin_LR.pdf",
+    "destination": "/docs/source/d2eb39dda5-65-66arcstar-dustin-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/71-72arcstar_brice_LR.pdf",
+    "destination": "/docs/source/d41b57b6d2-71-72arcstar-brice-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/83-84arcstar_jasper_LR-1.pdf",
+    "destination": "/docs/source/0ec477b758-83-84arcstar-jasper-LR-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2017/03/44industar_eric_tr-HR.pdf",
+    "destination": "/docs/source/c5aaee6d5f-44industar-eric-tr-HR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/01/45industar_nick_tr-HR.pdf",
+    "destination": "/docs/source/62283e6b40-45industar-nick-tr-HR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/01/46industar_lee-T%C3%BCrk%C3%A7e-HR.pdf",
+    "destination": "/docs/source/bafefcb98b-46industar-lee-Turkce-HR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/01/47industar_yangin-battaniyesi-T%C3%BCrk%C3%A7e-LR.pdf",
+    "destination": "/docs/source/a9b4072941-47industar-yangin-battaniyesi-Turkce-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/09/metalstar_welding-curtain-LR.pdf",
+    "destination": "/docs/source/d64330ae23-metalstar-welding-curtain-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/93-94arcstar_luke_LR.pdf",
+    "destination": "/docs/source/d0ac15d8a9-93-94arcstar-luke-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/89-90arcstar_leo_LR.pdf",
+    "destination": "/docs/source/245f5bee57-89-90arcstar-leo-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/97arcstar_ronald_LR.pdf",
+    "destination": "/docs/source/73d9ca08a5-97arcstar-ronald-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/04/896107-kemer_TR_LR.pdf",
+    "destination": "/docs/source/ed71f6a8c3-896107-kemer-TR-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/104arcstar_Paulson_LR.pdf",
+    "destination": "/docs/source/1a4ac3ed52-104arcstar-Paulson-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/105-106arcstar_Paulson_LR.pdf",
+    "destination": "/docs/source/e4b7b06e8c-105-106arcstar-Paulson-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/04/arcstar_Paulson_LR.pdf",
+    "destination": "/docs/source/cef48569b5-arcstar-Paulson-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2019/12/Paulson-International-510-arc-sn-12.pdf",
+    "destination": "/docs/source/c1e7ab0f5a-Paulson-International-510-arc-sn-12.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2018/03/Airpower_XR1_605117.pdf",
+    "destination": "/docs/source/766a8eea5d-Airpower-XR1-605117.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2018/03/605207_airpower_XR91_TR.pdf",
+    "destination": "/docs/source/8640a3c1ef-605207-airpower-XR91-TR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/99-100forestar_arbor_LR.pdf",
+    "destination": "/docs/source/df4a137c8e-99-100forestar-arbor-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/101-102forestar_timber_LR.pdf",
+    "destination": "/docs/source/ee04847e76-101-102forestar-timber-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/103-104forestar_miles_LR.pdf",
+    "destination": "/docs/source/4c9a9459af-103-104forestar-miles-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/106forestar_Chainsaw_LR.pdf",
+    "destination": "/docs/source/4e7acd7132-106forestar-Chainsaw-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/03/107forestar_Protectorlight_LR.pdf",
+    "destination": "/docs/source/aff028c203-107forestar-Protectorlight-LR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/10/603112_protector-forest_2-1_orange_en.pdf",
+    "destination": "/docs/source/22cac9f2a2-603112-protector-forest-2-1-orange-en.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/11/800185_MECHANIC-185_DAT_TK_13072021__2-in-1_.pdf",
+    "destination": "/docs/source/f4f2345130-800185-MECHANIC-185-DAT-TK-13072021-2-in-1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/11/800295_SPECTER_DAT_20210721.pdf",
+    "destination": "/docs/source/8b987751b9-800295-SPECTER-DAT-20210721.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/11/603115_protector-forest-2-1-gtx_red-yellow_en.pdf",
+    "destination": "/docs/source/bdd77f9a9f-603115-protector-forest-2-1-gtx-red-yellow-en.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2021/11/603113_protector-ultra-gtx_lime-green_en.pdf",
+    "destination": "/docs/source/3420b7b516-603113-protector-ultra-gtx-lime-green-en.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2024/09/13-G3001-NUV-OR.pdf",
+    "destination": "/docs/source/5341fe15ef-13-G3001-NUV-OR.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2024/09/12-forestar_forestly-h-kit_820803019.pdf",
+    "destination": "/docs/source/2cd74dbc14-12-forestar-forestly-h-kit-820803019.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2024/11/Jaguar-TR-LR1.pdf",
+    "destination": "/docs/source/7f83d14cd9-Jaguar-TR-LR1.pdf"
+  },
+  {
+    "source": "/wp-content/uploads/2025/05/Markus-brochure-LR-TR_.pdf",
+    "destination": "/docs/source/12048ba99b-Markus-brochure-LR-TR.pdf"
+  }
+]

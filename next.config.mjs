@@ -1,3 +1,7 @@
+import { readFileSync } from "node:fs";
+const legacyPaths = JSON.parse(
+  readFileSync(new URL("./src/cms/legacy-paths.json", import.meta.url), "utf8"),
+);
 /** @type {import('next').NextConfig} */
 const mediaHost = process.env.SUPABASE_URL
   ? new URL(process.env.SUPABASE_URL).hostname
@@ -5,7 +9,9 @@ const mediaHost = process.env.SUPABASE_URL
 const nextConfig = {
   env: { NEXT_PUBLIC_MEDIA_HOST: mediaHost },
   // Runtime CMS files belong on the persistent server disk, outside the bundle.
-  outputFileTracingExcludes: { "/*": ["./.cms/**/*"] },
+  outputFileTracingExcludes: {
+    "/*": ["./.cms/**/*", "./public/docs/**/*", "./public/images/source/**/*"],
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
@@ -20,6 +26,9 @@ const nextConfig = {
           ]
         : []),
     ],
+  },
+  async redirects() {
+    return legacyPaths.map((entry) => ({ ...entry, permanent: true }));
   },
   async headers() {
     return [

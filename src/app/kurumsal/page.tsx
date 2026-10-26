@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SiteImage from "@/components/SiteImage";
 import PageBanner from "@/components/PageBanner";
+import ContentBlocks from "@/components/ContentBlocks";
 
 export async function generateMetadata(): Promise<Metadata> {
   return pageMetadata("/kurumsal", (await getSection("app-kurumsal")).metadata);
@@ -49,6 +50,9 @@ export default async function CorporatePage() {
         </div>
       </section>
 
+      <section className="bg-paper pb-16" aria-label={cms.sourceTitle}>
+        <ContentBlocks blocks={cms.sourceBlocks} />
+      </section>
       <section className="bg-mist py-16 md:py-24">
         <div className="container-site">
           <h2 className="text-3xl font-semibold text-ink md:text-4xl">

@@ -1,11 +1,16 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import ArrowUpRight from "./ArrowUpRight";
 import { usePathname } from "next/navigation";
 import { useSection } from "@/cms/context";
 import type { Division } from "@/data/divisions";
 import { slugify } from "@/cms/schema";
-type Item = { label: string; href: string };
+type Item = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+};
 export default function MegaNavigation({
   items,
   divisions,
@@ -15,8 +20,10 @@ export default function MegaNavigation({
 }) {
   const c = useSection("components-Header");
   const [active, setActive] = useState<string | null>(null);
+  const [sector, setSector] = useState(divisions[0]?.slug || "");
   const nav = useRef<HTMLElement>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const openedByHover = useRef(false);
   const buttons = useRef<Record<string, HTMLButtonElement | null>>({});
   const pathname = usePathname();
   function cancelClose() {
@@ -53,11 +60,17 @@ export default function MegaNavigation({
       document.removeEventListener("pointerdown", outside);
     };
   }, [active]);
-  const division = divisions.find((d) => "/" + d.slug === active);
+  const division = divisions.find((d) =>
+    active === "/urunler" ? d.slug === sector : "/" + d.slug === active,
+  );
+  const submenu = items.find(
+    (item) => item.href === active && item.href !== "/urunler",
+  )?.children;
   let cut = 1;
   if (division) {
     const weights = division.groups.map(
-      (g) => 2 + Math.ceil(g.items.length / 2),
+      (g) =>
+        2 + Math.ceil(g.items.filter((item) => !item.parentSlug).length / 2),
     );
     const total = weights.reduce((a, b) => a + b, 0);
     let best = Infinity,
@@ -83,6 +96,8 @@ export default function MegaNavigation({
       }}
     >
       {items.map((item) =>
+        item.href === "/urunler" ||
+        Boolean(item.children?.length) ||
         divisions.some((d) => "/" + d.slug === item.href) ? (
           <button
             key={item.href}
@@ -92,16 +107,26 @@ export default function MegaNavigation({
             }}
             className={active === item.href ? "is-active" : ""}
             aria-expanded={active === item.href}
-            aria-controls="kg-products-panel"
+            aria-controls={
+              item.href === "/urunler" ||
+              divisions.some((d) => "/" + d.slug === item.href)
+                ? "kg-products-panel"
+                : "kg-submenu-panel"
+            }
             onPointerEnter={(event) => {
               if (event.pointerType === "mouse") {
                 cancelClose();
+                if (active !== item.href) openedByHover.current = true;
                 setActive(item.href);
               }
             }}
-            onClick={() => {
+            onClick={(event) => {
               cancelClose();
-              setActive((value) => (value === item.href ? null : item.href));
+              if (event.detail > 0 && openedByHover.current)
+                setActive(item.href);
+              else
+                setActive((value) => (value === item.href ? null : item.href));
+              openedByHover.current = false;
             }}
           >
             {item.label}
@@ -116,6 +141,22 @@ export default function MegaNavigation({
           </Link>
         ),
       )}
+      {submenu && !division && (
+        <div className="kg-mega-panel kg-simple-panel" id="kg-submenu-panel">
+          <div className="container-site">
+            {submenu.map((item) => (
+              <Link
+                href={item.href}
+                key={item.href}
+                onClick={() => setActive(null)}
+              >
+                {item.label}
+                <ArrowUpRight />
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
       {division && (
         <div
           className="kg-mega-panel"
@@ -124,6 +165,23 @@ export default function MegaNavigation({
           onPointerLeave={closeSoon}
         >
           <div className="kg-mega-inner">
+            {active === "/urunler" && (
+              <div className="kg-sector-tabs" aria-label={c.sectorLabel}>
+                {divisions.map((d) => (
+                  <button
+                    type="button"
+                    key={d.slug}
+                    aria-pressed={sector === d.slug}
+                    onClick={() => setSector(d.slug)}
+                  >
+                    {d.title}
+                  </button>
+                ))}
+                <Link href="/urunler" onClick={() => setActive(null)}>
+                  {c.allProductsLabel} <ArrowUpRight />
+                </Link>
+              </div>
+            )}
             <div className="kg-mega-overview">
               <Link href={"/" + division.slug} onClick={() => setActive(null)}>
                 {division.title}
@@ -157,16 +215,18 @@ export default function MegaNavigation({
                         </Link>
                       </h2>
                       <ul>
-                        {group.items.map((item) => (
-                          <li key={item.slug}>
-                            <Link
-                              href={"/" + division.slug + "/" + item.slug}
-                              onClick={() => setActive(null)}
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
+                        {group.items
+                          .filter((item) => !item.parentSlug)
+                          .map((item) => (
+                            <li key={item.slug}>
+                              <Link
+                                href={"/" + division.slug + "/" + item.slug}
+                                onClick={() => setActive(null)}
+                              >
+                                {item.name}
+                              </Link>
+                            </li>
+                          ))}
                       </ul>
                     </section>
                   ))}
