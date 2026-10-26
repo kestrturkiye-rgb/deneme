@@ -22,7 +22,8 @@ const rows = [];
 const urls = {};
 try {
   for (const name of await readdir(path.join(dir, "uploads"))) {
-    if (!/^[a-f0-9-]{36}\.(jpg|png|gif|webp|avif|pdf)$/.test(name)) continue;
+    if (!/^[a-f0-9-]{36}\.(jpg|png|gif|webp|avif|pdf|mp4|webm)$/.test(name))
+      continue;
     const bucket = db.storage.from(
       process.env.SUPABASE_STORAGE_BUCKET || "site-media",
     );
@@ -33,6 +34,8 @@ try {
       webp: "image/webp",
       avif: "image/avif",
       pdf: "application/pdf",
+      mp4: "video/mp4",
+      webm: "video/webm",
     }[name.split(".").pop()];
     const bytes = await readFile(path.join(dir, "uploads", name));
     const { error } = await bucket.upload("media/" + name, bytes, {

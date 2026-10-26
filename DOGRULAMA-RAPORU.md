@@ -20,7 +20,7 @@
 - `npm run typecheck`: başarılı.
 - `npm run test:assets`: **9 kontrol başarılı**; dosya imzası/boyut/zaman aşımı, yarım dosya bırakmama, bozuk önbelleği düzeltme, yapı envanteri ve Vercel statik belge kullanılabilirliği.
 - Playwright destekli `npm run test:cms`: **40 kontrol başarılı**. Giriş, geçici parola, oturum yenileme, CSRF, taslak/yayın/önizleme, doğrulama, sürüm çakışması, yüklemeler, dinamik ürün/sayfa, haber detayları, paylaşım görseli, katalog fotoğrafı, gelen kutusu, ceket/pantolon, malzeme/renk, gerçek kare dizisiyle 360° sürükleme/klavye/dokunma, tam ekran, mobil teklif ve sepet akışları kontrol edildi.
-- Playwright destekli `npm run test:cloud`: **12 kontrol başarılı**. Gerçek PostgreSQL motoru PGlite ve yerel Supabase REST/Storage sözleşme servisi kullanıldı. Anonim erişim engeli, iki uygulama işlemi arasında kalıcılık, eşzamanlı yazma koruması, ortak giriş sınırı, şifre değişikliği, bootstrap, imzalı yükleme, bozuk dosyanın reddi ve 5 MB dosyanın API'ye taşınmadan tarayıcıdan yüklenmesi doğrulandı. **Bu testler gerçek Supabase/Vercel hesabına bağlanmaz.**
+- Playwright destekli `npm run test:cloud`: **13 kontrol başarılı**. Gerçek PostgreSQL motoru PGlite ve yerel Supabase REST/Storage sözleşme servisi kullanıldı. Anonim erişim engeli, iki uygulama işlemi arasında kalıcılık, eşzamanlı yazma koruması, ortak giriş sınırı, şifre değişikliği, bootstrap, imzalı yükleme, bozuk dosyanın reddi ve 5 MB görsel/video dosyasının API'ye taşınmadan tarayıcıdan yüklenmesi doğrulandı. **Bu testler gerçek Supabase/Vercel hesabına bağlanmaz.**
 - **225 sayfa**, masaüstü ve 390 px mobil genişlikte tarandı. **1.116 yerel bağlantıda** hata bulunmadı. 427 yerel görsel adresi kontrol edildi. Sayfa taşması, hata ekranı, bozuk mevcut yerel görsel adresi veya tarayıcı çalışma hatası görülmedi. Olmayan sayfa/ürün adresleri 404 döndürür.
 - Derleme bağımlılık listelerinde özel `.cms/` hesabı/verisi bulunmadığı kontrol edildi. Test hesapları ve örnek dönüş kareleri geçici alanlarda kullanılıp kaldırıldı.
 
@@ -43,3 +43,11 @@ Menü ve aktarım testi: ana menünün sekiz başlığı, üç faaliyet alanı, 
 Derleme ve TypeScript kontrolü geçti. 225 sayfa, 1.116 yerel bağlantı ve 427 görsel adresi tarandı; hata ekranı, taşma, bozuk bağlantı veya büyük açık renkli arayüz yüzeyi bulunmadı. Masaüstü ve 390 px mobil ekranlar incelendi. Sayfa/kart zeminleri taramasının kapsamı CSS yüzeyleridir; kaynak fotoğraflara gömülü beyaz pikseller değildir. Kaynak fotoğrafların renklerine veya içeriğine müdahale edilmedi.
 
 Koyu form hata/başarı durumu tarayıcıda yakalanan örnek yanıtlarla kontrol edildi; gerçek talep oluşturulmadı. Tam ekran ürün galerisi ve normal görsel renkleri, telefon belge araması, menü ve eski adres yönlendirmeleri kontrol edildi. Güncel ekran görüntüleri `goruntuler/koyu-tasarim.pdf` dosyasındadır.
+
+## Banner video desteği · 26 Ekim 2026
+
+Her açılış hikâyesine panelden ayrı MP4/WebM videosu seçilebilir. Video başladığında kapak görselinin üzerine yumuşak geçişle açılır; sessiz, döngüde ve mobilde sayfa içinde oynar. Klavye ve dokunmayla erişilen durdur/oynat düğmesi vardır. Banner ekran dışında veya sekme gizliyken oynatma durur. Azaltılmış hareket ve veri tasarrufu tercihlerinde ziyaretçi açıkça başlatana kadar video indirilmez. Oynatma engeli veya dosya hatasında kapak görseli kalır.
+
+Medya kütüphanesi, yerel sunum, buluta aktarım ve Supabase yükleme izinleri MP4/WebM için genişletildi. Boyut sınırı 10 MB olarak korunur. Yerel video sunumu byte-range/HEAD destekler. Eski içerikler yeni alanlar olmadan da kaydedilebilir. Daha önce kurulmuş Supabase projesinde güncel kurulum SQL'i yeniden çalıştırılmalıdır.
+
+Üretim derlemesi başarılı; 40 CMS, 13 bulut sözleşmesi ve 13 video kontrolü geçti. Video testleri FFmpeg ile geçici renk desenli klipler ve ayrı bir yönetici hesabı oluşturur; gerçek kurumsal içerik olarak kullanılmaz. Masaüstü ve 390 px mobil görüntüler incelendi. Test dosyaları ve hesapları temizlendi. Gerçek kurumsal video henüz seçilmediğinden varsayılan banner mevcut fotoğrafları gösterir.

@@ -59,7 +59,7 @@ export async function GET(request: Request) {
   const dir = path.join(dataDir(), "uploads");
   mkdirSync(dir, { recursive: true });
   const files = readdirSync(/* turbopackIgnore: true */ dir)
-    .filter((n) => /^[a-f0-9-]+\.(jpg|png|gif|webp|avif|pdf)$/.test(n))
+    .filter((n) => /^[a-f0-9-]+\.(jpg|png|gif|webp|avif|pdf|mp4|webm)$/.test(n))
     .map((name) => ({
       name,
       url: "/media/" + name,
@@ -131,7 +131,9 @@ export async function POST(request: Request) {
     }
     if (
       body?.action === "complete" &&
-      /^media\/[a-f0-9-]{36}\.(jpg|png|gif|webp|avif|pdf)$/.test(body.path)
+      /^media\/[a-f0-9-]{36}\.(jpg|png|gif|webp|avif|pdf|mp4|webm)$/.test(
+        body.path,
+      )
     ) {
       const name = body.path.slice(6);
       const id = name.slice(0, 36);
@@ -147,12 +149,12 @@ export async function POST(request: Request) {
           { status: 400 },
         );
       const bytes = await fetch(url, {
-        headers: { Range: "bytes=0-15" },
+        headers: { Range: "bytes=0-511" },
         cache: "no-store",
         signal: AbortSignal.timeout(8000),
       });
       const ext = mediaExtension(
-        new Uint8Array(await bytes.arrayBuffer()).subarray(0, 16),
+        new Uint8Array(await bytes.arrayBuffer()).subarray(0, 512),
       );
       if (
         !bytes.ok ||
@@ -212,7 +214,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Yalnızca JPG, PNG, GIF, WebP, AVIF ve PDF yüklenebilir. SVG ve çalıştırılabilir dosyalar kabul edilmez.",
+          "Yalnızca JPG, PNG, GIF, WebP, AVIF, PDF, MP4 ve WebM yüklenebilir. SVG ve çalıştırılabilir dosyalar kabul edilmez.",
       },
       { status: 400 },
     );

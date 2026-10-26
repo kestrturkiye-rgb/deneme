@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSection } from "@/cms/context";
 import ArrowUpRight from "./ArrowUpRight";
 import SiteImage from "./SiteImage";
+import HeroVideo from "./HeroVideo";
 import { getImageProps } from "next/image";
 export default function Hero() {
   const c = useSection("components-Hero");
@@ -17,6 +18,7 @@ export default function Hero() {
       accent: c.metin03,
       description: c.metin04,
       image: c.heroImage,
+      video: c.heroVideo,
       imageAlt: c.metin09,
       href: c.metin05,
       linkLabel: c.metin06,
@@ -49,6 +51,14 @@ export default function Hero() {
         sizes="100vw"
         fetchPriority={selected === 0 ? "high" : "auto"}
       />
+      {current.video && (
+        <HeroVideo
+          key={current.id + current.video}
+          src={current.video}
+          playLabel={c.videoPlayLabel || "Banner videosunu oynat"}
+          pauseLabel={c.videoPauseLabel || "Banner videosunu durdur"}
+        />
+      )}
       <div className="kg-hero-shade" />
       <div
         className="kg-hero-content container-site"

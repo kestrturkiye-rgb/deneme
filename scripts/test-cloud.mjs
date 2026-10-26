@@ -195,7 +195,12 @@ const api = createServer(async (req, res) => {
       const item = files.get(pathname.slice(publicPrefix.length));
       if (!item) return reply(404, { message: "missing" });
       const ranged = Boolean(req.headers.range);
-      const bytes = ranged ? item.bytes.subarray(0, 16) : item.bytes;
+      const bytes = ranged
+        ? item.bytes.subarray(
+            0,
+            Number(/bytes=0-(\d+)/.exec(req.headers.range)?.[1] || 15) + 1,
+          )
+        : item.bytes;
       res.writeHead(ranged ? 206 : 200, {
         "Content-Type": item.type,
         "Content-Length": bytes.length,
@@ -439,6 +444,40 @@ try {
   pass(
     "Signed cloud uploads are validated by bytes, registered in the library and rejected content is removed",
   );
+  // Container headers exercise the storage contract; decoded playback is covered by test:video.
+  const mp4Header = Buffer.from(
+    "000000186674797069736f6d0000020069736f6d69736f32",
+    "hex",
+  );
+  const webmHeader = Buffer.concat([
+    Buffer.from("1a45dfa3", "hex"),
+    Buffer.alloc(32),
+    Buffer.from("4282847765626d", "hex"),
+  ]);
+  for (const [bytes, type] of [
+    [mp4Header, "video/mp4"],
+    [webmHeader, "video/webm"],
+  ]) {
+    const result = await upload(bytes, type);
+    assert.equal(result.response.status, 200);
+    const record = await result.response.json();
+    const stored = await fetch(record.url);
+    assert.equal(stored.headers.get("content-type"), type);
+    assert.deepEqual(Buffer.from(await stored.arrayBuffer()), bytes);
+  }
+  const wrongVideo = await upload(png, "video/mp4");
+  assert.equal(wrongVideo.response.status, 400);
+  assert(!files.has(wrongVideo.path));
+  const bucket = (
+    await pg.query(
+      "select allowed_mime_types from storage.buckets where id='site-media'",
+    )
+  ).rows[0];
+  assert(bucket.allowed_mime_types.includes("video/mp4"));
+  assert(bucket.allowed_mime_types.includes("video/webm"));
+  pass(
+    "Cloud MP4/WebM uploads preserve MIME, inspect the full signature and remove mismatched content; SQL permits videos",
+  );
   if (process.env.CMS_BROWSER_MODULE) {
     const { chromium } = await import(process.env.CMS_BROWSER_MODULE);
     const browser = await chromium.launch({
@@ -478,9 +517,27 @@ try {
       assert(apiSizes.every((n) => n < 2048));
       const list = await (await request(b, "/api/admin/media")).json();
       assert(list.some((i) => i.size === 5_000_000));
+      await p.locator(".adm-upload input[type=file]").setInputFiles({
+        name: "large.mp4",
+        mimeType: "video/mp4",
+        buffer: Buffer.concat([
+          mp4Header,
+          Buffer.alloc(5_000_000 - mp4Header.length),
+        ]),
+      });
+      await p
+        .locator(".adm-media-card")
+        .filter({ hasText: "MP4" })
+        .filter({ hasText: "4883 KB" })
+        .waitFor();
+      assert(apiSizes.every((n) => n < 2048));
+      const videoList = await (await request(b, "/api/admin/media")).json();
+      assert(
+        videoList.some((i) => i.name.endsWith(".mp4") && i.size === 5_000_000),
+      );
       assert.deepEqual(errors, []);
       pass(
-        "Browser uploads a 5 MB image directly to storage; every Vercel upload API request stays below 2 KB",
+        "Browser uploads a 5 MB image and video directly to storage; every Vercel upload API request stays below 2 KB",
       );
     } finally {
       await browser.close();

@@ -41,6 +41,8 @@ Panelin **Ürün detayları** bölümünde aktarılan 133 modeli ve mevcut ailel
 
 Vercel'de dosyalar uygulama fonksiyonundan geçirilmez: tarayıcı, yönetici oturumu doğrulandıktan sonra verilen imzalı bağlantıyla doğrudan Supabase'e yükler. Böylece 10 MB'a kadar dosyalar Vercel'in fonksiyon istek boyutu sınırına takılmaz. Sunucu tamamlanan yüklemenin boyutunu ve dosya imzasını kontrol eder.
 
+Banner videoları da panelde **Ana sayfa · Karşılama** bölümünden MP4/WebM olarak yüklenebilir (dosya başına 10 MB). Önceden oluşturulmuş Supabase projeniz varsa güncel `supabase/setup.sql` dosyasını yeniden çalıştırın; bu, depodaki izinli dosya türlerine videoları ekler ve mevcut içerikleri korur. Henüz bir video seçilmediğinde mevcut banner fotoğrafı gösterilir.
+
 İletişim ve teklif talepleri **Gelen talepler** bölümünde tutulur. E-posta bildirimi isteğe bağlıdır: `RESEND_API_KEY`, doğrulanmış gönderici `CONTACT_FROM` ve isteğe bağlı `CONTACT_TO` değerlerini Vercel'e ekleyip yeniden deploy edin. E-posta bildirimi başarısız olsa da talep kaydı korunur.
 
 ## 5. Yayın adresinde kontrol edin

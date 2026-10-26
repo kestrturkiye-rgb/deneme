@@ -55,6 +55,10 @@ function merge(a: Schema, b: Schema): Schema {
 export const schemas: Record<string, Schema> = Object.fromEntries(
   Object.entries(defaults).map(([key, value]) => [key, infer(value)]),
 );
+for (const key of ["heroVideo", "videoPlayLabel", "videoPauseLabel"])
+  schemas["components-Hero"].fields![key].optional = true;
+schemas["components-Hero"].fields!.extraStories.item!.fields!.video.optional =
+  true;
 for (const key of ["image", "imageAlt"])
   schemas["components-Divisions"].fields!.divisions.item!.fields![
     key
@@ -228,7 +232,7 @@ function validate(
   if (typeof value === "string") {
     if (value.length > 40000) errors.push(path + ": metin çok uzun.");
     if (
-      /(?:href|src|heroImage|frames|pattern|metadataBase|url|logo|metin)/i.test(
+      /(?:href|src|heroImage|heroVideo|video|frames|pattern|metadataBase|url|logo|metin)/i.test(
         path,
       ) &&
       /^\s*(?:javascript|data|vbscript):/i.test(value)
@@ -245,6 +249,17 @@ function validate(
         path +
           ": adres /, #, https://, http://, mailto: veya tel: ile başlamalı.",
       );
+    if (/\.(?:heroVideo|video)$/.test(path) && value) {
+      try {
+        if (!/^(?:https?:\/\/|\/(?!\/))/i.test(value)) throw new Error();
+        const url = new URL(value, "https://site.invalid");
+        if (!/\.(mp4|webm)$/i.test(url.pathname)) throw new Error();
+      } catch {
+        errors.push(
+          path + ": doğrudan bir MP4 veya WebM dosyası adresi girin.",
+        );
+      }
+    }
     if (
       path.endsWith(".date") &&
       (!/^\d{4}-\d{2}-\d{2}$/.test(value) ||
@@ -609,6 +624,7 @@ export const fieldLabels: Record<string, string> = {
   pages: "Sayfalar",
   blocks: "Sayfa blokları",
   image: "Görsel",
+  video: "Arka plan videosu (MP4 / WebM, isteğe bağlı)",
   buttonLabel: "Düğme metni",
   buttonHref: "Düğme bağlantısı",
   seoTitle: "SEO başlığı",

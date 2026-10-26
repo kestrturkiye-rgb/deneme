@@ -111,7 +111,10 @@
       "categoryLabel": "Alt bölüm faaliyet etiketi",
       "storyLabel": "Faaliyet seçim alanı etiketi",
       "firstStoryLabel": "İlk faaliyet seçim etiketi",
-      "extraStories": "Diğer açılış hikâyeleri"
+      "extraStories": "Diğer açılış hikâyeleri",
+      "heroVideo": "Karşılama videosu (MP4 / WebM, isteğe bağlı)",
+      "videoPlayLabel": "Video oynatma düğmesi etiketi",
+      "videoPauseLabel": "Video durdurma düğmesi etiketi"
     }
   },
   "components-MessageForm": {

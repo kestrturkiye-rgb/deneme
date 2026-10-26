@@ -35,7 +35,7 @@ Başka birine teslim edilecek geçici hesap için `npm run admin:setup -- --temp
 - **Sayfalar:** kurumsal, tarihçe, Ar-Ge, satış kanalları, iletişim, gizlilik ve diğer mevcut sayfaların metinleri ve SEO bilgileri.
 - **Yeni sayfalar:** adres, başlık, SEO açıklaması ve metin/görsel/düğme bloklarıyla yeni bir sayfa oluşturma. Sayfayı görünür yapıp yayınlayın; isterseniz üst/alt menüye bağlantısını ayrıca ekleyin.
 - **Renkler, yazı ve görünüm:** ana renkler, yazı tipleri, temel yazı boyutu, içerik genişliği, düğme köşeleri ve gelişmiş CSS.
-- **Medya kütüphanesi:** en fazla 10 MB JPG, PNG, GIF, WebP, AVIF ve PDF yükleme. İlgili alanda “Medya kütüphanesinden seç” ile kullanma. Çok kareli 360° içerikte karelerin sırasını listede belirleyin. Dosyalar herkese açık sunulur; gizli belge yüklemeyin.
+- **Medya kütüphanesi:** en fazla 10 MB JPG, PNG, GIF, WebP, AVIF, PDF, MP4 ve WebM yükleme. İlgili alanda “Medya kütüphanesinden seç” ile kullanma. Çok kareli 360° içerikte karelerin sırasını listede belirleyin. Dosyalar herkese açık sunulur; gizli belge yüklemeyin.
 - **Sürüm geçmişi ve yedek:** son 10 yayını taslağa geri alma, JSON dışa/içe aktarma.
 
 Listelerdeki oklarla sıralayın; kopyalama düğmesiyle benzer bir kayıt oluşturun. İç içe kayıtları açarak alt alanları düzenleyin. Arama kutusu hem bölüm adında hem içerik değerlerinde arar.
@@ -165,3 +165,15 @@ Kurumsal ve Ar-Ge bölümündeki kaynak metin, tesis/belge fotoğrafları ve ba�
 ## Koyu zemin ve ışık tonu
 
 Tasarım bölümündeki Sayfa arka planı, Bölüm arka planı, Ana metin ve İkincil metin alanları bütün ortak zemin ve metinleri yönetir. Arka plan ışık tonu, ürün sahnesine benzer yumuşak radyal ışığın rengini belirler. Varsayılan görünüm antrasit zemin, açık metin ve sıcak vurgu renkleridir. Ürün sahnesinin ayrı renkleri Ürün deneyimi bölümünde düzenlenebilir. Ürün fotoğrafının dosyasına gömülü beyaz fon, sayfa zemin ayarından bağımsızdır; şeffaf PNG/WebP ürün fotoğrafı ışıklı zeminle birleşir.
+
+## Ana sayfa banner videosu
+
+**Ana sayfa · Karşılama** bölümünde **Karşılama videosu** alanının “Medya kütüphanesinden seç” düğmesini kullanın. MP4 veya WebM dosyanızı yükleyip listeden seçin. Aynı yerdeki karşılama görselini videonun kapak/yedek fotoğrafı olarak koruyun. Taslağı önizleyip yayınlayın. **Diğer açılış hikâyeleri** içindeki her faaliyet için ayrı “Arka plan videosu” seçilebilir. Video adresini boşaltmak yalnızca görseli gösterir. Oynatma/durdurma düğmesi etiketleri de panelden değişir.
+
+Video sessiz, döngüde ve telefonda sayfa içinde oynar; görüntü başladıktan sonra fotoğrafın üzerine yumuşak geçişle açılır. Ziyaretçi durdurabilir. Banner ekran dışında veya sekme gizliyken durur. Azaltılmış hareket/veri tasarrufu tercihlerinde kendiliğinden indirilmez ve oynatılmaz; ziyaretçi isterse başlatır. Otomatik oynatma engellenirse veya dosya açılmazsa kapak görseli kalır.
+
+Yükleme sınırı dosya başına **10 MB**. Banner için 8–15 saniyelik, 16:9, web için sıkıştırılmış, tercihen ses kanalı çıkarılmış bir MP4 (H.264, yuv420p, faststart) önerilir. 1280×720 çoğu çekim için yeterlidir. WebM de desteklenir; MP4 telefonlarda daha geniş uyumluluk sağlar. YouTube sayfa bağlantısı banner arka planına uygun değildir; doğrudan `.mp4`/`.webm` dosya adresi gerekir. Daha büyük dosyalar harici bir video/CDN deposundan doğrudan adresle kullanılabilir.
+
+Hazır kurumsal video verilmediği için varsayılan içerikte video seçili değildir; mevcut fotoğraflar görünür. Daha önce kurulan Supabase deposunda video yüklemeyi açmak için güncel `supabase/setup.sql` yeniden çalıştırılmalıdır; mevcut içerikler korunur.
+
+Video uçtan uca testi için FFmpeg ve Playwright gerekir: `CMS_BROWSER_MODULE=/tam/yol/playwright/index.mjs npm run test:video`. Testler kendi geçici hesabını ve renk desenli kliplerini oluşturup temizler; gerçek yönetici hesabına veya içeriklerine dokunmaz.

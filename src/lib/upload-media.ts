@@ -8,9 +8,10 @@ export async function uploadMedia(file: File) {
   if (!file.size || file.size > 10_000_000)
     throw new Error("Dosya 1 bayt–10 MB arasında olmalı.");
   const extension = mediaExtension(
-    new Uint8Array(await file.slice(0, 16).arrayBuffer()),
+    new Uint8Array(await file.slice(0, 512).arrayBuffer()),
   );
-  if (!extension) throw new Error("JPG, PNG, GIF, WebP, AVIF veya PDF seçin.");
+  if (!extension)
+    throw new Error("JPG, PNG, GIF, WebP, AVIF, PDF, MP4 veya WebM seçin.");
   const prepared = await result(
     await fetch("/api/admin/media", {
       method: "POST",

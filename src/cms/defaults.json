@@ -275,7 +275,8 @@
         "image": "/images/engineering-brand.png",
         "imageAlt": "Endüstriyel izolasyon ekipmanlarını gösteren temsili marka görseli",
         "href": "/muhendislik",
-        "linkLabel": "Mühendisliği keşfet"
+        "linkLabel": "Mühendisliği keşfet",
+        "video": ""
       },
       {
         "id": "mining",
@@ -287,10 +288,14 @@
         "image": "/images/mining-brand.png",
         "imageAlt": "Doğal taş ocağını gösteren temsili marka görseli",
         "href": "/madencilik",
-        "linkLabel": "Madenciliği keşfet"
+        "linkLabel": "Madenciliği keşfet",
+        "video": ""
       }
     ],
-    "firstStoryLabel": "İş Güvenliği"
+    "firstStoryLabel": "İş Güvenliği",
+    "heroVideo": "",
+    "videoPlayLabel": "Banner videosunu oynat",
+    "videoPauseLabel": "Banner videosunu durdur"
   },
   "components-MessageForm": {
     "metin01": "Teklif talebiniz alındı",

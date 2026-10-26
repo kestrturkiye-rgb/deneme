@@ -398,12 +398,15 @@ function Editor({
   const text = String(value);
   const isColor = /^#[0-9a-f]{6}$/i.test(text);
   const isUrl =
-    /\.(src|href|heroImage|logo|pattern|image|buttonHref)$/.test(path) ||
+    /\.(src|href|heroImage|heroVideo|video|logo|pattern|image|buttonHref)$/.test(
+      path,
+    ) ||
     /^(\/|https?:\/\/|mailto:|tel:)/.test(text) ||
     /frames\.\d+$/.test(path);
   const isImage =
     /(?:\.(png|jpe?g|webp|avif|gif)(\?|$))/i.test(text) &&
     !text.includes("{n}");
+  const isVideo = /\.(mp4|webm)(?:[?#]|$)/i.test(text);
   const isLong =
     text.length > 110 ||
     /description|summary|customCss|intro|\.text/.test(path);
@@ -452,6 +455,16 @@ function Editor({
           src={text}
           alt="Seçili görsel"
           loading="lazy"
+        />
+      )}
+      {isVideo && (
+        <video
+          className="adm-video-preview"
+          src={text}
+          controls
+          playsInline
+          preload="metadata"
+          aria-label="Seçili banner videosu"
         />
       )}
       {optional}
@@ -1098,10 +1111,12 @@ export default function AdminClient() {
         <span>
           {uploading ? "Dosya yükleniyor…" : "↑ Dosya yükleyin veya seçin"}
         </span>
-        <small>JPG, PNG, WebP, AVIF, GIF veya PDF · En fazla 10 MB</small>
+        <small>
+          JPG, PNG, WebP, AVIF, GIF, PDF, MP4 veya WebM · En fazla 10 MB
+        </small>
         <input
           type="file"
-          accept="image/jpeg,image/png,image/webp,image/avif,image/gif,application/pdf"
+          accept="image/jpeg,image/png,image/webp,image/avif,image/gif,application/pdf,video/mp4,video/webm"
           disabled={uploading}
           onChange={(e) => {
             upload(e.target.files?.[0]);
@@ -1131,6 +1146,10 @@ export default function AdminClient() {
           >
             {item.name.endsWith(".pdf") ? (
               <div className="adm-pdf">PDF</div>
+            ) : /\.(mp4|webm)$/i.test(item.name) ? (
+              <div className="adm-pdf">
+                ▶ {item.name.split(".").pop()?.toUpperCase()}
+              </div>
             ) : (
               <img src={item.url} alt="Yüklenen görsel" loading="lazy" />
             )}

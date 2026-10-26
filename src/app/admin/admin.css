@@ -1428,3 +1428,12 @@
   font-size: 12px;
   color: #64707b;
 }
+
+.adm-video-preview {
+  width: 100%;
+  max-width: 420px;
+  max-height: 240px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background: #17191a;
+}

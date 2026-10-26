@@ -54,7 +54,7 @@ Site genelinde koyu gri, beyaz ve kırmızı görsel dil; geniş gri ürün men�
 
 ### Kreatif ana sayfa ekleri
 
-Seçilebilir üç görsel hikâye, büyük fotoğraflı faaliyet vitrini, gerçek katalogdan ürün keşfi ve filtreleme, tipografik marka mesajı, ilerleme çizgisi ve sayfa başına dönüş eklendi. Bölümler CMS'den düzenlenebilir, sıralanabilir ve gizlenebilir. Hareketler kullanıcı tercihine bağlıdır; azaltılmış hareket ayarına uyulur. Ürün görselleri ve 360° kareleri varsa katalog kartlarına otomatik yansır.
+Panelden MP4/WebM videosu seçilebilen üç görsel hikâye, büyük fotoğraflı faaliyet vitrini, gerçek katalogdan ürün keşfi ve filtreleme, tipografik marka mesajı, ilerleme çizgisi ve sayfa başına dönüş eklendi. Bölümler CMS'den düzenlenebilir, sıralanabilir ve gizlenebilir. Hareketler kullanıcı tercihine bağlıdır; azaltılmış hareket ayarına uyulur. Ürün görselleri ve 360° kareleri varsa katalog kartlarına otomatik yansır.
 
 ## Yayın öncesi tamamlanan düzenlemeler
 
@@ -65,3 +65,5 @@ Fotoğraflı ürün kartları, mobilde başlığı öne alan ürün sayfası ve 
 Güncel tasarımın 8 sayfalık ekran görüntüsü albümü: [PDF önizleme](goruntuler/vercel-hazir-tasarim.pdf) (yaklaşık 1,34 MB).
 
 Kaynak aktarımı için menü, galeri, belge araması ve 322 yönlendirmeyi çalışan site üzerinde kontrol etmek için: `npm run start` çalışırken başka terminalde `CMS_BROWSER_MODULE=/tam/yol/playwright/index.mjs npm run test:site`. Farklı bir yayın/port için `SITE_TEST_ORIGIN` ayarlanabilir. Test yalnızca okuma ve sayfa gezintisi yapar.
+
+Banner videoları sessiz, döngüde ve durdurma kontrolüyle oynar; azaltılmış hareket/veri tasarrufu tercihlerinde kapak görseli gösterilir. Kurumsal video henüz seçilmemiştir. Yükleme, yayınlama ve tarayıcı davranışlarını FFmpeg ve Playwright ile doğrulamak için `CMS_BROWSER_MODULE=/tam/yol/playwright/index.mjs npm run test:video` çalıştırın. Ayrıntılar [yönetim kılavuzunda](ADMIN-KILAVUZU.md#ana-sayfa-banner-videosu).

@@ -46,7 +46,7 @@ $$;
 revoke all on function public.cms_rate_limit(text,integer,integer,boolean) from public, anon, authenticated;
 grant execute on function public.cms_rate_limit(text,integer,integer,boolean) to service_role;
 
--- Public product media only. No anonymous upload policies are installed.
+-- Public site media only. No anonymous upload policies are installed.
 insert into storage.buckets(id,name,public,file_size_limit,allowed_mime_types)
-values('site-media','site-media',true,10000000,array['image/jpeg','image/png','image/gif','image/webp','image/avif','application/pdf'])
+values('site-media','site-media',true,10000000,array['image/jpeg','image/png','image/gif','image/webp','image/avif','application/pdf','video/mp4','video/webm'])
 on conflict(id) do update set public=true,file_size_limit=excluded.file_size_limit,allowed_mime_types=excluded.allowed_mime_types;
