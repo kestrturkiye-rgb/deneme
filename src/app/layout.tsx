@@ -1,3 +1,4 @@
+import { isPreviewDeployment } from "@/lib/deployment";
 import type { Metadata } from "next";
 import { CartProvider } from "@/components/CartProvider";
 import Footer from "@/components/Footer";
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     ...(await pageMetadata("/", c as Metadata)),
     metadataBase: new URL(siteBase(c.metadataBase)),
-    ...(process.env.VERCEL_ENV === "preview"
+    ...(isPreviewDeployment()
       ? { robots: { index: false, follow: false } }
       : {}),
   } as Metadata;

@@ -40,7 +40,9 @@ npm run test:cms
 npm run start
 ```
 
-**Dağıtım:** Vercel’de `SUPABASE_URL` ve `SUPABASE_SERVICE_ROLE_KEY` ile kalıcı Supabase deposu kullanılır. Kurulum SQL’i `supabase/setup.sql` içindedir. Aynı veritabanını paylaşan uygulama işlemleri sürüm kontrolü ve ortak giriş sınırlarıyla çalışır. Supabase olmadan yerel kullanımda `.cms/` kalıcı diski desteklenir; Vercel’de geçici diske sessizce kayıt yapılmaz.
+**Ücretsiz canlı deneme:** [Netlify Free + Supabase Free kurulumunu](NETLIFY-KURULUM.md) kullanın. Admin ve formlar Next.js sunucu adaptörüyle çalışır; ücretsiz planların kullanım kotaları vardır.
+
+**Vercel alternatifi:** Vercel’de `SUPABASE_URL` ve `SUPABASE_SERVICE_ROLE_KEY` ile kalıcı Supabase deposu kullanılır. Kurulum SQL’i `supabase/setup.sql` içindedir. Aynı veritabanını paylaşan uygulama işlemleri sürüm kontrolü ve ortak giriş sınırlarıyla çalışır. Supabase olmadan yerel kullanımda `.cms/` kalıcı diski desteklenir; Vercel’de geçici diske sessizce kayıt yapılmaz.
 
 **İçerik aktarımı:** kaynak sitedeki gerçek ürün fotoğrafları ve belgeler depoya dahil edildi; yeniden indirilmeleri gerekmez. [Aktarım raporu](AKTARIM-RAPORU.md) kapsamı ve istisnaları açıklar. Yeni fotoğraflar ve dönüş kareleri panelden eklenebilir. Gerçek dönüş için her ürün/parça başına aynı ölçü ve arka planla çekilmiş 24–72 farklı açı önerilir; tek fotoğraftan 360° üretilemez.
 

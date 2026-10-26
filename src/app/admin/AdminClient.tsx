@@ -1005,7 +1005,7 @@ export default function AdminClient() {
           {!configured ? (
             <div className="adm-alert">
               {storageBackend === "unconfigured" ? (
-                "Vercel için kalıcı veri deposu henüz bağlanmamış. Projedeki VERCEL-KURULUM.md adımlarını tamamlayın."
+                "Kalıcı veri deposu henüz bağlanmamış. Yayın projesindeki Supabase bağlantısını tamamlayın."
               ) : (
                 <>
                   Henüz yönetici hesabı yok. Kurulum kılavuzundaki hesap aktarma

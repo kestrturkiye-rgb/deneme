@@ -151,18 +151,27 @@ try {
   const compiled = ts.transpileModule(source, {
     compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
-  function load(vercel) {
+  const deploymentSource = await readFile("src/lib/deployment.ts", "utf8");
+  const deploymentCompiled = ts.transpileModule(deploymentSource, {
+    compilerOptions: { module: ts.ModuleKind.CommonJS },
+  }).outputText;
+  function load(env = {}) {
+    const cloud = Boolean(
+      env.VERCEL || env.NETLIFY || env.AWS_LAMBDA_FUNCTION_NAME,
+    );
+    const deployment = { exports: {}, process: { env } };
+    vm.runInNewContext(deploymentCompiled, deployment);
     const exports = {};
     const sandbox = {
       exports,
       URL,
-      process: { env: { VERCEL: vercel ? "1" : "" }, cwd: () => dir },
+      process: { env, cwd: () => dir },
       require(name) {
         if (name === "server-only") return {};
         if (name === "node:path") return path;
         if (name === "node:fs")
           return {
-            statSync: vercel
+            statSync: cloud
               ? () => {
                   throw new Error(
                     "Function filesystem must not be consulted for static PDFs",
@@ -170,6 +179,7 @@ try {
                 }
               : fs.statSync,
           };
+        if (name === "./deployment") return deployment.exports;
         if (name === "@/cms/store") return { dataDir: () => dir };
         if (name === "@/cms/bundled-documents.json") return bundled;
         throw new Error(name);
@@ -178,7 +188,7 @@ try {
     vm.runInNewContext(compiled, sandbox);
     return exports.documentAvailable;
   }
-  const cloudAvailable = load(true);
+  const cloudAvailable = load({ VERCEL: "1" });
   assert.equal(cloudAvailable("/docs/catalog.pdf"), true);
   assert.equal(cloudAvailable("/docs/missing.pdf"), false);
   assert.equal(cloudAvailable("/docs/../private.pdf"), false);
@@ -186,7 +196,19 @@ try {
   pass(
     "Vercel uses the build inventory when static assets are absent from the function filesystem",
   );
-  const localAvailable = load(false);
+  for (const env of [
+    { NETLIFY: "true" },
+    { AWS_LAMBDA_FUNCTION_NAME: "netlify-server" },
+  ]) {
+    const available = load(env);
+    assert.equal(available("/docs/catalog.pdf"), true);
+    assert.equal(available("/docs/missing.pdf"), false);
+    assert.equal(available("/docs/../private.pdf"), false);
+  }
+  pass(
+    "Netlify and Lambda use the verified PDF inventory without reading absent function assets",
+  );
+  const localAvailable = load();
   await mkdir(path.join(dir, "public/docs"), { recursive: true });
   await writeFile(path.join(dir, "public/docs/runtime.pdf"), pdf);
   assert.equal(localAvailable("/docs/runtime.pdf"), true);

@@ -11,6 +11,12 @@ import { randomBytes, scryptSync } from "node:crypto";
 import { spawn } from "node:child_process";
 import net from "node:net";
 import { setTimeout as delay } from "node:timers/promises";
+const hosting = process.env.CMS_TEST_HOST || "vercel";
+assert(
+  ["vercel", "netlify"].includes(hosting),
+  "CMS_TEST_HOST must be vercel or netlify",
+);
+const hostLabel = hosting === "netlify" ? "Netlify" : "Vercel";
 const pg = new PGlite();
 await pg.waitReady;
 await pg.exec(
@@ -254,9 +260,15 @@ async function start(extraEnv = {}) {
     {
       env: {
         ...process.env,
-        VERCEL: "1",
-        VERCEL_ENV: "preview",
-        VERCEL_URL: "preview.example.test",
+        VERCEL: hosting === "vercel" ? "1" : "",
+        VERCEL_ENV: hosting === "vercel" ? "preview" : "",
+        VERCEL_URL: hosting === "vercel" ? "preview.example.test" : "",
+        NETLIFY: hosting === "netlify" ? "true" : "",
+        CONTEXT: hosting === "netlify" ? "deploy-preview" : "",
+        URL: hosting === "netlify" ? "https://kivanc-test.netlify.app" : "",
+        DEPLOY_PRIME_URL: "",
+        DEPLOY_URL: "",
+        AWS_LAMBDA_FUNCTION_NAME: "",
         VERCEL_PROJECT_PRODUCTION_URL: "",
         CMS_DATA_DIR: dir,
         SUPABASE_URL: provider,
@@ -335,7 +347,8 @@ try {
     "supabase",
   );
   pass(
-    "Vercel mode loads the private cloud account and authenticates without a local account file",
+    hostLabel +
+      " mode loads the private cloud account and authenticates without a local account file",
   );
   let state = await (await request(a, "/api/admin/content")).json();
   const content = structuredClone(state.draft);
@@ -537,7 +550,7 @@ try {
       );
       assert.deepEqual(errors, []);
       pass(
-        "Browser uploads a 5 MB image and video directly to storage; every Vercel upload API request stays below 2 KB",
+        "Browser uploads a 5 MB image and video directly to storage; every serverless upload API request stays below 2 KB",
       );
     } finally {
       await browser.close();
@@ -565,7 +578,7 @@ try {
     429,
   );
   pass(
-    "Password failure limits are shared between independent Vercel instances",
+    "Password failure limits are shared between independent serverless instances",
   );
   const oldCookie = cookie;
   const changed = randomBytes(24).toString("hex");
@@ -596,7 +609,7 @@ try {
   assert.equal(seededAuth.status, 200);
   assert.equal((await seededAuth.json()).passwordChangeRequired, true);
   pass(
-    "private Vercel bootstrap variables create a temporary cloud account without committing credentials",
+    "private serverless bootstrap variables create a temporary cloud account without committing credentials",
   );
   const offline = await start({
     SUPABASE_URL: "",
@@ -622,7 +635,8 @@ try {
     503,
   );
   pass(
-    "unconfigured Vercel serves the site preview but cannot falsely accept requests or write temporary account data",
+    hostLabel +
+      " unconfigured mode serves the site preview but cannot falsely accept requests or write temporary account data",
   );
   assert.deepEqual(await readdir(dir), []);
   const html = await (await fetch(a)).text();
@@ -632,8 +646,42 @@ try {
     (await (await fetch(a + "/robots.txt")).text()).includes("Disallow: /"),
   );
   pass(
-    "Vercel mode writes no CMS files, exposes no private keys and prevents preview indexing",
+    hostLabel +
+      " mode writes no CMS files, exposes no private keys and prevents preview indexing",
   );
+  if (hosting === "netlify") {
+    const production = await start({
+      CONTEXT: "production",
+      SITE_ORIGIN: "",
+      URL: "https://kivanc-deneme.netlify.app",
+    });
+    const productionHtml = await (await fetch(production)).text();
+    const canonical = /<link rel="canonical" href="([^"]+)"/.exec(
+      productionHtml,
+    )?.[1];
+    assert(canonical, "Production canonical link is missing");
+    assert.equal(new URL(canonical).href, "https://kivanc-deneme.netlify.app/");
+    assert(!productionHtml.includes('<meta name="robots" content="noindex'));
+    assert(
+      !/^Disallow: \/$/m.test(
+        await (await fetch(production + "/robots.txt")).text(),
+      ),
+    );
+    const lambda = await start({
+      NETLIFY: "",
+      AWS_LAMBDA_FUNCTION_NAME: "netlify-server",
+      SUPABASE_URL: "",
+      SUPABASE_SERVICE_ROLE_KEY: "",
+    });
+    assert.equal(
+      (await (await fetch(lambda + "/api/admin/auth")).json()).backend,
+      "unconfigured",
+    );
+    assert.deepEqual(await readdir(dir), []);
+    pass(
+      "Netlify production canonical uses the site URL, preview indexing is isolated, and Lambda cannot fall back to temporary CMS storage",
+    );
+  }
   console.log(
     `\n${checks} cloud checks passed. Local provider fixture and temporary data removed.`,
   );

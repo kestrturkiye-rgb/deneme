@@ -16,3 +16,6 @@ next-env.d.ts
 .vercel/
 .backups/
 .migration/
+
+# Netlify local build output and site link
+.netlify/

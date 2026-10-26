@@ -2,7 +2,7 @@
 
 ## İlk çalıştırma
 
-Node.js 24 kullanın. Vercel kurulumu için önce [VERCEL-KURULUM.md](VERCEL-KURULUM.md) dosyasını izleyin.
+Node.js 24 kullanın. Ücretsiz canlı deneme için [NETLIFY-KURULUM.md](NETLIFY-KURULUM.md), Vercel alternatifi için [VERCEL-KURULUM.md](VERCEL-KURULUM.md) dosyasını izleyin.
 
 ```bash
 cd /workspace/deneme

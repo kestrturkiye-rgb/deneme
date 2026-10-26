@@ -1,4 +1,5 @@
 import "server-only";
+import { isServerlessDeployment } from "@/lib/deployment";
 import { createClient } from "@supabase/supabase-js";
 import { existsSync, readFileSync, readdirSync, unlinkSync } from "node:fs";
 import path from "node:path";
@@ -6,7 +7,7 @@ import { dataDir, atomicWrite } from "./paths";
 export function backend(): "supabase" | "file" | "unconfigured" {
   if (process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY)
     return "supabase";
-  return process.env.VERCEL ? "unconfigured" : "file";
+  return isServerlessDeployment() ? "unconfigured" : "file";
 }
 export function database() {
   if (backend() !== "supabase")
@@ -57,7 +58,7 @@ export async function writeDocument(
 ) {
   const mode = backend();
   if (mode === "unconfigured")
-    throw new Error("Vercel için kalıcı veri deposunu yapılandırın.");
+    throw new Error("Yayın ortamı için kalıcı veri deposunu yapılandırın.");
   if (mode === "file") {
     if (expectedVersion !== undefined) {
       const file = filename(key);
