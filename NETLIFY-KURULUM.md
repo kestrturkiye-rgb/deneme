@@ -1,5 +1,7 @@
 # Ücretsiz canlı deneme yayını
 
+Güncel ücretsiz deneme adresi: **https://kivancgroup-deneme.netlify.app**. Ön yüz yayındadır; yönetici girişi ve form kayıtları Supabase bağlantısı tamamlandığında etkinleşir.
+
 Bu siteyi **Netlify Free + Supabase Free** ile bir `*.netlify.app` adresinde deneyebilirsiniz. Alan adı satın almak gerekmez. Kalıcı admin hesabı, içerikler, talepler ve yeni medya Supabase'de tutulur. Netlify için Next.js adaptörü, Node.js 24 ve yayın yapılandırması depoya eklenmiştir. Vercel zorunlu değildir.
 
 Ücretsiz planlar sınırsız değildir. Güncel kredi, depolama ve trafik kotalarını hesap ekranında kontrol edin: [Netlify Free](https://www.netlify.com/pricing/) ve [Supabase Free](https://supabase.com/pricing). Limitler dolduğunda yayın/dosya erişimi kısıtlanabilir; Supabase'in etkin olmayan ücretsiz projeleri duraklatılabilir. Pro/ücretli plan seçmeyin. Yeni bir alan adı ve ücretli e-posta servisi bu deneme için gerekli değildir. E-posta servisi olmadan da talepler panelde kaydedilir.
@@ -58,3 +60,19 @@ npm run test:assets
 ```
 
 Netlify CLI'nin yerel yapılandırma dizini salt okunur bir home altında kalıyorsa, komutu çalıştırırken `XDG_CONFIG_HOME=/workspace/.kivanc-deploy/config` ve `XDG_CACHE_HOME=/workspace/.kivanc-deploy/cache` kullanılabilir. Bu yerel testler gerçek Netlify/Supabase hesabına bağlanmaz ve canlı yayının yerini tutmaz.
+
+## Doğrulanan manuel yayın komutu
+
+Netlify CLI ile önceden oluşturulan paketi yayınlarken, Next.js adaptörünün hazırladığı **`.netlify/static`** dizinini açıkça seçin. `--no-build` tek başına kullanılırsa `netlify.toml` içindeki `.next` yolu seçilip CSS/JS ve PDF dosyaları eksik yayınlanabilir.
+
+```bash
+NODE_OPTIONS=--use-env-proxy \
+XDG_CONFIG_HOME=/workspace/.kivanc-deploy/config \
+XDG_CACHE_HOME=/workspace/.kivanc-deploy/cache \
+npm exec --yes --cache /workspace/.npm-cache --package netlify-cli@27.14.2 -- \
+netlify deploy --prod --no-build --dir .netlify/static \
+  --env SITE_ORIGIN=https://kivancgroup-deneme.netlify.app \
+  --env SITE_NOINDEX=true
+```
+
+Bu çalışma ortamında Netlify CLI hesabı zaten yetkilendirilmiştir; yeniden Netlify anahtarı oluşturmak gerekmez. GitHub'dan otomatik derleme, sağlayıcının SSH hazırlık hatası nedeniyle durdurulmuştur; doğrulanan yayın yolu yukarıdaki manuel CLI komutudur. Supabase anahtarı kullanıcıyla birlikte sonraki adımda oluşturulacaktır.

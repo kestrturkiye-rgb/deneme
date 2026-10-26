@@ -40,6 +40,8 @@ npm run test:cms
 npm run start
 ```
 
+**Canlı deneme adresi:** https://kivancgroup-deneme.netlify.app — ön yüz yayında; admin/veri/form bağlantısı Supabase kurulumunu bekliyor.
+
 **Ücretsiz canlı deneme:** [Netlify Free + Supabase Free kurulumunu](NETLIFY-KURULUM.md) kullanın. Admin ve formlar Next.js sunucu adaptörüyle çalışır; ücretsiz planların kullanım kotaları vardır.
 
 **Vercel alternatifi:** Vercel’de `SUPABASE_URL` ve `SUPABASE_SERVICE_ROLE_KEY` ile kalıcı Supabase deposu kullanılır. Kurulum SQL’i `supabase/setup.sql` içindedir. Aynı veritabanını paylaşan uygulama işlemleri sürüm kontrolü ve ortak giriş sınırlarıyla çalışır. Supabase olmadan yerel kullanımda `.cms/` kalıcı diski desteklenir; Vercel’de geçici diske sessizce kayıt yapılmaz.
