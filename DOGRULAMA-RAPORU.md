@@ -161,3 +161,22 @@ Doğrulama:
 - Yedi yeni logo/font adresinin canlı kopyaları yerel dosyalarla SHA-256 bakımından aynı. Canlı CMS sürümü **4**; önceki yayın geri alma geçmişindedir. Ürün detayları ve katalog ilişkileri yayın öncesi kopyayla birebir aynı. Yönetim API'si `configured:true, backend:supabase` döndürür. İzlenen **897 dosyada** özel anahtar, parola veya hesap özeti eşleşmesi bulunmadı.
 
 Canlı tarayıcı kontrolleri, önceki bölümlerde açıklanan TLS doğrulamasını koruyan salt okunur aktarımı kullandı. Başlatılan yerel önizleme sunucusu kapatıldı. Ücretli hizmet veya yeni alan adı işlemi başlatılmadı.
+
+## Tam genişlik, fotoğraf kadrajı ve kategori bağlantıları · 27 Ekim 2026
+
+Faaliyet alanları görseli içerik kabının genişliğiyle sınırlanıyor, çözüm başlıkları bağlantı yerine metin olarak gösteriliyor ve geniş ekranlarda `cover` ölçeklemesi fotoğrafın üstünü kesiyordu. Açılır ürün menüsündeki 10–11 piksel metinler de özellikle daha geniş CSS görüntü alanlarında küçük kalıyordu.
+
+Faaliyet görselleri artık sayfanın iki kenarına uzanır; başlıklar ve sekmeler içerik genişliğinde kalır. Ana banner ve faaliyet görselleri masaüstünde kaynak fotoğrafın tamamı korunarak sağa yerleşir; koyu geçiş sol metin alanıyla birleştirir. Portre ekranlarda kadraj üstten başlar. Fotoğraf dosyalarının pikselleri değiştirilmedi. Çözüm başlıkları katalogdaki gerçek grup veya ürün adına göre bağlantıya dönüşür: beş İş Güvenliği, dört Mühendislik ve iki Madencilik bağlantısı. Eşleşmeyen özel adlar ilgili ana bölüm sayfasına gider.
+
+Ürün menüsündeki bağlantılar **18–20 piksel**, grup başlıkları **22 piksel** ve tıklama alanları en az **44 piksel** yapıldı. Menü içerik alanı genişletildi ve ekran yüksekliğine göre kaydırılabilir. Eski zorunlu küçük başlık kuralları kaldırıldı.
+
+Doğrulama:
+
+- Üretim derlemesi, TypeScript ve Netlify paketlemesi başarılı. Canlı yayın: **`6ae093a533460fafe4aadec7`**.
+- **47 CMS/site kontrolü** ve **13 video kontrolü** geçti. Banner regresyonu üç görünümü dokuz ekran ölçüsünde, **27 yerleşimde** denetler; 1920 ve 2560 piksel genişlikler de kapsamdadır. Yeni kontroller gerçek çözüm bağlantıları, tam sayfa genişliği ve menüde okunabilir metin/tıklama alanlarını doğrular.
+- Yerel ve canlı tarayıcıda **5 yeni kontrol grubu** geçti. 1920×900, 2560×900 ve 2560×1200 ölçülerinde üç sektörün ana/faaliyet görselleri için **18 geniş ekran yerleşimi** kontrol edildi. Masaüstünde görüntülerin tamamının korunduğu ve faaliyet görsellerinin sayfa genişliğine ulaştığı ölçüldü.
+- Canlıda **11 bağlantının tamamına gerçekten tıklanıp** doğru ürün sayfasının veya doğru katalog grubunun ekranda açıldığı doğrulandı. Üç sektörde gerçek mobil dokunma geçişleri de başarılıdır. Ürün menüsünün üç sektör seçimi, yazı ölçüleri, hedef alanları ve İtfaiyeci Elbisesi sayfasına geçiş kontrol edildi.
+- 2560×1200 CSS görüntü alanı ve **0,75 piksel oranıyla** paylaşılan geniş ekranlara yakın ekran görüntüleri alındı; ana banner, faaliyet görseli ve menü görsel olarak incelendi. Canlı ana sayfanın önceki **6 regresyon grubu** da geçti; logo, yazı tipi, küçük ekranlar ve ortaklar şeridinin kontrolleri korunur. Tarayıcı çalışma hatası görülmedi.
+- Canlı CMS kaydı işlem öncesi kopyayla birebir aynı; sürüm **4**. Bu değişiklikte taslak/yayın verisine yazılmadı. Yönetim API'si Supabase bağlantısını doğrular. İzlenen **898 dosyada** özel anahtar, parola veya hesap özeti eşleşmesi bulunmadı.
+
+Canlı tarayıcı doğrulaması TLS denetimini koruyan salt okunur aktarım yöntemini kullandı. Etkileşim kontrolleri sekmelerin seçili durumu güncellendikten sonra ilgili içeriği ölçer. Başlatılan yerel önizleme sunucusu kapatıldı; geçici test hesapları ve video dosyaları temizlendi.

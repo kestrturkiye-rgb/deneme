@@ -56,7 +56,9 @@ Ana sayfanın yenilenen görünümünde logo **Üst menü ve duyurular**, alt bi
 
 **İş ortakları** bölümünde marka adı, bağlantısı ve logo görseli düzenlenebilir. **İş ortakları otomatik akış** seçeneği kaymayı açıp kapatır. Ziyaretçi oklarla, fareyle sürükleyerek veya telefonda kaydırarak da ilerler. Otomatik akış fare üzerindeyken, klavye odağı listede olduğunda, bölüm ekran dışına çıktığında veya sekme gizlendiğinde durur. Azaltılmış hareket tercihinde kendiliğinden başlamaz; ziyaretçi isterse başlatabilir. Başlık, açıklama ve kontrol etiketleri de düzenlenebilir.
 
-İş ortakları başlangıçta bannerın hemen altına yerleştirildi; **Ana sayfa sırası ve görünürlük** bölümünden taşınabilir veya gizlenebilir. Banner yüksekliği gerçek menü ve ekran yüksekliğinden hesaplanır. Fotoğrafın portre/yatay ekranlarda kenarlardan kırpılması, alanı dolduran kapak görünümünün parçasıdır; ana metinler ve seçim düğmeleri banner içinde kalır.
+İş ortakları başlangıçta bannerın hemen altına yerleştirildi; **Ana sayfa sırası ve görünürlük** bölümünden taşınabilir veya gizlenebilir. Banner yüksekliği gerçek menü ve ekran yüksekliğinden hesaplanır. Masaüstünde ana bannerın ve faaliyet görsellerinin tamamı korunarak sağa yerleşir; koyu geçiş sol metin alanıyla birleştirir. Portre telefonlarda fotoğraf üstten kadrajlanır; ana metinler ve seçim düğmeleri banner içinde kalır.
+
+Faaliyet görselleri sayfanın iki kenarına uzanır. **Ana sayfa · Faaliyet alanları** içindeki çözüm adları, katalogdaki aynı adlı ürün grubuna veya ürün sayfasına bağlanır. Örneğin **İtfaiye Ürünleri**, İş Güvenliği kataloğundaki ilgili gruba; **Tekstil Kompansatör** kendi ürün sayfasına gider. Adını değiştirirken katalogdaki karşılığını da güncelleyin. Eşleşmeyen özel adlar ilgili ana bölüm sayfasını açar.
 
 ## Taslak ve yayın
 
