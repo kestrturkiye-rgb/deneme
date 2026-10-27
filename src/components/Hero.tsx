@@ -5,6 +5,7 @@ import { useSection } from "@/cms/context";
 import ArrowUpRight from "./ArrowUpRight";
 import SiteImage from "./SiteImage";
 import HeroVideo from "./HeroVideo";
+import BrandLines from "./BrandLines";
 import { getImageProps } from "next/image";
 export default function Hero() {
   const c = useSection("components-Hero");
@@ -50,6 +51,7 @@ export default function Hero() {
           alt={current.imageAlt}
           fill
           sizes="100vw"
+          loading="eager"
           fetchPriority={selected === 0 ? "high" : "auto"}
         />
       </div>
@@ -62,6 +64,7 @@ export default function Hero() {
         />
       )}
       <div className="kg-hero-shade" />
+      <BrandLines className="kg-hero-lines" />
       <div
         className="kg-hero-content container-site"
         id="hero-story"
@@ -130,6 +133,7 @@ export default function Hero() {
             <span>{String(index + 1).padStart(2, "0")}</span>
             <strong>{story.label}</strong>
             <i aria-hidden="true" />
+            <ArrowUpRight />
           </button>
         ))}
       </div>

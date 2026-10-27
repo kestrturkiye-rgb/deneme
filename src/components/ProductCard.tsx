@@ -28,7 +28,12 @@ export default function ProductCard({
   return (
     <Link href={href} className="kg-product-card">
       <div className={"kg-product-art" + (image ? "" : " is-technical")}>
-        <span className="kg-product-type">{label}</span>
+        <span className="kg-product-type">
+          <span className="kg-card-index" aria-hidden="true">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          {label}
+        </span>
         {image ? (
           <SiteImage
             src={image}

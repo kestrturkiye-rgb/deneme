@@ -1,0 +1,422 @@
+/* Kıvanç's own visual language. Colours and button corners remain CMS values. */
+.kg-identity {
+  --kg-backdrop: radial-gradient(
+    ellipse at 80% 0%,
+    rgb(var(--color-surface-glow) / 0.24),
+    transparent 64%
+  );
+  --kg-card-light: linear-gradient(
+    145deg,
+    rgb(var(--color-ink) / 0.035),
+    transparent 65%
+  );
+}
+.kg-redesign.kg-identity .kg-header,
+.kg-redesign.kg-identity .kg-brand {
+  background: var(--kg-dark);
+}
+.kg-identity .kg-header {
+  border-bottom: 1px solid var(--kg-border);
+}
+.kg-identity .kg-brand-lines {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  color: var(--kg-accent);
+}
+.kg-redesign.kg-identity .btn-primary,
+.kg-redesign.kg-identity .btn-outline {
+  border-radius: var(--button-radius) calc(var(--button-radius) * 2)
+    var(--button-radius) var(--button-radius);
+  letter-spacing: 0.035em;
+}
+.kg-redesign.kg-identity .btn-primary {
+  color: var(--kg-dark);
+  box-shadow: inset 0 1px 0 #ffffff20;
+}
+.kg-redesign.kg-identity .btn-primary:hover {
+  background: rgb(var(--color-brand-light));
+  color: var(--kg-dark);
+}
+.kg-identity .kg-product-spin,
+.kg-identity .kg-cart-count {
+  color: var(--kg-dark);
+}
+.kg-identity ::selection {
+  color: var(--kg-dark);
+}
+.kg-identity .kg-eyebrow > span {
+  border-radius: 0;
+  width: 5px;
+  height: 12px;
+  transform: skewX(-28deg);
+}
+.kg-identity .kg-text-link,
+.kg-identity .kg-dark-link {
+  text-underline-offset: 6px;
+}
+
+/* The same full-height, uncropped photography with a quieter brand signature. */
+.kg-identity.kg-home .kg-hero-lines {
+  z-index: -1;
+  left: 28%;
+  bottom: 0;
+  width: 46%;
+  height: 85%;
+  opacity: 0.18;
+  mask-image: linear-gradient(0deg, #000, transparent 95%);
+}
+.kg-identity.kg-home .kg-hero h1 {
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+.kg-identity.kg-home .kg-hero h1 > span {
+  color: rgb(var(--color-brand-light));
+  font-weight: 700;
+}
+.kg-identity.kg-home .kg-story-selector {
+  gap: 12px;
+}
+.kg-identity.kg-home .kg-story-selector button {
+  border-top-color: #ffffff25;
+  border-bottom: 0;
+  padding-inline: 18px;
+  background: linear-gradient(90deg, #ffffff06, transparent);
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.kg-identity.kg-home .kg-story-selector button[aria-selected="true"] {
+  background: linear-gradient(
+    90deg,
+    rgb(var(--color-brand) / 0.13),
+    transparent
+  );
+  border-top-color: var(--kg-accent);
+}
+.kg-identity.kg-home .kg-story-selector button > span {
+  color: rgb(var(--color-brand-light));
+  font-variant-numeric: tabular-nums;
+}
+.kg-identity.kg-home .kg-story-selector i {
+  display: none;
+}
+.kg-identity.kg-home .kg-story-selector .kg-arrow {
+  margin-left: auto;
+  color: #ffffff90;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.kg-identity.kg-home .kg-section-head h2 {
+  max-width: 780px;
+  letter-spacing: -0.035em;
+}
+.kg-identity.kg-home .kg-partners {
+  background: var(--kg-dark);
+  border-bottom: 1px solid var(--kg-border);
+}
+.kg-identity .kg-partner-logo {
+  border-radius: 4px 18px 4px 4px;
+}
+.kg-identity .kg-partner-name {
+  border-bottom: 1px solid var(--kg-border);
+  padding-bottom: 16px;
+}
+.kg-identity.kg-home .kg-sector-tabs button {
+  border-radius: 4px 12px 0 0;
+}
+.kg-identity.kg-home .kg-sector-number {
+  color: #ffffff15;
+  -webkit-text-stroke: 0;
+  font-style: italic;
+  font-weight: 600;
+}
+.kg-identity.kg-home .kg-sector-solutions {
+  border-left-color: rgb(var(--color-brand) / 0.5);
+  background: linear-gradient(90deg, #111619d9, #11161960);
+  border-radius: 0 18px 0 0;
+}
+.kg-identity.kg-home .kg-sector-solutions a:hover {
+  background: rgb(var(--color-brand) / 0.15);
+}
+.kg-identity.kg-home .kg-quality-grid {
+  gap: 0;
+  border-block: 1px solid var(--kg-border);
+}
+.kg-identity.kg-home .kg-quality-grid article {
+  border: 0;
+  padding: 32px 28px;
+}
+.kg-identity.kg-home .kg-quality-grid article + article {
+  border-left: 1px solid var(--kg-border);
+}
+.kg-identity.kg-home .kg-quality-number {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.kg-identity.kg-home .kg-about-image::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border: 1px solid #ffffff25;
+  pointer-events: none;
+}
+.kg-identity.kg-home .kg-facts dt {
+  color: rgb(var(--color-brand-light));
+}
+.kg-identity.kg-home .kg-statement {
+  background: var(--kg-dark);
+  border-block: 1px solid var(--kg-border);
+  padding-top: clamp(56px, 6vw, 90px);
+}
+.kg-identity .kg-statement::before,
+.kg-identity .kg-statement::after {
+  display: none;
+}
+.kg-identity.kg-home .kg-statement h2 {
+  position: relative;
+  max-width: 1050px;
+  color: var(--kg-ink);
+  font-size: clamp(46px, 6.5vw, 104px);
+  line-height: 1.05;
+}
+.kg-identity.kg-home .kg-statement-top {
+  color: rgb(var(--color-brand-light));
+  font-size: 12px;
+}
+.kg-identity .kg-statement-top > span:last-child {
+  transform: rotate(15deg);
+}
+.kg-identity .kg-statement-lines {
+  z-index: -1;
+  right: 1%;
+  top: -20%;
+  width: 55%;
+  height: 130%;
+  opacity: 0.45;
+}
+.kg-identity.kg-home .kg-statement-bottom p {
+  color: var(--kg-muted);
+  font-size: 17px;
+}
+.kg-identity.kg-home .kg-statement-bottom a {
+  color: var(--kg-ink);
+  border-color: var(--kg-accent);
+  font-size: 15px;
+}
+.kg-identity .kg-statement-marquee {
+  color: rgb(var(--color-brand-light));
+  border-color: var(--kg-border);
+}
+
+/* Open product imagery, measured type and a small numbered catalogue marker. */
+.kg-redesign.kg-identity .kg-product-card {
+  border-radius: 4px 18px 4px 4px;
+  border-color: var(--kg-border);
+  overflow: hidden;
+}
+.kg-redesign.kg-identity .kg-product-card:hover {
+  border-color: rgb(var(--color-brand) / 0.65);
+}
+.kg-redesign.kg-identity .kg-product-art:not(.is-technical) {
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    rgb(var(--color-surface-glow) / 0.6),
+    transparent 78%
+  );
+}
+.kg-redesign.kg-identity .kg-product-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  color: var(--kg-muted);
+}
+.kg-identity .kg-card-index {
+  color: rgb(var(--color-brand-light));
+  padding-right: 9px;
+  border-right: 1px solid var(--kg-border);
+  font-variant-numeric: tabular-nums;
+}
+.kg-redesign.kg-identity .kg-product-open {
+  border-radius: 5px;
+  transform: none;
+  border-color: var(--kg-border);
+}
+.kg-redesign.kg-identity .kg-product-caption {
+  border-top: 1px solid var(--kg-border);
+}
+.kg-redesign.kg-identity .kg-product-caption > small {
+  letter-spacing: 0.04em;
+}
+.kg-redesign.kg-identity .kg-product-caption > span {
+  width: 100%;
+  border-top: 0;
+}
+.kg-identity .family-heading {
+  position: relative;
+  isolation: isolate;
+  max-width: none;
+  padding: 14px 0 26px;
+}
+.kg-identity .family-heading h1 {
+  max-width: 950px;
+}
+.kg-identity .family-eyebrow {
+  color: rgb(var(--color-brand-light));
+}
+.kg-identity .family-intro {
+  font-size: 16px;
+}
+.kg-identity .kg-family-lines {
+  right: 0;
+  top: 0;
+  width: 190px;
+  height: 100%;
+  opacity: 0.22;
+  z-index: -1;
+}
+.kg-redesign.kg-identity .product-reference {
+  background:
+    radial-gradient(
+      ellipse at 22% 45%,
+      color-mix(in srgb, var(--product-glow) 24%, transparent),
+      transparent 65%
+    ),
+    var(--product-background);
+}
+.kg-redesign.kg-identity .product-reference .product-heading h1 {
+  font-size: clamp(29px, 2.6vw, 40px);
+  line-height: 1.15;
+}
+.kg-redesign.kg-identity .product-reference .product-series {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--product-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+.kg-redesign.kg-identity .product-reference .product-series::after {
+  display: none;
+}
+.kg-identity .product-series::before {
+  content: "";
+  width: 5px;
+  height: 15px;
+  transform: skewX(-28deg);
+  background: var(--product-accent);
+}
+.kg-identity .kg-product-lines {
+  top: 4%;
+  right: 4%;
+  width: 80%;
+  height: 80%;
+  color: var(--product-accent);
+  opacity: 0.12;
+}
+.kg-redesign.kg-identity .product-share {
+  border: 1px solid var(--kg-border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--product-text);
+}
+.kg-redesign.kg-identity .product-reference .product-quote .btn-primary {
+  border-radius: var(--button-radius) calc(var(--button-radius) * 2)
+    var(--button-radius) var(--button-radius);
+  background: var(--product-accent);
+  color: var(--kg-dark);
+}
+.kg-redesign.kg-identity .product-reference .product-quote .btn-primary:hover {
+  background: color-mix(in srgb, var(--product-accent) 80%, white);
+}
+.kg-redesign.kg-identity .product-reference .product-description {
+  font-size: 15px;
+}
+.kg-identity .kg-banner-lines {
+  right: 0;
+  top: -40%;
+  width: 45%;
+  height: 180%;
+  opacity: 0.2;
+}
+.kg-identity .kg-banner-rule {
+  width: 34px;
+  height: 5px;
+  transform: skewX(-28deg);
+}
+.kg-identity .kg-footer {
+  border-top: 1px solid var(--kg-border);
+}
+
+@media (max-width: 900px) {
+  .kg-identity.kg-home .kg-quality-grid article:nth-child(3) {
+    border-left: 0;
+  }
+  .kg-identity.kg-home .kg-quality-grid article:nth-child(n + 3) {
+    border-top: 1px solid var(--kg-border);
+  }
+}
+@media (max-width: 700px) {
+  .kg-identity.kg-home .kg-story-selector {
+    gap: 8px;
+  }
+  .kg-identity.kg-home .kg-story-selector button {
+    padding-inline: 6px;
+  }
+  .kg-identity.kg-home .kg-story-selector .kg-arrow {
+    display: none;
+  }
+  .kg-identity.kg-home .kg-hero-lines {
+    left: 25%;
+    width: 90%;
+    opacity: 0.13;
+  }
+  .kg-identity.kg-home .kg-quality-grid article {
+    padding: 26px 18px;
+  }
+  .kg-identity.kg-home .kg-statement-bottom p {
+    font-size: 15px;
+  }
+  .kg-identity .kg-statement-lines {
+    width: 85%;
+    right: -15%;
+    opacity: 0.25;
+  }
+  .kg-identity .kg-family-lines {
+    width: 90px;
+    opacity: 0.1;
+  }
+  .kg-identity .family-heading {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  .kg-identity .family-intro {
+    font-size: 14px;
+  }
+  .kg-identity .kg-card-index {
+    padding-right: 5px;
+  }
+  .kg-redesign.kg-identity .kg-product-type {
+    gap: 5px;
+  }
+  .kg-redesign.kg-identity .product-reference .product-heading h1 {
+    font-size: 29px;
+  }
+}
+@media (max-width: 420px) {
+  .kg-identity.kg-home .kg-quality-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .kg-identity.kg-home .kg-quality-grid article + article {
+    border-left: 0;
+    border-top: 1px solid var(--kg-border);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kg-identity.kg-home .kg-story-selector button {
+    transition: none;
+  }
+}

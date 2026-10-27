@@ -46,7 +46,10 @@ export default function SiteFrame({
   return (
     <ContentProvider content={content}>
       <div
-        className={"site-shell kg-redesign" + (path === "/" ? " kg-home" : "")}
+        className={
+          "site-shell kg-redesign kg-identity" +
+          (path === "/" ? " kg-home" : "")
+        }
         style={style as CSSProperties}
       >
         <style>{`html { font-size: ${d.baseFontSize}px; } body { background: ${d.paper}; }`}</style>

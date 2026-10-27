@@ -1,4 +1,5 @@
 "use client";
+import BrandLines from "./BrandLines";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useSection } from "@/cms/context";
@@ -237,6 +238,7 @@ export default function ProductExperience(props: Props) {
                 props.variants.length ? "variant-tab-" + variant : undefined
               }
             >
+              <BrandLines className="kg-product-lines" />
               {visual()}
               {(images.length > 0 || hasSpin) && (
                 <button

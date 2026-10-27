@@ -5,6 +5,7 @@ import type { Detail } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
 import { frameUrls } from "@/lib/spin";
 import ProductCard from "./ProductCard";
+import BrandLines from "./BrandLines";
 
 export default async function ProductFamily({
   product,
@@ -33,6 +34,7 @@ export default async function ProductFamily({
           <span aria-current="page">{product.name}</span>
         </nav>
         <header className="family-heading">
+          <BrandLines className="kg-family-lines" />
           <p className="family-eyebrow">{product.groupTitle}</p>
           <h1>{product.name}</h1>
           <p className="family-intro">

@@ -17,6 +17,7 @@ import "./surface-design.css";
 import "./home-fonts.css";
 import "./home-design.css";
 import "./navigation-design.css";
+import "./identity-design.css";
 export const dynamic = "force-dynamic";
 export async function generateMetadata(): Promise<Metadata> {
   const c = (await getClientContent())["app-layout"].metadata;

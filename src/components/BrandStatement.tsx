@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { getSection } from "@/cms/server";
 import ArrowUpRight from "./ArrowUpRight";
+import BrandLines from "./BrandLines";
 export default async function BrandStatement() {
   const c = await getSection("components-BrandStatement");
   return (
     <section className="kg-statement" data-reveal>
+      <BrandLines className="kg-statement-lines" />
       <div className="container-site">
         <div className="kg-statement-top">
           <span>{c.eyebrow}</span>

@@ -1,4 +1,5 @@
 import SiteImage from "./SiteImage";
+import BrandLines from "./BrandLines";
 type Props = {
   title: string;
   intro?: string;
@@ -33,7 +34,7 @@ export default function PageBanner({
         {intro && <p>{intro}</p>}
         {caption && <small className="editorial-caption">{caption}</small>}
       </div>
-      <span className="kg-banner-orbit" aria-hidden="true" />
+      <BrandLines className="kg-banner-lines" />
     </section>
   );
 }
