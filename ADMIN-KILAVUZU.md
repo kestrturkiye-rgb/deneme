@@ -46,6 +46,8 @@ Listelerdeki oklarla sıralayın; kopyalama düğmesiyle benzer bir kayıt oluş
 
 **Bölümler ve ürün listesi** içindeki **Ana ürün ailesinin adresi** ve **Modelin yer aldığı diğer ürün aileleri** alanları kartların hangi ailede görüneceğini belirler. Kart fotoğrafı modelin kendi detay kaydından alınır. Aile açıklamasında yalnızca model adları varsa bunlar tekrar açıklama metni olarak gösterilmez; eşleşen modeller bu listedeki sırayla öne alınır. Diğer modeller katalog sırasını korur. Açıklayıcı metinler, ek bilgiler ve belgeler korunur.
 
+Elbise ailelerine yalnızca kıyafet modelleri bağlayın. İtfaiyeci Elbisesi'nde sekiz takım bulunur: Maximus, Optimus, Stefan III, Stefan II, Primus, Salvator, Mare ve Alexus. Örme başlıklar, iç giyim, istasyon üniforması ve alüminize elbiseler kendi ailelerindedir; Cool Vest, İtfaiye Ürünleri grubunda bağımsız üründür. Endüstriyel eldiven, baret, ark başlığı/gözlüğü, çorap ve tamamlayıcı ekipmanlar da kendi kategorilerinde bulunur. Yeni bir ekipman eklerken hem ana aileyi hem diğer aileler alanını kontrol edin; elbise ailesini ek aile olarak seçmek ekipmanı yeniden elbise listesine getirir. Aile sayfasının altında genel kardeş kategori listesi gösterilmez; model sayfasının ilgili ürünleri korunur.
+
 Paneldeki **Ürün sayfası** bölümünde **Ürün ailesi için varsayılan giriş metni** ve **Ürün ailesindeki adet etiketi**, kategori düzeninin ortak metinleridir. Yeni alanlar eski içerik yedekleriyle uyumludur.
 
 ## Ana sayfa, logo ve iş ortakları

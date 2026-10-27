@@ -180,3 +180,29 @@ Doğrulama:
 - Canlı CMS kaydı işlem öncesi kopyayla birebir aynı; sürüm **4**. Bu değişiklikte taslak/yayın verisine yazılmadı. Yönetim API'si Supabase bağlantısını doğrular. İzlenen **898 dosyada** özel anahtar, parola veya hesap özeti eşleşmesi bulunmadı.
 
 Canlı tarayıcı doğrulaması TLS denetimini koruyan salt okunur aktarım yöntemini kullandı. Etkileşim kontrolleri sekmelerin seçili durumu güncellendikten sonra ilgili içeriği ölçer. Başlatılan yerel önizleme sunucusu kapatıldı; geçici test hesapları ve video dosyaları temizlendi.
+
+## Elbise kategorilerindeki ekipmanların ayrılması · 27 Ekim 2026
+
+İtfaiyeci Elbisesi ve bazı endüstriyel elbise ailelerine başlık, eldiven, baret, içlik ve tamamlayıcı ekipmanlar da bağlanmıştı. İncelenen **37 ürünün** ana/ek aile ilişkileri düzeltildi. İsimlerden çalışma anında tahmin yapan bir filtre eklenmedi; yönetim panelindeki gerçek kategori ilişkileri güncellendi.
+
+| Elbise ailesi | Önce | Sonra |
+| --- | ---: | ---: |
+| İtfaiyeci Elbisesi | 18 | 8 |
+| INDUSTAR – Isı ve Aleve Karşı Koruma | 25 | 19 |
+| ARCSTAR – Elektrik Arkına Karşı Koruma | 27 | 15 |
+| METALSTAR – Ergimiş Metal Sıçramasına Karşı Koruma | 9 | 4 |
+| REFSTAR – Radyan Isıya Karşı Koruma | 16 | 9 |
+| Endüstriyel Elbiseler | 59 | 34 |
+
+İtfaiyeci Elbisesi'nde Maximus, Optimus, Stefan III, Stefan II, Primus, Salvator, Mare ve Alexus bulunur. Başlıklar, iç giyim, istasyon üniforması ve alüminize elbiseler mevcut kendi ailelerine taşındı. Cool Vest, İtfaiye Ürünleri grubunda bağımsız ürün olarak erişilebilir. Endüstriyel ekipmanlar mevcut eldiven, baret, ark başlığı/gözlüğü, örme ürün, çorap ve tamamlayıcı ekipman kategorilerine bağlandı. Gerçek endüstriyel koruyucu yelek, önlük ve diğer kıyafetler tutuldu. Açıkça elbise ve ekipmanı birlikte kapsayan FORESTAR gibi aileler karışık ürün yapısını korur.
+
+**15 kategori detay kaydındaki** ilgisiz model satırları ve ekipman fotoğrafları ayrıldı; görseli olmayan ekipman ailelerine kendi üyelerinin mevcut fotoğrafları bağlandı. Aile sayfalarındaki genel kardeş kategori listesi kaldırıldı. Model sayfalarının ilgili ürünleri ve doğru aileye geri dönüşü korunur. Hiçbir ürün adresi silinmedi. **133 modelin** kendi açıklaması, fotoğrafları, belgeleri ve dönüş kareleri yayın öncesi kayıtla birebir aynıdır.
+
+Doğrulama:
+
+- Normal üretim derlemesi, TypeScript ve Netlify paketlemesi başarılı; Playwright destekli **48 CMS/site kontrolü** geçti. Yeni regresyon elbise listelerindeki ekipman ayrımını, ayrı eldiven/başlık ailelerini ve doğru kategoriye geri dönüşü denetler. Geçici veriler temizlendi.
+- Yerel önizleme ve gerçek canlı sitede **5 kontrol grubu** geçti: **32 ürün ailesinin** kart üyeliği/adresleri, altı elbise ailesinin görünen metninde ilgisiz ürün bulunmaması, taşınan ürünlerin doğru aileye dönüşü ve bağımsız Cool Vest erişimi, mobil Maximus geçişinde yedi açı/yedi ilgili elbise, **187 mevcut katalog adresinin tamamının HTTP 200** döndürmesi. Tarayıcı çalışma hatası veya kontrol edilen ailelerde yatay taşma görülmedi.
+- Masaüstü elbise/ekipman sayfaları ve mobil itfaiyeci kartları görsel olarak incelendi. Mobil kart fotoğrafları çözülüp gerçek resimlerinin yüklendiği ayrıca doğrulandı. Canlı tarayıcı kontrolleri önceki bölümlerde açıklanan, TLS denetimini koruyan salt okunur aktarımı kullandı.
+- Netlify canlı yayını: **`6ae09de4c569fd78dae0817f`**. Supabase taslak ve yayın içeriği **sürüm 5**; önceki yayın geri alma geçmişine alındı. Yazma sırasında sürüm çakışması koruması kullanıldı. Gerçek kayıt incelenen yayınla birebir eşleşir; yönetim API'si `configured:true, backend:supabase` döndürür. İzlenen **898 dosyada** özel anahtar/parola/hesap özeti eşleşmesi bulunmadı.
+
+Yönetim kılavuzuna yeni ürünlerde hem ana hem ek aile ilişkilerini kontrol etme kuralı eklendi. Başlatılan yerel önizleme sunucusu kapatıldı. Ana sayfa tasarımı ve mevcut ürün içerikleri değiştirilmedi.
