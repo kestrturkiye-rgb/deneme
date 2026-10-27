@@ -40,6 +40,14 @@ Başka birine teslim edilecek geçici hesap için `npm run admin:setup -- --temp
 
 Listelerdeki oklarla sıralayın; kopyalama düğmesiyle benzer bir kayıt oluşturun. İç içe kayıtları açarak alt alanları düzenleyin. Arama kutusu hem bölüm adında hem içerik değerlerinde arar.
 
+## Ürün ailesi ve model sayfaları
+
+İtfaiyeci Elbisesi gibi alt modelleri bulunan ürün aileleri fotoğraflı bir katalog olarak açılır. Fotoğraf, ürün adı ve kartın tamamı modelin kendi sayfasına gider; kategoriye teklif eklenmez. Gerçek modelin sayfasında fotoğraf/360° görünümü ve teklif eylemleri bulunur.
+
+**Bölümler ve ürün listesi** içindeki **Ana ürün ailesinin adresi** ve **Modelin yer aldığı diğer ürün aileleri** alanları kartların hangi ailede görüneceğini belirler. Kart fotoğrafı modelin kendi detay kaydından alınır. Aile açıklamasında yalnızca model adları varsa bunlar tekrar açıklama metni olarak gösterilmez; eşleşen modeller bu listedeki sırayla öne alınır. Diğer modeller katalog sırasını korur. Açıklayıcı metinler, ek bilgiler ve belgeler korunur.
+
+Paneldeki **Ürün sayfası** bölümünde **Ürün ailesi için varsayılan giriş metni** ve **Ürün ailesindeki adet etiketi**, kategori düzeninin ortak metinleridir. Yeni alanlar eski içerik yedekleriyle uyumludur.
+
 ## Taslak ve yayın
 
 1. Alanları düzenleyin. Değişiklikler bu aşamada yalnızca tarayıcıdadır.

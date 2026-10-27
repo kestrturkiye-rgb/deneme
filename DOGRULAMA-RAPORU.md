@@ -123,3 +123,20 @@ Doğrulama:
 - Beş ek elbise sayfası 1440 ve 390 piksel genişlikte, toplam **10 sayfa/görünüm kontrolünde** geçti. Yüklenen doğru görsellerin açılması, mevcut galeride geçiş, doğal resim ölçüsü ve taşma/çalışma hatası kontrol edildi. Masaüstü Maximus, ALUSTAR, ERIC ve üniforma ekranları ayrıca görsel olarak incelendi.
 
 Canlı tarayıcı kontrolleri, çalışma ortamının Chromium CA kısıtı nedeniyle yukarı akış HTTPS sertifikalarını doğrulayan salt okunur yerel aktarım ve yalnızca herkese açık medya adreslerine yönelik aktarım kullandı. İçerik veya stiller değiştirilmedi; TLS doğrulaması kapatılmadı. Test hesapları veya deneme dönüş kareleri canlı ürüne eklenmedi. Yönetim anahtarları ve işleme yardımcıları kaynak depoya alınmadı.
+
+## Ürün ailelerinden model seçimi · 27 Ekim 2026
+
+İtfaiyeci Elbisesi gibi kategori kayıtları tek ürün şablonunda açılıyor; kaynak açıklamasındaki model adları tıklanamayan paragraflar olarak gösteriliyordu. Gerçek model bağlantıları ise büyük görselin altındaki ayrı listede kalıyordu. Alt modelleri bulunan **22 ürün ailesi** için sayfanın başında fotoğraflı katalog düzeni eklendi. Kartın fotoğrafı, adı ve tamamı modelin kendi adresine gider. Kategori sayfasında ürün teklif eylemi veya tek ürüne ait büyük galeri bulunmaz; model detaylarında mevcut 360° ve teklif akışı korunur.
+
+Kaynak açıklamada adı geçen modeller listenin başına alınır. İtfaiyeci Elbisesi sayfasında Maximus, Optimus, Stefan III, Stefan II, Primus, Salvator, Mare ve Alexus ilk sekiz karttır; diğer on ürün de aynı katalogda erişilebilir. Açıklamada sadece model adı olan satırlar tekrar metin olarak gösterilmez. Açıklayıcı içerik, ek bilgiler ve belgeler tutuldu; ek bilgi içindeki eşleşen model adları da bağlantıya dönüştürüldü. Kartlar masaüstünde dört, tablette üç, telefonda iki sütuna yerleşir. Ortak giriş ve adet etiketleri panelden değiştirilebilir; yeni alanlar eski içeriklerde isteğe bağlıdır.
+
+Doğrulama:
+
+- Üretim derlemesi, TypeScript ve Netlify paketlemesi başarılı. Canlı yayın: **`6ae07d640d6c64cb90ebb957`**.
+- Playwright destekli **42 CMS kontrolü** geçti. Yeni regresyon; kart fotoğrafı/başlığı, klavye, kategoriye geri dönüş, diğer ürün aileleri, doğru model sırası ve mobil sütun düzenini denetler. Sepet testi depolama ve istemci yüklemesinin tamamlanmasını bekler; seçilen ürün/parçaya ilişkin doğrulama korunur.
+- Hem yerel üretim sunucusunda hem gerçek canlı içerikle **22 aile × 2 ekran genişliği = 44 sayfa görünümü** tarandı. Kart sayıları ve adresleri katalog ilişkileriyle eşleşti; taşma veya tarayıcı çalışma hatası görülmedi. **133 farklı model adresinin tamamı HTTP 200** döndürdü. Aile belgelerinin sayıları korundu.
+- Canlıda menü → İtfaiyeci Elbisesi → model, fotoğraftan tıklama, klavyeyle seçim, kategoriye geri dönüş ve gerçek mobil dokunma geçişleri başarılı. Masaüstü ve mobil ekran görüntüleri ayrıca incelendi.
+- Canlı Maximus sayfasının **7 kontrol grubu** yeniden geçti; yedi dönüş karesi, araçlar, tam ekran, dokunma ve ürün içeriği korunur.
+- Gerçek CMS taslağı ve yayınının işlem öncesi kopyasıyla birebir aynı kaldığı doğrulandı; içerik sürümü **3**. Yönetim API'si `configured:true, backend:supabase` döndürür. İzlenen **885 dosyada** özel anahtar/parola/hesap özeti eşleşmesi bulunmadı.
+
+Canlı tarayıcı doğrulaması yukarıda açıklanan, TLS denetimini koruyan salt okunur aktarım yöntemini kullandı. Bu değişiklikte veri tabanına içerik yazılmadı; yerel sunucu ve test verileri kapatılıp temizlendi.
