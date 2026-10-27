@@ -1031,7 +1031,14 @@ try {
       await productPage
         .getByRole("button", { name: "Teklif sepetine ekle", exact: true })
         .click();
+      await productPage.waitForFunction(() =>
+        JSON.parse(localStorage.getItem("kivanc-teklif-sepeti") || "[]")
+          .some((item) => item.name.startsWith("Yeni Panel Ürünü – Pantolon")),
+      );
       await productPage.goto(origin + "/teklif-sepeti");
+      await productPage.getByRole("link", {
+        name: /^Yeni Panel Ürünü – Pantolon/,
+      }).waitFor();
       assert(
         (await productPage.textContent("main")).includes(
           "Yeni Panel Ürünü – Pantolon",
@@ -1142,6 +1149,43 @@ try {
       });
       const launchPage = await launchVisitor.newPage();
       launchPage.on("pageerror", (e) => errors.push(e.message));
+      await launchPage.setViewportSize({ width: 1440, height: 1000 });
+      await launchPage.goto(origin + "/is-guvenligi/itfaiyeci-elbisesi", {
+        waitUntil: "networkidle",
+      });
+      assert.equal(await launchPage.locator(".product-family h1").textContent(), "İtfaiyeci Elbisesi");
+      assert.equal(await launchPage.locator(".product-quote,.product-mobile-bar,.product-gallery").count(), 0);
+      const familyCards = launchPage.locator("#modeller .kg-product-card");
+      assert.equal(await familyCards.count(), 18);
+      assert.deepEqual((await familyCards.locator("h3").allTextContents()).slice(0, 8), [
+        "Maximus 2.0 (832551)", "Optimus 2.0 (832536)", "Stefan III (832507)",
+        "Stefan II (832356)", "Primus 2.0 (832548)", "Salvator (832330)",
+        "Mare (833115)", "Alexus (832346)",
+      ]);
+      assert((await familyCards.first().boundingBox()).y < 1000, "Models must start in the first viewport.");
+      await familyCards.first().locator(".kg-product-art").click();
+      await launchPage.waitForURL("**/maximus-2-0-832551");
+      await launchPage.locator(".product-parent-nav a").click();
+      await launchPage.waitForURL("**/itfaiyeci-elbisesi");
+      await familyCards.nth(1).focus();
+      await launchPage.keyboard.press("Enter");
+      await launchPage.waitForURL("**/optimus-2-0-832536");
+      for (const slug of ["aluminize-elbise", "solunum-seti"]) {
+        await launchPage.goto(origin + "/is-guvenligi/" + slug, { waitUntil: "networkidle" });
+        assert.equal(await launchPage.locator(".product-family h1").count(), 1);
+        const card = launchPage.locator("#modeller .kg-product-card").first();
+        const destination = await card.getAttribute("href");
+        await card.locator("h3").click();
+        await launchPage.waitForURL("**" + destination);
+        assert.equal(await launchPage.locator(".product-heading h1").count(), 1);
+      }
+      await launchPage.setViewportSize({ width: 390, height: 844 });
+      await launchPage.goto(origin + "/is-guvenligi/itfaiyeci-elbisesi", { waitUntil: "networkidle" });
+      assert.equal(await launchPage.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+      assert.equal(await familyCards.first().evaluate(el => getComputedStyle(el.closest("ul")).gridTemplateColumns.split(" ").length), 2);
+      await familyCards.first().locator("h3").click();
+      await launchPage.waitForURL("**/maximus-2-0-832551");
+      ok("product families show ordered clickable model cards; image, title, keyboard, parent return and mobile navigation work without category quote controls");
       await launchPage.goto(origin + "/is-guvenligi/yeni-panel-urunu", {
         waitUntil: "networkidle",
       });

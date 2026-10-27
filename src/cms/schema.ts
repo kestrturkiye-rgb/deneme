@@ -65,6 +65,8 @@ for (const key of ["image", "imageAlt"])
   ].optional = true;
 schemas["components-Product360"].fields!.controlsLabel.optional = true;
 schemas["components-ProductExperience"].fields!.galleryLabel.optional = true;
+for (const key of ["familyIntro", "familyCountLabel"])
+  schemas["app-[division]-[slug]"].fields![key].optional = true;
 const catalogItem =
   schemas["data-divisions"].fields!.divisions.item!.fields!.groups.item!.fields!
     .items.item!;
@@ -617,6 +619,8 @@ export function slugify(text: string) {
 }
 export const fieldLabels: Record<string, string> = {
   parentSlug: "Ana ürün ailesinin adresi (model için)",
+  familyIntro: "Ürün ailesi için varsayılan giriş metni",
+  familyCountLabel: "Ürün ailesindeki adet etiketi",
   relatedFamilies: "Modelin yer aldığı diğer ürün aileleri",
   children: "Alt menü bağlantıları",
   sourceBlocks: "Kurumsal içerik, fotoğraflar ve belgeler",

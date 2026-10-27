@@ -436,6 +436,8 @@
     "metin07": "Model için bilgi iste",
     "fallbackIntro": "{name}, Kıvanç Group’un {division} bölümünde {group} grubunda yer alır. Teknik özellikler, standartlar ve fiyat bilgisi için teklif talebi oluşturabilirsiniz.",
     "parentLabel": "Ürün ailesi",
+    "familyIntro": "Bu gruptaki ürünleri inceleyin. Fotoğrafa veya ürün adına tıklayarak detay sayfasına geçebilirsiniz.",
+    "familyCountLabel": "ürün",
     "modelLabel": "ÜRÜN",
     "modelAction": "Ürünü incele",
     "videosTitle": "Ürün videoları"

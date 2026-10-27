@@ -4,14 +4,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProductExperience from "@/components/ProductExperience";
+import ProductFamily from "@/components/ProductFamily";
 import DocumentLink from "@/components/DocumentLink";
-import ProductCard from "@/components/ProductCard";
 import ArrowUpRight from "@/components/ArrowUpRight";
 import { getProduct, productHref, getProducts } from "@/data/catalog";
 import { getDetails } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
 import "./product.css";
 import "./product-stage.css";
+import "./product-family.css";
 type Props = { params: Promise<{ division: string; slug: string }> };
 export const dynamicParams = true;
 async function introFor(
@@ -60,8 +61,47 @@ export default async function ProductPage({ params }: Props) {
   );
   const allProducts = await getProducts();
   const models = allProducts.filter(
-    (p) => p.parentSlug === slug || p.relatedFamilies?.includes(slug),
+    (p) =>
+      p.divisionSlug === division &&
+      (p.parentSlug === slug || p.relatedFamilies?.includes(slug)),
   );
+  const isFamily = models.length > 0;
+  const normalizeName = (name: string) =>
+    name
+      .normalize("NFKC")
+      .replace(/[–—]/g, "-")
+      .replace(/\s+/g, " ")
+      .trim()
+      .toLocaleLowerCase("tr-TR");
+  const modelByName = new Map(
+    models.map((model) => [normalizeName(model.name), model]),
+  );
+  // Source family descriptions sometimes contain only model names. They belong
+  // in the selectable catalogue, rather than the product description preview.
+  const familyDescription = description.filter(
+    (text) => !modelByName.has(normalizeName(text)),
+  );
+  const sourceOrder = new Map(
+    description.map((name, index) => [normalizeName(name), index]),
+  );
+  models.sort(
+    (a, b) =>
+      (sourceOrder.get(normalizeName(a.name)) ?? description.length) -
+      (sourceOrder.get(normalizeName(b.name)) ?? description.length),
+  );
+  const hasDetails = Boolean(
+    detail?.features?.length ||
+      detail?.sections?.length ||
+      (isFamily ? familyDescription.length : description.length),
+  );
+  function detailText(text: string) {
+    const model = modelByName.get(normalizeName(text));
+    return model ? (
+      <Link className="product-family-model-link" href={productHref(model)}>
+        {text} →
+      </Link>
+    ) : text;
+  }
   const parent = allProducts.find((p) => p.slug === product.parentSlug);
   const related = allProducts.filter(
     (p) =>
@@ -82,34 +122,43 @@ export default async function ProductPage({ params }: Props) {
           <Link href={productHref(parent)}>← {parent.name}</Link>
         </nav>
       )}
-      <ProductExperience
-        {...product}
-        href={productHref(product)}
-        description={description}
-        features={detail?.features ?? []}
-        images={images}
-        spin={spin}
-        variants={detail?.variants ?? []}
-        line={detail?.line}
-        configurations={detail?.configurations ?? []}
-        colors={detail?.colors ?? []}
-        relatedProduct={
-          related[0]
-            ? {
-                name: related[0].name,
-                href: productHref(related[0]),
-                image:
-                  allDetails[related[0].slug]?.images?.[0]?.src ||
-                  getProductMedia(related[0].slug, related[0].name).images[0]
-                    ?.src,
-              }
-            : undefined
-        }
-      />
+      {isFamily ? (
+        <ProductFamily
+          product={product}
+          models={models}
+          details={allDetails}
+          description={familyDescription}
+        />
+      ) : (
+        <ProductExperience
+          {...product}
+          href={productHref(product)}
+          description={description}
+          features={detail?.features ?? []}
+          images={images}
+          spin={spin}
+          variants={detail?.variants ?? []}
+          line={detail?.line}
+          configurations={detail?.configurations ?? []}
+          colors={detail?.colors ?? []}
+          relatedProduct={
+            related[0]
+              ? {
+                  name: related[0].name,
+                  href: productHref(related[0]),
+                  image:
+                    allDetails[related[0].slug]?.images?.[0]?.src ||
+                    getProductMedia(related[0].slug, related[0].name).images[0]
+                      ?.src,
+                }
+              : undefined
+          }
+        />
+      )}
       <div className="product-detail-nav">
         <div className="container-site">
           {models.length > 0 && <a href="#modeller">{cms.metin05}</a>}
-          <a href="#urun-detaylari">{labels.details}</a>
+          {hasDetails && <a href="#urun-detaylari">{labels.details}</a>}
           {Boolean(detail?.specs?.length) && (
             <a href="#teknik-bilgiler">{labels.technical}</a>
           )}
@@ -121,35 +170,7 @@ export default async function ProductPage({ params }: Props) {
           )}
         </div>
       </div>
-      {models.length > 0 && (
-        <section id="modeller" className="product-model-section">
-          <div className="container-site">
-            <h2>{cms.metin05}</h2>
-            <ul className="kg-product-grid catalog-grid mt-8">
-              {models.map((model, index) => {
-                const data = allDetails[model.slug];
-                return (
-                  <li key={model.slug}>
-                    <ProductCard
-                      href={productHref(model)}
-                      name={model.name}
-                      category={product.name}
-                      image={data?.images?.[0]?.src}
-                      index={index}
-                      hasSpin={Boolean(data?.spin)}
-                      label={cms.modelLabel}
-                      action={cms.modelAction}
-                      summary={(data?.description?.[0] || "").slice(0, 145)}
-                      tags={[]}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
-      )}
-      <section id="urun-detaylari" className="product-details-section">
+      {hasDetails && <section id="urun-detaylari" className="product-details-section">
         <div className="container-site product-details-grid">
           <div>
             <span className="product-kicker">{labels.detailKicker}</span>
@@ -170,12 +191,12 @@ export default async function ProductPage({ params }: Props) {
               <article key={i} className="product-detail-article">
                 <h3>{section.title}</h3>
                 {section.text?.map((text, j) => (
-                  <p key={j}>{text}</p>
+                  <p key={j}>{detailText(text)}</p>
                 ))}
                 {section.items && (
                   <ul>
                     {section.items.map((text, j) => (
-                      <li key={j}>{text}</li>
+                      <li key={j}>{detailText(text)}</li>
                     ))}
                   </ul>
                 )}
@@ -183,14 +204,14 @@ export default async function ProductPage({ params }: Props) {
             ))}
             {!detail?.sections?.length &&
               !detail?.features?.length &&
-              description.map((p, i) => (
+              (isFamily ? familyDescription : description).map((p, i) => (
                 <p key={i} className="product-detail-paragraph">
                   {p}
                 </p>
               ))}
           </div>
         </div>
-      </section>
+      </section>}
       {Boolean(detail?.specs?.length) && (
         <section id="teknik-bilgiler" className="product-spec-section">
           <div className="container-site product-details-grid">
@@ -246,7 +267,7 @@ export default async function ProductPage({ params }: Props) {
             <h2>{cms.metin05}</h2>
             <ul>
               {detail!.models!.map((model, i) => (
-                <li key={i}>{model}</li>
+                <li key={i}>{detailText(model)}</li>
               ))}
             </ul>
             <Link href="/iletisim" className="btn-outline">
