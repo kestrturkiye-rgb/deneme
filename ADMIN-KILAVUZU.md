@@ -54,6 +54,8 @@ Paneldeki **Ürün sayfası** bölümünde **Ürün ailesi için varsayılan gir
 
 Ana sayfanın yenilenen görünümünde logo **Üst menü ve duyurular**, alt bilgi logosu **Alt bilgi ve sosyal medya** bölümünden değiştirilebilir. Paylaşılan Kıvanç Group logosunun yatay web uyarlaması `/images/brand/kivanc-group-header.webp` adresindedir.
 
+Görsel kimlikte sıcak turuncu, koyu füme zemin ve logonun yönünü izleyen ince açılı çizgiler kullanılır. **Renkler, yazı ve görünüm** bölümündeki marka/zemin/metin/parlama renkleri ve düğme köşe ölçüsü bu görünümü yönetir. Düğmelerin bir köşesi ortak ölçünün iki katıdır. Ürün sahnesinin zemin, metin, vurgu ve ışık renkleri **Ürün sayfası** ayarlarından ayrıca değiştirilebilir. Çizgiler dekoratiftir; ürün fotoğrafları ve yazılarının parçası değildir. Küçük katalog numaraları sıralamayı izler, ürün kodunu değiştirmez.
+
 **Renkler, yazı ve görünüm** içindeki **Ana sayfa metin yazı tipi** ve **Ana sayfa başlık yazı tipi**, diğer sayfalardan ayrı yönetilir. Başlangıç değeri S-GARD referansında da kullanılan Titillium Web'dir. Türkçe karakterler ve 400/600/700 ağırlıkları siteyle birlikte sunulur; ziyaretçinin harici font hizmetine bağlanması gerekmez.
 
 **İş ortakları** bölümünde marka adı, bağlantısı ve logo görseli düzenlenebilir. **İş ortakları otomatik akış** seçeneği kaymayı açıp kapatır. Ziyaretçi oklarla, fareyle sürükleyerek veya telefonda kaydırarak da ilerler. Otomatik akış fare üzerindeyken, klavye odağı listede olduğunda, bölüm ekran dışına çıktığında veya sekme gizlendiğinde durur. Azaltılmış hareket tercihinde kendiliğinden başlamaz; ziyaretçi isterse başlatabilir. Başlık, açıklama ve kontrol etiketleri de düzenlenebilir.

@@ -206,3 +206,19 @@ Doğrulama:
 - Netlify canlı yayını: **`6ae09de4c569fd78dae0817f`**. Supabase taslak ve yayın içeriği **sürüm 5**; önceki yayın geri alma geçmişine alındı. Yazma sırasında sürüm çakışması koruması kullanıldı. Gerçek kayıt incelenen yayınla birebir eşleşir; yönetim API'si `configured:true, backend:supabase` döndürür. İzlenen **898 dosyada** özel anahtar/parola/hesap özeti eşleşmesi bulunmadı.
 
 Yönetim kılavuzuna yeni ürünlerde hem ana hem ek aile ilişkilerini kontrol etme kuralı eklendi. Başlatılan yerel önizleme sunucusu kapatıldı. Ana sayfa tasarımı ve mevcut ürün içerikleri değiştirilmedi.
+
+## Kıvanç'a özgü görsel kimlik · 27 Ekim 2026
+
+Mevcut görsel ağırlıklı koyu düzen korunarak marka kimliği ayrıştırıldı. Sıcak turuncu, füme yüzeyler ve kırık beyaz metinler ortak paleti oluşturur. Logonun yönünü izleyen ince açılı çizgiler banner, kurumsal bölüm, kategori başlığı ve ürün sahnesinde tekrar eder. Bu SVG çizgileri dekoratiftir; ekran okuyucudan ve işaretçi etkileşiminden çıkarılmıştır. Başlıklarda ağırlık/harf aralığı, faaliyet seçimlerinde vurgu, ürün kartlarında küçük sıra numarası ve köşe detayları düzenlendi. Ana banner fotoğrafı geciktirilmeden yüklenir; yalnızca seçili görsel görüntülenir.
+
+Genel renkler, parlama ve düğme köşe ölçüsü mevcut tasarım alanlarından; ürün sahnesinin dört rengi mevcut ürün ayarlarından yönetilir. Yeni yazı tipi, harici tasarım kütüphanesi veya görsel hizmeti eklenmedi. Ürün fotoğrafları, teknik özellikler, belgeler, kategori ilişkileri ve ana sayfa bölüm sırası değiştirilmedi. İtfaiyeci Elbisesi'nin sekiz kıyafet modeli korunur.
+
+Doğrulama:
+
+- Üretim derlemesi ve TypeScript başarılı; **48 CMS/site** ve **13 video kontrolü** geçti. Üç ana banner dokuz ekran ölçüsünde, toplam **27 yerleşimde** kontrol edildi; gerçek logo/ortak görselleri, menüler, formlar, yönetim paneli ve ürün seçimi regresyonları başarılıdır.
+- Yerel ve canlı tarayıcıda **5 yerleşim/gezinme grubu** geçti: **18 geniş ekran yerleşimi**, **11 gerçek faaliyet bağlantısı**, 18–20 px menü bağlantıları/44 px hedefler, 2560×1200 CSS alanında 0,75 piksel oranı ve üç sektörde gerçek mobil dokunma. Etkileşimler istemci dosyaları yüklendikten ve seçili sekme durumu güncellendikten sonra ölçüldü.
+- Canlı görünümde **11 ekran görüntüsü** alındı; ana sayfa, ortaklar, faaliyetler, kurumsal vurgu, kalite alanı ve ürünlerin masaüstü/mobil görünümleri incelendi. Ana bannerın birincil düğmesinin metin kontrastı **5,86:1** ölçüldü. Bu ölçüm tüm site için erişilebilirlik sertifikası anlamına gelmez.
+- Gerçek canlı Maximus sayfasında son **7 regresyon grubu** geçti: metin/10 özellik/3 belge, yedi açının yüklenmesi ve seçimi, fare/klavye/dokunma, oynatma/durdurma, tam ekran, fotoğraf-dönüş geçişi ve mobil sabit eylemler. Canlı kontrolde görülen açı halkası/sabit teklif çubuğu örtüşmesi, eski seri etiketi alt boşluğu ve üst aralıklar düzenlenerek giderildi. **382 px mobil ürün sahnesi korunur**; 390×844 görünümde halka 713,84 px'de biter, teklif çubuğu 723 px'de başlar. Free rozeti ile teklif eylemi de ayrı alanlardadır. Son düzeltme Netlify üretim derlemesi ve aynı gerçek canlı regresyonla tekrar doğrulandı.
+- Son Netlify yayını **`6ae0a56a72ae61494aefaaab`**. CMS taslağı/yayını **sürüm 6**; yalnızca 10 genel tasarım ve dört ürün rengi alanı güncellendi. Önceki yayın geri alma geçmişinde tutuldu; yazma sırasında sürüm çakışması kontrol edildi. Gerçek kayıt incelenen yayınla aynıdır; katalog ve tüm model detayları önceki sürümle birebir eşleşir. Yönetim API'si Supabase bağlantısını doğrular. İzlenen **900 dosyada** özel anahtar/parola/hesap özeti eşleşmesi bulunmadı.
+
+Canlı tarayıcı kontrolleri TLS doğrulamasını koruyan salt okunur aktarımı kullandı; stil değiştirilmiş önizleme, canlı doğrulama sonucu olarak sayılmadı. Başlatılan geliştirme ve üretim önizlemeleri kapatıldı. Ücretli hizmet veya alan adı işlemi yapılmadı.
