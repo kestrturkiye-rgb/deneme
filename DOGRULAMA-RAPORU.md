@@ -140,3 +140,24 @@ Doğrulama:
 - Gerçek CMS taslağı ve yayınının işlem öncesi kopyasıyla birebir aynı kaldığı doğrulandı; içerik sürümü **3**. Yönetim API'si `configured:true, backend:supabase` döndürür. İzlenen **885 dosyada** özel anahtar/parola/hesap özeti eşleşmesi bulunmadı.
 
 Canlı tarayıcı doğrulaması yukarıda açıklanan, TLS denetimini koruyan salt okunur aktarım yöntemini kullandı. Bu değişiklikte veri tabanına içerik yazılmadı; yerel sunucu ve test verileri kapatılıp temizlendi.
+
+## Ana sayfa, yeni logo ve kayar ortaklar · 27 Ekim 2026
+
+`https://www.s-gard.de/en/` sayfasının HTML ve CSS kaynakları doğrudan incelendi. Referansta Titillium Web'in 400/600/700 ağırlıkları, ekranı dolduran açılış ve açılışın hemen altında sürekli akan marka logoları bulundu. S-GARD'ın ürün görselleri veya videosu projeye alınmadı.
+
+Paylaşılan Kıvanç Group logosu yatay web kullanımına uyarlandı; menü ve alt bilgiye eklendi. Son WebP dosyası **1000×214, 29.002 bayt**. Ana sayfada Titillium Web kullanılır; diğer sayfaların yazı tipi ayarları korunur. Açık lisanslı `@fontsource/titillium-web@5.3.0` paketinin SHA-512 bütünlüğü doğrulandı. Altı yerel Latin/Latin Extended WOFF2 dosyasının toplamı **56.464 bayt**; lisans ve kaynak notu `public/fonts/` içindedir. Tarayıcı Google veya referans sitenin font sunucusuna bağlanmaz. Ana sayfanın başlık/metin yazı tipleri panelden ayrı değiştirilebilir.
+
+Banner, sabit mobil 790 piksel sınırı yerine gerçek menü yüksekliğinin çıkarıldığı ekran yüksekliğini kullanır. Menü, duyuru veya ekran ölçüsü değiştiğinde yükseklik yeniden ölçülür. Ana içerik, üç faaliyet seçimi ve alt satır ayrı yerleşim satırlarıdır. Dar ve yatay ekranlarda metin/düğme aralıkları uyarlanır. Netlify Free rozeti korunur; telefonda faaliyet seçimlerinin üstünü kapatmaması için alan ayrılır.
+
+Dokuz mevcut iş ortağının kaynak siteden daha önce alınmış gerçek logoları eşleştirildi; marka adları ve bağlantıları değiştirilmedi. Ortaklar, bannerın hemen altına taşındı. Sürekli akış; durdur/başlat, önceki/sonraki, fareyle sürükleme, dokunma ve klavyeyle kullanılabilir. Fare üzerindeyken ve listede klavye odağı varken durur. Azaltılmış hareket tercihinde otomatik başlamaz. Akışı devam ettiren görsel kopyalar ikinci bir klavye gezinme listesi oluşturmaz; görünür kopyalara fareyle tıklanabilir. Logo, metin, bağlantı, bölüm sırası ve otomatik akış ayarları panelde düzenlenebilir.
+
+Doğrulama:
+
+- Normal üretim derlemesi, TypeScript ve Netlify paketlemesi başarılı. Canlı yayın: **`6ae08c1e38ac0b7fbd9f32e9`**; adres `https://kivancgroup-deneme.netlify.app`.
+- Playwright destekli **45 CMS/site kontrolü** ve **13 video kontrolü** geçti. Yeni kontroller; ana sayfa font alanlarındaki CSS komutlarını reddetme, gerçek logo/font yüklemesi, bannerın ekranlara oturması, ortak görselleri ve akış düğmelerini kapsar. Geçici hesaplar ve video desenleri temizlendi.
+- Yerel üretim sunucusunda ve gerçek canlı adreste **6 ana sayfa kontrol grubu** geçti. Üç banner × altı ekran ölçüsü, toplam **18 yerleşim**: 1440×900, 1280×720, 768×1024, 390×844, 320×568 ve 844×390. Menü/banner sınırı, ekran altına oturma, başlık/açıklama/eylem/seçim sırası ve taşma ölçüldü. Canlı telefonda Free rozeti için ayrılan alan da doğrulandı.
+- Dokuz logonun gerçek yüklemesi ve özgün bağlantıları, otomatik kaymanın gerçekten ilerlemesi, azaltılmış hareket, ok/klavye, fare üzerine gelme, odak, durdurma ve devam doğrulandı. Fareyle sürükleme yanlışlıkla bağlantı açmaz; sürükleme sonrasında klavye ve görünür tekrar logolarının yeni sekme bağlantıları çalışır. Bu yeni sekme kontrolünde üçüncü taraf yanıtı test tarayıcısında yakalandı; harici sitenin içeriğinin çalıştığı iddia edilmez. Gerçek dokunma olaylarıyla telefon kaydırması da geçti.
+- Canlı Maximus için **7 regresyon grubu** yeniden geçti; ürün içeriği ve yedi açılı dönüş korunur. Ana sayfa ve ortaklar bölümünün masaüstü/mobil ekranları görsel olarak incelendi. Tarayıcı çalışma hatası görülmedi.
+- Yedi yeni logo/font adresinin canlı kopyaları yerel dosyalarla SHA-256 bakımından aynı. Canlı CMS sürümü **4**; önceki yayın geri alma geçmişindedir. Ürün detayları ve katalog ilişkileri yayın öncesi kopyayla birebir aynı. Yönetim API'si `configured:true, backend:supabase` döndürür. İzlenen **897 dosyada** özel anahtar, parola veya hesap özeti eşleşmesi bulunmadı.
+
+Canlı tarayıcı kontrolleri, önceki bölümlerde açıklanan TLS doğrulamasını koruyan salt okunur aktarımı kullandı. Başlatılan yerel önizleme sunucusu kapatıldı. Ücretli hizmet veya yeni alan adı işlemi başlatılmadı.

@@ -48,6 +48,16 @@ Listelerdeki oklarla sıralayın; kopyalama düğmesiyle benzer bir kayıt oluş
 
 Paneldeki **Ürün sayfası** bölümünde **Ürün ailesi için varsayılan giriş metni** ve **Ürün ailesindeki adet etiketi**, kategori düzeninin ortak metinleridir. Yeni alanlar eski içerik yedekleriyle uyumludur.
 
+## Ana sayfa, logo ve iş ortakları
+
+Ana sayfanın yenilenen görünümünde logo **Üst menü ve duyurular**, alt bilgi logosu **Alt bilgi ve sosyal medya** bölümünden değiştirilebilir. Paylaşılan Kıvanç Group logosunun yatay web uyarlaması `/images/brand/kivanc-group-header.webp` adresindedir.
+
+**Renkler, yazı ve görünüm** içindeki **Ana sayfa metin yazı tipi** ve **Ana sayfa başlık yazı tipi**, diğer sayfalardan ayrı yönetilir. Başlangıç değeri S-GARD referansında da kullanılan Titillium Web'dir. Türkçe karakterler ve 400/600/700 ağırlıkları siteyle birlikte sunulur; ziyaretçinin harici font hizmetine bağlanması gerekmez.
+
+**İş ortakları** bölümünde marka adı, bağlantısı ve logo görseli düzenlenebilir. **İş ortakları otomatik akış** seçeneği kaymayı açıp kapatır. Ziyaretçi oklarla, fareyle sürükleyerek veya telefonda kaydırarak da ilerler. Otomatik akış fare üzerindeyken, klavye odağı listede olduğunda, bölüm ekran dışına çıktığında veya sekme gizlendiğinde durur. Azaltılmış hareket tercihinde kendiliğinden başlamaz; ziyaretçi isterse başlatabilir. Başlık, açıklama ve kontrol etiketleri de düzenlenebilir.
+
+İş ortakları başlangıçta bannerın hemen altına yerleştirildi; **Ana sayfa sırası ve görünürlük** bölümünden taşınabilir veya gizlenebilir. Banner yüksekliği gerçek menü ve ekran yüksekliğinden hesaplanır. Fotoğrafın portre/yatay ekranlarda kenarlardan kırpılması, alanı dolduran kapak görünümünün parçasıdır; ana metinler ve seçim düğmeleri banner içinde kalır.
+
 ## Taslak ve yayın
 
 1. Alanları düzenleyin. Değişiklikler bu aşamada yalnızca tarayıcıdadır.
