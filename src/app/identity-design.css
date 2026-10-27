@@ -299,6 +299,7 @@
   font-size: 12px;
   font-weight: 600;
   padding-bottom: 0;
+  margin: 0;
 }
 .kg-redesign.kg-identity .product-reference .product-series::after {
   display: none;
@@ -422,19 +423,19 @@
     .kg-redesign.kg-identity
     .product-reference
     .product-breadcrumb {
-    padding-top: 12px;
+    padding-top: 8px;
   }
   html:has(script[data-netlify-site-id][data-account-tier="free"])
     .kg-redesign.kg-identity
     .product-reference
     .product-title-row {
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
   html:has(script[data-netlify-site-id][data-account-tier="free"])
     .kg-redesign.kg-identity
     .product-reference
     .product-hero-grid {
-    row-gap: 10px;
+    row-gap: 6px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
