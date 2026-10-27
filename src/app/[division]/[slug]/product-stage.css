@@ -356,6 +356,6 @@
     .product-reference .product-photo,
   html:has(script[data-netlify-site-id][data-account-tier="free"])
     .product-reference .p360-stage {
-    height: clamp(402px, 72vw, 540px);
+    height: clamp(382px, 70vw, 520px);
   }
 }
