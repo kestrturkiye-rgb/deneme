@@ -320,3 +320,42 @@
     transition: none;
   }
 }
+
+/* The free host's badge stays visible without covering the quote action or
+   the angle ring. Reserve space only when its official Free-tier script exists. */
+@media (max-width: 700px) {
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .product-mobile-bar {
+    bottom: 48px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .site-shell:has(.product-reference) {
+    padding-bottom: 133px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .site-shell:has(.product-reference) .kg-back-top {
+    bottom: 153px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .kg-redesign .product-reference {
+    padding-top: 8px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .product-reference .product-breadcrumb {
+    padding-bottom: 8px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .product-reference .product-hero-grid {
+    row-gap: 14px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .product-reference .product-title-row {
+    margin-bottom: 12px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .product-reference .product-photo,
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .product-reference .p360-stage {
+    height: clamp(402px, 72vw, 540px);
+  }
+}
