@@ -609,6 +609,23 @@ try {
   });
   assert.equal(r.status, 400);
   ok("single-frame variant rejected as invalid 360 content");
+  for (const angles of [
+    [0, 90],
+    [0, 90, 180, 360],
+    [0, 90, 90, 270],
+  ]) {
+    const invalidAngles = structuredClone(content);
+    invalidAngles["data-details"].details[
+      "yeni-panel-urunu"
+    ].variants[0].colors[0].spin.angles = angles;
+    const response = await request("/api/admin/content", {
+      method: "POST",
+      body: { action: "save", version: state.version, content: invalidAngles },
+    });
+    assert.equal(response.status, 400);
+  }
+  testDetail.variants[0].colors[0].spin.angles = [0, 45, 180, 270];
+  ok("explicit frame angles reject missing, duplicate and out-of-range values");
   result = await json("/api/admin/content", {
     method: "POST",
     body: { action: "publish", version: state.version, content },
@@ -933,6 +950,7 @@ try {
       await stage.focus();
       await productPage.keyboard.press("ArrowRight");
       assert.notEqual(await frame.getAttribute("src"), first);
+      await productPage.locator(".p360-tools > summary").click();
       await productPage.locator(".p360-controls input").fill("0");
       assert.equal(await frame.getAttribute("src"), first);
       const box = await stage.boundingBox();
@@ -952,6 +970,10 @@ try {
         .getByRole("button", { name: "Görüş açısı 0°", exact: true })
         .click();
       assert.equal(await frame.getAttribute("src"), first);
+      await productPage
+        .getByRole("button", { name: "Görüş açısı 45°", exact: true })
+        .click();
+      assert.equal(await frame.getAttribute("src"), spinImages[1]);
       await productPage
         .getByRole("button", { name: "Görüş açısı 180°", exact: true })
         .click();

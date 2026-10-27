@@ -11,6 +11,7 @@ import { getProduct, productHref, getProducts } from "@/data/catalog";
 import { getDetails } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
 import "./product.css";
+import "./product-stage.css";
 type Props = { params: Promise<{ division: string; slug: string }> };
 export const dynamicParams = true;
 async function introFor(

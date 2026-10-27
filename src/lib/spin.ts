@@ -3,6 +3,8 @@
 export type SpinConfig = {
   /** Görsel açıklaması */
   alt: string;
+  /** Her karenin gerçek görüş açısı; eksik açılar varsa eşit aralık varsayılmaz. */
+  angles?: number[];
 } & (
   | {
       /** Kare adresi, kare numarası {n} ile yazılır. Örn: /products/360/itfaiyeci/{n}.jpg */
@@ -36,6 +38,56 @@ export function frameUrls(config: SpinConfig) {
     pattern.replace("{n}", String(start + i).padStart(pad, "0")),
   );
 }
+
+export function frameAngles(config: SpinConfig): number[] {
+  const total = frameUrls(config).length;
+  return config.angles?.length === total &&
+    config.angles.every(
+      (angle) => Number.isFinite(angle) && angle >= 0 && angle < 360,
+    )
+    ? config.angles
+    : Array.from({ length: total }, (_, i) => (i * 360) / total);
+}
+
+export function closestFrame(angle: number, angles: number[]) {
+  const target = wrapIndex(angle, 360);
+  let closest = 0,
+    distance = Infinity;
+  angles.forEach((value, i) => {
+    const difference = Math.abs(value - target);
+    const circular = Math.min(difference, 360 - difference);
+    if (circular < distance) {
+      closest = i;
+      distance = circular;
+    }
+  });
+  return closest;
+}
+
+const ORBIT_TILT = (-6 * Math.PI) / 180;
+export function orbitPoint(angle: number) {
+  const radians = Math.PI + (angle * Math.PI) / 180;
+  const x = 190 * Math.cos(radians),
+    y = 30 * Math.sin(radians);
+  return {
+    x: 210 + x * Math.cos(ORBIT_TILT) - y * Math.sin(ORBIT_TILT),
+    y: 48 + x * Math.sin(ORBIT_TILT) + y * Math.cos(ORBIT_TILT),
+  };
+}
+
+export function orbitAngle(x: number, y: number) {
+  const dx = x - 210,
+    dy = y - 48;
+  const rx = dx * Math.cos(ORBIT_TILT) + dy * Math.sin(ORBIT_TILT);
+  const ry = -dx * Math.sin(ORBIT_TILT) + dy * Math.cos(ORBIT_TILT);
+  return wrapIndex(
+    ((Math.atan2(ry / 30, rx / 190) - Math.PI) * 180) / Math.PI,
+    360,
+  );
+}
+
+export const rotationDelay = (total: number) =>
+  Math.max(100, Math.round(4800 / Math.max(1, total)));
 
 /** Sağa sürükleyince önceki kareye, sola sürükleyince sonraki kareye geçer */
 export function frameAfterDrag(

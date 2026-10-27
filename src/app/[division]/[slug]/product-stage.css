@@ -1,0 +1,322 @@
+/* A quiet product stage: the garment and its angle ring lead the page. */
+.kg-redesign .product-reference {
+  padding: 32px 0 60px;
+  min-height: 0;
+  overflow: clip;
+}
+.kg-redesign .product-reference > .container-site {
+  max-width: 1360px;
+  padding-inline: 40px;
+  transform: none;
+}
+.kg-redesign .product-reference .product-breadcrumb {
+  padding-bottom: 20px;
+  font-size: 10px;
+  opacity: 0.65;
+}
+.kg-redesign .product-reference .product-hero-grid {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  grid-template-areas: "gallery heading" "gallery intro";
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(36px, 5vw, 80px);
+  row-gap: 24px;
+}
+.kg-redesign .product-reference .product-heading {
+  padding-top: 36px;
+}
+.kg-redesign .product-reference .product-heading h1 {
+  font-size: clamp(27px, 2.25vw, 34px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  overflow-wrap: normal;
+}
+.kg-redesign .product-reference .product-title-row {
+  margin-bottom: 24px;
+  gap: 20px;
+}
+.kg-redesign .product-reference .product-series {
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+.kg-redesign .product-reference .product-intro {
+  top: auto;
+  padding: 0;
+}
+.kg-redesign .product-reference .product-description {
+  font-size: 14px;
+  line-height: 1.85;
+  max-width: 440px;
+}
+.kg-redesign .product-reference .product-options {
+  margin-top: 28px;
+  gap: 12px;
+}
+.kg-redesign .product-reference .product-colors {
+  margin-top: 26px;
+}
+.kg-redesign .product-reference .product-quote {
+  margin-top: 32px;
+}
+.kg-redesign .product-reference .product-quote .btn-primary {
+  min-height: 56px;
+}
+.kg-redesign .product-reference .product-contact-link {
+  margin-top: 14px;
+}
+.kg-redesign .product-reference .product-details-jump {
+  margin-top: 26px;
+}
+.kg-redesign .product-reference .product-gallery-main::before {
+  inset: -40px -65px 65px;
+  opacity: 0.48;
+  background: radial-gradient(
+    ellipse at 50% 48%,
+    var(--product-glow),
+    transparent 66%
+  );
+}
+.kg-redesign .product-reference .product-visual {
+  isolation: isolate;
+}
+.kg-redesign .product-reference .product-visual:has(img)::before {
+  content: "";
+  position: absolute;
+  inset: 0 20% 65px;
+  background: url("/images/product-atmosphere.webp") center / contain no-repeat;
+  opacity: 0.23;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse, #000 38%, transparent 76%);
+}
+.kg-redesign .product-reference .product-visual > .p360,
+.kg-redesign .product-reference .product-photo {
+  position: relative;
+  z-index: 1;
+}
+.kg-redesign .product-reference .product-photo,
+.kg-redesign .product-reference .p360-stage,
+.kg-redesign .product-reference .product-no-image {
+  height: 560px;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: auto;
+  background: transparent;
+}
+.kg-redesign .product-reference .product-photo {
+  padding: 0 36px 15px;
+}
+.kg-redesign .product-reference .p360-image {
+  padding: 0 36px 15px;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 14px 20px #0003);
+}
+.kg-redesign .product-reference .p360-label {
+  display: none;
+}
+.kg-redesign .product-reference .p360-drag-hint {
+  bottom: 3px;
+  background: transparent;
+  color: #b4b4b4;
+  padding: 0;
+  gap: 16px;
+  font-size: 9px;
+  opacity: 0.75;
+}
+.kg-redesign .product-reference .p360-orbit {
+  width: 70%;
+  max-width: 420px;
+  aspect-ratio: 420 / 96;
+  margin: -6px auto 0;
+  touch-action: none;
+  cursor: grab;
+}
+.kg-redesign .product-reference .p360-orbit:active {
+  cursor: grabbing;
+}
+.kg-redesign .product-reference .p360-orbit ellipse {
+  stroke: #b3b3b3;
+  stroke-width: 0.8;
+}
+.kg-redesign .product-reference .p360-orbit button {
+  width: 6px;
+  height: 6px;
+}
+.kg-redesign .product-reference .p360-orbit button::before {
+  inset: -12px;
+}
+.kg-redesign .product-reference .p360-orbit button.active {
+  width: 8px;
+  height: 8px;
+}
+.p360-tools {
+  position: relative;
+  width: min(70%, 420px);
+  margin: -5px auto 0;
+}
+.p360-tools > summary,
+.product-gallery-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+  min-height: 30px;
+  color: #aaa;
+  font-size: 10px;
+}
+.p360-tools > summary::-webkit-details-marker,
+.product-gallery-details > summary::-webkit-details-marker {
+  display: none;
+}
+.p360-tools > summary {
+  font-size: 9px;
+  color: #8e8e8e;
+}
+.p360-tools > summary:hover,
+.product-gallery-details > summary:hover {
+  color: #fff;
+}
+.p360-tools > summary:focus-visible,
+.product-gallery-details > summary:focus-visible {
+  outline: 1px solid var(--product-accent);
+  outline-offset: 4px;
+}
+.p360-tools[open] > summary span:last-child,
+.product-gallery-details[open] > summary span:last-child {
+  transform: rotate(45deg);
+}
+.kg-redesign .product-reference .p360-tools .p360-controls {
+  width: 100%;
+  max-width: none;
+  padding: 9px 0;
+  margin: 0;
+  opacity: 1;
+  background: transparent;
+}
+.kg-redesign .product-reference .p360-tools .p360-controls button {
+  background: transparent;
+}
+.kg-redesign .product-reference .product-gallery-bottom {
+  margin-top: 16px;
+  padding-left: 100px;
+  min-height: 72px;
+  align-items: start;
+}
+.kg-redesign .product-reference .product-related-thumb {
+  top: 0;
+  bottom: auto;
+}
+.kg-redesign .product-reference .product-related-thumb > span {
+  width: 64px;
+  height: 64px;
+}
+.kg-redesign .product-reference .product-related-thumb strong {
+  font-size: 10px;
+}
+.kg-redesign .product-reference .product-related-thumb small {
+  font-size: 8px;
+}
+.product-gallery-details {
+  min-width: 0;
+  width: 100%;
+  max-width: 430px;
+}
+.product-gallery-details > summary {
+  justify-content: flex-start;
+}
+.product-gallery-details > summary > span:nth-child(1) {
+  color: #777;
+  font-size: 9px;
+}
+.kg-redesign .product-reference .product-gallery-details .product-thumbnails {
+  padding: 10px 2px 6px;
+  margin: 0;
+  gap: 8px;
+}
+.kg-redesign .product-reference .product-enlarge {
+  top: 12px;
+  right: 12px;
+}
+.kg-redesign .product-reference .product-lightbox .product-photo,
+.kg-redesign .product-reference .product-lightbox .p360-stage {
+  height: calc(85svh - 180px);
+  min-height: 280px;
+}
+.kg-redesign .product-reference .product-lightbox .product-visual::before {
+  opacity: 0.18;
+}
+@media (min-width: 1650px) {
+  .kg-redesign .product-reference .product-photo,
+  .kg-redesign .product-reference .p360-stage,
+  .kg-redesign .product-reference .product-no-image {
+    height: 620px;
+  }
+  .kg-redesign .product-reference .product-side-label {
+    display: flex;
+    top: 120px;
+    max-width: 155px;
+  }
+}
+@media (max-width: 900px) {
+  .kg-redesign .product-reference {
+    padding-top: 20px;
+  }
+  .kg-redesign .product-reference > .container-site {
+    padding-inline: 24px;
+  }
+  .kg-redesign .product-reference .product-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "heading" "gallery" "intro";
+    gap: 26px;
+  }
+  .kg-redesign .product-reference .product-heading {
+    padding-top: 0;
+  }
+  .kg-redesign .product-reference .product-heading h1 {
+    font-size: clamp(27px, 5vw, 34px);
+  }
+  .kg-redesign .product-reference .product-title-row {
+    margin-bottom: 16px;
+  }
+  .kg-redesign .product-reference .product-photo,
+  .kg-redesign .product-reference .p360-stage,
+  .kg-redesign .product-reference .product-no-image {
+    height: clamp(410px, 78vw, 560px);
+  }
+  .kg-redesign .product-reference .product-gallery-main::before {
+    inset: -10px -24px 70px;
+  }
+  .kg-redesign .product-reference .product-photo {
+    padding-inline: 12px;
+  }
+  .kg-redesign .product-reference .p360-image {
+    padding-inline: 12px;
+  }
+  .kg-redesign .product-reference .p360-orbit {
+    width: 84%;
+  }
+  .p360-tools {
+    width: 84%;
+  }
+  .kg-redesign .product-reference .product-description {
+    max-width: none;
+    font-size: 14px;
+  }
+  .kg-redesign .product-reference .product-gallery-bottom {
+    margin-top: 12px;
+    padding-left: 90px;
+  }
+  .kg-redesign .product-reference .product-quote {
+    margin-top: 28px;
+  }
+  .product-mobile-bar[data-primary-visible="true"] {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kg-redesign .product-reference .p360-orbit button {
+    transition: none;
+  }
+}

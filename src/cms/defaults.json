@@ -381,7 +381,8 @@
     "loadError": "360° kareleri yüklenemedi. Sayfayı yenileyin veya diğer fotoğrafları inceleyin.",
     "previous": "Önceki açı",
     "next": "Sonraki açı",
-    "angle": "Görüş açısı"
+    "angle": "Görüş açısı",
+    "controlsLabel": "Dönüş kontrolleri"
   },
   "components-Quality": {
     "values": [
@@ -10570,7 +10571,8 @@
     "productAccent": "#d52d0c",
     "productGlow": "#737373",
     "mobileQuote": "Teklif iste",
-    "mobileAsk": "Bilgi iste"
+    "mobileAsk": "Bilgi iste",
+    "galleryLabel": "Ürün görselleri"
   },
   "components-NewsPreview": {
     "eyebrow": "KIVANÇ GROUP GÜNDEM",

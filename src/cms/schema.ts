@@ -63,6 +63,8 @@ for (const key of ["image", "imageAlt"])
   schemas["components-Divisions"].fields!.divisions.item!.fields![
     key
   ].optional = true;
+schemas["components-Product360"].fields!.controlsLabel.optional = true;
+schemas["components-ProductExperience"].fields!.galleryLabel.optional = true;
 const catalogItem =
   schemas["data-divisions"].fields!.divisions.item!.fields!.groups.item!.fields!
     .items.item!;
@@ -119,6 +121,7 @@ detail.fields!.spin = {
   fields: {
     alt: string,
     frames: { ...strings, optional: true },
+    angles: { type: "array", item: { type: "number" }, optional: true },
     pattern: { ...string, optional: true },
     count: { type: "number", optional: true },
     start: { type: "number", optional: true },
@@ -540,6 +543,7 @@ export function validateContent(value: unknown): string[] {
             pattern?: string;
             count?: number;
             pad?: number;
+            angles?: number[];
           };
         }
       ).spin;
@@ -560,6 +564,17 @@ export function validateContent(value: unknown): string[] {
       )
         errors.push(
           "360° için en az iki kare veya {n} içeren adres ve 2–500 kare sayısı gerekli.",
+        );
+      if (
+        spin?.angles !== undefined &&
+        (spin.angles.length !== (spin.frames?.length ?? spin.count) ||
+          new Set(spin.angles).size !== spin.angles.length ||
+          spin.angles.some(
+            (angle) => !Number.isFinite(angle) || angle < 0 || angle >= 360,
+          ))
+      )
+        errors.push(
+          "360° açıları her kare için bir benzersiz 0–359° değeri içermeli.",
         );
     }
   }
@@ -653,6 +668,9 @@ export const fieldLabels: Record<string, string> = {
   documents: "Belgeler",
   spin: "360° görüntü",
   frames: "Kare görselleri",
+  angles: "Kare görüş açıları (derece)",
+  controlsLabel: "Dönüş kontrolleri etiketi",
+  galleryLabel: "Ürün görselleri etiketi",
   pattern: "Kare adres kalıbı ({n})",
   count: "Kare sayısı",
   start: "Başlangıç numarası",

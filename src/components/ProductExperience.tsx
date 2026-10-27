@@ -39,8 +39,10 @@ export default function ProductExperience(props: Props) {
     [configurationId, setConfigurationId] = useState(""),
     [expanded, setExpanded] = useState(false),
     [shareStatus, setShareStatus] = useState(""),
-    [fullscreen, setFullscreen] = useState(false);
+    [fullscreen, setFullscreen] = useState(false),
+    [quoteVisible, setQuoteVisible] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
+  const quoteContainer = useRef<HTMLDivElement>(null);
   const current = props.variants[variant];
   const colors = current?.colors ?? (!current ? props.colors : []);
   const color = colors[colorIndex];
@@ -76,6 +78,16 @@ export default function ProductExperience(props: Props) {
     if (fullscreen) dialog.current?.showModal();
     else dialog.current?.close();
   }, [fullscreen]);
+  useEffect(() => {
+    const element = quoteContainer.current;
+    if (!element || !window.IntersectionObserver) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setQuoteVisible(entry.isIntersecting),
+      { threshold: 0.2, rootMargin: "-90px 0px 0px" },
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
   function changeVariant(index: number) {
     setVariant(index);
     setColorIndex(0);
@@ -96,6 +108,10 @@ export default function ProductExperience(props: Props) {
     }
   }
   const image = images[selected];
+  const previewParagraphs = props.description.slice(
+    0,
+    (props.description[0]?.length || 0) < 140 ? 2 : 1,
+  );
   const otherVariant = props.variants.find((_, index) => index !== variant);
   const thumbFor = (entry: ProductVariant) =>
     entry.images?.[0]?.src ||
@@ -282,43 +298,55 @@ export default function ProductExperience(props: Props) {
                   <small>{props.relatedProduct.name}</small>
                 </Link>
               ) : null}
-              <div className="product-thumbnails">
-                {hasSpin && (
-                  <button
-                    type="button"
-                    className={mode === "spin" ? "active" : ""}
-                    onClick={() => setMode("spin")}
-                    aria-label={c.spinLabel}
-                    aria-pressed={mode === "spin"}
-                  >
-                    <strong>360°</strong>
-                    <small>{c.spinLabel}</small>
-                  </button>
-                )}
-                {images.map((item, index) => (
-                  <button
-                    key={item.src + "-" + index}
-                    type="button"
-                    className={
-                      mode === "image" && selected === index ? "active" : ""
-                    }
-                    onClick={() => {
-                      setSelected(index);
-                      setMode("image");
-                    }}
-                    aria-label={`${c.photo} ${index + 1}`}
-                    aria-pressed={mode === "image" && selected === index}
-                  >
-                    <SiteImage
-                      src={item.src}
-                      alt={item.alt}
-                      width={80}
-                      height={96}
-                      sizes="80px"
-                    />
-                  </button>
-                ))}
-              </div>
+              {(images.length > 1 || (hasSpin && images.length > 0)) && (
+                <details
+                  className="product-gallery-details"
+                  open={!hasSpin && images.length <= 2}
+                >
+                  <summary>
+                    {c.galleryLabel || "Ürün görselleri"}
+                    <span>{images.length}</span>
+                    <span aria-hidden="true">＋</span>
+                  </summary>
+                  <div className="product-thumbnails">
+                    {hasSpin && (
+                      <button
+                        type="button"
+                        className={mode === "spin" ? "active" : ""}
+                        onClick={() => setMode("spin")}
+                        aria-label={c.spinLabel}
+                        aria-pressed={mode === "spin"}
+                      >
+                        <strong>360°</strong>
+                        <small>{c.spinLabel}</small>
+                      </button>
+                    )}
+                    {images.map((item, index) => (
+                      <button
+                        key={item.src + "-" + index}
+                        type="button"
+                        className={
+                          mode === "image" && selected === index ? "active" : ""
+                        }
+                        onClick={() => {
+                          setSelected(index);
+                          setMode("image");
+                        }}
+                        aria-label={`${c.photo} ${index + 1}`}
+                        aria-pressed={mode === "image" && selected === index}
+                      >
+                        <SiteImage
+                          src={item.src}
+                          alt={item.alt}
+                          width={80}
+                          height={96}
+                          sizes="80px"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </details>
+              )}
             </div>
             {hasSpin && (
               <p className="product-view-note">
@@ -339,10 +367,12 @@ export default function ProductExperience(props: Props) {
                   <p key={index}>{text}</p>
                 ))
               ) : (
-                <p>
-                  {props.description[0]?.slice(0, 230)}
-                  {(props.description[0]?.length || 0) > 230 ? "…" : ""}
-                </p>
+                previewParagraphs.map((text, index) => (
+                  <p key={index}>
+                    {text.slice(0, 230)}
+                    {text.length > 230 ? "…" : ""}
+                  </p>
+                ))
               )}
             </div>
             {(props.description.length > 1 ||
@@ -446,7 +476,7 @@ export default function ProductExperience(props: Props) {
                 </div>
               </fieldset>
             )}
-            <div className="product-quote">
+            <div className="product-quote" ref={quoteContainer}>
               {props.kind === "product" ? (
                 <AddToQuote
                   key={quoteSlug}
@@ -470,7 +500,7 @@ export default function ProductExperience(props: Props) {
           </div>
         </div>
       </div>
-      <div className="product-mobile-bar">
+      <div className="product-mobile-bar" data-primary-visible={quoteVisible}>
         <div>
           <strong>{props.name}</strong>
           <span>{current?.label || props.groupTitle}</span>
