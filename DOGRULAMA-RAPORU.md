@@ -105,3 +105,21 @@ Canlı Netlify deployment: `6ae0577d99badef7892f7839`. Gerçek HTTPS adresinde *
 Yeni yayında yedi temsilî ürünün gerçek gösterilen fotoğrafları kaynak dosyalarla tekrar karşılaştırıldı; tamamı geçti. Git tarafından izlenen dosyalarda sunucu anahtarı, veritabanı parolası, yönetici oturum sırrı veya parola özeti bulunmadığı kontrol edildi.
 
 İsteğe bağlı e-posta servisi bağlı değildir; talep kayıtları panelin gelen kutusu için saklanır. Gerçek 360° kare serileri ve kurumsal banner videosu henüz kullanıcı tarafından sağlanmamıştır. Deneme adresinin indekslenmemesi korunur ve kivancgroup.com DNS kayıtları değiştirilmedi.
+
+## Sade ürün sahnesi ve Maximus açıları · 27 Ekim 2026
+
+Bu bölüm, yukarıdaki bağlantı kontrolünden sonra sağlanan Maximus görsellerini ve yeni ürün tasarımını kapsar. Texport referansına göre tüm ürün detaylarında solda büyük ürün, sağda başlık/açıklama/teklif eylemi, koyu zemin ve hafif buğu kullanılan ortak düzen uygulandı. Uzun fotoğraf şeritleri ve ayrıntılı dönüş araçları açılır başlıklara alındı. Referans markanın ürün fotoğrafları kullanılmadı; ürünün mevcut özellikleri ve belgeleri korundu.
+
+Maximus 2.0 için kullanıcının RAR dosyasındaki yedi görüntünün fonu kaldırıldı, silüetleri aynı ölçüde hizalandı ve 1000×1440 şeffaf WebP olarak hazırlandı. Karelerin toplamı **904.822 bayt**. Görsellerin içindeki özgün renk ve ürün detayları korunarak fon kenarları birleştirildi. Açılış 45° görünümüdür; halka ve sürükleme karelerin tanımlı `45, 90, 135, 180, 225, 270, 0` açılarını kullanır. Eksik 315° görüntüsü veya yeni ürün açısı üretilmedi. Yedi kareli dönüş kademelidir; daha akıcı sonuç için aynı çekim düzeninde 24–72 kare gerekir. Ceket ve pantolon için ayrı çekimler sağlanmadığından bu kayıt bütün takımı gösterir.
+
+ALUSTAR ULTRA LIGHT, ALUSTAR, Cool Vest, ERIC içlik ve istasyon üniformasının **dokuz farklı fotoğrafı** da şeffaf WebP olarak hazırlandı; toplam **894.716 bayt**. Aynı fotoğrafları kullanan model, eski ad ve kategori kayıtları dahil **16 detay kaydındaki** görsel adresleri güncellendi. Bu, katalogdaki bütün fotoğrafların fonunun kaldırıldığı anlamına gelmez. Bu ürünlerin mevcut fotoğraf galerileri korundu; onlara olmayan dönüş kareleri eklenmedi. Yüklenen her dosyanın indirilen kopyası SHA-256 ile karşılaştırıldı. Canlı içerik sürümü **3**; önceki yayınlar geri alma geçmişinde tutuldu ve yayın sırasında sürüm çakışması kontrol edildi. Diğer metinler ve kullanıcı düzenlemeleri değiştirilmedi.
+
+Doğrulama:
+
+- Üretim derlemesi, TypeScript ve Netlify paketlemesi başarılı. Son görsel yerleşim yayını: **`6ae078a83432402079b80c89`**; adres: `https://kivancgroup-deneme.netlify.app`.
+- Yeni açı doğrulaması dahil Playwright destekli **41 CMS kontrolü** ve **14 bulut sözleşmesi kontrolü** geçti. Bulut sözleşmesi kontrolleri gerçek hizmet hesabına bağlanmayan yerel sağlayıcı testleridir.
+- Gerçek canlı Maximus sayfasında **7 kontrol grubu** geçti: ürün metni/10 özellik/3 belge, yedi karenin yüklenmesi, fare/klavye/açı halkası/kaydırıcı, oynatma/durdurma/tam ekran, fotoğraf-dönüş geçişi, başlangıçta sade kontroller ve mobil dokunma. Taşma veya tarayıcı çalışma hatası görülmedi.
+- Netlify Free rozeti korunarak mobil teklif eylemine ayrı alan bırakıldı. 390×844 görünümde rozet, teklif düğmesi ve açı halkasının birbirini örtmediği ölçülerek doğrulandı. Ana teklif eylemi görünür olduğunda tekrarlanan sabit mobil çubuk gizlenir.
+- Beş ek elbise sayfası 1440 ve 390 piksel genişlikte, toplam **10 sayfa/görünüm kontrolünde** geçti. Yüklenen doğru görsellerin açılması, mevcut galeride geçiş, doğal resim ölçüsü ve taşma/çalışma hatası kontrol edildi. Masaüstü Maximus, ALUSTAR, ERIC ve üniforma ekranları ayrıca görsel olarak incelendi.
+
+Canlı tarayıcı kontrolleri, çalışma ortamının Chromium CA kısıtı nedeniyle yukarı akış HTTPS sertifikalarını doğrulayan salt okunur yerel aktarım ve yalnızca herkese açık medya adreslerine yönelik aktarım kullandı. İçerik veya stiller değiştirilmedi; TLS doğrulaması kapatılmadı. Test hesapları veya deneme dönüş kareleri canlı ürüne eklenmedi. Yönetim anahtarları ve işleme yardımcıları kaynak depoya alınmadı.

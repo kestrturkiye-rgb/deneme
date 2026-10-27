@@ -95,6 +95,10 @@ Test, geçici veri dizininde ayrı bir üretim sunucusu başlatır; gerçek hesa
 
 Ürün sayfasındaki geniş galeride fotoğraflar ile 360° görünüm arasında geçiş yapılır. Tam ekran açılabilir. Fareyle sürükleme, telefonda yatay dokunma, sol/sağ ok tuşları, kaydırıcı ve başlat/durdur düğmeleri desteklenir. Otomatik dönüş kullanıcının başlatmasıyla çalışır; sayfa yüklenir yüklenmez dönmez. Bozuk kare varsa görüntüleyici hata mesajı verir; sessizce sahte dönüş göstermez.
 
+Koyu ürün sahnesinde elips halka, tıklama ve sürüklemeyle açıyı seçer. Kaydırıcı ile başlat/durdur düğmeleri **Dönüş kontrolleri**, uzun fotoğraf listeleri **Ürün görselleri** başlığı açıldığında görünür. İlk görünümün sade kalması için bu alanlar çok açılı ürünlerde kapalı başlar. Şeffaf PNG/WebP dosyaları koyu sahneyle birleşir; JPEG içine gömülü beyaz fon sayfa rengini değiştirmekle silinmez.
+
+Kareler eşit açılarla çekilmemişse 360° alanındaki **Kare görüş açıları (derece)** listesine her kare için bir değer girin. Değerler 0 dahil, 360 hariç aralıkta ve benzersiz olmalı; açı sayısı kare sayısıyla eşleşmelidir. Örneğin yedi kare için `0, 45, 90, 135, 180, 225, 270` kullanılabilir. Alan eklenmezse kareler eşit aralıklı kabul edilir. Kare listesini değiştirirken açı listesini de güncelleyin. İlk kare açılış görünümüdür; ilk olarak çapraz açı istiyorsanız o kareyi ve ona karşılık gelen açıyı listenin başına alın.
+
 **Tek parça ürün:** Ürün detaylarında “360° görüntü” alanını ekleyin. “360° karelerini seç” düğmesiyle tüm kareleri topluca yükleyin. Fotoğraflar `1.jpg`, `2.jpg`, … `36.jpg` biçiminde adlandırılırsa doğal sayısal sıraya konur. Açıklamayı yazıp taslağı önizleyin. Listede tek tek kareleri sıralamak da mümkündür.
 
 **Ceket + pantolon:** Ürün detaylarında “Ceket / pantolon ve diğer parçalar” listesini ekleyin. İki kayıt oluşturun:
@@ -104,7 +108,7 @@ Test, geçici veri dizininde ayrı bir üretim sunucusu başlatır; gerçek hesa
 
 Her kaydın kendi fotoğrafları, açıklaması ve 360° alanı vardır. Kareleri her parçanın kendi 360° alanına yükleyin. Kimlikleri benzersiz tutun. Seçilen parça teklif sepetine ürün adıyla birlikte eklenir.
 
-Diziler için 24–72 kare önerilir (36 kare = her 10°'de bir çekim); aynı yükseklik, kadraj, ışık ve arka planı kullanın. Desteklenen üst sınır 500 karedir. Gerçek görseller bu sürüme eklenmedi; teknik testlerde kullanılan geçici renk kareleri projeye veya canlı içeriğe kaydedilmez.
+Diziler için 24–72 kare önerilir (36 kare = her 10°'de bir çekim); aynı yükseklik, kadraj, ışık ve arka planı kullanın. Desteklenen üst sınır 500 karedir. Maximus 2.0 için kullanıcının sağladığı yedi açılı takım görselleri canlı CMS'ye eklendi; az kareli dizilerde geçiş kademelidir. Teknik testlerde kullanılan geçici renk kareleri projeye veya canlı içeriğe kaydedilmez.
 
 Paylaşılan Texport ekran görüntüsündeki koyu ürün alanı, solda büyük ürün ve elips biçimli açı seçimi, sağda açıklama/seçenekler ve oval teklif düğmesi esas alınmıştır. Referanstaki rakip ürün fotoğrafı projeye kopyalanmamıştır; kendi görsellerinizi yükleyin.
 
