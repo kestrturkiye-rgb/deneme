@@ -88,7 +88,7 @@ export default function Hero() {
         </div>
       </div>
       <div
-        className="kg-story-selector"
+        className="kg-story-selector container-site"
         role="tablist"
         aria-label={c.storyLabel}
       >

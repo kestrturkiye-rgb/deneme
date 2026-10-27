@@ -4,10 +4,12 @@ import { getSection } from "@/cms/server";
 import Link from "next/link";
 import CartBadge from "./CartBadge";
 import MobileMenu from "./MobileMenu";
+import HeaderMetrics from "./HeaderMetrics";
 export default async function Header() {
   const c = await getSection("components-Header");
   return (
     <header className="kg-header">
+      <HeaderMetrics />
       <div className="kg-header-utility container-site">
         <div>
           <a href={c.metin02}>{c.metin03}</a>

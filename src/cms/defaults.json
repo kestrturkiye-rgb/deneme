@@ -137,7 +137,9 @@
     "contactHref": "/iletisim",
     "contactLabel": "Bizimle iletişime geçin",
     "tagline": "İş güvenliği, mühendislik ve madencilikte 1980’den beri güvenilir çözümler.",
-    "established": "1980’DEN BERİ"
+    "established": "1980’DEN BERİ",
+    "logo": "/images/brand/kivanc-group-header.webp",
+    "logoAlt": "Kıvanç Group"
   },
   "components-Header": {
     "announcements": [
@@ -236,7 +238,7 @@
     "metin06": "Ürün veya bölüm ara...",
     "metin07": "/",
     "metin08": "Kıvanç Group",
-    "metin09": "/logo.png",
+    "metin09": "/images/brand/kivanc-group-header.webp",
     "metin10": "Kıvanç Group",
     "metin11": "/teklif-sepeti",
     "metin12": "TEKLİF SEPETİ",
@@ -331,42 +333,58 @@
     "partners": [
       {
         "name": "INTERSPIRO",
-        "href": "http://www.interspiro.com/"
+        "href": "http://www.interspiro.com/",
+        "image": "/images/source/2a2c2e775e-Interspiro-Sirket-Logosu.jpg"
       },
       {
         "name": "PBI",
-        "href": "https://www.pbi-int.com/"
+        "href": "https://www.pbi-int.com/",
+        "image": "/images/source/d39a6dd6a5-PBI-01-1200x480.jpg"
       },
       {
         "name": "3M",
-        "href": "http://www.3m.com.tr/"
+        "href": "http://www.3m.com.tr/",
+        "image": "/images/source/3bc84fba52-3M-Logo-02.jpg"
       },
       {
         "name": "HARVIK",
-        "href": "http://www.harvik.com/"
+        "href": "http://www.harvik.com/",
+        "image": "/images/source/3e7b83c0cf-1234824302.jpg"
       },
       {
         "name": "KLEVERS",
-        "href": "http://www.klevers.de/"
+        "href": "http://www.klevers.de/",
+        "image": "/images/source/3716e2b73b-AAEAAQAAAAAAAAg5AAAAJDBhNzk4MTQ2LWYwYjItNDgwMi05ZTc5LWU5NDI1YjJkZjM3Mw.png"
       },
       {
         "name": "SEIZ",
-        "href": "https://www.seiz.de/"
+        "href": "https://www.seiz.de/",
+        "image": "/images/source/81d504862d-seiz.png"
       },
       {
         "name": "BULLARD",
-        "href": "http://www.bullard.com/europe/en/"
+        "href": "http://www.bullard.com/europe/en/",
+        "image": "/images/source/f3eb6eef06-Bullard-Sirket-Logosu.jpg"
       },
       {
         "name": "HAIX",
-        "href": "http://www.haix.com/en/"
+        "href": "http://www.haix.com/en/",
+        "image": "/images/source/1752a79668-Haix-Logo-1197x480.jpg"
       },
       {
         "name": "YKK",
-        "href": "https://www.ykk.com.tr/"
+        "href": "https://www.ykk.com.tr/",
+        "image": "/images/source/851e57fff5-YKK-LOGO-1200x480.jpeg"
       }
     ],
-    "metin01": "Çözüm ortaklarımız"
+    "metin01": "Çözüm ortaklarımız",
+    "eyebrow": "GÜÇLÜ İŞ BİRLİKLERİ",
+    "intro": "Uzmanlığı ve yenilikçi çözümleri bir araya getiren iş ortaklarımız.",
+    "autoScroll": true,
+    "previousLabel": "Önceki iş ortağı",
+    "nextLabel": "Sonraki iş ortağı",
+    "pauseLabel": "Akışı durdur",
+    "playLabel": "Akışı başlat"
   },
   "components-Product360": {
     "metin01": "360°",
@@ -10419,13 +10437,20 @@
     "buttonRadius": 32,
     "customCss": "",
     "motionEffects": true,
-    "surfaceGlow": "#5a5a5a"
+    "surfaceGlow": "#5a5a5a",
+    "homeBodyFont": "\"Titillium Web\", system-ui, sans-serif",
+    "homeHeadingFont": "\"Titillium Web\", system-ui, sans-serif"
   },
   "home": {
     "sections": [
       {
         "id": "hero",
         "title": "Karşılama",
+        "visible": true
+      },
+      {
+        "id": "partners",
+        "title": "İş ortakları",
         "visible": true
       },
       {
@@ -10456,11 +10481,6 @@
       {
         "id": "news",
         "title": "Haberler",
-        "visible": true
-      },
-      {
-        "id": "partners",
-        "title": "İş ortakları",
         "visible": true
       }
     ]

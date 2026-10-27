@@ -1,0 +1,421 @@
+/* Brand artwork and homepage typography; product pages retain their own type. */
+.kg-redesign .kg-brand {
+  background: #191919;
+  padding: 0;
+  border-radius: 0;
+}
+.kg-redesign .kg-brand img {
+  width: 198px;
+  height: 66px;
+  object-fit: contain;
+}
+.kg-redesign .kg-header {
+  background: #191919;
+}
+.kg-redesign .kg-footer-logo {
+  display: block;
+  width: 220px;
+  height: 74px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.kg-home {
+  font-synthesis: none;
+}
+.kg-home h1,
+.kg-home h2,
+.kg-home h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.kg-home main h2 {
+  font-size: clamp(34px, 4.25vw, 60px);
+  line-height: 1.1;
+}
+.kg-home .kg-section-head {
+  margin-bottom: 42px;
+  gap: 32px;
+}
+.kg-home .kg-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+.kg-home .kg-sector-section,
+.kg-home .kg-discovery,
+.kg-home .kg-quality,
+.kg-home .kg-news,
+.kg-home .kg-partners {
+  padding-block: clamp(64px, 7vw, 104px);
+}
+.kg-home .kg-about-content {
+  padding-block: clamp(56px, 6vw, 90px);
+}
+.kg-home .kg-about-content > p:not(.kg-eyebrow),
+.kg-home .kg-quality p,
+.kg-home .kg-section-head > p {
+  font-size: 17px;
+  line-height: 1.75;
+}
+.kg-home .btn-primary,
+.kg-home .btn-outline {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Copy, story selection and footer occupy separate rows inside the viewport. */
+.kg-home .kg-story-hero {
+  height: calc(100svh - var(--kg-header-height));
+  min-height: 0;
+  max-height: none;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  overflow: clip;
+}
+.kg-home .kg-story-hero .kg-hero-content {
+  height: auto;
+  min-height: 0;
+  width: 100%;
+  padding-top: clamp(24px, 6svh, 64px);
+  padding-bottom: clamp(24px, 5svh, 56px);
+  justify-content: center;
+}
+.kg-home .kg-hero .kg-eyebrow {
+  margin-bottom: 18px;
+}
+.kg-home .kg-hero h1 {
+  font-size: clamp(42px, min(5.8vw, 9.4svh), 88px);
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+  max-width: 850px;
+  margin-bottom: 22px;
+}
+.kg-home .kg-hero h1 > span::after {
+  display: none;
+}
+.kg-home .kg-hero-description {
+  max-width: 490px;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 28px;
+  color: #eee;
+}
+.kg-home .kg-hero-image,
+.kg-home .kg-hero-video {
+  object-fit: cover;
+  object-position: 62% center;
+}
+.kg-home .kg-story-selector {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  max-width: var(--container-width);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.kg-home .kg-story-selector button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 62px;
+  padding: 16px 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #ffffff38;
+  backdrop-filter: none;
+}
+.kg-home .kg-story-selector button > span {
+  margin: 0;
+  font-size: 12px;
+}
+.kg-home .kg-story-selector strong {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.kg-home .kg-story-selector button[aria-selected="true"] {
+  color: #fff;
+  background: transparent;
+  border-top-color: var(--kg-accent);
+}
+.kg-home .kg-story-selector i {
+  top: -1px;
+  bottom: auto;
+}
+.kg-home .kg-story-selector button:hover {
+  color: #fff;
+  border-top-color: #fff;
+}
+.kg-home .kg-hero-bottom {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  font-size: 10px;
+  min-height: 45px;
+}
+
+/* Real partner logos in a continuous, accessible horizontal rail. */
+.kg-redesign .kg-partners {
+  overflow: clip;
+  border-top: 1px solid var(--kg-border);
+}
+.kg-partners-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.kg-home .kg-partners h2 {
+  text-align: left;
+  margin: 12px 0 18px;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  color: var(--kg-ink);
+}
+.kg-partners-intro {
+  max-width: 520px;
+  color: var(--kg-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.kg-partners-controls {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+.kg-partners-controls button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--kg-border);
+  border-radius: 50%;
+  color: var(--kg-ink);
+  background: transparent;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.kg-partners-controls button:hover {
+  border-color: var(--kg-accent);
+  background: var(--kg-accent);
+}
+.kg-partners-viewport {
+  overflow-x: auto;
+  scrollbar-width: none;
+  cursor: grab;
+  padding-block: 6px;
+}
+.kg-partners-viewport::-webkit-scrollbar {
+  display: none;
+}
+.kg-partners-viewport[data-dragging="true"] {
+  cursor: grabbing;
+  user-select: none;
+}
+.kg-redesign .kg-partners .kg-partners-track {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  width: max-content;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.kg-partners-track > li {
+  flex: 0 0 auto;
+  width: clamp(210px, 20vw, 280px);
+}
+.kg-redesign .kg-partners .kg-partners-track a {
+  display: block;
+  padding: 0;
+  font-family: var(--body-font);
+  color: var(--kg-ink);
+  text-decoration: none;
+}
+.kg-partner-logo {
+  background: #fff;
+  color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  padding: 28px;
+  border-radius: 3px;
+}
+.kg-partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.25s;
+}
+.kg-partners-track a:hover .kg-partner-logo img {
+  transform: scale(1.035);
+}
+.kg-partner-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 18px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .kg-home .kg-hero h1 {
+    font-size: clamp(38px, 6.5vw, 64px);
+  }
+  .kg-home .kg-hero-description {
+    max-width: 440px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 700px) {
+  .kg-redesign .kg-brand img {
+    width: 150px;
+    height: 50px;
+  }
+  .kg-home .kg-story-hero .kg-hero-content {
+    justify-content: flex-end;
+    padding: 20px 24px 28px;
+  }
+  .kg-home .kg-hero h1 {
+    font-size: clamp(34px, 9.2vw, 54px);
+    margin-bottom: 16px;
+    line-height: 1.08;
+  }
+  .kg-home .kg-hero .kg-eyebrow {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+  .kg-home .kg-hero-description {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 360px;
+  }
+  .kg-home .kg-hero-actions {
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+  .kg-home .kg-hero-actions .btn-primary {
+    padding: 13px 18px;
+    gap: 12px;
+    font-size: 12px !important;
+    white-space: nowrap;
+  }
+  .kg-home .kg-hero-actions .kg-text-link {
+    font-size: 12px;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .kg-home .kg-story-selector {
+    gap: 16px;
+    padding-inline: 24px;
+  }
+  .kg-home .kg-story-selector button {
+    min-height: 60px;
+    padding: 12px 0;
+    gap: 7px;
+  }
+  .kg-home .kg-story-selector strong {
+    font-size: 12px;
+  }
+  .kg-home .kg-story-selector button > span {
+    font-size: 9px;
+  }
+  .kg-home .kg-hero-bottom {
+    padding: 10px 24px 16px;
+    min-height: 40px;
+  }
+  .kg-partners-heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  .kg-partners-intro {
+    font-size: 15px;
+  }
+  .kg-partners-track > li {
+    width: 200px;
+  }
+  .kg-partner-logo {
+    height: 120px;
+    padding: 24px;
+  }
+}
+@media (max-height: 700px) {
+  .kg-home .kg-hero-bottom {
+    display: none;
+  }
+  .kg-home .kg-story-hero .kg-hero-content {
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+}
+@media (max-width: 360px) {
+  .kg-home .kg-hero h1 {
+    font-size: 30px;
+  }
+  .kg-home .kg-hero-description {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .kg-home .kg-hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+@media (max-width: 700px) {
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .kg-home
+    .kg-story-hero {
+    padding-bottom: 48px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .kg-home
+    .kg-hero-bottom {
+    display: none;
+  }
+}
+@media (max-height: 580px) and (min-width: 701px) {
+  .kg-home .kg-header-utility {
+    display: none;
+  }
+  .kg-home .kg-header-main {
+    height: 72px;
+  }
+  .kg-home .kg-hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .kg-home .kg-hero-description {
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 680px;
+    margin-bottom: 12px;
+  }
+  .kg-home .kg-hero .kg-eyebrow {
+    margin-bottom: 10px;
+  }
+  .kg-home .kg-story-selector button {
+    min-height: 46px;
+    padding-block: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kg-partner-logo img,
+  .kg-partners-controls button {
+    transition: none;
+  }
+}

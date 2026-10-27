@@ -814,15 +814,6 @@
   background: rgb(var(--color-paper));
   padding: 58px 0 63px;
 }
-.kg-partners h2 {
-  font-size: 10px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.13em !important;
-  text-transform: uppercase !important;
-  text-align: center;
-  color: #8c8c8c;
-  margin-bottom: 36px;
-}
 .kg-partners ul {
   display: flex;
   align-items: center;
@@ -1461,10 +1452,6 @@
   }
   .kg-partners {
     padding: 40px 0 45px;
-  }
-  .kg-partners h2 {
-    font-size: 8px !important;
-    margin-bottom: 28px;
   }
   .kg-partners ul {
     justify-content: center;

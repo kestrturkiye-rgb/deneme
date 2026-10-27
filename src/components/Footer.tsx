@@ -28,9 +28,21 @@ export default async function Footer() {
       </div>
       <div className="kg-footer-links container-site">
         <div className="kg-footer-brand">
-          <span>
-            KIVANÇ<span>GROUP</span>
-          </span>
+          {cms.logo ? (
+            <Link href="/" aria-label={cms.logoAlt || "Kıvanç Group"}>
+              <img
+                className="kg-footer-logo"
+                src={cms.logo}
+                alt={cms.logoAlt || "Kıvanç Group"}
+                width="220"
+                height="72"
+              />
+            </Link>
+          ) : (
+            <span>
+              KIVANÇ<span>GROUP</span>
+            </span>
+          )}
           <p>{cms.tagline}</p>
           <span className="kg-footer-established">{cms.established}</span>
         </div>

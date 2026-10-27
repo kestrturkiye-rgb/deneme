@@ -445,6 +445,16 @@ try {
   });
   assert.equal(r.status, 400);
   ok("unsafe content URLs rejected");
+  for (const field of ["homeBodyFont", "homeHeadingFont"]) {
+    const invalidFont = structuredClone(content);
+    invalidFont.design[field] = "system-ui; color:red";
+    r = await request("/api/admin/content", {
+      method: "POST",
+      body: { action: "save", version: state.version, content: invalidFont },
+    });
+    assert.equal(r.status, 400);
+  }
+  ok("homepage font choices reject injected CSS commands");
   const invalid = structuredClone(content);
   invalid["data-news"].news[0].date = "not-a-date";
   r = await request("/api/admin/content", {
@@ -1032,13 +1042,16 @@ try {
         .getByRole("button", { name: "Teklif sepetine ekle", exact: true })
         .click();
       await productPage.waitForFunction(() =>
-        JSON.parse(localStorage.getItem("kivanc-teklif-sepeti") || "[]")
-          .some((item) => item.name.startsWith("Yeni Panel Ürünü – Pantolon")),
+        JSON.parse(localStorage.getItem("kivanc-teklif-sepeti") || "[]").some(
+          (item) => item.name.startsWith("Yeni Panel Ürünü – Pantolon"),
+        ),
       );
       await productPage.goto(origin + "/teklif-sepeti");
-      await productPage.getByRole("link", {
-        name: /^Yeni Panel Ürünü – Pantolon/,
-      }).waitFor();
+      await productPage
+        .getByRole("link", {
+          name: /^Yeni Panel Ürünü – Pantolon/,
+        })
+        .waitFor();
       assert(
         (await productPage.textContent("main")).includes(
           "Yeni Panel Ürünü – Pantolon",
@@ -1153,16 +1166,35 @@ try {
       await launchPage.goto(origin + "/is-guvenligi/itfaiyeci-elbisesi", {
         waitUntil: "networkidle",
       });
-      assert.equal(await launchPage.locator(".product-family h1").textContent(), "İtfaiyeci Elbisesi");
-      assert.equal(await launchPage.locator(".product-quote,.product-mobile-bar,.product-gallery").count(), 0);
+      assert.equal(
+        await launchPage.locator(".product-family h1").textContent(),
+        "İtfaiyeci Elbisesi",
+      );
+      assert.equal(
+        await launchPage
+          .locator(".product-quote,.product-mobile-bar,.product-gallery")
+          .count(),
+        0,
+      );
       const familyCards = launchPage.locator("#modeller .kg-product-card");
       assert.equal(await familyCards.count(), 18);
-      assert.deepEqual((await familyCards.locator("h3").allTextContents()).slice(0, 8), [
-        "Maximus 2.0 (832551)", "Optimus 2.0 (832536)", "Stefan III (832507)",
-        "Stefan II (832356)", "Primus 2.0 (832548)", "Salvator (832330)",
-        "Mare (833115)", "Alexus (832346)",
-      ]);
-      assert((await familyCards.first().boundingBox()).y < 1000, "Models must start in the first viewport.");
+      assert.deepEqual(
+        (await familyCards.locator("h3").allTextContents()).slice(0, 8),
+        [
+          "Maximus 2.0 (832551)",
+          "Optimus 2.0 (832536)",
+          "Stefan III (832507)",
+          "Stefan II (832356)",
+          "Primus 2.0 (832548)",
+          "Salvator (832330)",
+          "Mare (833115)",
+          "Alexus (832346)",
+        ],
+      );
+      assert(
+        (await familyCards.first().boundingBox()).y < 1000,
+        "Models must start in the first viewport.",
+      );
       await familyCards.first().locator(".kg-product-art").click();
       await launchPage.waitForURL("**/maximus-2-0-832551");
       await launchPage.locator(".product-parent-nav a").click();
@@ -1171,21 +1203,44 @@ try {
       await launchPage.keyboard.press("Enter");
       await launchPage.waitForURL("**/optimus-2-0-832536");
       for (const slug of ["aluminize-elbise", "solunum-seti"]) {
-        await launchPage.goto(origin + "/is-guvenligi/" + slug, { waitUntil: "networkidle" });
+        await launchPage.goto(origin + "/is-guvenligi/" + slug, {
+          waitUntil: "networkidle",
+        });
         assert.equal(await launchPage.locator(".product-family h1").count(), 1);
         const card = launchPage.locator("#modeller .kg-product-card").first();
         const destination = await card.getAttribute("href");
         await card.locator("h3").click();
         await launchPage.waitForURL("**" + destination);
-        assert.equal(await launchPage.locator(".product-heading h1").count(), 1);
+        assert.equal(
+          await launchPage.locator(".product-heading h1").count(),
+          1,
+        );
       }
       await launchPage.setViewportSize({ width: 390, height: 844 });
-      await launchPage.goto(origin + "/is-guvenligi/itfaiyeci-elbisesi", { waitUntil: "networkidle" });
-      assert.equal(await launchPage.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-      assert.equal(await familyCards.first().evaluate(el => getComputedStyle(el.closest("ul")).gridTemplateColumns.split(" ").length), 2);
+      await launchPage.goto(origin + "/is-guvenligi/itfaiyeci-elbisesi", {
+        waitUntil: "networkidle",
+      });
+      assert.equal(
+        await launchPage.evaluate(
+          () => document.documentElement.scrollWidth > innerWidth,
+        ),
+        false,
+      );
+      assert.equal(
+        await familyCards
+          .first()
+          .evaluate(
+            (el) =>
+              getComputedStyle(el.closest("ul")).gridTemplateColumns.split(" ")
+                .length,
+          ),
+        2,
+      );
       await familyCards.first().locator("h3").click();
       await launchPage.waitForURL("**/maximus-2-0-832551");
-      ok("product families show ordered clickable model cards; image, title, keyboard, parent return and mobile navigation work without category quote controls");
+      ok(
+        "product families show ordered clickable model cards; image, title, keyboard, parent return and mobile navigation work without category quote controls",
+      );
       await launchPage.goto(origin + "/is-guvenligi/yeni-panel-urunu", {
         waitUntil: "networkidle",
       });
@@ -1283,6 +1338,155 @@ try {
       assert.deepEqual(errors, []);
       ok(
         "uploaded product images appear in catalog cards; news have internal detail pages, canonical URLs and rendered social preview images",
+      );
+      await launchPage.goto(origin, { waitUntil: "networkidle" });
+      await launchPage.evaluate(() => document.fonts.ready);
+      assert(
+        (
+          await launchPage
+            .locator(".kg-home")
+            .evaluate((el) => getComputedStyle(el).fontFamily)
+        ).includes("Titillium Web"),
+      );
+      assert.equal(
+        await launchPage.locator(".kg-brand img").getAttribute("src"),
+        "/images/brand/kivanc-group-header.webp",
+      );
+      for (const size of [
+        { width: 1440, height: 900 },
+        { width: 1280, height: 720 },
+        { width: 768, height: 1024 },
+        { width: 390, height: 844 },
+        { width: 320, height: 568 },
+        { width: 844, height: 390 },
+      ]) {
+        await launchPage.setViewportSize(size);
+        await launchPage.evaluate(() => scrollTo(0, 0));
+        await launchPage.waitForFunction(
+          () =>
+            Math.abs(
+              document.querySelector(".kg-header").getBoundingClientRect()
+                .height -
+                parseFloat(
+                  getComputedStyle(
+                    document.querySelector(".kg-home"),
+                  ).getPropertyValue("--kg-header-height"),
+                ),
+            ) < 1,
+        );
+        for (let story = 0; story < 3; story++) {
+          await launchPage
+            .locator(".kg-story-selector button")
+            .nth(story)
+            .click();
+          await launchPage.evaluate(() => scrollTo(0, 0));
+          const bounds = await launchPage.evaluate(() => {
+            const rect = (selector) => {
+              const { x, y, width, height, bottom, right } = document
+                .querySelector(selector)
+                .getBoundingClientRect();
+              return { x, y, width, height, bottom, right };
+            };
+            return {
+              hero: rect(".kg-hero"),
+              header: rect(".kg-header"),
+              title: rect(".kg-hero h1"),
+              actions: rect(".kg-hero-actions"),
+              tabs: rect(".kg-story-selector"),
+            };
+          });
+          const message = JSON.stringify({ size, story, bounds });
+          assert(Math.abs(bounds.hero.y - bounds.header.bottom) <= 2, message);
+          assert(Math.abs(bounds.hero.bottom - size.height) <= 2, message);
+          assert(
+            bounds.title.y >= bounds.hero.y &&
+              bounds.actions.bottom <= bounds.tabs.y,
+            message,
+          );
+          assert(
+            bounds.actions.right <= size.width &&
+              bounds.tabs.bottom <= bounds.hero.bottom,
+            message,
+          );
+          assert.equal(
+            await launchPage.evaluate(
+              () => document.documentElement.scrollWidth > innerWidth,
+            ),
+            false,
+            message,
+          );
+        }
+      }
+      ok(
+        "the logo and self-hosted Turkish typography render; all three hero stories fit six desktop, tablet, small-phone and landscape viewports",
+      );
+      await launchPage.setViewportSize({ width: 390, height: 844 });
+      const partners = launchPage.locator(".kg-partners");
+      const rail = launchPage.locator(".kg-partners-viewport");
+      await partners.scrollIntoViewIfNeeded();
+      assert(
+        (await partners
+          .locator("h2")
+          .evaluate((el) => parseFloat(getComputedStyle(el).fontSize))) >= 32,
+      );
+      assert.equal(await partners.getByRole("link").count(), 9);
+      assert.equal(
+        await partners
+          .locator('li[aria-hidden=true] a:not([tabindex="-1"])')
+          .count(),
+        0,
+      );
+      const logos = partners.locator("li:not([aria-hidden]) img");
+      assert.equal(await logos.count(), 9);
+      for (let i = 0; i < 9; i++) {
+        await logos.nth(i).scrollIntoViewIfNeeded();
+        await logos.nth(i).evaluate((im) => im.decode());
+      }
+      await rail.evaluate((el) => {
+        el.scrollLeft = 0;
+      });
+      assert.equal(await rail.getAttribute("data-moving"), "false");
+      await partners
+        .getByRole("button", { name: "Sonraki iş ortağı", exact: true })
+        .click();
+      assert((await rail.evaluate((el) => el.scrollLeft)) > 0);
+      await rail.focus();
+      const manual = await rail.evaluate((el) => el.scrollLeft);
+      await launchPage.keyboard.press("ArrowRight");
+      assert((await rail.evaluate((el) => el.scrollLeft)) > manual);
+      await launchPage.emulateMedia({ reducedMotion: "no-preference" });
+      await partners
+        .getByRole("button", { name: "Akışı başlat", exact: true })
+        .click();
+      await launchPage.mouse.move(1, 1);
+      await launchPage.waitForFunction(
+        () =>
+          document.querySelector(".kg-partners-viewport").dataset.moving ===
+          "true",
+      );
+      const automatic = await rail.evaluate((el) => el.scrollLeft);
+      await launchPage.waitForFunction(
+        (before) =>
+          document.querySelector(".kg-partners-viewport").scrollLeft >
+          before + 12,
+        automatic,
+      );
+      await partners
+        .getByRole("button", { name: "Akışı durdur", exact: true })
+        .click();
+      await launchPage.waitForFunction(
+        () =>
+          document.querySelector(".kg-partners-viewport").dataset.moving ===
+          "false",
+      );
+      const stopped = await rail.evaluate((el) => el.scrollLeft);
+      await launchPage.waitForTimeout(180);
+      assert(
+        Math.abs((await rail.evaluate((el) => el.scrollLeft)) - stopped) <= 1,
+      );
+      assert.deepEqual(errors, []);
+      ok(
+        "all nine real partner logos load; duplicate logos are excluded from keyboard navigation, reduced motion disables autoplay and arrow, keyboard, play and pause controls work",
       );
       await launchVisitor.close();
     } finally {

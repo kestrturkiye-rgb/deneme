@@ -65,6 +65,22 @@ for (const key of ["image", "imageAlt"])
   ].optional = true;
 schemas["components-Product360"].fields!.controlsLabel.optional = true;
 schemas["components-ProductExperience"].fields!.galleryLabel.optional = true;
+for (const key of ["homeBodyFont", "homeHeadingFont"])
+  schemas.design.fields![key].optional = true;
+for (const key of ["logo", "logoAlt"])
+  schemas["components-Footer"].fields![key].optional = true;
+schemas["components-Partners"].fields!.partners.item!.fields!.image.optional =
+  true;
+for (const key of [
+  "eyebrow",
+  "intro",
+  "autoScroll",
+  "previousLabel",
+  "nextLabel",
+  "pauseLabel",
+  "playLabel",
+])
+  schemas["components-Partners"].fields![key].optional = true;
 for (const key of ["familyIntro", "familyCountLabel"])
   schemas["app-[division]-[slug]"].fields![key].optional = true;
 const catalogItem =
@@ -344,7 +360,12 @@ export function validateContent(value: unknown): string[] {
       "Tasarım ölçüleri: yazı 12–24, genişlik 800–2000, köşe 0–60 olmalı.",
     );
   if (
-    /[{};<>]/.test(design.bodyFont + design.headingFont) ||
+    /[{};<>]/.test(
+      design.bodyFont +
+        design.headingFont +
+        (design.homeBodyFont || "") +
+        (design.homeHeadingFont || ""),
+    ) ||
     /[<>]|@import|url\s*\(/i.test(design.customCss)
   )
     errors.push(
@@ -619,6 +640,9 @@ export function slugify(text: string) {
 }
 export const fieldLabels: Record<string, string> = {
   parentSlug: "Ana ürün ailesinin adresi (model için)",
+  homeBodyFont: "Ana sayfa metin yazı tipi",
+  homeHeadingFont: "Ana sayfa başlık yazı tipi",
+  autoScroll: "İş ortakları otomatik akış",
   familyIntro: "Ürün ailesi için varsayılan giriş metni",
   familyCountLabel: "Ürün ailesindeki adet etiketi",
   relatedFamilies: "Modelin yer aldığı diğer ürün aileleri",

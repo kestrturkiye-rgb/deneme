@@ -21,8 +21,9 @@ export default function SiteFrame({
   if (path.startsWith("/admin")) return <>{children}</>;
   const d = content.design;
   const style: Record<string, string | number> = {
-    "--body-font": d.bodyFont,
-    "--heading-font": d.headingFont,
+    "--body-font": path === "/" ? d.homeBodyFont || d.bodyFont : d.bodyFont,
+    "--heading-font":
+      path === "/" ? d.homeHeadingFont || d.headingFont : d.headingFont,
     "--container-width": d.containerWidth + "px",
     "--button-radius": d.buttonRadius + "px",
     fontSize: d.baseFontSize + "px",

@@ -1,0 +1,4 @@
+Titillium Web — SIL Open Font License 1.1.
+Latin and Latin Extended WOFF2 subsets from @fontsource/titillium-web@5.3.0.
+Original package verified against registry SHA-512 integrity before extraction.
+See TITILLIUM-LICENSE.txt for copyright and license.
