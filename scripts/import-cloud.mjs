@@ -1,7 +1,8 @@
-import { loadEnvConfig } from "@next/env";
+import nextEnv from "@next/env";
 import { createClient } from "@supabase/supabase-js";
 import { readFile, readdir, access } from "node:fs/promises";
 import path from "node:path";
+const { loadEnvConfig } = nextEnv;
 loadEnvConfig(process.cwd());
 if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY)
   throw new Error(
