@@ -292,12 +292,13 @@
   line-height: 1.15;
 }
 .kg-redesign.kg-identity .product-reference .product-series {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 12px;
   color: var(--product-text);
   font-size: 12px;
   font-weight: 600;
+  padding-bottom: 0;
 }
 .kg-redesign.kg-identity .product-reference .product-series::after {
   display: none;
@@ -413,6 +414,27 @@
   .kg-identity.kg-home .kg-quality-grid article + article {
     border-left: 0;
     border-top: 1px solid var(--kg-border);
+  }
+}
+@media (max-width: 700px) {
+  /* Keep the full-size garment and its angle ring above the Free-host action. */
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .kg-redesign.kg-identity
+    .product-reference
+    .product-breadcrumb {
+    padding-top: 12px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .kg-redesign.kg-identity
+    .product-reference
+    .product-title-row {
+    margin-bottom: 8px;
+  }
+  html:has(script[data-netlify-site-id][data-account-tier="free"])
+    .kg-redesign.kg-identity
+    .product-reference
+    .product-hero-grid {
+    row-gap: 10px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
