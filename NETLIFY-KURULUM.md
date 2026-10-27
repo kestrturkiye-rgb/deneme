@@ -1,6 +1,6 @@
 # Ücretsiz canlı deneme yayını
 
-Güncel ücretsiz deneme adresi: **https://kivancgroup-deneme.netlify.app**. Ön yüz yayındadır; yönetici girişi ve form kayıtları Supabase bağlantısı tamamlandığında etkinleşir.
+Güncel ücretsiz deneme adresi: **https://kivancgroup-deneme.netlify.app**. Supabase Free bağlantısı 27 Ekim 2026'da tamamlandı: mevcut yönetici hesabı aktarıldı, özel veritabanı ve dosya deposu kuruldu; canlı iletişim/teklif taleplerinin kalıcı kaydı doğrulandı. İlk girişte geçici parola değiştirilmelidir. E-posta bildirimi henüz yapılandırılmamıştır; talepler veritabanında saklanır.
 
 Bu siteyi **Netlify Free + Supabase Free** ile bir `*.netlify.app` adresinde deneyebilirsiniz. Alan adı satın almak gerekmez. Kalıcı admin hesabı, içerikler, talepler ve yeni medya Supabase'de tutulur. Netlify için Next.js adaptörü, Node.js 24 ve yayın yapılandırması depoya eklenmiştir. Vercel zorunlu değildir.
 
@@ -48,7 +48,7 @@ Gerçek bağlantı yoksa uygulama talep almış gibi davranmaz ve geçici fonksi
 
 ## Geliştirme ortamından yayınlama
 
-Bu çalışma ortamından sizin adınıza yayın yapabilmem için `NETLIFY_AUTH_TOKEN` ve `SUPABASE_ACCESS_TOKEN` güvenli ortam alanlarından eklenmelidir; anahtar değerlerini sohbete göndermeyin. Önceki Vercel anahtarı Netlify için kullanılmaz. İzinli ağ hedefleri `api.netlify.com`, `*.netlify.app`, `api.supabase.com` ve oluşturulan projenin `*.supabase.co` adresini kapsamalıdır. Taslak ortam ayarlarını kaydetmek, kendi başına siteyi yayınlamaz.
+Bu çalışma ortamında Netlify CLI OAuth yetkisi ve Supabase yönetim erişimi mevcuttur; ek bir Netlify veya Vercel anahtarı gerekli değildir. Yeni bir çalışma ortamında mevcut bağlantıları kontrol edin ve yalnızca eksik erişimi güvenli ortam ayarlarından ekleyin; anahtar değerlerini sohbete göndermeyin. İzinli ağ hedefleri `api.netlify.com`, `*.netlify.app`, `api.supabase.com` ve oluşturulan projenin `*.supabase.co` adresini kapsamalıdır. Taslak ortam ayarlarını kaydetmek, kendi başına siteyi yayınlamaz.
 
 Yerel uyumluluk kontrolü:
 
@@ -75,7 +75,7 @@ netlify deploy --prod --no-build --dir .netlify/static \
   --env SITE_NOINDEX=true
 ```
 
-Bu çalışma ortamında Netlify CLI hesabı zaten yetkilendirilmiştir; yeniden Netlify anahtarı oluşturmak gerekmez. GitHub'dan otomatik derleme, sağlayıcının SSH hazırlık hatası nedeniyle durdurulmuştur; doğrulanan yayın yolu yukarıdaki manuel CLI komutudur. Supabase anahtarı kullanıcıyla birlikte sonraki adımda oluşturulacaktır.
+Bu çalışma ortamında Netlify CLI hesabı zaten yetkilendirilmiştir; yeniden Netlify anahtarı oluşturmak gerekmez. GitHub'dan otomatik derleme, sağlayıcının SSH hazırlık hatası nedeniyle durdurulmuştur; doğrulanan yayın yolu yukarıdaki manuel CLI komutudur. Supabase sunucu değişkenleri Netlify'da özel olarak kayıtlıdır. Free organizasyonundaki Frankfurt projesinde `supabase/setup.sql` uygulandı ve mevcut hesap `npm run cms:import` ile korundu. Netlify Free üzerinde ortam değişkenleri varsayılan kapsam/bağlamla kaydedilmelidir; bu hesaptaki özel kapsam isteği HTTP 403 döndürdü. `SUPABASE_SERVICE_ROLE_KEY` hiçbir zaman `NEXT_PUBLIC_` önekiyle tanımlanmaz.
 
 ## Ürün görsellerinin doğru yüklenmesi
 

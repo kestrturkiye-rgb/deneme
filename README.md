@@ -40,7 +40,7 @@ npm run test:cms
 npm run start
 ```
 
-**Canlı deneme adresi:** https://kivancgroup-deneme.netlify.app — ön yüz yayında; admin/veri/form bağlantısı Supabase kurulumunu bekliyor.
+**Canlı deneme adresi:** https://kivancgroup-deneme.netlify.app — Netlify Free + Supabase Free bağlantısı tamamlandı. Yönetici hesabı, kalıcı kayıtlar ve dosya deposu bağlıdır; yönetici ilk girişte geçici parolasını değiştirmelidir. İletişim/teklif taleplerinin gerçek veritabanına kaydı doğrulandı. E-posta bildirimi isteğe bağlıdır ve henüz yapılandırılmamıştır.
 
 **Ücretsiz canlı deneme:** [Netlify Free + Supabase Free kurulumunu](NETLIFY-KURULUM.md) kullanın. Admin ve formlar Next.js sunucu adaptörüyle çalışır; ücretsiz planların kullanım kotaları vardır.
 
