@@ -1,0 +1,200 @@
+/* Full-width activity stages and readable category navigation. */
+.kg-home .kg-sector-section > .container-site {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+.kg-home .kg-sector-section .kg-section-head,
+.kg-home .kg-sector-section .kg-sector-tabs {
+  width: calc(100% - 80px);
+  max-width: calc(var(--container-width) - 80px);
+  margin-inline: auto;
+}
+.kg-home .kg-sector-panel {
+  --sector-height: clamp(620px, 80svh, 880px);
+  width: 100%;
+  min-height: var(--sector-height);
+  padding: 64px max(40px, calc((100% - var(--container-width)) / 2 + 40px));
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 64px;
+  background: #101315;
+}
+.kg-home .kg-sector-photo {
+  object-position: 62% top;
+}
+.kg-home .kg-sector-number {
+  left: max(40px, calc((100% - var(--container-width)) / 2 + 40px));
+  top: 36px;
+}
+.kg-home .kg-sector-copy .kg-eyebrow {
+  font-size: 12px;
+}
+.kg-home .kg-sector-copy > div > p:not(.kg-eyebrow) {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 580px;
+}
+.kg-home .kg-sector-solutions {
+  padding: 8px 0 8px 28px;
+  gap: 4px;
+  background: linear-gradient(90deg, #10131585, transparent);
+}
+.kg-home .kg-sector-solutions li {
+  display: block;
+  font-size: 18px;
+}
+.kg-sector-solutions a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 48px;
+  padding: 8px 12px;
+  color: #f5f5f5;
+  line-height: 1.5;
+  border-radius: 3px;
+  transition: background 0.2s;
+}
+.kg-sector-solutions a > span:first-child {
+  color: var(--kg-accent);
+  font-size: 22px;
+}
+.kg-sector-solutions a .kg-arrow {
+  margin-left: auto;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+.kg-sector-solutions a:hover {
+  background: #ffffff16;
+}
+.kg-home .kg-sector-tabs button {
+  min-height: 48px;
+  padding: 12px 20px;
+}
+.kg-home .kg-sector-tabs strong {
+  font-size: 16px;
+}
+.kg-home .kg-sector-tabs button > span {
+  font-size: 12px;
+}
+
+@media (min-width: 901px) {
+  .kg-home .kg-sector-panel {
+    height: var(--sector-height);
+  }
+  .kg-home .kg-sector-art {
+    left: auto;
+    width: min(100%, calc(var(--sector-height) * 1672 / 941));
+    mask-image: linear-gradient(90deg, transparent, #000 22%);
+  }
+  .kg-home .kg-sector-art .kg-sector-photo {
+    object-fit: contain;
+    object-position: right top;
+  }
+}
+@media (max-width: 900px) {
+  .kg-home .kg-sector-panel {
+    min-height: 820px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-inline: 32px;
+  }
+  .kg-home .kg-sector-solutions {
+    border-left: 0;
+    border-top: 1px solid #ffffff30;
+    padding: 16px 0 0;
+  }
+}
+@media (max-width: 700px) {
+  .kg-home .kg-sector-section .kg-section-head,
+  .kg-home .kg-sector-section .kg-sector-tabs {
+    width: calc(100% - 48px);
+  }
+  .kg-home .kg-sector-panel {
+    min-height: 860px;
+    padding: 36px 24px;
+  }
+  .kg-home .kg-sector-tabs {
+    gap: 8px;
+  }
+  .kg-home .kg-sector-tabs button {
+    gap: 8px;
+    padding: 10px 12px;
+  }
+  .kg-home .kg-sector-tabs strong {
+    font-size: 14px;
+  }
+  .kg-home .kg-sector-copy > div > p:not(.kg-eyebrow) {
+    font-size: 16px;
+  }
+  .kg-home .kg-sector-solutions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .kg-home .kg-sector-solutions li {
+    font-size: 16px;
+  }
+  .kg-home .kg-sector-number {
+    left: 24px;
+  }
+}
+
+.kg-redesign .kg-desktop-nav > a,
+.kg-redesign .kg-desktop-nav > button {
+  font-size: clamp(12px, 0.9vw, 15px);
+}
+.kg-redesign .kg-mega-inner {
+  max-width: 1480px;
+  max-height: calc(100svh - var(--kg-header-height) - 16px);
+  padding: 28px 40px 40px;
+  gap: 28px 52px;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.kg-redesign .kg-mega-inner .kg-sector-tabs {
+  padding-bottom: 16px;
+}
+.kg-redesign .kg-mega-inner .kg-sector-tabs button,
+.kg-redesign .kg-mega-inner .kg-sector-tabs > a {
+  font-size: 17px;
+  min-height: 48px;
+}
+.kg-redesign .kg-mega-overview > a {
+  font-size: 22px;
+  line-height: 1.4;
+}
+.kg-redesign .kg-mega-overview > button {
+  width: 44px;
+  height: 44px;
+}
+.kg-redesign .kg-mega-column h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+.kg-redesign .kg-mega-column h2 a {
+  min-height: 44px;
+}
+.kg-redesign .kg-mega-column ul {
+  gap: 4px 24px;
+}
+.kg-redesign .kg-mega-column li {
+  font-size: clamp(18px, 0.95vw, 20px);
+  line-height: 1.5;
+}
+.kg-redesign .kg-mega-column li a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 6px 0;
+}
+.kg-redesign .kg-mega-column section + section {
+  margin-top: 28px;
+}
+.kg-redesign .kg-mega-column:last-child {
+  padding-left: 32px;
+  margin-left: -10px;
+}

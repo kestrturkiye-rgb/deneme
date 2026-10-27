@@ -4,10 +4,24 @@ import Link from "next/link";
 import { useSection } from "@/cms/context";
 import ArrowUpRight from "./ArrowUpRight";
 import SiteImage from "./SiteImage";
+import { slugify } from "@/cms/schema";
 export default function Divisions() {
   const c = useSection("components-Divisions");
+  const catalog = useSection("data-divisions");
   const [selected, setSelected] = useState(0);
   const current = c.divisions[selected] || c.divisions[0];
+  const division = catalog.divisions.find(
+    (item) => "/" + item.slug === current?.href,
+  );
+  const destination = (label: string) => {
+    const key = slugify(label);
+    const group = division?.groups.find((item) => slugify(item.title) === key);
+    if (group) return current.href + "#" + slugify(group.title);
+    const product = division?.groups
+      .flatMap((item) => item.items)
+      .find((item) => slugify(item.name) === key);
+    return product ? current.href + "/" + product.slug : current.href;
+  };
   return (
     <section
       className="kg-divisions kg-sector-section"
@@ -71,15 +85,17 @@ export default function Divisions() {
               aria-labelledby={"sector-tab-" + selected}
             >
               {current.image && (
-                <SiteImage
-                  key={current.image}
-                  className="kg-sector-photo"
-                  src={current.image}
-                  alt={current.imageAlt || current.title}
-                  loading="lazy"
-                  fill
-                  sizes="100vw"
-                />
+                <div className="kg-sector-art">
+                  <SiteImage
+                    key={current.image}
+                    className="kg-sector-photo"
+                    src={current.image}
+                    alt={current.imageAlt || current.title}
+                    loading="lazy"
+                    fill
+                    sizes="100vw"
+                  />
+                </div>
               )}
               <div className="kg-sector-overlay" />
               <div className="kg-sector-copy">
@@ -102,8 +118,11 @@ export default function Divisions() {
               <ul className="kg-sector-solutions">
                 {current.items.map((item) => (
                   <li key={item}>
-                    <span aria-hidden="true">+</span>
-                    {item}
+                    <Link href={destination(item)}>
+                      <span aria-hidden="true">+</span>
+                      <span>{item}</span>
+                      <ArrowUpRight />
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -1353,6 +1353,9 @@ try {
         "/images/brand/kivanc-group-header.webp",
       );
       for (const size of [
+        { width: 2560, height: 1200 },
+        { width: 2560, height: 900 },
+        { width: 1920, height: 900 },
         { width: 1440, height: 900 },
         { width: 1280, height: 720 },
         { width: 768, height: 1024 },
@@ -1415,12 +1418,112 @@ try {
             false,
             message,
           );
+          if (size.width >= 901) {
+            const image = launchPage.locator(".kg-hero-image");
+            await image.evaluate((el) => el.decode());
+            assert.equal(
+              await image.evaluate((el) => getComputedStyle(el).objectFit),
+              "contain",
+            );
+            const artwork = await launchPage
+              .locator(".kg-hero-art")
+              .boundingBox();
+            assert(
+              artwork.x >= -1 && artwork.x + artwork.width <= size.width + 1,
+              message,
+            );
+          }
         }
       }
       ok(
-        "the logo and self-hosted Turkish typography render; all three hero stories fit six desktop, tablet, small-phone and landscape viewports",
+        "the logo and Turkish typography render; all three hero stories fit nine viewport sizes and wide screens preserve the complete image",
+      );
+      const solutionPaths = [
+        [
+          "/is-guvenligi#itfaiye-urunleri",
+          "/is-guvenligi#endustri-urunleri",
+          "/is-guvenligi#ormanci-urunleri",
+          "/is-guvenligi#askeriye-ve-polis-urunleri",
+          "/is-guvenligi#arama-kurtarma-urunleri",
+        ],
+        [
+          "/muhendislik#cam-elyaf-kumaslar-ve-izolasyon-malzemeleri",
+          "/muhendislik#makine-ekipman-izolasyonu",
+          "/muhendislik/tekstil-kompansator",
+          "/muhendislik/protek-yangin-battaniyesi",
+        ],
+        ["/madencilik#silis-kumu", "/madencilik#musselstone"],
+      ];
+      await launchPage.setViewportSize({ width: 1920, height: 900 });
+      for (let sector = 0; sector < 3; sector++) {
+        await launchPage.goto(origin, { waitUntil: "networkidle" });
+        await launchPage
+          .locator('#faaliyet-alanlari [role="tab"]')
+          .nth(sector)
+          .click();
+        const panel = await launchPage
+          .locator(".kg-sector-panel")
+          .boundingBox();
+        const width = await launchPage.evaluate(
+          () => document.documentElement.clientWidth,
+        );
+        assert(
+          Math.abs(panel.x) <= 1 && Math.abs(panel.width - width) <= 1,
+          "Activity stage must span the page width.",
+        );
+        const solutions = launchPage.locator(".kg-sector-solutions a");
+        assert.deepEqual(
+          await solutions.evaluateAll((els) =>
+            els.map((el) => el.getAttribute("href")),
+          ),
+          solutionPaths[sector],
+        );
+        await solutions.first().click();
+        await launchPage.waitForURL("**" + solutionPaths[sector][0]);
+        const hash = solutionPaths[sector][0].split("#")[1];
+        await launchPage.waitForFunction((id) => {
+          const el = document.getElementById(id);
+          return (
+            el &&
+            el.getBoundingClientRect().top >= 0 &&
+            el.getBoundingClientRect().top < innerHeight
+          );
+        }, hash);
+      }
+      ok(
+        "all eleven activity solutions are real catalogue links; full-width stages and navigation to each sector's group work",
+      );
+      await launchPage.goto(origin, { waitUntil: "networkidle" });
+      const menu = launchPage.locator(".kg-desktop-nav");
+      await menu
+        .getByRole("button", { name: "Ürünlerimiz", exact: true })
+        .click();
+      const menuLink = menu.locator(".kg-mega-column li a").first();
+      assert(
+        (await menuLink.evaluate((el) =>
+          parseFloat(getComputedStyle(el).fontSize),
+        )) >= 18,
+      );
+      assert((await menuLink.boundingBox()).height >= 44);
+      assert(
+        (await menu
+          .locator(".kg-mega-column h2")
+          .first()
+          .evaluate((el) => parseFloat(getComputedStyle(el).fontSize))) >= 22,
+      );
+      await menu
+        .getByRole("link", { name: "İtfaiyeci Elbisesi", exact: true })
+        .click();
+      await launchPage.waitForURL("**/itfaiyeci-elbisesi");
+      assert.equal(
+        await launchPage.locator(".product-family h1").textContent(),
+        "İtfaiyeci Elbisesi",
+      );
+      ok(
+        "mega-menu product links use readable text and large click targets and still navigate to the selected family",
       );
       await launchPage.setViewportSize({ width: 390, height: 844 });
+      await launchPage.goto(origin, { waitUntil: "networkidle" });
       const partners = launchPage.locator(".kg-partners");
       const rail = launchPage.locator(".kg-partners-viewport");
       await partners.scrollIntoViewIfNeeded();

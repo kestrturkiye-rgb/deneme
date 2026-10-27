@@ -42,15 +42,17 @@ export default function Hero() {
   }
   return (
     <section className="kg-hero kg-story-hero" aria-labelledby="hero-heading">
-      <SiteImage
-        key={current.image}
-        className="kg-hero-image kg-story-image"
-        src={current.image}
-        alt={current.imageAlt}
-        fill
-        sizes="100vw"
-        fetchPriority={selected === 0 ? "high" : "auto"}
-      />
+      <div className="kg-hero-art">
+        <SiteImage
+          key={current.image}
+          className="kg-hero-image kg-story-image"
+          src={current.image}
+          alt={current.imageAlt}
+          fill
+          sizes="100vw"
+          fetchPriority={selected === 0 ? "high" : "auto"}
+        />
+      </div>
       {current.video && (
         <HeroVideo
           key={current.id + current.video}

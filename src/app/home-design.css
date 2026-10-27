@@ -103,7 +103,36 @@
 .kg-home .kg-hero-image,
 .kg-home .kg-hero-video {
   object-fit: cover;
-  object-position: 62% center;
+  object-position: 62% top;
+}
+.kg-hero-art,
+.kg-sector-art {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  pointer-events: none;
+}
+.kg-home .kg-story-image,
+.kg-home .kg-sector-photo {
+  transform-origin: top right;
+}
+
+/* Keep the complete source image on wide screens, fading its dark left edge
+   into the stage instead of enlarging it until the people are cropped. */
+@media (min-width: 901px) {
+  .kg-home .kg-story-hero {
+    background: #101315;
+  }
+  .kg-home .kg-hero-art {
+    left: auto;
+    width: min(100%, calc((100svh - var(--kg-header-height)) * 1672 / 941));
+    mask-image: linear-gradient(90deg, transparent, #000 22%);
+  }
+  .kg-home .kg-hero-art .kg-hero-image,
+  .kg-home .kg-hero-video {
+    object-fit: contain;
+    object-position: right top;
+  }
 }
 .kg-home .kg-story-selector {
   position: relative;
