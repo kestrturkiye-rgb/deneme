@@ -276,7 +276,7 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </section>
       )}
-      {related.length > 0 && (
+      {!isFamily && related.length > 0 && (
         <section className="product-related">
           <div className="container-site">
             <span className="product-kicker">{product.groupTitle}</span>

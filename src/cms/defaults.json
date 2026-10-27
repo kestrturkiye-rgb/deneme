@@ -2459,15 +2459,7 @@
           "Mare (833115)",
           "Alexus (832346)"
         ],
-        "sections": [
-          {
-            "title": "Soğuk Yelek",
-            "text": [
-              "Cool Vest"
-            ],
-            "items": []
-          }
-        ],
+        "sections": [],
         "images": [
           {
             "src": "/images/source/0cdc479106-Maximus-2-0-Front-832551-YENI.png",
@@ -2500,10 +2492,6 @@
           {
             "src": "/images/source/b5f98b5513-Alexus-832346-4.png",
             "alt": "Alexus (832346)"
-          },
-          {
-            "src": "/images/source/81221586bd-coolwest1.jpg",
-            "alt": "Cool Vest"
           }
         ]
       },
@@ -2563,12 +2551,7 @@
               "SERGIO – 839198 Gömlek (Class 1)",
               "ALEX – 838282 Tulum (Class 1)",
               "LUIS – 816158 Yelek (7,5 cal/cm²)",
-              "MARCO – 837270 Ceket & Pantolon (7,5)",
-              "ERIC – 854106 Alev Almaz İçlik",
-              "NICK – 825105 Çift Katlı Örme Başlık",
-              "LEE – 812100 Çorap",
-              "Protek Yangın Battaniyesi",
-              "Protek Kaynak Perdesi"
+              "MARCO – 837270 Ceket & Pantolon (7,5)"
             ],
             "items": []
           }
@@ -2652,26 +2635,6 @@
           {
             "src": "/images/source/233e84d055-837270-45yan-manken.jpg",
             "alt": "MARCO – 837270 Ceket & Pantolon (7,5)"
-          },
-          {
-            "src": "/images/source/7b570e1e27-iclik-2-on.jpg",
-            "alt": "ERIC – 854106 Alev Almaz İçlik"
-          },
-          {
-            "src": "/images/source/109dde0cfb-825105-onarka-PBI-manken.jpg",
-            "alt": "NICK – 825105 Çift Katlı Örme Başlık"
-          },
-          {
-            "src": "/images/source/d72c7a07f8-94000044.jpg",
-            "alt": "LEE – 812100 Çorap"
-          },
-          {
-            "src": "/images/source/fb44748283-model-1c.jpg",
-            "alt": "Protek Yangın Battaniyesi"
-          },
-          {
-            "src": "/images/source/a50849e905-CFW-2000-192062012.jpg",
-            "alt": "Protek Kaynak Perdesi"
           }
         ]
       },
@@ -2704,10 +2667,6 @@
               "Açık ark metodu EN 61482-1-1, açık kutu testi ise EN 61482-1-2 kapsamına düşmektedir.",
               "Açık ark testi, Ark Termal Performans Değeri (ATPV) ile gerçekleşir. En az 167,5 kJ/m2(4 cal/cm2) olmalıdır. Yüksek değer daha iyi koruma anlamına gelir. Gerekli ATPV değeri risk analiziyle belirlenir.",
               "Kutu testinde, sınıf test şartlarına ve ölçülen termal korumaya göre belirlenir. Sınıf 1 minimumdur ve 4 kA lık bir akım, 500 ms ve 30cm uzaklığı kapsar. Sınıf 2 testi içinse bu değer 7 kA’dır.",
-              "Paulson – Başlık için Yedek Vizör",
-              "3M H-700N-VI Beyaz Baret",
-              "Eureka 13-4 Heat FR-AF – ATPV >12",
-              "RUSSELL – 805106 Eldiven (Class 1)",
               "DEAN – 834244 Takım (40 cal/cm²)",
               "JASPER – 844117 Pantolon",
               "BRICE – 839114 Gömlek (Class 1)",
@@ -2722,15 +2681,7 @@
               "ADAM – 837275 Ceket & Pantolon (8,7)",
               "ALEX – 838282 Tulum (Class 1)",
               "SIMON – 839116 Gömlek (Class 1)",
-              "SERGIO – 839198 Gömlek (Class 1)",
-              "LEO – 827110 Başlık (40 cal/cm²)",
-              "Paulson – Elektrik Ark Vizörü",
-              "Paulson – Elektrik Ark Gözlüğü",
-              "TED – 896107 Aramid Kemer",
-              "RONALD – 805101 Eldiven (40 cal/cm²)",
-              "LUKE – 827119 Başlık (25 cal/cm²)",
-              "ERIC – 854106 Alev Almaz İçlik",
-              "NICK – 825105 Çift Katlı Örme Başlık"
+              "SERGIO – 839198 Gömlek (Class 1)"
             ],
             "items": []
           }
@@ -2743,22 +2694,6 @@
           }
         ],
         "images": [
-          {
-            "src": "/images/source/3c49f0ebf9-IM22-AFA2-40V.jpg",
-            "alt": "Paulson – Başlık için Yedek Vizör"
-          },
-          {
-            "src": "/images/source/db3604cb5f-3M-H700.png",
-            "alt": "3M H-700N-VI Beyaz Baret"
-          },
-          {
-            "src": "/images/source/fdca55d04e-Eureka.png",
-            "alt": "Eureka 13-4 Heat FR-AF – ATPV >12"
-          },
-          {
-            "src": "/images/source/c0313b1329-805106-ust-koyulaci.jpg",
-            "alt": "RUSSELL – 805106 Eldiven (Class 1)"
-          },
           {
             "src": "/images/source/ddaf00670a-828114-takim-on.jpg",
             "alt": "DEAN – 834244 Takım (40 cal/cm²)"
@@ -2818,38 +2753,6 @@
           {
             "src": "/images/source/d3e7c11f35-839198-001-onmanken.jpg",
             "alt": "SERGIO – 839198 Gömlek (Class 1)"
-          },
-          {
-            "src": "/images/source/f3f4d1dfb3-827110-J.jpg",
-            "alt": "LEO – 827110 Başlık (40 cal/cm²)"
-          },
-          {
-            "src": "/images/source/0e39978bd3-AMP1-E12-PCT.jpg",
-            "alt": "Paulson – Elektrik Ark Vizörü"
-          },
-          {
-            "src": "/images/source/4f85f5d1c7-510-ARC-SN-38-1.jpg",
-            "alt": "Paulson – Elektrik Ark Gözlüğü"
-          },
-          {
-            "src": "/images/source/6af68e4eb8-890123-kemer-1-1.jpg",
-            "alt": "TED – 896107 Aramid Kemer"
-          },
-          {
-            "src": "/images/source/dbcb7ac225-805101.jpg",
-            "alt": "RONALD – 805101 Eldiven (40 cal/cm²)"
-          },
-          {
-            "src": "/images/source/bee7226051-827119.jpg",
-            "alt": "LUKE – 827119 Başlık (25 cal/cm²)"
-          },
-          {
-            "src": "/images/source/7b570e1e27-iclik-2-on.jpg",
-            "alt": "ERIC – 854106 Alev Almaz İçlik"
-          },
-          {
-            "src": "/images/source/109dde0cfb-825105-onarka-PBI-manken.jpg",
-            "alt": "NICK – 825105 Çift Katlı Örme Başlık"
           }
         ]
       },
@@ -2897,14 +2800,9 @@
               "Sınıf 1: Düşük seviyelerde sıçrama ve radyan ısıya neden olan düşük tehlikeli kaynak işlerine karşı korumadır.",
               "Sınıf 2: Yüksek seviyelerde sıçrama ve radyan ısıya neden olan daha tehlikeli kaynak işlerine karşı korumadır.",
               "CASE – 838101 Tulum",
-              "LEROY – 827122 Başlık",
               "TRAVIS – 834188 Ceket & Pantolon",
               "AXIS – 837113 Ceket & Pantolon",
-              "VINCE – 819101 Kolluk",
-              "VINCENT – 817116 Tozluk",
-              "Bullard 911C Baret",
-              "KELVIN – 837277 Ceket & Pantolon",
-              "Protek Kaynak Perdesi"
+              "KELVIN – 837277 Ceket & Pantolon"
             ],
             "items": []
           }
@@ -2922,10 +2820,6 @@
             "alt": "CASE – 838101 Tulum"
           },
           {
-            "src": "/images/source/db8d6bd351-827122-on.png",
-            "alt": "LEROY – 827122 Başlık"
-          },
-          {
             "src": "/images/source/82edc8fc33-834188-front.png",
             "alt": "TRAVIS – 834188 Ceket & Pantolon"
           },
@@ -2934,24 +2828,8 @@
             "alt": "AXIS – 837113 Ceket & Pantolon"
           },
           {
-            "src": "/images/source/02e564a4fd-819101-1.png",
-            "alt": "VINCE – 819101 Kolluk"
-          },
-          {
-            "src": "/images/source/c1a07793d2-817116-2.png",
-            "alt": "VINCENT – 817116 Tozluk"
-          },
-          {
-            "src": "/images/source/c07925b2c5-911C-yan.png",
-            "alt": "Bullard 911C Baret"
-          },
-          {
             "src": "/images/source/58e1f5c4d6-837277-001-on.jpg",
             "alt": "KELVIN – 837277 Ceket & Pantolon"
-          },
-          {
-            "src": "/images/source/a50849e905-CFW-2000-192062012.jpg",
-            "alt": "Protek Kaynak Perdesi"
           }
         ]
       },
@@ -2982,13 +2860,6 @@
               "Bu standardın amacı ısı ve aleve karşı koruma sağlayan giysi için asgari performans gereksinimlerini belirlemektir. Bu standartta listelenen birçok tehlike arasında üç performans seviyesi (dördüncü bir performans seviyesine sahip Radyan Isı dışında) bulunmaktadır. Seviye 1 düşük risk algılamasına maruz kalındığını gösterir. Seviye 2 orta dereceli risk algılamasına maruz kalındığını gösterir. Seviye 3 yüksek risk algılamasına maruz kalındığını gösterir.",
               "REFSTAR elbiseler, ISO 11612’ye göre sertifikalıdır; ayrıca dokuma koruyucu kumaşlara kıyasla alüminize elbiselerin Radyan Isı Transfer değeri çok daha yüksektir. ISO 1162’ye göre Radyan Isı Transfer Kodu C olarak belirlenmiştir. 4 seviye bulunmaktadır. C1 en düşük ve C4 en yüksek koruma seviyesidir.",
               "Alüminize elbiseler ergimiş metal sıçramalarına karşı da koruma sağlar. Ergimiş Alüminyum Sıçraması Kod D, Ergimiş Demir Sıçraması Kod E altında ele alınmaktadır. D1 ve E1 en düşük koruma seviyesiyken, D3 ve E3 en yüksek koruma seviyesidir.",
-              "WOLF – 827100 Başlık",
-              "PAUL – 827103 Başlık",
-              "JACK- 827101 Başlık",
-              "TYLER – 805100 Eldiven",
-              "TERRY – 805105 Eldiven",
-              "HARVEY – 817100 Tozluk",
-              "CURTIS – 817101 Tozluk",
               "ALUSTAR ULTRA LIGHT – 830100 Set",
               "ALUSTAR – 830102 Alüminize Elbise Seti",
               "FELIX – 837114 Ceket & Pantolon",
@@ -3017,34 +2888,6 @@
           }
         ],
         "images": [
-          {
-            "src": "/images/source/c43310c735-827100-Shroud-Front-2.jpg",
-            "alt": "WOLF – 827100 Başlık"
-          },
-          {
-            "src": "/images/source/ad7f916b27-827103-Shroud-Front.jpg",
-            "alt": "PAUL – 827103 Başlık"
-          },
-          {
-            "src": "/images/source/a483f591fa-827101-Shroud-Front.jpg",
-            "alt": "JACK- 827101 Başlık"
-          },
-          {
-            "src": "/images/source/279883722f-805100-Gloves-Yan-2.jpg",
-            "alt": "TYLER – 805100 Eldiven"
-          },
-          {
-            "src": "/images/source/da51cdb474-805105-Gloves2.jpg",
-            "alt": "TERRY – 805105 Eldiven"
-          },
-          {
-            "src": "/images/source/ec2b2a6244-817100-Gaiters-1.jpg",
-            "alt": "HARVEY – 817100 Tozluk"
-          },
-          {
-            "src": "/images/source/f836bf2116-817101-Gaiters-1.jpg",
-            "alt": "CURTIS – 817101 Tozluk"
-          },
           {
             "src": "/images/source/7c47dd977e-830100-Aluminized-Suit.jpg",
             "alt": "ALUSTAR ULTRA LIGHT – 830100 Set"
@@ -3503,10 +3346,102 @@
         ],
         "models": []
       },
-      "refstar-tamamlayici-ekipman": {},
-      "metalstar-tamamlayici-ekipman": {},
-      "ark-basliklari-ve-gozlukleri": {},
-      "corap": {},
+      "refstar-tamamlayici-ekipman": {
+        "images": [
+          {
+            "src": "/images/source/c43310c735-827100-Shroud-Front-2.jpg",
+            "alt": "WOLF – 827100 Başlık"
+          },
+          {
+            "src": "/images/source/ad7f916b27-827103-Shroud-Front.jpg",
+            "alt": "PAUL – 827103 Başlık"
+          },
+          {
+            "src": "/images/source/a483f591fa-827101-Shroud-Front.jpg",
+            "alt": "JACK- 827101 Başlık"
+          },
+          {
+            "src": "/images/source/279883722f-805100-Gloves-Yan-2.jpg",
+            "alt": "TYLER – 805100 Eldiven"
+          },
+          {
+            "src": "/images/source/da51cdb474-805105-Gloves2.jpg",
+            "alt": "TERRY – 805105 Eldiven"
+          },
+          {
+            "src": "/images/source/ec2b2a6244-817100-Gaiters-1.jpg",
+            "alt": "HARVEY – 817100 Tozluk"
+          },
+          {
+            "src": "/images/source/f836bf2116-817101-Gaiters-1.jpg",
+            "alt": "CURTIS – 817101 Tozluk"
+          }
+        ]
+      },
+      "metalstar-tamamlayici-ekipman": {
+        "images": [
+          {
+            "src": "/images/source/db8d6bd351-827122-on.png",
+            "alt": "LEROY – 827122 Başlık"
+          },
+          {
+            "src": "/images/source/02e564a4fd-819101-1.png",
+            "alt": "VINCE – 819101 Kolluk"
+          },
+          {
+            "src": "/images/source/c1a07793d2-817116-2.png",
+            "alt": "VINCENT – 817116 Tozluk"
+          },
+          {
+            "src": "/images/source/c07925b2c5-911C-yan.png",
+            "alt": "Bullard 911C Baret"
+          },
+          {
+            "src": "/images/source/a50849e905-CFW-2000-192062012.jpg",
+            "alt": "Protek Kaynak Perdesi"
+          }
+        ]
+      },
+      "ark-basliklari-ve-gozlukleri": {
+        "images": [
+          {
+            "src": "/images/source/3c49f0ebf9-IM22-AFA2-40V.jpg",
+            "alt": "Paulson – Başlık için Yedek Vizör"
+          },
+          {
+            "src": "/images/source/109dde0cfb-825105-onarka-PBI-manken.jpg",
+            "alt": "NICK – 825105 Çift Katlı Örme Başlık"
+          },
+          {
+            "src": "/images/source/bee7226051-827119.jpg",
+            "alt": "LUKE – 827119 Başlık (25 cal/cm²)"
+          },
+          {
+            "src": "/images/source/f3f4d1dfb3-827110-J.jpg",
+            "alt": "LEO – 827110 Başlık (40 cal/cm²)"
+          },
+          {
+            "src": "/images/source/4f85f5d1c7-510-ARC-SN-38-1.jpg",
+            "alt": "Paulson – Elektrik Ark Gözlüğü"
+          },
+          {
+            "src": "/images/source/0e39978bd3-AMP1-E12-PCT.jpg",
+            "alt": "Paulson – Elektrik Ark Vizörü"
+          },
+          {
+            "src": "/images/source/b2a63b24c5-Paulson-510-ARC-SN-12.jpeg",
+            "alt": "Paulson 510-ARC-SN 12 ark koruyucu gözlük"
+          }
+        ]
+      },
+      "corap": {
+        "images": [
+          {
+            "src": "/images/source/d72c7a07f8-94000044.jpg",
+            "alt": "LEE – 812100 Çorap"
+          }
+        ]
+      },
       "orme-urunler": {
         "description": [
           "Örme ürünler"
@@ -3518,13 +3453,140 @@
           }
         ]
       },
-      "tamamlayici-ekipman": {},
-      "arcstar-ic-giyim": {},
-      "industar-ic-giyim": {},
+      "tamamlayici-ekipman": {
+        "images": [
+          {
+            "src": "/images/source/fb44748283-model-1c.jpg",
+            "alt": "Protek Yangın Battaniyesi"
+          },
+          {
+            "src": "/images/source/a50849e905-CFW-2000-192062012.jpg",
+            "alt": "Protek Kaynak Perdesi"
+          },
+          {
+            "src": "/images/source/709c797613-890123-kemer-1.jpg",
+            "alt": "TED – 896107 Aramid Kemer"
+          }
+        ]
+      },
+      "arcstar-ic-giyim": {
+        "images": [
+          {
+            "src": "/images/source/c0313b1329-805106-ust-koyulaci.jpg",
+            "alt": "RUSSELL – 805106 Eldiven (Class 1)"
+          },
+          {
+            "src": "/images/source/db3604cb5f-3M-H700.png",
+            "alt": "3M H-700N-VI Beyaz Baret"
+          },
+          {
+            "src": "/images/source/3c49f0ebf9-IM22-AFA2-40V.jpg",
+            "alt": "Paulson – Başlık için Yedek Vizör"
+          },
+          {
+            "src": "/images/source/7b570e1e27-iclik-2-on.jpg",
+            "alt": "ERIC – 854106 Alev Almaz İçlik"
+          },
+          {
+            "src": "/images/source/109dde0cfb-825105-onarka-PBI-manken.jpg",
+            "alt": "NICK – 825105 Çift Katlı Örme Başlık"
+          },
+          {
+            "src": "/images/source/bee7226051-827119.jpg",
+            "alt": "LUKE – 827119 Başlık (25 cal/cm²)"
+          },
+          {
+            "src": "/images/source/f3f4d1dfb3-827110-J.jpg",
+            "alt": "LEO – 827110 Başlık (40 cal/cm²)"
+          },
+          {
+            "src": "/images/source/dbcb7ac225-805101.jpg",
+            "alt": "RONALD – 805101 Eldiven (40 cal/cm²)"
+          },
+          {
+            "src": "/images/source/709c797613-890123-kemer-1.jpg",
+            "alt": "TED – 896107 Aramid Kemer"
+          },
+          {
+            "src": "/images/source/4f85f5d1c7-510-ARC-SN-38-1.jpg",
+            "alt": "Paulson – Elektrik Ark Gözlüğü"
+          },
+          {
+            "src": "/images/source/0e39978bd3-AMP1-E12-PCT.jpg",
+            "alt": "Paulson – Elektrik Ark Vizörü"
+          },
+          {
+            "src": "/images/source/b2a63b24c5-Paulson-510-ARC-SN-12.jpeg",
+            "alt": "Paulson 510-ARC-SN 12 ark koruyucu gözlük"
+          }
+        ]
+      },
+      "industar-ic-giyim": {
+        "images": [
+          {
+            "src": "/images/source/fdca55d04e-Eureka.png",
+            "alt": "Eureka 13-4 Heat FR-AF – ATPV >12"
+          },
+          {
+            "src": "/images/source/7b570e1e27-iclik-2-on.jpg",
+            "alt": "ERIC – 854106 Alev Almaz İçlik"
+          },
+          {
+            "src": "/images/source/109dde0cfb-825105-onarka-PBI-manken.jpg",
+            "alt": "NICK – 825105 Çift Katlı Örme Başlık"
+          },
+          {
+            "src": "/images/source/d72c7a07f8-94000044.jpg",
+            "alt": "LEE – 812100 Çorap"
+          },
+          {
+            "src": "/images/source/fb44748283-model-1c.jpg",
+            "alt": "Protek Yangın Battaniyesi"
+          },
+          {
+            "src": "/images/source/a50849e905-CFW-2000-192062012.jpg",
+            "alt": "Protek Kaynak Perdesi"
+          }
+        ]
+      },
       "solunum-setleri": {},
-      "endustriyel-eldiven": {},
+      "endustriyel-eldiven": {
+        "images": [
+          {
+            "src": "/images/source/279883722f-805100-Gloves-Yan-2.jpg",
+            "alt": "TYLER – 805100 Eldiven"
+          },
+          {
+            "src": "/images/source/da51cdb474-805105-Gloves2.jpg",
+            "alt": "TERRY – 805105 Eldiven"
+          },
+          {
+            "src": "/images/source/c0313b1329-805106-ust-koyulaci.jpg",
+            "alt": "RUSSELL – 805106 Eldiven (Class 1)"
+          },
+          {
+            "src": "/images/source/fdca55d04e-Eureka.png",
+            "alt": "Eureka 13-4 Heat FR-AF – ATPV >12"
+          },
+          {
+            "src": "/images/source/dbcb7ac225-805101.jpg",
+            "alt": "RONALD – 805101 Eldiven (40 cal/cm²)"
+          }
+        ]
+      },
       "endustriyel-cizme": {},
-      "endustriyel-baret": {},
+      "endustriyel-baret": {
+        "images": [
+          {
+            "src": "/images/source/c07925b2c5-911C-yan.png",
+            "alt": "Bullard 911C Baret"
+          },
+          {
+            "src": "/images/source/db3604cb5f-3M-H700.png",
+            "alt": "3M H-700N-VI Beyaz Baret"
+          }
+        ]
+      },
       "endustriyel-elbiseler": {
         "description": [
           "KELVIN – 837277 Ceket & Pantolon"
@@ -3550,22 +3612,13 @@
               "SERGIO – 839198 Gömlek (Class 1)",
               "ALEX – 838282 Tulum (Class 1)",
               "LUIS – 816158 Yelek (7,5 cal/cm²)",
-              "MARCO – 837270 Ceket & Pantolon (7,5)",
-              "Protek Kaynak Perdesi",
-              "Protek Yangın Battaniyesi",
-              "LEE – 812100 Çorap",
-              "NICK – 825105 Çift Katlı Örme Başlık",
-              "ERIC – 854106 Alev Almaz İçlik"
+              "MARCO – 837270 Ceket & Pantolon (7,5)"
             ],
             "items": []
           },
           {
             "title": "Arcstar",
             "text": [
-              "Paulson – Başlık için Yedek Vizör",
-              "3M H-700N-VI Beyaz Baret",
-              "Eureka 13-4 Heat FR-AF – ATPV >12",
-              "RUSSELL – 805106 Eldiven (Class 1)",
               "JASPER – 844117 Pantolon",
               "BRICE – 839114 Gömlek (Class 1)",
               "DUSTIN – 835108 Pardesü (25 cal/cm²)",
@@ -3580,15 +3633,7 @@
               "SERGIO – 839198 Gömlek (Class 1)",
               "ALEX – 838282 Tulum (Class 1)",
               "LUIS – 816158 Yelek (7,5 cal/cm²)",
-              "MARCO – 837270 Ceket & Pantolon (7,5)",
-              "TED – 896107 Aramid Kemer",
-              "Paulson – Elektrik Ark Vizörü",
-              "Paulson – Elektrik Ark Gözlüğü",
-              "RONALD – 805101 Eldiven (40 cal/cm²)",
-              "LEO – 827110 Başlık (40 cal/cm²)",
-              "LUKE – 827119 Başlık (25 cal/cm²)",
-              "NICK – 825105 Çift Katlı Örme Başlık",
-              "ERIC – 854106 Alev Almaz İçlik"
+              "MARCO – 837270 Ceket & Pantolon (7,5)"
             ],
             "items": []
           },
@@ -3598,25 +3643,13 @@
               "AXIS – 837113 Ceket & Pantolon",
               "TRAVIS – 834188 Ceket & Pantolon",
               "CASE – 838101 Tulum",
-              "LEROY – 827122 Başlık",
-              "VINCE – 819101 Kolluk",
-              "VINCENT – 817116 Tozluk",
-              "Bullard 911C Baret",
-              "KELVIN – 837277 Ceket & Pantolon",
-              "Protek Kaynak Perdesi"
+              "KELVIN – 837277 Ceket & Pantolon"
             ],
             "items": []
           },
           {
             "title": "Refstar",
             "text": [
-              "WOLF – 827100 Başlık",
-              "PAUL – 827103 Başlık",
-              "JACK- 827101 Başlık",
-              "TYLER – 805100 Eldiven",
-              "TERRY – 805105 Eldiven",
-              "HARVEY – 817100 Tozluk",
-              "CURTIS – 817101 Tozluk",
               "ALUSTAR ULTRA LIGHT – 830100 Set",
               "ALUSTAR – 830102 Alüminize Elbise Seti",
               "FELIX – 837114 Ceket & Pantolon",
@@ -3704,42 +3737,6 @@
             "alt": "MARCO – 837270 Ceket & Pantolon (7,5)"
           },
           {
-            "src": "/images/source/a50849e905-CFW-2000-192062012.jpg",
-            "alt": "Protek Kaynak Perdesi"
-          },
-          {
-            "src": "/images/source/fb44748283-model-1c.jpg",
-            "alt": "Protek Yangın Battaniyesi"
-          },
-          {
-            "src": "/images/source/d72c7a07f8-94000044.jpg",
-            "alt": "LEE – 812100 Çorap"
-          },
-          {
-            "src": "/images/source/109dde0cfb-825105-onarka-PBI-manken.jpg",
-            "alt": "NICK – 825105 Çift Katlı Örme Başlık"
-          },
-          {
-            "src": "/images/source/7b570e1e27-iclik-2-on.jpg",
-            "alt": "ERIC – 854106 Alev Almaz İçlik"
-          },
-          {
-            "src": "/images/source/3c49f0ebf9-IM22-AFA2-40V.jpg",
-            "alt": "Paulson – Başlık için Yedek Vizör"
-          },
-          {
-            "src": "/images/source/db3604cb5f-3M-H700.png",
-            "alt": "3M H-700N-VI Beyaz Baret"
-          },
-          {
-            "src": "/images/source/fdca55d04e-Eureka.png",
-            "alt": "Eureka 13-4 Heat FR-AF – ATPV >12"
-          },
-          {
-            "src": "/images/source/c0313b1329-805106-ust-koyulaci.jpg",
-            "alt": "RUSSELL – 805106 Eldiven (Class 1)"
-          },
-          {
             "src": "/images/source/8527054244-839114-on.jpg",
             "alt": "BRICE – 839114 Gömlek (Class 1)"
           },
@@ -3756,30 +3753,6 @@
             "alt": "HENRY – 834220 Takım (Class 2)"
           },
           {
-            "src": "/images/source/6af68e4eb8-890123-kemer-1-1.jpg",
-            "alt": "TED – 896107 Aramid Kemer"
-          },
-          {
-            "src": "/images/source/0e39978bd3-AMP1-E12-PCT.jpg",
-            "alt": "Paulson – Elektrik Ark Vizörü"
-          },
-          {
-            "src": "/images/source/4f85f5d1c7-510-ARC-SN-38-1.jpg",
-            "alt": "Paulson – Elektrik Ark Gözlüğü"
-          },
-          {
-            "src": "/images/source/dbcb7ac225-805101.jpg",
-            "alt": "RONALD – 805101 Eldiven (40 cal/cm²)"
-          },
-          {
-            "src": "/images/source/f3f4d1dfb3-827110-J.jpg",
-            "alt": "LEO – 827110 Başlık (40 cal/cm²)"
-          },
-          {
-            "src": "/images/source/bee7226051-827119.jpg",
-            "alt": "LUKE – 827119 Başlık (25 cal/cm²)"
-          },
-          {
             "src": "/images/source/a25bd09812-837113-front.png",
             "alt": "AXIS – 837113 Ceket & Pantolon"
           },
@@ -3790,50 +3763,6 @@
           {
             "src": "/images/source/5a83acb4a4-838101-front.png",
             "alt": "CASE – 838101 Tulum"
-          },
-          {
-            "src": "/images/source/db8d6bd351-827122-on.png",
-            "alt": "LEROY – 827122 Başlık"
-          },
-          {
-            "src": "/images/source/02e564a4fd-819101-1.png",
-            "alt": "VINCE – 819101 Kolluk"
-          },
-          {
-            "src": "/images/source/c1a07793d2-817116-2.png",
-            "alt": "VINCENT – 817116 Tozluk"
-          },
-          {
-            "src": "/images/source/c07925b2c5-911C-yan.png",
-            "alt": "Bullard 911C Baret"
-          },
-          {
-            "src": "/images/source/c43310c735-827100-Shroud-Front-2.jpg",
-            "alt": "WOLF – 827100 Başlık"
-          },
-          {
-            "src": "/images/source/ad7f916b27-827103-Shroud-Front.jpg",
-            "alt": "PAUL – 827103 Başlık"
-          },
-          {
-            "src": "/images/source/a483f591fa-827101-Shroud-Front.jpg",
-            "alt": "JACK- 827101 Başlık"
-          },
-          {
-            "src": "/images/source/279883722f-805100-Gloves-Yan-2.jpg",
-            "alt": "TYLER – 805100 Eldiven"
-          },
-          {
-            "src": "/images/source/da51cdb474-805105-Gloves2.jpg",
-            "alt": "TERRY – 805105 Eldiven"
-          },
-          {
-            "src": "/images/source/ec2b2a6244-817100-Gaiters-1.jpg",
-            "alt": "HARVEY – 817100 Tozluk"
-          },
-          {
-            "src": "/images/source/f836bf2116-817101-Gaiters-1.jpg",
-            "alt": "CURTIS – 817101 Tozluk"
           },
           {
             "src": "/images/source/7c47dd977e-830100-Aluminized-Suit.jpg",
@@ -7958,89 +7887,78 @@
               {
                 "name": "NICK – 825105 Örme Başlık (Aramid/Viscose FR)",
                 "slug": "aramid-viscose-fr-orme-baslik-825105",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "itfaiyeci-orme-baslik",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "itfaiyeci-orme-baslik"
                 ]
               },
               {
                 "name": "BLOCK-HOOD – 825126 Örme Başlık",
                 "slug": "block-hood-825126-hood",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "itfaiyeci-orme-baslik",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "itfaiyeci-orme-baslik"
                 ]
               },
               {
                 "name": "NICK – 825105 Örme Başlık (PBI)",
                 "slug": "pbi-orme-baslik-825105",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "itfaiyeci-orme-baslik",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "itfaiyeci-orme-baslik"
                 ]
               },
               {
                 "name": "ALUSTAR ULTRA LIGHT 830100",
                 "slug": "830100",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "aluminize-elbise",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "aluminize-elbise"
                 ]
               },
               {
                 "name": "ALUSTAR 830102",
                 "slug": "830102",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "aluminize-elbise",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "aluminize-elbise"
                 ]
               },
               {
                 "name": "Cool Vest",
                 "slug": "cool-vest",
-                "parentSlug": "itfaiyeci-elbisesi",
-                "relatedFamilies": [
-                  "itfaiyeci-elbisesi"
-                ]
+                "parentSlug": "",
+                "relatedFamilies": []
               },
               {
                 "name": "LEE – 812100 Çok Fonksiyonlu Koruma Çorap",
                 "slug": "cok-fonksiyonlu-koruma-corap",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "itfaiyeci-ic-giyim",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "itfaiyeci-ic-giyim"
                 ]
               },
               {
                 "name": "NICK – 825105 Örme Başlık (Aramid)",
                 "slug": "aramid-orme-baslik-825105",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "itfaiyeci-orme-baslik",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "itfaiyeci-orme-baslik"
                 ]
               },
               {
                 "name": "ERIC – 854106 Alev Almaz İçlik",
                 "slug": "835103-ic-giyim",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "itfaiyeci-ic-giyim",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "itfaiyeci-ic-giyim"
                 ]
               },
               {
                 "name": "İstasyon Üniforması",
                 "slug": "itfaiyeci-elbisesi-istasyon-uniformasi",
-                "parentSlug": "itfaiyeci-elbisesi",
+                "parentSlug": "istasyon-uniformasi",
                 "relatedFamilies": [
-                  "itfaiyeci-elbisesi",
                   "istasyon-uniformasi"
                 ]
               },
@@ -8400,73 +8318,68 @@
               {
                 "name": "WOLF – 827100 Başlık",
                 "slug": "wolf-baslik",
-                "parentSlug": "refstar-radyan-isiya-karsi-koruma",
+                "parentSlug": "refstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "refstar-radyan-isiya-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "refstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "PAUL – 827103 Başlık",
                 "slug": "paul-baslik",
-                "parentSlug": "refstar-radyan-isiya-karsi-koruma",
+                "parentSlug": "refstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "refstar-radyan-isiya-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "refstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "JACK- 827101 Başlık",
                 "slug": "jack-baslik",
-                "parentSlug": "refstar-radyan-isiya-karsi-koruma",
+                "parentSlug": "refstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "refstar-radyan-isiya-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "refstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "TYLER – 805100 Eldiven",
                 "slug": "tyler-eldiven",
-                "parentSlug": "refstar-radyan-isiya-karsi-koruma",
+                "parentSlug": "endustriyel-eldiven",
                 "relatedFamilies": [
-                  "refstar-radyan-isiya-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "endustriyel-eldiven",
+                  "refstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "TERRY – 805105 Eldiven",
                 "slug": "terry-eldiven",
-                "parentSlug": "refstar-radyan-isiya-karsi-koruma",
+                "parentSlug": "endustriyel-eldiven",
                 "relatedFamilies": [
-                  "refstar-radyan-isiya-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "endustriyel-eldiven",
+                  "refstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "HARVEY – 817100 Tozluk",
                 "slug": "harvey-tozluk",
-                "parentSlug": "refstar-radyan-isiya-karsi-koruma",
+                "parentSlug": "refstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "refstar-radyan-isiya-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "refstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "CURTIS – 817101 Tozluk",
                 "slug": "curtis-tozluk",
-                "parentSlug": "refstar-radyan-isiya-karsi-koruma",
+                "parentSlug": "refstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "refstar-radyan-isiya-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "refstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "RUSSELL – 805106 Eldiven (Class 1)",
                 "slug": "russell-805106-eldiven",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "endustriyel-eldiven",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "endustriyel-eldiven",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
@@ -8481,10 +8394,9 @@
               {
                 "name": "LEROY – 827122 Başlık",
                 "slug": "leroy-827122-hood",
-                "parentSlug": "metalstar-ergimis-metal-sicramasina-karsi-koruma",
+                "parentSlug": "metalstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "metalstar-ergimis-metal-sicramasina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "metalstar-tamamlayici-ekipman"
                 ]
               },
               {
@@ -8508,54 +8420,53 @@
               {
                 "name": "VINCE – 819101 Kolluk",
                 "slug": "vince-819101-arm-protector",
-                "parentSlug": "metalstar-ergimis-metal-sicramasina-karsi-koruma",
+                "parentSlug": "metalstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "metalstar-ergimis-metal-sicramasina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "metalstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "VINCENT – 817116 Tozluk",
                 "slug": "vincent-817116-gaiters",
-                "parentSlug": "metalstar-ergimis-metal-sicramasina-karsi-koruma",
+                "parentSlug": "metalstar-tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "metalstar-ergimis-metal-sicramasina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "metalstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "Bullard 911C Baret",
                 "slug": "bullard-911c-helmet",
-                "parentSlug": "metalstar-ergimis-metal-sicramasina-karsi-koruma",
+                "parentSlug": "endustriyel-baret",
                 "relatedFamilies": [
-                  "metalstar-ergimis-metal-sicramasina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "endustriyel-baret",
+                  "metalstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "Eureka 13-4 Heat FR-AF – ATPV >12",
                 "slug": "eureka-13-4-heat-fr-af-atpv-12-cal-cm2",
-                "parentSlug": "industar-isi-ve-aleve-karsi-koruma",
+                "parentSlug": "endustriyel-eldiven",
                 "relatedFamilies": [
-                  "industar-isi-ve-aleve-karsi-koruma"
+                  "endustriyel-eldiven",
+                  "industar-ic-giyim"
                 ]
               },
               {
                 "name": "3M H-700N-VI Beyaz Baret",
                 "slug": "3m-h-700n-vi-beyaz-baret",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "endustriyel-baret",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "endustriyel-baret",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "Paulson – Başlık için Yedek Vizör",
                 "slug": "paulson-baslik-icin-yedek-vizor",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "ark-basliklari-ve-gozlukleri",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "ark-basliklari-ve-gozlukleri",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
@@ -8860,111 +8771,112 @@
               {
                 "name": "ERIC – 854106 Alev Almaz İçlik",
                 "slug": "eric-854106-alev-almaz-iclik-2",
-                "parentSlug": "industar-isi-ve-aleve-karsi-koruma",
+                "parentSlug": "industar-ic-giyim",
                 "relatedFamilies": [
-                  "industar-isi-ve-aleve-karsi-koruma",
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "industar-ic-giyim",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "NICK – 825105 Çift Katlı Örme Başlık",
                 "slug": "nick-825105-cift-katli-orme-baslik",
-                "parentSlug": "industar-isi-ve-aleve-karsi-koruma",
+                "parentSlug": "orme-urunler",
                 "relatedFamilies": [
-                  "industar-isi-ve-aleve-karsi-koruma",
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "orme-urunler",
+                  "industar-ic-giyim",
+                  "arcstar-ic-giyim",
+                  "ark-basliklari-ve-gozlukleri"
                 ]
               },
               {
                 "name": "LEE – 812100 Çorap",
                 "slug": "lee-812100-corap",
-                "parentSlug": "industar-isi-ve-aleve-karsi-koruma",
+                "parentSlug": "corap",
                 "relatedFamilies": [
-                  "industar-isi-ve-aleve-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "corap",
+                  "industar-ic-giyim"
                 ]
               },
               {
                 "name": "Protek Yangın Battaniyesi",
                 "slug": "endustriyel-protek-yangin-battaniyesi",
-                "parentSlug": "industar-isi-ve-aleve-karsi-koruma",
+                "parentSlug": "tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "industar-isi-ve-aleve-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "tamamlayici-ekipman",
+                  "industar-ic-giyim"
                 ]
               },
               {
                 "name": "Protek Kaynak Perdesi",
                 "slug": "protek-kaynak-perdesi",
-                "parentSlug": "industar-isi-ve-aleve-karsi-koruma",
+                "parentSlug": "tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "industar-isi-ve-aleve-karsi-koruma",
-                  "metalstar-ergimis-metal-sicramasina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "tamamlayici-ekipman",
+                  "industar-ic-giyim",
+                  "metalstar-tamamlayici-ekipman"
                 ]
               },
               {
                 "name": "LUKE – 827119 Başlık (25 cal/cm²)",
                 "slug": "luke-baslik",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "ark-basliklari-ve-gozlukleri",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "ark-basliklari-ve-gozlukleri",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "LEO – 827110 Başlık (40 cal/cm²)",
                 "slug": "leo-baslik",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "ark-basliklari-ve-gozlukleri",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "ark-basliklari-ve-gozlukleri",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "RONALD – 805101 Eldiven (40 cal/cm²)",
                 "slug": "ronald-eldiven",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "endustriyel-eldiven",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "endustriyel-eldiven",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "TED – 896107 Aramid Kemer",
                 "slug": "ted-aramid-kemer",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "tamamlayici-ekipman",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "tamamlayici-ekipman",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "Paulson – Elektrik Ark Gözlüğü",
                 "slug": "paulson-elektrik-ark-gozlugu",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "ark-basliklari-ve-gozlukleri",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "ark-basliklari-ve-gozlukleri",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "Paulson – Elektrik Ark Vizörü",
                 "slug": "paulson-elektrik-ark-vizoru",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "ark-basliklari-ve-gozlukleri",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma",
-                  "endustriyel-elbiseler"
+                  "ark-basliklari-ve-gozlukleri",
+                  "arcstar-ic-giyim"
                 ]
               },
               {
                 "name": "Paulson Gözlük 510-ARC-SN 12",
                 "slug": "paulson-gozluk-510-arc-sn-12",
-                "parentSlug": "arcstar-elektrik-arkina-karsi-koruma",
+                "parentSlug": "ark-basliklari-ve-gozlukleri",
                 "relatedFamilies": [
-                  "arcstar-elektrik-arkina-karsi-koruma"
+                  "ark-basliklari-ve-gozlukleri",
+                  "arcstar-ic-giyim"
                 ]
               },
               {

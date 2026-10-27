@@ -1177,7 +1177,12 @@ try {
         0,
       );
       const familyCards = launchPage.locator("#modeller .kg-product-card");
-      assert.equal(await familyCards.count(), 18);
+      assert.equal(await familyCards.count(), 8);
+      assert.equal(await launchPage.locator(".product-related").count(), 0);
+      assert.doesNotMatch(
+        await launchPage.locator("main").textContent(),
+        /Cool Vest|Soğuk Yelek|Örme Başlık|Alüminize Elbise|İstasyon Üniforması/,
+      );
       assert.deepEqual(
         (await familyCards.locator("h3").allTextContents()).slice(0, 8),
         [
@@ -1240,6 +1245,43 @@ try {
       await launchPage.waitForURL("**/maximus-2-0-832551");
       ok(
         "product families show ordered clickable model cards; image, title, keyboard, parent return and mobile navigation work without category quote controls",
+      );
+      await launchPage.goto(origin + "/is-guvenligi/endustriyel-elbiseler", {
+        waitUntil: "networkidle",
+      });
+      const industrialNames = await launchPage
+        .locator(".family-model-grid h3")
+        .allTextContents();
+      assert.equal(industrialNames.length, 34);
+      for (const name of industrialNames)
+        assert.doesNotMatch(
+          name,
+          /Başlık|Eldiven|Baret|Vizör|Gözlük|Çorap|Kemer|Battaniye|Perde|Tozluk|Kolluk|İçlik/i,
+        );
+      await launchPage.goto(origin + "/is-guvenligi/endustriyel-eldiven", {
+        waitUntil: "networkidle",
+      });
+      assert.equal(
+        await launchPage.locator(".family-model-grid > li").count(),
+        5,
+      );
+      await launchPage
+        .locator(".family-model-grid .kg-product-card")
+        .first()
+        .click();
+      assert.equal(
+        await launchPage.locator(".product-parent-nav a").getAttribute("href"),
+        "/is-guvenligi/endustriyel-eldiven",
+      );
+      await launchPage.goto(origin + "/is-guvenligi/itfaiyeci-orme-baslik", {
+        waitUntil: "networkidle",
+      });
+      assert.equal(
+        await launchPage.locator(".family-model-grid > li").count(),
+        4,
+      );
+      ok(
+        "garment families exclude equipment while gloves and knitted hoods remain in their own categories with correct parent navigation",
       );
       await launchPage.goto(origin + "/is-guvenligi/yeni-panel-urunu", {
         waitUntil: "networkidle",
