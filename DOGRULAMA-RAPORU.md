@@ -222,3 +222,9 @@ Doğrulama:
 - Son Netlify yayını **`6ae0a56a72ae61494aefaaab`**. CMS taslağı/yayını **sürüm 6**; yalnızca 10 genel tasarım ve dört ürün rengi alanı güncellendi. Önceki yayın geri alma geçmişinde tutuldu; yazma sırasında sürüm çakışması kontrol edildi. Gerçek kayıt incelenen yayınla aynıdır; katalog ve tüm model detayları önceki sürümle birebir eşleşir. Yönetim API'si Supabase bağlantısını doğrular. İzlenen **900 dosyada** özel anahtar/parola/hesap özeti eşleşmesi bulunmadı.
 
 Canlı tarayıcı kontrolleri TLS doğrulamasını koruyan salt okunur aktarımı kullandı; stil değiştirilmiş önizleme, canlı doğrulama sonucu olarak sayılmadı. Başlatılan geliştirme ve üretim önizlemeleri kapatıldı. Ücretli hizmet veya alan adı işlemi yapılmadı.
+
+## Tarayıcı sekmesi logo simgesi · 30 Ekim 2026
+
+Turuncu zemin üzerindeki tek harfli `icon.svg` kaldırıldı; daha önce hazırlanan Kıvanç amblemi sekme simgesine uyarlandı. Next.js'in dosya tabanlı simge düzeni kullanılır: `favicon.ico` içinde 16/32/48 px RGBA kareleri, `icon.png` için 192×192 px ve `apple-icon.png` için 180×180 px. Toplam dosya boyutu **53.155 bayt**. ICO içindeki PNG kareleri, Next.js görüntü çözücüsünün beklediği dört kanallı biçimdedir.
+
+Netlify üretim derlemesi başarılı; canlı yayın **`6ae428f7a5744c3093148949`**. Ana sayfa, Maximus ürün sayfası ve yönetim panelinde üç yeni simge bağlantısı bulundu; eski `icon.svg` bağlantısı yoktur. Simge adreslerinin tamamı HTTP 200 ve doğru görüntü türünü döndürür. Canlı dosyaların baytları kaynak dosyalarla birebir karşılaştırıldı; ICO karelerinin ölçüleri ve RGBA kanalları ayrıca doğrulandı. CMS verilerine yazılmadı, sayfa tasarımı ve ürün içeriği değiştirilmedi.
