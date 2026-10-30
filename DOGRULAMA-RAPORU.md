@@ -1,5 +1,30 @@
 # Yayın hazırlığı ve doğrulama
 
+## Beş dil ve çeviri yönetimi · 30 Ekim 2026
+
+Türkçeye ek olarak **İngilizce `/en`, İspanyolca `/es`, Arapça `/ar` ve Almanca `/de`** mevcut ücretsiz deneme sitesinde yayında. Kod **`6f1c222`**, Netlify yayını **`6ae478617a7a5cad24ec3c71`**. Üst menüdeki dünya simgesi beş dili açar. Dil değiştirme aynı sayfayı, URL sorgusunu ve bölüm işaretini korur; teklif sepeti sıfırlanmaz. Türkçe adresler değişmedi.
+
+Menü, ana sayfa, ortak kontroller, katalog adları, teklif/iletişim/aramanın temel alanları ve Maximus içeriği için dört dilde **571 kaynak metin karşılığı** siteyle birlikte saklanır. Marka, model, standart ve ürün kodları; fotoğraflar, 360° açı/kareleri ve dosya adresleri korunur. Arapçada sağdan sola düzen, uygun yazı ölçüleri, telefon/e-posta yönü ve aynı yönde kalan ürün görselleri kullanılır. Belge ve haber tarihleri seçilen dilde biçimlenir. Dil bağlantıları, canonical ve hreflang alanları, çok dilli site haritası ve arama/sepet robots kuralları eklendi.
+
+Panelde **Diller ve çeviriler** bölümünden dil, içerik bölümü veya ürün koduyla aranabilir. Kaynak metin ve seçilen dilin karşılığı birlikte görülür; taslak kaydetme, o dilde gerçek önizleme, yayınlama ve varsayılana dönüş desteklenir. Aynı kaynak metnin özel çevirisi yalnızca seçilen dilde kullanıldığı tüm yerlere uygulanır. Kaynak değişirse eski özel çeviri yeni metne uygulanmaz. `{count}` ve benzeri değişkenler kayıt doğrulamasıyla korunur. Kullanılmayan dil düzenlemeleri ziyaretçiye gönderilen içerikten çıkarılır; asıl yönetim kaydı korunur.
+
+**Kapsam:** Eski uzun teknik, hukuk ve arşiv metinlerinin tamamı çevrilmiş değildir. Çevirisi olmayan kaynak silinmez; panelde bekleyen alanlar bulunabilir. Ayrıntılı özgün Türkçe metin görülen sayfalarda Türkçe sayfaya bağlantı sunulur. PDF ve görsellerin içindeki yazılar çevrilmez. Bu başlangıç kapsamı kullanım kılavuzunda da açıkça belirtilmiştir. Ücretli veya ziyaretçi başına çalışan bir çeviri API'si eklenmedi.
+
+Dil adresleri Next.js'in gerçek `[lang]` sayfa ağacında çalışır; Türkçe için sunucu içi adres eşlemesi kullanılır. Dil seçimi URL kök parametresinden alınır, istemcinin gönderdiği dil başlığına güvenilmez. Ayrı bir yönlendirme/Edge paketi veya ek Deno indirmesi gerekmez. Yönetim panelinin ayrı kök düzeni ve Türkçe dili korunur. Uygulama genelindeki 404 görünümü için Next.js 16'nın belgelenmiş `globalNotFound` seçeneği kullanılır.
+
+Doğrulama:
+
+- Üretim derlemesi, `npm run typecheck` ve Netlify üretim paketlemesi başarılı. Yayınlanan paket, ek Edge yönlendirme işlevi içermez.
+- Playwright ile **56 CMS kontrolü yeniden geçti**: eski Türkçe akışlar, dinamik ürün/sayfa, admin görsel/360° düzenleme, aile kartları, önizleme, kayıt/yayın, formlar ve mobil görünüm korundu.
+- `npm run test:languages`: **15 kontrol geçti**. Beş dilin HTML `lang/dir`, menü/banner, adres/metadata, kategori/model geçişi, 360° ve teklif kontrolleri; diller arasında tek sepet kaydı ve miktar; sorgu/bölüm işaretinin korunması; Arapça kategori bağlantıları; dört dilde mobil menü/banner/form gönderimi; admin çevirisinin izole taslak önizlemesi ve yayını; hatalı anahtarın reddi, site haritası, korunan uçlar ve çevrilmiş form hataları doğrulandı. Testler farklı sunucu bağlama adresiyle de çalıştırıldı. Gerçek hesaba veya canlı içeriğe test yazması yapılmadı.
+- Gerçek içerik kopyasıyla dört dilde masaüstü/mobil ana sayfalar ve Arapça Maximus görünümünden **10 ekran görüntüsü** alındı. Arapça masaüstü başlık ölçüleri ve telefon yönü görsel incelemeyle düzeltildi; ürün fotoğrafları aynalanmadı.
+- Yayından sonra canlıda **10 kontrol grubu geçti**: beş dilde gerçek ana sayfa, dil seçimi, metadata, katalogdan sekiz modele ve yedi açılı Maximus'a geçiş; dört dilde mobil dil menüsü; çalışan yönetici girişi/Supabase ve girişsiz içerik API'sinin 401 dönmesi. Tarayıcı çalışma hatası veya yatay taşma görülmedi.
+- Canlı Türkçe Maximus'un **7 kontrol grubu** yeniden geçti: gerçek ürün metni, yedi WebP kare, fare/klavye/dokunma, açı halkası, galeri, oynatma ve tam ekran; ücretsiz hosting rozeti ile mobil teklif alanının yerleşimi korundu.
+- Yayın sonrası Supabase taslak/yayın kaydı işlem öncesi kopyayla birebir aynı, **sürüm 6** ve **187 ürün/kategori** korundu. Yönetim API'si `configured:true, backend:supabase` döndürür. **931 kaynak dosyasında** özel anahtar veya yerel hesap özeti eşleşmesi bulunmadı.
+
+Canlı tarayıcı incelemesi yalnızca GET/HEAD aktarımı ve tam eşleşen herkese açık medya adresleriyle yapıldı; üst HTTPS bağlantılarının sertifika denetimi korundu. Test hesapları ve geçici veriler temizlendi. Kullanım adımları [ADMIN-KILAVUZU.md](ADMIN-KILAVUZU.md) içindeki **Diller ve çeviriler** bölümündedir.
+
+
 ## Görsel sayfa ve ürün yönetimi · 30 Ekim 2026
 
 Yeni yönetim stüdyosu mevcut ücretsiz deneme sitesinde yayında: **https://kivancgroup-deneme.netlify.app/admin**. Kod yayını **`cbe5153`**, Netlify yayını **`6ae44aba8d362228daec3bd0`**. Yönetici hesabı/parolası, alan adı ve ücretsiz plan değiştirilmedi.
