@@ -1,4 +1,7 @@
 "use client";
+import {useLocale} from "@/i18n/context";
+import {localizedHref} from "@/i18n/locales";
+import { splitLocale } from "@/i18n/locales";
 import { usePathname } from "next/navigation";
 import { useSection } from "@/cms/context";
 import type { PageLayout } from "@/cms/workspace";
@@ -10,7 +13,8 @@ export default function ManagedPage({
 }: {
   children: React.ReactNode;
 }) {
-  const path = usePathname(),
+  const locale=useLocale();
+  const path = splitLocale(usePathname()).path,
     layouts = useSection("pageLayouts");
   const layout = (layouts?.pages as Record<string, PageLayout>)?.[path];
   const replace = path !== "/" && layout?.replaceContent;
@@ -37,7 +41,7 @@ export default function ManagedPage({
                     block.buttonLabel && block.buttonHref ? (
                       <a
                         className="btn-outline"
-                        href={block.buttonHref}
+                        href={localizedHref(block.buttonHref,locale)}
                         target={
                           block.buttonHref.startsWith("http") ||
                           block.buttonHref.toLowerCase().includes(".pdf")

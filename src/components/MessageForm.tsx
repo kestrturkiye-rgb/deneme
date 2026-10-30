@@ -1,8 +1,9 @@
 "use client";
+import {useLocale} from "@/i18n/context";
 
 import { useSection } from "@/cms/context";
 
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { useState } from "react";
 
 type QuoteItem = { name: string; qty: number; href: string };
@@ -26,6 +27,7 @@ export default function MessageForm({
   onSuccess,
   subject,
 }: Props) {
+  const locale=useLocale();
   const cms = useSection("components-MessageForm");
 
   const [status, setStatus] = useState<Status>("idle");
@@ -42,7 +44,7 @@ export default function MessageForm({
     try {
       const res = await fetch("/api/mesaj", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "X-Site-Language": locale },
         body: JSON.stringify({
           kind,
           name: data.get("name"),
@@ -59,7 +61,7 @@ export default function MessageForm({
       const result = (await res.json().catch(() => ({}))) as { error?: string };
 
       if (!res.ok) {
-        setError(result.error ?? "Mesaj gönderilemedi. Lütfen tekrar deneyin.");
+        setError(result.error ?? cms.sendError);
         setStatus("error");
         return;
       }
@@ -69,7 +71,7 @@ export default function MessageForm({
       onSuccess?.();
     } catch {
       setError(
-        "Bağlantı hatası. İnternet bağlantınızı kontrol edip tekrar deneyin.",
+        cms.connectionError,
       );
       setStatus("error");
     }

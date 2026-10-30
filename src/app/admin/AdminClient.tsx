@@ -12,6 +12,7 @@ import { uploadMedia } from "@/lib/upload-media";
 import Inbox from "./Inbox";
 import ProductStudio, { type UpdateContent } from "./ProductStudio";
 import PageWorkspace from "./PageWorkspace";
+import TranslationStudio from "./TranslationStudio";
 
 type Media = {
   name: string;
@@ -839,6 +840,7 @@ function AdminClientInner() {
             ["data-divisions", "Ürünler ve kategoriler"],
             ["components-Header", "Menü ve logo"],
             ["design", "Renkler ve görünüm"],
+            ["translations", "Diller ve çeviriler"],
           ].map(([key, title]) => (
             <button
               key={key}
@@ -935,6 +937,7 @@ function AdminClientInner() {
                     {
                       overview: "Genel bakış",
                       pages: "Sayfalar ve görseller",
+                      translations: "Diller ve çeviriler",
                       inbox: "Gelen talepler",
                       media: "Medya kütüphanesi",
                       history: "Sürüm geçmişi",
@@ -985,6 +988,7 @@ function AdminClientInner() {
                     {
                       overview: "Hoş geldiniz.",
                       pages: "Sayfalar ve görseller",
+                      translations: "Diller ve çeviriler",
                       inbox: "Gelen talepler",
                       media: "Medya kütüphanesi",
                       history: "Sürüm geçmişi ve yedek",
@@ -1231,6 +1235,15 @@ function AdminClientInner() {
                     onChange={(value) => changeSection("home", value)}
                   />
                 }
+              />
+            </div>
+          )}
+          {active === "translations" && (
+            <div className="adm-editor-card">
+              <TranslationStudio
+                content={content}
+                update={updateContent}
+                onPreview={preview}
               />
             </div>
           )}

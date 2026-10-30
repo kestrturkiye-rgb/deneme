@@ -1,3 +1,4 @@
+import { locales, localizedHref } from "@/i18n/locales";
 import { isPreviewDeployment } from "@/lib/deployment";
 import type { MetadataRoute } from "next";
 import { getSection } from "@/cms/server";
@@ -10,7 +11,14 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/admin", "/api/", "/teklif-sepeti", "/arama"],
+      disallow: [
+        "/admin",
+        "/api/",
+        ...locales.flatMap((locale) => [
+          localizedHref("/teklif-sepeti", locale),
+          localizedHref("/arama", locale),
+        ]),
+      ],
     },
     sitemap: base + "/sitemap.xml",
   };

@@ -1,5 +1,5 @@
 import { getSection } from "@/cms/server";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import SiteImage from "./SiteImage";
 export default async function About() {
   const c = await getSection("components-About");

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { getSection } from "@/cms/server";
 import { productHref, type Product } from "@/data/catalog";
 import type { Detail } from "@/data/details";

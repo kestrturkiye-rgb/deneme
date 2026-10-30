@@ -320,7 +320,9 @@
     "inquiryPlaceholder": "Ürün, kullanım alanı, adet ve özel taleplerinizi yazabilirsiniz.",
     "inquirySubmit": "Teklif talebini ilet",
     "receivedTitle": "Talebiniz alındı.",
-    "receivedText": "Talebiniz ilgili ekibimize iletildi. Paylaştığınız iletişim bilgileri üzerinden size dönüş yapacağız."
+    "receivedText": "Talebiniz ilgili ekibimize iletildi. Paylaştığınız iletişim bilgileri üzerinden size dönüş yapacağız.",
+    "sendError": "Mesaj gönderilemedi. Lütfen tekrar deneyin.",
+    "connectionError": "Bağlantı hatası. İnternet bağlantınızı kontrol edip tekrar deneyin."
   },
   "components-MobileMenu": {
     "metin01": "Menüyü aç",
@@ -666,7 +668,8 @@
     "metin07": "/iletisim",
     "metin08": "bize yazın",
     "metin09": ".",
-    "metin10": "· "
+    "metin10": "· ",
+    "resultsTemplate": "“{query}” için sonuçlar"
   },
   "app-dokumanlar": {
     "metadata": {
@@ -10594,5 +10597,13 @@
   },
   "pageLayouts": {
     "pages": {}
+  },
+  "localization": {
+    "translations": {
+      "en": {},
+      "es": {},
+      "ar": {},
+      "de": {}
+    }
   }
 }

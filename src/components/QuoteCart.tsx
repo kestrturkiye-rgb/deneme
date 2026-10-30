@@ -2,16 +2,46 @@
 
 import { useSection } from "@/cms/context";
 
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { useState } from "react";
 import { useCart } from "./CartProvider";
 import MessageForm from "./MessageForm";
 
 export default function QuoteCart() {
   const cms = useSection("components-QuoteCart");
+  const catalog = useSection("data-divisions");
+  const details = useSection("data-details");
 
   const { items, ready, setQty, remove, clear } = useCart();
   const [sent, setSent] = useState(false);
+  const displayItems = items.map((item) => {
+    const [slug, variantId, colorId, configurationId] = item.slug.split("--");
+    const product = catalog.divisions
+      .flatMap((d) => d.groups.flatMap((g) => g.items))
+      .find((p) => p.slug === slug);
+    const detail = (
+      details.details as Record<string, import("@/data/details").Detail>
+    )[slug];
+    if (!product) return item;
+    const variant = detail?.variants?.find((v) => v.id === variantId);
+    const color = (variant?.colors || detail?.colors)?.find(
+      (c) => c.id === colorId,
+    );
+    const config = (variant?.configurations || detail?.configurations)?.find(
+      (c) => c.id === configurationId,
+    );
+    return {
+      ...item,
+      name: [
+        product.name,
+        variant?.label,
+        color?.label,
+        config ? `${config.composition} / ${config.outerLayer}` : undefined,
+      ]
+        .filter(Boolean)
+        .join(" – "),
+    };
+  });
 
   if (!ready) {
     return <p className="text-muted">{cms.metin01}</p>;
@@ -65,7 +95,7 @@ export default function QuoteCart() {
         </div>
 
         <ul className="divide-y divide-mist-dark">
-          {items.map((item) => (
+          {displayItems.map((item) => (
             <li
               key={item.slug}
               className="flex flex-wrap items-center gap-4 py-5"
@@ -92,7 +122,7 @@ export default function QuoteCart() {
               <button
                 type="button"
                 onClick={() => remove(item.slug)}
-                aria-label={`${item.name} ürününü sepetten çıkar`}
+                aria-label={`${cms.metin15}: ${item.name}`}
                 className="text-sm text-muted underline underline-offset-4 transition-colors hover:text-brand-600"
               >
                 {cms.metin15}
@@ -107,7 +137,7 @@ export default function QuoteCart() {
         <div className="mt-6">
           <MessageForm
             kind="quote"
-            items={items.map((i) => ({
+            items={displayItems.map((i) => ({
               name: i.name,
               qty: i.qty,
               href: i.href,

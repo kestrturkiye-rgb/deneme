@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { getSection } from "@/cms/server";
 import ArrowUpRight from "./ArrowUpRight";
 import BrandLines from "./BrandLines";

@@ -1,4 +1,5 @@
 "use client";
+import {useLocale} from "@/i18n/context";
 import { useMemo, useState } from "react";
 import { useSection } from "@/cms/context";
 import type { Product } from "@/data/catalog";
@@ -11,12 +12,13 @@ export default function ProductDiscoveryClient({
   items: Item[];
   divisions: { slug: string; title: string }[];
 }) {
+  const locale=useLocale();
   const c = useSection("components-ProductDiscovery");
   const [filter, setFilter] = useState("all"),
     [query, setQuery] = useState(""),
     [visible, setVisible] = useState(c.limit);
   const filtered = useMemo(() => {
-    const q = query.trim().toLocaleLowerCase("tr");
+    const q = query.trim().toLocaleLowerCase(locale);
     const result = items.filter(
       (item) =>
         (filter === "all" || item.divisionSlug === filter) &&
@@ -30,7 +32,7 @@ export default function ProductDiscoveryClient({
             " " +
             item.slug
           )
-            .toLocaleLowerCase("tr")
+            .toLocaleLowerCase(locale)
             .includes(q)),
     );
     if (filter === "all" && !q)
@@ -40,7 +42,7 @@ export default function ProductDiscoveryClient({
         return (aRank < 0 ? 999 : aRank) - (bRank < 0 ? 999 : bRank);
       });
     return result;
-  }, [items, filter, query, c.featuredSlugs]);
+  }, [items, filter, query, c.featuredSlugs, locale]);
   function clear() {
     setFilter("all");
     setQuery("");

@@ -1,4 +1,5 @@
 "use client";
+import {useLocale} from "@/i18n/context";
 import { useState, type ReactNode } from "react";
 
 export default function DocumentLibrary({
@@ -13,10 +14,11 @@ export default function DocumentLibrary({
     noResults: string;
   };
 }) {
+  const locale=useLocale();
   const [query, setQuery] = useState("");
   const normalize = (value: string) =>
     value
-      .toLocaleLowerCase("tr")
+      .toLocaleLowerCase(locale)
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .replaceAll("ı", "i");

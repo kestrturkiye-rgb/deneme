@@ -1,3 +1,5 @@
+import { splitLocale } from "@/i18n/locales";
+import { localizeContent } from "@/i18n/content";
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
@@ -7,10 +9,14 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function GET(request: Request) {
   const url = new URL(request.url);
-  const target = url.searchParams.get("path") || "/";
+  const requested = url.searchParams.get("path") || "/";
+  const { locale, path: target } = splitLocale(requested);
   if (target.length > 350 || !target.startsWith("/") || target.startsWith("//"))
     return new Response("Bulunamadı", { status: 404 });
-  const content = (await readState()).published;
+  const content = localizeContent(
+    (await readState()).published,
+    locale === "ar" ? "en" : locale,
+  );
   const root = content["app-layout"];
   const routes: Record<string, { title: string; subtitle: string }> = {
     "/": {

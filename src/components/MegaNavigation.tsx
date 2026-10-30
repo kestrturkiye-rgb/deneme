@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import ArrowUpRight from "./ArrowUpRight";
 import { usePathname } from "next/navigation";
 import { useSection } from "@/cms/context";
@@ -206,7 +206,7 @@ export default function MegaNavigation({
                       <h2>
                         <Link
                           href={
-                            "/" + division.slug + "#" + slugify(group.title)
+                            "/" + division.slug + "#" + (group.anchor || slugify(group.title))
                           }
                           onClick={() => setActive(null)}
                         >

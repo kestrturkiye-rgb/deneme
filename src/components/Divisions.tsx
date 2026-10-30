@@ -1,25 +1,27 @@
 "use client";
+import type {Division} from "@/data/divisions";
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { useSection } from "@/cms/context";
 import ArrowUpRight from "./ArrowUpRight";
 import SiteImage from "./SiteImage";
 import { slugify } from "@/cms/schema";
 export default function Divisions() {
   const c = useSection("components-Divisions");
-  const catalog = useSection("data-divisions");
+  const catalog = useSection("data-divisions") as {divisions:Division[]};
   const [selected, setSelected] = useState(0);
   const current = c.divisions[selected] || c.divisions[0];
   const division = catalog.divisions.find(
     (item) => "/" + item.slug === current?.href,
   );
   const destination = (label: string) => {
-    const key = slugify(label);
-    const group = division?.groups.find((item) => slugify(item.title) === key);
-    if (group) return current.href + "#" + slugify(group.title);
+    const normalize = (value: string) => value.normalize("NFKC").trim().toLocaleLowerCase();
+    const key = normalize(label);
+    const group = division?.groups.find((item) => normalize(item.title) === key);
+    if (group) return current.href + "#" + (group.anchor || slugify(group.title));
     const product = division?.groups
       .flatMap((item) => item.items)
-      .find((item) => slugify(item.name) === key);
+      .find((item) => normalize(item.name) === key);
     return product ? current.href + "/" + product.slug : current.href;
   };
   return (

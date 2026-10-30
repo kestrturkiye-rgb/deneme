@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import type { CustomBlock } from "@/cms/pages";
 import ContentBlockView from "./ContentBlockView";
 import DocumentLink from "./DocumentLink";

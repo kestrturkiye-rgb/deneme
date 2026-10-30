@@ -1,6 +1,6 @@
 import ArrowUpRight from "./ArrowUpRight";
 import { getSection } from "@/cms/server";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { getLegislation } from "@/data/documents";
 import { documentAvailable } from "@/lib/document-availability";
 

@@ -16,7 +16,8 @@
     "test:assets": "node scripts/test-assets.mjs",
     "test:site": "node scripts/test-site.mjs",
     "test:video": "node scripts/test-video.mjs",
-    "test:product-images": "node --use-env-proxy scripts/test-product-images.mjs"
+    "test:product-images": "node --use-env-proxy scripts/test-product-images.mjs",
+    "test:languages": "node scripts/test-languages.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

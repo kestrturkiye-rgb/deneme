@@ -1,3 +1,4 @@
+import { textId } from "@/i18n/keys";
 import defaults from "./defaults.json";
 export type Schema = {
   type: "string" | "number" | "boolean" | "array" | "object" | "record";
@@ -56,6 +57,9 @@ function merge(a: Schema, b: Schema): Schema {
 export const schemas: Record<string, Schema> = Object.fromEntries(
   Object.entries(defaults).map(([key, value]) => [key, infer(value)]),
 );
+for (const key of ["sendError", "connectionError"])
+  schemas["components-MessageForm"].fields![key].optional = true;
+schemas["app-arama"].fields!.resultsTemplate.optional = true;
 for (const key of ["heroVideo", "videoPlayLabel", "videoPauseLabel"])
   schemas["components-Hero"].fields![key].optional = true;
 schemas["components-Hero"].fields!.extraStories.item!.fields!.video.optional =
@@ -230,6 +234,22 @@ schemas.pageLayouts = {
   }),
   optional: true,
 };
+schemas.localization = {
+  ...object({
+    translations: object(
+      Object.fromEntries(
+        ["en", "es", "ar", "de"].map((locale) => [
+          locale,
+          {
+            type: "record" as const,
+            item: object({ source: string, text: string }),
+          },
+        ]),
+      ),
+    ),
+  }),
+  optional: true,
+};
 export function emptyValue(schema: Schema): unknown {
   if (schema.initial !== undefined) return structuredClone(schema.initial);
   if (schema.type === "array") return [];
@@ -348,6 +368,19 @@ export function validateContent(value: unknown): string[] {
   validate(value, { type: "object", fields: schemas }, "İçerik", errors);
   if (errors.length) return errors;
   const c = value as typeof defaults;
+  const translations = c.localization?.translations as
+    | Record<string, Record<string, { source: string; text: string }>>
+    | undefined;
+  for (const [locale, entries] of Object.entries(translations || {}))
+    for (const [id, entry] of Object.entries(entries)) {
+      if (id !== textId(entry.source))
+        errors.push("Çeviri anahtarı kaynak metinle eşleşmiyor: " + locale);
+      const tokens = (text: string) =>
+        [...new Set(text.match(/\{[a-zA-Z]+\}/g) || [])].sort().join(",");
+      if (tokens(entry.source) !== tokens(entry.text))
+        errors.push("Çevirideki {değişkenler} korunmalı: " + locale);
+    }
+
   try {
     const url = new URL(c["app-layout"].metadata.metadataBase);
     if (!["http:", "https:"].includes(url.protocol)) throw new Error();

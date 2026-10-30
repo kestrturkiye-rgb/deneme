@@ -1,6 +1,6 @@
 import ArrowUpRight from "./ArrowUpRight";
 import { getSection } from "@/cms/server";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 export default async function Quality() {
   const c = await getSection("components-Quality");
   return (

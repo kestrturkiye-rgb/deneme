@@ -1,4 +1,5 @@
 "use client";
+import { splitLocale } from "@/i18n/locales";
 import SiteImage from "./SiteImage";
 import BrandLines from "./BrandLines";
 import { usePathname } from "next/navigation";
@@ -20,7 +21,7 @@ export default function PageBanner({
   eyebrow,
   caption,
 }: Props) {
-  const path = usePathname(),
+  const path = splitLocale(usePathname()).path,
     layouts = useSection("pageLayouts");
   const banner = (layouts?.pages as Record<string, PageLayout>)?.[path]?.banner;
   if (banner?.hidden) return null;

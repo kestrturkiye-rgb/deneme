@@ -1,9 +1,12 @@
+import {getLocale} from "@/i18n/server";
+import {intlLocales} from "@/i18n/locales";
 import ArrowUpRight from "./ArrowUpRight";
 import { getSection } from "@/cms/server";
 import { getNews, newsHref } from "@/data/news";
 import NewsVisual from "./NewsVisual";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 export default async function NewsPreview() {
+  const locale=await getLocale();
   const c = await getSection("components-NewsPreview");
   const news = [...(await getNews())]
     .sort((a, b) => b.date.localeCompare(a.date))
@@ -41,7 +44,7 @@ export default async function NewsPreview() {
               </Link>
               <div className="kg-news-meta">
                 <time dateTime={item.date}>
-                  {new Intl.DateTimeFormat("tr-TR", {
+                  {new Intl.DateTimeFormat(intlLocales[locale], {
                     day: "2-digit",
                     month: "long",
                     year: "numeric",

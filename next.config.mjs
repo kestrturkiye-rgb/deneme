@@ -7,6 +7,7 @@ const mediaHost = process.env.SUPABASE_URL
   ? new URL(process.env.SUPABASE_URL).hostname
   : "";
 const nextConfig = {
+  experimental: { globalNotFound: true },
   env: {
     NEXT_PUBLIC_MEDIA_HOST: mediaHost,
     NEXT_PUBLIC_IMAGE_SERVICE: process.env.NETLIFY ? "netlify" : "next",
@@ -35,7 +36,22 @@ const nextConfig = {
     ],
   },
   async redirects() {
-    return legacyPaths.map((entry) => ({ ...entry, permanent: true }));
+    return [
+      { source: "/tr/:path*", destination: "/:path*", permanent: true },
+      ...legacyPaths.map((entry) => ({ ...entry, permanent: true })),
+    ];
+  },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: "/", destination: "/tr" },
+        {
+          source:
+            "/:path((?!tr(?:/|$)|en(?:/|$)|es(?:/|$)|ar(?:/|$)|de(?:/|$)|admin(?:/|$)|api(?:/|$)|_next(?:/|$)|images(?:/|$)|fonts(?:/|$)|docs(?:/|$)|media(?:/|$)|paylasim(?:/|$)|.*\\.[a-zA-Z0-9]+$).*)",
+          destination: "/tr/:path*",
+        },
+      ],
+    };
   },
   async headers() {
     return [

@@ -2,7 +2,7 @@
 
 import { useSection } from "@/cms/context";
 
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { useState } from "react";
 import { useCart } from "./CartProvider";
 

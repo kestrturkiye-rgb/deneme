@@ -1,3 +1,5 @@
+import { translateText } from "@/i18n/content";
+import { isLocale } from "@/i18n/locales";
 import { NextResponse } from "next/server";
 import { receiveInquiry, updateInquiry } from "@/cms/inquiries";
 import { backend, database } from "@/cms/persistence";
@@ -58,8 +60,18 @@ function multiLine(value: unknown, max: number) {
 }
 
 export async function POST(request: Request) {
+  const selectedLanguage = request.headers.get("x-site-language") || "tr";
+  const language = isLocale(selectedLanguage) ? selectedLanguage : "tr";
+  const json = (body: { error?: string; ok?: boolean }, init?: ResponseInit) =>
+    NextResponse.json(
+      body.error
+        ? { ...body, error: translateText(body.error, language) }
+        : body,
+      init,
+    );
+
   if (await rateLimited(request)) {
-    return NextResponse.json(
+    return json(
       {
         error:
           "Çok fazla deneme yaptınız. Lütfen birkaç dakika sonra tekrar deneyin.",
@@ -71,21 +83,21 @@ export async function POST(request: Request) {
   let body: Record<string, unknown>;
   try {
     if (Number(request.headers.get("content-length") || 0) > 64_000)
-      return NextResponse.json({ error: "İstek çok büyük." }, { status: 413 });
+      return json({ error: "İstek çok büyük." }, { status: 413 });
     const raw = await request.text();
     if (raw.length > 64_000)
-      return NextResponse.json({ error: "İstek çok büyük." }, { status: 413 });
+      return json({ error: "İstek çok büyük." }, { status: 413 });
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed))
       throw new Error("Invalid body");
     body = parsed;
   } catch {
-    return NextResponse.json({ error: "Geçersiz istek." }, { status: 400 });
+    return json({ error: "Geçersiz istek." }, { status: 400 });
   }
 
   // Bot tuzağı doluysa sessizce başarılı say
   if (typeof body.website === "string" && body.website.trim() !== "") {
-    return NextResponse.json({ ok: true });
+    return json({ ok: true });
   }
 
   const kind =
@@ -101,22 +113,16 @@ export async function POST(request: Request) {
   const message = multiLine(body.message, 4000);
 
   if (!name) {
-    return NextResponse.json(
-      { error: "Lütfen adınızı yazın." },
-      { status: 400 },
-    );
+    return json({ error: "Lütfen adınızı yazın." }, { status: 400 });
   }
   if (!EMAIL_RE.test(email)) {
-    return NextResponse.json(
+    return json(
       { error: "Lütfen geçerli bir e-posta adresi girin." },
       { status: 400 },
     );
   }
   if (kind !== "quote" && !message) {
-    return NextResponse.json(
-      { error: "Lütfen mesajınızı yazın." },
-      { status: 400 },
-    );
+    return json({ error: "Lütfen mesajınızı yazın." }, { status: 400 });
   }
 
   const rawItems = Array.isArray(body.items) ? body.items.slice(0, 50) : [];
@@ -135,14 +141,11 @@ export async function POST(request: Request) {
     .filter((i) => i.name);
 
   if (kind === "quote" && items.length === 0) {
-    return NextResponse.json(
-      { error: "Teklif sepetiniz boş." },
-      { status: 400 },
-    );
+    return json({ error: "Teklif sepetiniz boş." }, { status: 400 });
   }
 
   if (body.consent !== true)
-    return NextResponse.json(
+    return json(
       { error: "Lütfen gizlilik bilgilendirmesini okuyup onaylayın." },
       { status: 400 },
     );
@@ -159,7 +162,7 @@ export async function POST(request: Request) {
       consent: true,
     });
   } catch {
-    return NextResponse.json(
+    return json(
       {
         error:
           "Talebiniz kaydedilemedi. Lütfen e-posta veya telefonla bize ulaşın.",
@@ -170,7 +173,7 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.CONTACT_FROM;
   const to = process.env.CONTACT_TO || "info@kivancgroup.com";
-  if (!apiKey || !from) return NextResponse.json({ ok: true });
+  if (!apiKey || !from) return json({ ok: true });
   const lines = [
     kind !== "contact" ? "Yeni teklif talebi" : "Yeni iletişim mesajı",
     "",
@@ -214,5 +217,5 @@ export async function POST(request: Request) {
       await updateInquiry(inquiry.id, { delivery: "failed" });
     } catch {}
   }
-  return NextResponse.json({ ok: true });
+  return json({ ok: true });
 }

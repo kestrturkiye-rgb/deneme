@@ -1,5 +1,7 @@
 "use client";
+import { splitLocale } from "@/i18n/locales";
 import VisualEffects from "./VisualEffects";
+import OriginalLanguageNote from "./OriginalLanguageNote";
 import ManagedPage from "./ManagedPage";
 import { usePathname } from "next/navigation";
 import { ContentProvider } from "@/cms/context";
@@ -18,7 +20,7 @@ export default function SiteFrame({
   children: React.ReactNode;
   preview: boolean;
 }) {
-  const path = usePathname();
+  const path = splitLocale(usePathname()).path;
   if (path.startsWith("/admin")) return <>{children}</>;
   const d = content.design;
   const style: Record<string, string | number> = {
@@ -73,6 +75,7 @@ export default function SiteFrame({
         <main id="icerik">
           <ManagedPage>{children}</ManagedPage>
         </main>
+        <OriginalLanguageNote content={content} />
         {footer}
         <VisualEffects />
       </div>

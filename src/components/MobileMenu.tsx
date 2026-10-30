@@ -1,7 +1,7 @@
 "use client";
 import ArrowUpRight from "./ArrowUpRight";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { useSection } from "@/cms/context";
 type Item = {
   label: string;

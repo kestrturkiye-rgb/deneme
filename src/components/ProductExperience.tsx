@@ -1,7 +1,9 @@
 "use client";
+import {useLocale} from "@/i18n/context";
+import {localizedHref} from "@/i18n/locales";
 import BrandLines from "./BrandLines";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import { useSection } from "@/cms/context";
 import Product360 from "./Product360";
 import AddToQuote from "./AddToQuote";
@@ -33,6 +35,7 @@ type Props = {
   relatedProduct?: { href: string; name: string; image?: string };
 };
 export default function ProductExperience(props: Props) {
+  const locale=useLocale();
   const c = useSection("components-ProductExperience");
   const [variant, setVariant] = useState(0),
     [selected, setSelected] = useState(0),
@@ -88,7 +91,7 @@ export default function ProductExperience(props: Props) {
     setConfigurationId("");
   }
   async function share() {
-    const url = new URL(props.href, window.location.origin).href;
+    const url = new URL(localizedHref(props.href,locale), window.location.origin).href;
     try {
       if (navigator.share) {
         await navigator.share({ title: props.name, url });

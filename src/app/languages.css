@@ -1,0 +1,206 @@
+.kg-language {
+  position: relative;
+  flex-shrink: 0;
+  z-index: 105;
+}
+.kg-language > summary {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 5px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--kg-text, #f5f2eb);
+}
+.kg-language > summary::-webkit-details-marker {
+  display: none;
+}
+.kg-language nav {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + 8px);
+  width: 190px;
+  padding: 6px;
+  background: #20282c;
+  border: 1px solid #485156;
+  border-radius: 8px;
+  box-shadow: 0 16px 45px #0006;
+  max-height: 70vh;
+  overflow: auto;
+}
+.kg-language nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.kg-language nav a[aria-current="true"] {
+  background: #f26a2126;
+  color: #ff9655;
+}
+.kg-language nav a:hover {
+  background: #ffffff12;
+}
+.kg-language nav small {
+  font-size: 11px;
+  opacity: 0.65;
+}
+.kg-language summary:focus-visible,
+.kg-language a:focus-visible {
+  outline: 2px solid #ff9655;
+  outline-offset: 2px;
+}
+/* Arabic uses native RTL flow; product images and technical codes keep their orientation. */
+html[lang="ar"] .site-shell {
+  font-family: Tahoma, Arial, sans-serif;
+  letter-spacing: 0;
+}
+html[lang="ar"] .site-shell h1,
+html[lang="ar"] .site-shell h2,
+html[lang="ar"] .site-shell h3 {
+  font-family: Tahoma, Arial, sans-serif;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+html[dir="rtl"] .kg-eyebrow,
+html[dir="rtl"] .editorial-eyebrow,
+html[dir="rtl"] .product-kicker {
+  letter-spacing: 0;
+}
+html[dir="rtl"] .site-shell input[type="email"],
+html[dir="rtl"] .site-shell input[type="tel"],
+html[dir="rtl"] .p360,
+html[dir="rtl"] .product-photo {
+  direction: ltr;
+}
+html[dir="rtl"] .site-shell a[href^="tel:"],
+html[dir="rtl"] .site-shell a[href^="mailto:"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+html[dir="rtl"] .kg-language nav {
+  direction: rtl;
+}
+html[dir="rtl"] .kg-search form {
+  right: auto;
+  left: 0;
+}
+html[dir="rtl"] .kg-mobile-dialog nav,
+html[dir="rtl"] .kg-sector-tabs button,
+html[dir="rtl"] .kg-story-tabs button,
+html[dir="rtl"] .product-reference .product-content {
+  text-align: start;
+}
+html[dir="rtl"] .product-reference .product-side-label {
+  left: auto;
+  right: 2vw;
+}
+html[dir="rtl"] .product-reference .product-share {
+  margin-left: 0;
+  margin-right: auto;
+}
+html[dir="rtl"] .kg-hero-content {
+  direction: ltr;
+}
+html[dir="rtl"] .kg-hero-content > * {
+  direction: rtl;
+  text-align: right;
+}
+html[dir="rtl"] .kg-story-hero .kg-hero-content > div {
+  max-width: 100%;
+}
+@media (min-width: 901px) {
+  html[lang="ar"] .kg-home .kg-story-hero .kg-hero-content > * {
+    max-width: 620px;
+    width: 100%;
+  }
+  html[lang="ar"] .kg-home .kg-story-hero #hero-heading {
+    font-size: clamp(36px, 3.6vw, 54px);
+    line-height: 1.55;
+  }
+  .site-shell .kg-header-main {
+    gap: 22px;
+  }
+  .site-shell .kg-header-actions {
+    gap: 14px;
+  }
+  html:not([lang="tr"]) .kg-desktop-nav {
+    gap: 16px;
+  }
+  html:not([lang="tr"]) .kg-desktop-nav > a,
+  html:not([lang="tr"]) .kg-desktop-nav > button {
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.4;
+    text-align: center;
+  }
+  html[dir="rtl"] .kg-home .kg-story-hero .kg-hero-content {
+    margin-inline-start: 0;
+  }
+}
+@media (max-width: 1100px) and (min-width: 901px) {
+  html:not([lang="tr"]) .kg-header-main {
+    gap: 12px;
+  }
+  html:not([lang="tr"]) .kg-desktop-nav {
+    gap: 10px;
+  }
+  html:not([lang="tr"]) .kg-header-quote > span:first-child {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .kg-language > summary {
+    gap: 3px;
+    font-size: 11px;
+  }
+  .kg-language > summary svg {
+    width: 17px;
+  }
+  .site-shell .kg-header-actions {
+    gap: 10px;
+  }
+  html[lang="ar"] .kg-home .kg-hero-content h1 {
+    font-size: clamp(27px, 7.1vw, 40px);
+    line-height: 1.42;
+  }
+  .kg-language nav {
+    position: fixed;
+    top: calc(var(--site-header-height, 80px) - 5px);
+    inset-inline-end: 14px;
+    width: 190px;
+  }
+}
+.kg-original-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-block: 20px;
+  border-top: 1px solid #ffffff20;
+  color: #bfc5c8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.kg-original-note a {
+  flex-shrink: 0;
+  color: #ff9655;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .kg-original-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

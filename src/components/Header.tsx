@@ -1,11 +1,15 @@
+import LanguageSwitcher from "./LanguageSwitcher";
+import { localizedHref } from "@/i18n/locales";
+import { getLocale } from "@/i18n/server";
 import MegaNavigation from "./MegaNavigation";
 import { getDivisions } from "@/data/divisions";
 import { getSection } from "@/cms/server";
-import Link from "next/link";
+import Link from "@/components/LocalizedLink";
 import CartBadge from "./CartBadge";
 import MobileMenu from "./MobileMenu";
 import HeaderMetrics from "./HeaderMetrics";
 export default async function Header() {
+  const locale = await getLocale();
   const c = await getSection("components-Header");
   return (
     <header className="kg-header">
@@ -33,6 +37,7 @@ export default async function Header() {
         </Link>
         <MegaNavigation items={c.mainNav} divisions={await getDivisions()} />
         <div className="kg-header-actions">
+          <LanguageSwitcher />
           <details className="kg-search">
             <summary aria-label={c.searchLabel} title={c.searchLabel}>
               <svg
@@ -48,7 +53,7 @@ export default async function Header() {
                 <path d="m16 16 5 5" />
               </svg>
             </summary>
-            <form action="/arama" role="search">
+            <form action={localizedHref("/arama", locale)} role="search">
               <label>
                 <span className="sr-only">{c.metin06}</span>
                 <input

@@ -1,3 +1,4 @@
+import { locales, localizedHref } from "@/i18n/locales";
 import type { MetadataRoute } from "next";
 import { productHref, getProducts } from "@/data/catalog";
 import { getDivisions } from "@/data/divisions";
@@ -34,5 +35,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...(await getProducts()).map((p) => productHref(p)),
   ];
 
-  return paths.map((path) => ({ url: `${BASE}${path}` }));
+  return [...new Set(paths)].flatMap((path) =>
+    locales.map((locale) => ({
+      url: BASE + localizedHref(path || "/", locale),
+      alternates: {
+        languages: Object.fromEntries(
+          locales.map((language) => [
+            language,
+            BASE + localizedHref(path || "/", language),
+          ]),
+        ),
+      },
+    })),
+  );
 }

@@ -89,6 +89,22 @@ Görsel kimlikte sıcak turuncu, koyu füme zemin ve logonun yönünü izleyen i
 
 Faaliyet görselleri sayfanın iki kenarına uzanır. **Ana sayfa · Faaliyet alanları** içindeki çözüm adları, katalogdaki aynı adlı ürün grubuna veya ürün sayfasına bağlanır. Örneğin **İtfaiye Ürünleri**, İş Güvenliği kataloğundaki ilgili gruba; **Tekstil Kompansatör** kendi ürün sayfasına gider. Adını değiştirirken katalogdaki karşılığını da güncelleyin. Eşleşmeyen özel adlar ilgili ana bölüm sayfasını açar.
 
+## Diller ve çeviriler
+
+Sitenin üstündeki dünya simgesinden Türkçe, English, Español, العربية ve Deutsch seçilebilir. Türkçe mevcut adreslerini korur. Diğer diller `/en`, `/es`, `/ar`, `/de` ön ekini kullanır; örneğin `/de/is-guvenligi/maximus-2-0-832551`. Dil geçişi bulunduğunuz sayfayı, URL sorgusunu ve bölüm işaretini korur. Dil değiştirmek sepeti silmez. Arapça görünüm sağdan sola akar; ürün fotoğrafları ve 360° kareleri aynalanmaz.
+
+**Diller ve çeviriler** bölümünde:
+
+1. Düzenlemek istediğiniz dili ve içerik bölümünü seçin. Ürün çevirileri **Ürün detayları**, ana sayfa açılışı **Ana sayfa · Karşılama** başlığındadır.
+2. Kaynak metni, ürün kodunu veya alan yolunu arayın. Türkçe kaynak solda; seçtiğiniz dilin metni sağdadır. Aynı kaynak metnin çevirisi, o dilde kullanıldığı bütün alanlara yansır.
+3. Çeviriyi yazın. `{count}`, `{query}`, `{name}` gibi değişkenleri olduğu gibi koruyun; hatalı değişkenlerle kayıt reddedilir. Ürün/model kodlarını, standart numaralarını ve marka adlarını değiştirmeyin.
+4. **Taslağı kaydet** ile kaydedin. İlgili sayfanın Türkçe adresini önizleme alanına yazıp **Bu dilde taslağı önizle** düğmesini kullanın. Önizleme kaydı yeniden kaydeder; bu, ziyaretçiye yayın yapmaz.
+5. Kontrolden sonra **Yayınla** düğmesini kullanın. Türkçe kaynak ve diğer dillerin özel çevirileri korunur. **Varsayılana dön** özel çeviriyi kaldırır ve hazır karşılığı kullanır.
+
+Başlangıç çevirileri site içinde saklanır; ücretli bir çeviri API'si veya ziyaretçi başına harici çeviri isteği yoktur. Menü, ana sayfa, ortak kontrol metinleri, teklif/iletişim/aramanın temel alanları, katalog adları ve Maximus içeriği için hazır karşılıklar vardır. Eski uzun teknik ve arşiv içeriklerinin tamamı çevrilmiş değildir. **Yalnızca çeviri eklenmemiş metinler** seçeneği bu alanları ve aynı kalabilecek marka/model adlarını bulmayı sağlar. Çevirisi olmayan kaynak korunur; ayrıntılı özgün Türkçe metin gösterilen sayfalarda Türkçe sayfaya bağlantı bulunur. PDF ve görsel dosyalarının içindeki yazılar bu ayarla çevrilmez.
+
+Kaynak metin değiştiğinde eski özel çeviri yeni metne yanlışlıkla uygulanmaz. Yeni kaynağı bu bölümde yeniden çevirin. Görsel yükleme, ürün ailesi, adres, renk kodu ve 360° açı/kare verileri çeviri alanlarına dahil edilmez. Yönetim panelinin dili Türkçedir.
+
 ## Taslak ve yayın
 
 1. Alanları düzenleyin. Değişiklikler bu aşamada yalnızca tarayıcıdadır.

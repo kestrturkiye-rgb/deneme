@@ -1,5 +1,6 @@
 import { getSection } from "@/cms/server";
 export type Group = {
+  anchor?: string;
   title: string;
   items: {
     name: string;
