@@ -20,12 +20,14 @@ export default async function InquiryPage({
   return (
     <section className="inquiry-page container-site">
       <div className="inquiry-story">
-        <SiteImage
-          src={cms.image}
-          alt={cms.imageAlt}
-          fill
-          sizes="(max-width: 900px) 100vw, 50vw"
-        />
+        {cms.image && (
+          <SiteImage
+            src={cms.image}
+            alt={cms.imageAlt}
+            fill
+            sizes="(max-width: 900px) 100vw, 50vw"
+          />
+        )}
         <div>
           <p className="editorial-eyebrow">{cms.eyebrow}</p>
           <h1>{cms.title}</h1>

@@ -10,6 +10,7 @@ import ArrowUpRight from "@/components/ArrowUpRight";
 import { getProduct, productHref, getProducts } from "@/data/catalog";
 import { getDetails } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
+import { productView } from "@/lib/product-view";
 import "./product.css";
 import "./product-stage.css";
 import "./product-family.css";
@@ -52,7 +53,7 @@ export default async function ProductPage({ params }: Props) {
   const detail = allDetails[slug];
   const media = getProductMedia(product.slug, product.name);
   const images = detail?.images ?? media.images;
-  const spin = detail?.spin ?? media.spin;
+  const spin = detail?.spinDisabled ? undefined : (detail?.spin ?? media.spin);
   const description = await introFor(
     product.name,
     product.groupTitle,
@@ -100,7 +101,9 @@ export default async function ProductPage({ params }: Props) {
       <Link className="product-family-model-link" href={productHref(model)}>
         {text} →
       </Link>
-    ) : text;
+    ) : (
+      text
+    );
   }
   const parent = allProducts.find((p) => p.slug === product.parentSlug);
   const related = allProducts.filter(
@@ -146,10 +149,10 @@ export default async function ProductPage({ params }: Props) {
               ? {
                   name: related[0].name,
                   href: productHref(related[0]),
-                  image:
-                    allDetails[related[0].slug]?.images?.[0]?.src ||
-                    getProductMedia(related[0].slug, related[0].name).images[0]
-                      ?.src,
+                  image: productView(
+                    allDetails[related[0].slug],
+                    getProductMedia(related[0].slug, related[0].name),
+                  ).image,
                 }
               : undefined
           }
@@ -170,48 +173,50 @@ export default async function ProductPage({ params }: Props) {
           )}
         </div>
       </div>
-      {hasDetails && <section id="urun-detaylari" className="product-details-section">
-        <div className="container-site product-details-grid">
-          <div>
-            <span className="product-kicker">{labels.detailKicker}</span>
-            <h2>{labels.details}</h2>
-          </div>
-          <div>
-            {detail?.features && detail.features.length > 0 && (
-              <ul className="product-all-features">
-                {detail.features.map((feature, i) => (
-                  <li key={i}>
-                    <span>+</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            )}
-            {detail?.sections?.map((section, i) => (
-              <article key={i} className="product-detail-article">
-                <h3>{section.title}</h3>
-                {section.text?.map((text, j) => (
-                  <p key={j}>{detailText(text)}</p>
-                ))}
-                {section.items && (
-                  <ul>
-                    {section.items.map((text, j) => (
-                      <li key={j}>{detailText(text)}</li>
-                    ))}
-                  </ul>
-                )}
-              </article>
-            ))}
-            {!detail?.sections?.length &&
-              !detail?.features?.length &&
-              (isFamily ? familyDescription : description).map((p, i) => (
-                <p key={i} className="product-detail-paragraph">
-                  {p}
-                </p>
+      {hasDetails && (
+        <section id="urun-detaylari" className="product-details-section">
+          <div className="container-site product-details-grid">
+            <div>
+              <span className="product-kicker">{labels.detailKicker}</span>
+              <h2>{labels.details}</h2>
+            </div>
+            <div>
+              {detail?.features && detail.features.length > 0 && (
+                <ul className="product-all-features">
+                  {detail.features.map((feature, i) => (
+                    <li key={i}>
+                      <span>+</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {detail?.sections?.map((section, i) => (
+                <article key={i} className="product-detail-article">
+                  <h3>{section.title}</h3>
+                  {section.text?.map((text, j) => (
+                    <p key={j}>{detailText(text)}</p>
+                  ))}
+                  {section.items && (
+                    <ul>
+                      {section.items.map((text, j) => (
+                        <li key={j}>{detailText(text)}</li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
               ))}
+              {!detail?.sections?.length &&
+                !detail?.features?.length &&
+                (isFamily ? familyDescription : description).map((p, i) => (
+                  <p key={i} className="product-detail-paragraph">
+                    {p}
+                  </p>
+                ))}
+            </div>
           </div>
-        </div>
-      </section>}
+        </section>
+      )}
       {Boolean(detail?.specs?.length) && (
         <section id="teknik-bilgiler" className="product-spec-section">
           <div className="container-site product-details-grid">

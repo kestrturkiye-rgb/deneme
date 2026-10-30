@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { runAdminStudio } from "./test-admin-studio.mjs";
 import { deflateSync } from "node:zlib";
 import {
   mkdtemp,
@@ -856,8 +857,15 @@ try {
       });
       await page.getByRole("button", { name: "Ana sayfayı düzenle →" }).click();
       await page
-        .getByRole("heading", { name: "Ana sayfa · Karşılama", exact: true })
+        .getByRole("heading", { name: "Sayfalar ve görseller", exact: true })
         .waitFor();
+      await page
+        .getByRole("button", { name: "İçerik ve ayarlar", exact: true })
+        .click();
+      await page
+        .locator(".adm-page-section > summary")
+        .filter({ hasText: "Ana sayfa · Karşılama" })
+        .click();
       const field = page.getByLabel("Isıya ve aleve karşı", { exact: true });
       await field.fill("Tarayıcıdan güncellenen başlık");
       await page
@@ -878,25 +886,13 @@ try {
       await page.getByRole("link", { name: "Yönetime dön" }).click();
       await page.getByRole("heading", { name: "Hoş geldiniz." }).waitFor();
       await page
-        .getByRole("button", { name: "Ürün detayları ›", exact: false })
-        .first()
-        .click()
-        .catch(async () => {
-          await page
-            .getByRole("button", { name: "Ürün detayları", exact: true })
-            .click();
-        });
+        .getByRole("button", { name: "Ürün detayları", exact: true })
+        .click();
       await page.screenshot({
         path: "/tmp/kivanc-admin-products.png",
         fullPage: true,
       });
-      const spinField = page
-        .locator(".adm-optional")
-        .filter({ hasText: "360° görüntü" })
-        .first();
-      await spinField
-        .getByRole("button", { name: "+ Alanı ekle", exact: true })
-        .click();
+      await page.getByRole("button", { name: "360°", exact: true }).click();
       const files = [
         {
           name: "frame-10.png",
@@ -927,7 +923,7 @@ try {
         await page.request.get(origin + "/api/admin/content")
       ).json();
       const uploadedFrames =
-        browserState.draft["data-details"].details["itfaiyeci-elbisesi"].spin
+        browserState.draft["data-details"].details["maximus-2-0-832551"].spin
           .frames;
       assert.equal(uploadedFrames.length, 3);
       assert.deepEqual(
@@ -1634,6 +1630,7 @@ try {
         "all nine real partner logos load; duplicate logos are excluded from keyboard navigation, reduced motion disables autoplay and arrow, keyboard, play and pause controls work",
       );
       await launchVisitor.close();
+      await runAdminStudio({ page, browser, origin, pngFrame, ok });
     } finally {
       await browser.close();
     }

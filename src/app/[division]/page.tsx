@@ -9,7 +9,7 @@ import { getCustomPages } from "@/cms/pages";
 import { getDivisions, getDivision } from "@/data/divisions";
 import { getDetails } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
-import { frameUrls } from "@/lib/spin";
+import { productView } from "@/lib/product-view";
 import ProductCard from "@/components/ProductCard";
 import ContentBlocks from "@/components/ContentBlocks";
 
@@ -97,20 +97,7 @@ export default async function DivisionPage({ params }: Props) {
                   .map((item, index) => {
                     const detail = details[item.slug];
                     const media = getProductMedia(item.slug, item.name);
-                    const variant = detail?.variants?.[0];
-                    const color = detail?.colors?.[0] || variant?.colors?.[0];
-                    const spin =
-                      color?.spin ||
-                      variant?.spin ||
-                      detail?.spin ||
-                      media.spin;
-                    const frames = spin ? frameUrls(spin) : [];
-                    const image =
-                      color?.images?.[0]?.src ||
-                      detail?.images?.[0]?.src ||
-                      variant?.images?.[0]?.src ||
-                      media.images[0]?.src ||
-                      frames[0];
+                    const { image, frames } = productView(detail, media);
                     return (
                       <li key={item.slug}>
                         <ProductCard

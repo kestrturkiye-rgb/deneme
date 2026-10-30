@@ -3,7 +3,7 @@ import { getSection } from "@/cms/server";
 import { productHref, type Product } from "@/data/catalog";
 import type { Detail } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
-import { frameUrls } from "@/lib/spin";
+import { productView } from "@/lib/product-view";
 import ProductCard from "./ProductCard";
 import BrandLines from "./BrandLines";
 
@@ -27,9 +27,7 @@ export default async function ProductFamily({
         <nav className="product-breadcrumb" aria-label={labels.breadcrumb}>
           <Link href="/">{labels.home}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={"/" + product.divisionSlug}>
-            {product.divisionTitle}
-          </Link>
+          <Link href={"/" + product.divisionSlug}>{product.divisionTitle}</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{product.name}</span>
         </nav>
@@ -52,17 +50,7 @@ export default async function ProductFamily({
             {models.map((model, index) => {
               const detail = details[model.slug];
               const media = getProductMedia(model.slug, model.name);
-              const variant = detail?.variants?.[0];
-              const color = detail?.colors?.[0] || variant?.colors?.[0];
-              const spin =
-                color?.spin || variant?.spin || detail?.spin || media.spin;
-              const frames = spin ? frameUrls(spin) : [];
-              const image =
-                color?.images?.[0]?.src ||
-                detail?.images?.[0]?.src ||
-                variant?.images?.[0]?.src ||
-                media.images[0]?.src ||
-                frames[0];
+              const { image, frames } = productView(detail, media);
               return (
                 <li key={model.slug}>
                   <ProductCard

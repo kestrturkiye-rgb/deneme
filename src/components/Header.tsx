@@ -25,7 +25,11 @@ export default async function Header() {
       </div>
       <div className="kg-header-main container-site">
         <Link className="kg-brand" href={c.metin07} aria-label={c.metin08}>
-          <img src={c.metin09} alt={c.metin10} width="163" height="60" />
+          {c.metin09 ? (
+            <img src={c.metin09} alt={c.metin10} width="163" height="60" />
+          ) : (
+            <span>{c.metin10 || "Kıvanç Group"}</span>
+          )}
         </Link>
         <MegaNavigation items={c.mainNav} divisions={await getDivisions()} />
         <div className="kg-header-actions">

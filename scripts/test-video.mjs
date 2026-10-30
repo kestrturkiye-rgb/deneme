@@ -261,10 +261,15 @@ try {
   await page.getByRole("button", { name: "Güvenli giriş →" }).click();
   await page.getByRole("heading", { name: "Hoş geldiniz." }).waitFor();
   await page.getByRole("button", { name: "Ana sayfayı düzenle →" }).click();
-  const field = page.getByLabel("Karşılama videosu (MP4 / WebM, isteğe bağlı)");
-  await field
-    .locator("xpath=../..")
-    .getByRole("button", { name: "Medya kütüphanesinden seç" })
+  const videoEditor = page
+    .locator(".adm-page-media-grid .adm-media-field")
+    .filter({
+      hasText:
+        "Ana sayfa · Karşılama / Karşılama videosu (MP4 / WebM, isteğe bağlı)",
+    });
+  const field = videoEditor.locator(".adm-url-details input");
+  await videoEditor
+    .getByRole("button", { name: "Kütüphaneden seç", exact: true })
     .click();
   await page
     .locator('.adm-modal .adm-upload input[type="file"]')

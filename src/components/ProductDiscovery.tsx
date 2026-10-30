@@ -2,7 +2,7 @@ import { getProducts, productHref } from "@/data/catalog";
 import { getDivisions } from "@/data/divisions";
 import { getDetails } from "@/data/details";
 import { getProductMedia } from "@/lib/product-media";
-import { frameUrls } from "@/lib/spin";
+import { productView } from "@/lib/product-view";
 import ProductDiscoveryClient from "./ProductDiscoveryClient";
 export default async function ProductDiscovery() {
   const products = await getProducts(),
@@ -11,19 +11,7 @@ export default async function ProductDiscovery() {
   const items = products.map((product) => {
     const detail = details[product.slug],
       media = getProductMedia(product.slug, product.name);
-    const variant = detail?.variants?.[0];
-    const spin =
-      detail?.spin ||
-      variant?.spin ||
-      detail?.colors?.[0]?.spin ||
-      variant?.colors?.[0]?.spin ||
-      media.spin;
-    let frames: string[] = [];
-    try {
-      if (spin) frames = frameUrls(spin);
-    } catch {}
-    const image =
-      (detail?.images || variant?.images || media.images)[0]?.src || frames[0];
+    const { image, frames } = productView(detail, media);
     return {
       ...product,
       href: productHref(product),

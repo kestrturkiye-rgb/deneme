@@ -6,6 +6,7 @@ export type Schema = {
   optional?: boolean;
   initial?: unknown;
   options?: string[];
+  keyPattern?: string;
 };
 const string: Schema = { type: "string" };
 const strings: Schema = { type: "array", item: string };
@@ -183,6 +184,52 @@ detail.fields!.configurations = {
 };
 detail.fields!.variants.item!.fields!.configurations =
   detail.fields!.configurations;
+for (const scope of [detail, detail.fields!.variants.item!, colors.item!])
+  scope.fields!.spinDisabled = { type: "boolean", optional: true };
+const block = object({
+  title: string,
+  text: string,
+  image: string,
+  alt: string,
+  buttonLabel: string,
+  buttonHref: string,
+  visible: { type: "boolean", optional: true },
+  layout: {
+    ...string,
+    optional: true,
+    options: ["image-right", "image-left", "full"],
+  },
+});
+schemas.customPages.fields!.pages.item!.fields!.blocks = {
+  type: "array",
+  item: block,
+};
+for (const key of ["app-kurumsal", "app-ar-ge"])
+  schemas[key].fields!.sourceBlocks = { type: "array", item: block };
+schemas.pageLayouts = {
+  ...object({
+    pages: {
+      type: "record",
+      keyPattern:
+        "^/(?:[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*)?$",
+      item: object({
+        banner: {
+          ...object({
+            title: { ...string, optional: true },
+            intro: { ...string, optional: true },
+            image: { ...string, optional: true },
+            alt: { ...string, optional: true },
+            hidden: { type: "boolean", optional: true },
+          }),
+          optional: true,
+        },
+        blocks: { type: "array", item: block, optional: true },
+        replaceContent: { type: "boolean", optional: true },
+      }),
+    },
+  }),
+  optional: true,
+};
 export function emptyValue(schema: Schema): unknown {
   if (schema.initial !== undefined) return structuredClone(schema.initial);
   if (schema.type === "array") return [];
@@ -230,7 +277,11 @@ function validate(
         continue;
       }
       if (schema.type === "record") {
-        if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(key))
+        if (
+          !new RegExp(schema.keyPattern || "^[a-z0-9]+(?:-[a-z0-9]+)*$").test(
+            key,
+          )
+        )
           errors.push(
             path + ": ürün adresi küçük harf, sayı ve tire içermeli.",
           );
@@ -251,6 +302,8 @@ function validate(
     return;
   }
   if (typeof value === "string") {
+    if (schema.options && !schema.options.includes(value))
+      errors.push(path + ": geçersiz seçenek.");
     if (value.length > 40000) errors.push(path + ": metin çok uzun.");
     if (
       /(?:href|src|heroImage|heroVideo|video|frames|pattern|metadataBase|url|logo|metin)/i.test(

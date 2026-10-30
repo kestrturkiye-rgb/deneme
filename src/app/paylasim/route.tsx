@@ -73,93 +73,95 @@ export async function GET(request: Request) {
   );
   const logo = await readFile(path.join(process.cwd(), "public/logo.png"));
   return new ImageResponse(
-    <div
-      style={{
-        width: "100%",
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        background: "#202020",
-        color: "white",
-        padding: "55px 65px",
-        fontFamily: "Brand",
-        borderLeft: "16px solid #d52d0c",
-        position: "relative",
-      }}
-    >
+    (
       <div
         style={{
+          width: "100%",
+          height: "100%",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <img
-          width="190"
-          height="72"
-          src={"data:image/png;base64," + logo.toString("base64")}
-          style={{
-            objectFit: "contain",
-            background: "white",
-            padding: 8,
-            borderRadius: 3,
-          }}
-          alt="Kıvanç Group"
-        />
-        <span
-          style={{
-            fontSize: 16,
-            color: "#d7d7d7",
-            maxWidth: 650,
-            textAlign: "right",
-          }}
-        >
-          {root.shareEyebrow}
-        </span>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flex: 1,
           flexDirection: "column",
-          justifyContent: "center",
-          maxWidth: 1050,
+          background: "#202020",
+          color: "white",
+          padding: "55px 65px",
+          fontFamily: "Brand",
+          borderLeft: "16px solid #d52d0c",
+          position: "relative",
         }}
       >
         <div
           style={{
-            fontSize: item.title.length > 85 ? 45 : 61,
-            lineHeight: 1.18,
-            letterSpacing: -2,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
-          {item.title.slice(0, 160)}
+          <img
+            width={190}
+            height={72}
+            src={"data:image/png;base64," + logo.toString("base64")}
+            style={{
+              objectFit: "contain",
+              background: "white",
+              padding: 8,
+              borderRadius: 3,
+            }}
+            alt="Kıvanç Group"
+          />
+          <span
+            style={{
+              fontSize: 16,
+              color: "#d7d7d7",
+              maxWidth: 650,
+              textAlign: "right",
+            }}
+          >
+            {root.shareEyebrow}
+          </span>
         </div>
         <div
           style={{
-            fontSize: 24,
-            color: "#c3c3c3",
-            marginTop: 24,
-            lineHeight: 1.5,
+            display: "flex",
+            flex: 1,
+            flexDirection: "column",
+            justifyContent: "center",
+            maxWidth: 1050,
           }}
         >
-          {item.subtitle.slice(0, 180)}
+          <div
+            style={{
+              fontSize: item.title.length > 85 ? 45 : 61,
+              lineHeight: 1.18,
+              letterSpacing: -2,
+            }}
+          >
+            {item.title.slice(0, 160)}
+          </div>
+          <div
+            style={{
+              fontSize: 24,
+              color: "#c3c3c3",
+              marginTop: 24,
+              lineHeight: 1.5,
+            }}
+          >
+            {item.subtitle.slice(0, 180)}
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            fontSize: 17,
+            color: "#c6c6c6",
+            borderTop: "1px solid #555",
+            paddingTop: 23,
+          }}
+        >
+          <span>{root.shareFooter}</span>
+          <span style={{ color: "#ff7253" }}>KIVANÇ GROUP</span>
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          fontSize: 17,
-          color: "#c6c6c6",
-          borderTop: "1px solid #555",
-          paddingTop: 23,
-        }}
-      >
-        <span>{root.shareFooter}</span>
-        <span style={{ color: "#ff7253" }}>KIVANÇ GROUP</span>
-      </div>
-    </div>,
+    ),
     {
       width: 1200,
       height: 630,

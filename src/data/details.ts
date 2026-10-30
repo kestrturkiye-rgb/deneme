@@ -2,6 +2,7 @@ import { getSection } from "@/cms/server";
 import type { SpinConfig } from "@/lib/spin";
 
 export type ProductColor = {
+  spinDisabled?: boolean;
   id: string;
   label: string;
   swatch: string;
@@ -18,6 +19,7 @@ export type ProductConfiguration = {
 };
 
 export type ProductVariant = {
+  spinDisabled?: boolean;
   configurations?: ProductConfiguration[];
   colors?: ProductColor[];
   id: string;
@@ -28,6 +30,7 @@ export type ProductVariant = {
 };
 
 export type Detail = {
+  spinDisabled?: boolean;
   line?: string;
   configurations?: ProductConfiguration[];
   colors?: ProductColor[];

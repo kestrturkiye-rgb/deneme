@@ -1,5 +1,9 @@
+"use client";
 import SiteImage from "./SiteImage";
 import BrandLines from "./BrandLines";
+import { usePathname } from "next/navigation";
+import { useSection } from "@/cms/context";
+import type { PageLayout } from "@/cms/workspace";
 type Props = {
   title: string;
   intro?: string;
@@ -16,6 +20,14 @@ export default function PageBanner({
   eyebrow,
   caption,
 }: Props) {
+  const path = usePathname(),
+    layouts = useSection("pageLayouts");
+  const banner = (layouts?.pages as Record<string, PageLayout>)?.[path]?.banner;
+  if (banner?.hidden) return null;
+  title = banner?.title ?? title;
+  intro = banner?.intro ?? intro;
+  image = banner?.image ?? image;
+  imageAlt = banner?.alt ?? imageAlt;
   return (
     <section className={"kg-page-banner" + (image ? " kg-editorial-hero" : "")}>
       {image && (

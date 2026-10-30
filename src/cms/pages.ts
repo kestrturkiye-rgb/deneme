@@ -1,5 +1,7 @@
 import { getSection } from "./server";
 export type CustomBlock = {
+  visible?: boolean;
+  layout?: string;
   title: string;
   text: string;
   image: string;

@@ -1,0 +1,27 @@
+.managed-page-blocks {
+  padding: 48px 0;
+  background: var(--kg-canvas);
+}
+.kg-about.kg-about-text {
+  grid-template-columns: minmax(0, 1fr);
+}
+.kg-about-text .kg-about-content {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+.source-block.block-image-left.has-image > .source-block-image {
+  order: -1;
+}
+.source-block.block-full.has-image {
+  grid-template-columns: minmax(0, 1fr);
+}
+.source-block.block-full > .source-block-image {
+  order: -1;
+  width: 100%;
+  max-height: 700px;
+  object-fit: contain;
+}
+.source-block.block-full > div {
+  max-width: 900px;
+}

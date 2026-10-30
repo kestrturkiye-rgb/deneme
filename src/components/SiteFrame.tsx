@@ -1,5 +1,6 @@
 "use client";
 import VisualEffects from "./VisualEffects";
+import ManagedPage from "./ManagedPage";
 import { usePathname } from "next/navigation";
 import { ContentProvider } from "@/cms/context";
 import type { Content } from "@/cms/store";
@@ -69,7 +70,9 @@ export default function SiteFrame({
           </aside>
         )}
         {header}
-        <main id="icerik">{children}</main>
+        <main id="icerik">
+          <ManagedPage>{children}</ManagedPage>
+        </main>
         {footer}
         <VisualEffects />
       </div>

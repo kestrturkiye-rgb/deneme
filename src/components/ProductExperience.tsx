@@ -7,7 +7,7 @@ import Product360 from "./Product360";
 import AddToQuote from "./AddToQuote";
 import SiteImage from "./SiteImage";
 import type { SpinConfig } from "@/lib/spin";
-import { frameUrls } from "@/lib/spin";
+import { productView } from "@/lib/product-view";
 import type {
   ProductVariant,
   ProductColor,
@@ -57,15 +57,7 @@ export default function ProductExperience(props: Props) {
   const outerLayers = configurations.filter(
     (item) => item.composition === configuration?.composition,
   );
-  const images = color
-    ? (color.images ??
-      (color.spin ? [{ src: frameUrls(color.spin)[0], alt: color.label }] : []))
-    : (current?.images ?? props.images);
-  const spin =
-    color?.spin ??
-    (!color
-      ? (current?.spin ?? (!current ? props.spin : undefined))
-      : undefined);
+  const { images, spin } = productView(props, {}, variant, colorIndex);
   const hasSpin = Boolean(spin);
   const [mode, setMode] = useState<"spin" | "image">(
     hasSpin ? "spin" : "image",
@@ -115,10 +107,7 @@ export default function ProductExperience(props: Props) {
   );
   const otherVariant = props.variants.find((_, index) => index !== variant);
   const thumbFor = (entry: ProductVariant) =>
-    entry.images?.[0]?.src ||
-    (entry.spin
-      ? frameUrls(entry.spin)[0]
-      : entry.colors?.[0]?.images?.[0]?.src);
+    productView({ variants: [entry] }).image;
   const visual = (large = false) => (
     <div className={"product-visual" + (large ? " is-fullscreen" : "")}>
       {mode === "spin" && spin ? (
@@ -364,18 +353,16 @@ export default function ProductExperience(props: Props) {
                 "product-description" + (expanded ? " is-expanded" : "")
               }
             >
-              {expanded ? (
-                props.description.map((text, index) => (
-                  <p key={index}>{text}</p>
-                ))
-              ) : (
-                previewParagraphs.map((text, index) => (
-                  <p key={index}>
-                    {text.slice(0, 230)}
-                    {text.length > 230 ? "…" : ""}
-                  </p>
-                ))
-              )}
+              {expanded
+                ? props.description.map((text, index) => (
+                    <p key={index}>{text}</p>
+                  ))
+                : previewParagraphs.map((text, index) => (
+                    <p key={index}>
+                      {text.slice(0, 230)}
+                      {text.length > 230 ? "…" : ""}
+                    </p>
+                  ))}
             </div>
             {(props.description.length > 1 ||
               (props.description[0]?.length || 0) > 230) && (

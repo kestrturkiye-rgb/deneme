@@ -26,25 +26,50 @@ Başka birine teslim edilecek geçici hesap için `npm run admin:setup -- --temp
 
 - **Gelen talepler:** iletişim ve teklif kayıtları; okundu/okunmadı durumu, iletişim bilgileri, ürünler ve e-posta bildirimi durumu.
 - **Genel bakış:** içerik sayıları, yayın durumu ve hızlı erişim.
-- **Üst menü ve duyurular:** kayan yazılar, logo, bağlantılar, arama alanı, telefon ve e-posta.
+- **Menü ve logo:** kayan yazılar, logo, bağlantılar, arama alanı, telefon ve e-posta.
 - **Ana sayfa:** karşılama görseli/metinleri/düğmeleri, kurumsal bilgiler, faaliyet kartları, kalite ve iş ortakları.
 - **Ana sayfa sırası ve görünürlük:** bölümleri yukarı/aşağı taşıma ve gizleme.
-- **Bölümler ve ürün listesi:** bölüm, kategori ve ürün ekleme/silme/sıralama. Ürünün adı ile adresi ayrı alanlardır; adı değiştirmek adresi değiştirmez. `slug` alanını değiştirirseniz detay kaydının anahtarı da değişeceği için önce içeriği yedekleyin; yeni adreste “Mevcut bir üründen içerik kopyala” ile eski kaydı aktarabilirsiniz. Aynı ürün adresi iki kez kullanılamaz.
-- **Ürün detayları:** açıklamalar, özellikler, başlıklı bölümler, modeller, teknik tablolar, görseller, katalog/sertifika bağlantıları ve 360° kareleri. İsteğe bağlı alanlar “Alanı ekle” ile açılır.
+- **Ürünler ve kategoriler:** bölüm, kategori ve ürün ekleme/silme/sıralama. Ürünün adı ile adresi ayrı alanlardır; adı değiştirmek adresi değiştirmez. `slug` alanını değiştirirseniz detay kaydının anahtarı da değişeceği için önce içeriği yedekleyin; yeni adreste “Mevcut bir üründen içerik kopyala” ile eski kaydı aktarabilirsiniz. Aynı ürün adresi iki kez kullanılamaz.
+- **Ürün detayları:** aramalı ürün listesi; her üründe doğrudan açılan fotoğraf galerisi, 360° yönetimi, içerik/belgeler, parçalar/renkler ve ürün bilgileri. Fotoğraf ve dönüş eklemek için “Alanı ekle” gerekmez. **+ Yeni ürün** ile katalog ve detay kaydı birlikte oluşturulur.
 - **Haberler, mevzuat, dokümanlar, videolar, kariyer:** kayıt ekleme, düzenleme, kopyalama, kaldırma ve sıralama.
-- **Sayfalar:** kurumsal, tarihçe, Ar-Ge, satış kanalları, iletişim, gizlilik ve diğer mevcut sayfaların metinleri ve SEO bilgileri.
-- **Yeni sayfalar:** adres, başlık, SEO açıklaması ve metin/görsel/düğme bloklarıyla yeni bir sayfa oluşturma. Sayfayı görünür yapıp yayınlayın; isterseniz üst/alt menüye bağlantısını ayrıca ekleyin.
+- **Sayfalar ve görseller:** tüm mevcut sayfaların aranabilir listesi. Seçilen sayfanın bannerı, görsel/video alanları, metinleri, ayarları ve fotoğraflı blokları aynı çalışma alanından düzenlenir. Ürün sayfaları doğrudan ürün düzenleyicisine geçer.
+- **Gelişmiş içerik alanları → Yeni sayfalar:** adres, başlık, SEO açıklaması ve metin/görsel/düğme bloklarıyla yeni bir sayfa oluşturma. Sayfayı görünür yapıp yayınlayın; isterseniz üst/alt menüye bağlantısını ayrıca ekleyin.
 - **Renkler, yazı ve görünüm:** ana renkler, yazı tipleri, temel yazı boyutu, içerik genişliği, düğme köşeleri ve gelişmiş CSS.
 - **Medya kütüphanesi:** en fazla 10 MB JPG, PNG, GIF, WebP, AVIF, PDF, MP4 ve WebM yükleme. İlgili alanda “Medya kütüphanesinden seç” ile kullanma. Çok kareli 360° içerikte karelerin sırasını listede belirleyin. Dosyalar herkese açık sunulur; gizli belge yüklemeyin.
 - **Sürüm geçmişi ve yedek:** son 10 yayını taslağa geri alma, JSON dışa/içe aktarma.
 
 Listelerdeki oklarla sıralayın; kopyalama düğmesiyle benzer bir kayıt oluşturun. İç içe kayıtları açarak alt alanları düzenleyin. Arama kutusu hem bölüm adında hem içerik değerlerinde arar.
 
+## Fotoğrafları ve 360° görünümü düzenleme
+
+1. **Ürün detayları** bölümünde ürün adını veya kodunu arayın; örneğin **Maximus 2.0 (832551)**. Ürün ailesi yerine fotoğrafını değiştireceğiniz gerçek modeli seçin.
+2. **Görseller** sekmesinde fotoğrafları birlikte yükleyin, sürükleyerek veya oklarla sıralayın. **Kapak yap** ilk fotoğrafı değiştirir; **Sil** fotoğrafı yalnızca seçili ürün/görünümden çıkarır. Dosya kütüphanede kalır. Her fotoğrafın alternatif açıklaması değiştirilebilir.
+3. **360°** sekmesinden gerçek dönüş fotoğraflarını birlikte seçin. İki ila 500 kare desteklenir; akıcı dönüş için aynı ölçüde ve merkezde çekilmiş 24–72 kare önerilir. Dosya adları doğal sayısal sırayla dizilir. Tek fotoğraftan yeni açılar oluşturulmaz.
+4. Mevcut seriyi değiştirebilir veya sonuna kare ekleyebilirsiniz. **360° önizle** ile sürükleyerek dönüşü kontrol edin. Karelerin sırası oklarla değişir, fotoğraf ve açı birlikte taşınır. Gerçek açıları biliyorsanız açı düzenlemesini açın. Özel açılı seriye eklenen yeni karelerin açıları tamamlanmadan kayıt/yayın yapılmaz; mevcut açı bilgisi korunur.
+5. **Bu görünümde 360° kullan** seçeneği seriyi silmeden kapatır. **Seriyi kaldır** kareleri üründen çıkarır; dosyaları kütüphaneden silmez.
+6. Ceket, pantolon veya renkler ayrıysa **Parçalar ve renkler** sekmesinden ekleyin. **Düzenlenen görünüm** listesinden ilgili parçayı/rengi seçerek ona özel fotoğraf ve 360° yükleyin. Genel ürün, ceket, pantolon ve renklerin görselleri bağımsız kaydedilir; ziyaretçinin gördüğü ilk seçeneğin fotoğrafı katalog kartında kullanılır.
+7. **İçerik ve belgeler** açıklamaları, özellikleri, teknik alanları ve PDF bağlantılarını; **Ürün bilgileri** adını, grubunu ve bağlı olduğu aileleri yönetir. Ürün adı değişince mevcut adres korunur.
+8. **Bu ürünü önizle** seçtiğiniz ürünün taslağını açar. Sonucu kontrol ettikten sonra panelde **Yayınla** düğmesini kullanın.
+
+Yükleme veya yeni kare açılarını tamamlama sırasında ürün/sayfa değiştirme, kaydetme ve yayınlama bekletilir. Böylece dosyalar yanlış ürüne bağlanmaz. Yükleme hata verirse tamamlanan dosyalar kütüphanede kalır; eksik bir seri ürünün mevcut serisinin üstüne yazılmaz.
+
+## Her sayfanın görselleri ve düzeni
+
+**Sayfalar ve görseller** bölümünde sayfayı adıyla veya adresiyle arayın. Ana sayfa, standart sayfalar, faaliyet bölümleri, haber detayları, özel sayfalar ve ürünler listelenir.
+
+- **Görseller ve banner:** sayfanın mevcut görsellerini/video alanlarını önizlemeleriyle gösterir. Doğrudan dosya yükleyin, kütüphaneden seçin veya görseli kaldırın. İç sayfa bannerının fotoğrafını, açıklamasını, başlığını ve metnini yalnızca o sayfa için değiştirebilir/gizleyebilirsiniz. **Varsayılan bannera dön** bu özel değişiklikleri kaldırır. Ana sayfanın bannerı kendi karşılama görselleri/video alanlarından yönetilir.
+- **İçerik ve ayarlar:** seçilen sayfanın metinleri, kayıtları ve SEO alanları bulunur. Ana sayfada bölüm sırası ve görünürlüğü de buradadır. Ortak bileşenler işaretlidir; bunların düzenlenmesi bileşeni kullanan diğer sayfalara da yansır.
+- **Fotoğraflı bloklar:** sayfaya başlık, metin, fotoğraf ve bağlantı ekleyin. Görsel sağda, solda veya geniş yerleşimde olabilir. Blokları oklarla sıralayabilir, gizleyebilir veya kaldırabilirsiniz. Varsayılan olarak mevcut içeriğin arkasına eklenir.
+- İsteğe bağlı **Sayfayı yalnızca bu bloklarla oluştur** ayarı mevcut sayfa gövdesini geçici olarak değiştirir; form veya ürün listesi gibi alanlar da gizlenir. Seçeneği kapatmak asıl sayfayı geri getirir. Ana sayfanın yerleşimi bölüm sırası üzerinden yönetilir.
+- **Bu sayfayı önizle** doğrudan seçtiğiniz sayfanın taslağını açar. Ziyaretçiler yayınlanana kadar bu değişiklikleri görmez.
+
+Kütüphane seçim penceresinde **Yüklediklerim** yüklenen dosyaları, **Site görselleri** ise sitede zaten kullanılan görselleri sunar. Arama yaparak mevcut ürün fotoğrafını veya logoyu yeniden seçebilirsiniz. Yeni bir URL oluşturmak için dosyayı önce yükleyin. Dosya başına sınır 10 MB'dır.
+
 ## Ürün ailesi ve model sayfaları
 
 İtfaiyeci Elbisesi gibi alt modelleri bulunan ürün aileleri fotoğraflı bir katalog olarak açılır. Fotoğraf, ürün adı ve kartın tamamı modelin kendi sayfasına gider; kategoriye teklif eklenmez. Gerçek modelin sayfasında fotoğraf/360° görünümü ve teklif eylemleri bulunur.
 
-**Bölümler ve ürün listesi** içindeki **Ana ürün ailesinin adresi** ve **Modelin yer aldığı diğer ürün aileleri** alanları kartların hangi ailede görüneceğini belirler. Kart fotoğrafı modelin kendi detay kaydından alınır. Aile açıklamasında yalnızca model adları varsa bunlar tekrar açıklama metni olarak gösterilmez; eşleşen modeller bu listedeki sırayla öne alınır. Diğer modeller katalog sırasını korur. Açıklayıcı metinler, ek bilgiler ve belgeler korunur.
+**Ürünler ve kategoriler** içindeki **Ana ürün ailesinin adresi** ve **Modelin yer aldığı diğer ürün aileleri** alanları kartların hangi ailede görüneceğini belirler. Kart fotoğrafı modelin kendi detay kaydından alınır. Aile açıklamasında yalnızca model adları varsa bunlar tekrar açıklama metni olarak gösterilmez; eşleşen modeller bu listedeki sırayla öne alınır. Diğer modeller katalog sırasını korur. Açıklayıcı metinler, ek bilgiler ve belgeler korunur.
 
 Elbise ailelerine yalnızca kıyafet modelleri bağlayın. İtfaiyeci Elbisesi'nde sekiz takım bulunur: Maximus, Optimus, Stefan III, Stefan II, Primus, Salvator, Mare ve Alexus. Örme başlıklar, iç giyim, istasyon üniforması ve alüminize elbiseler kendi ailelerindedir; Cool Vest, İtfaiye Ürünleri grubunda bağımsız üründür. Endüstriyel eldiven, baret, ark başlığı/gözlüğü, çorap ve tamamlayıcı ekipmanlar da kendi kategorilerinde bulunur. Yeni bir ekipman eklerken hem ana aileyi hem diğer aileler alanını kontrol edin; elbise ailesini ek aile olarak seçmek ekipmanı yeniden elbise listesine getirir. Aile sayfasının altında genel kardeş kategori listesi gösterilmez; model sayfasının ilgili ürünleri korunur.
 
@@ -52,7 +77,7 @@ Paneldeki **Ürün sayfası** bölümünde **Ürün ailesi için varsayılan gir
 
 ## Ana sayfa, logo ve iş ortakları
 
-Ana sayfanın yenilenen görünümünde logo **Üst menü ve duyurular**, alt bilgi logosu **Alt bilgi ve sosyal medya** bölümünden değiştirilebilir. Paylaşılan Kıvanç Group logosunun yatay web uyarlaması `/images/brand/kivanc-group-header.webp` adresindedir.
+Ana sayfanın yenilenen görünümünde logo **Menü ve logo**, alt bilgi logosu **Alt bilgi ve sosyal medya** bölümünden değiştirilebilir. Paylaşılan Kıvanç Group logosunun yatay web uyarlaması `/images/brand/kivanc-group-header.webp` adresindedir.
 
 Görsel kimlikte sıcak turuncu, koyu füme zemin ve logonun yönünü izleyen ince açılı çizgiler kullanılır. **Renkler, yazı ve görünüm** bölümündeki marka/zemin/metin/parlama renkleri ve düğme köşe ölçüsü bu görünümü yönetir. Düğmelerin bir köşesi ortak ölçünün iki katıdır. Ürün sahnesinin zemin, metin, vurgu ve ışık renkleri **Ürün sayfası** ayarlarından ayrıca değiştirilebilir. Çizgiler dekoratiftir; ürün fotoğrafları ve yazılarının parçası değildir. Küçük katalog numaraları sıralamayı izler, ürün kodunu değiştirmez.
 

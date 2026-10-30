@@ -4,16 +4,21 @@ import SiteImage from "./SiteImage";
 export default async function About() {
   const c = await getSection("components-About");
   return (
-    <section className="kg-about" data-reveal>
-      <div className="kg-about-image">
-        <SiteImage
-          src={c.image}
-          alt={c.imageAlt}
-          fill
-          sizes="(max-width: 900px) 100vw, 50vw"
-        />
-        <span className="kg-about-year">{c.facts[0]?.value}</span>
-      </div>
+    <section
+      className={"kg-about" + (!c.image ? " kg-about-text" : "")}
+      data-reveal
+    >
+      {c.image && (
+        <div className="kg-about-image">
+          <SiteImage
+            src={c.image}
+            alt={c.imageAlt}
+            fill
+            sizes="(max-width: 900px) 100vw, 50vw"
+          />
+          <span className="kg-about-year">{c.facts[0]?.value}</span>
+        </div>
+      )}
       <div className="kg-about-content">
         <p className="kg-eyebrow">
           <span />
