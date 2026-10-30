@@ -1,5 +1,17 @@
 # Yayın hazırlığı ve doğrulama
 
+## Canlıya alma isteği: Netlify kredi sınırı · 30 Ekim 2026
+
+Kullanıcının açık **canlıya al** talebi üzerine `fa7ca4d` için mevcut Netlify üretim hedefinde yayın denendi. Üretim paketi yeniden başarıyla hazırlandı (Netlify paketlemesi 12,5 saniye); kayıtlı CLI oturumu ve mevcut proje korundu. İlk genel 403 hatası HTTP yöntemi/hedefi/durum koduyla, kimlik bilgileri veya istek gövdeleri kaydedilmeden teşhis edildi.
+
+**Yayın gerçekleşmedi.** Netlify'ın `POST /api/v1/sites/a7ea3dad-ed1a-459d-a869-ba2b2bccdf5b/deploys` yanıtı **403** ve gerekçesi: **“Account credit usage exceeded - new deploys are blocked until credits are added”**. Bu, yeni bir anahtar veya tekrar giriş gerektiren oturum hatası değildir: aynı kayıtlı oturumla kullanıcı, proje ve hesap okuma istekleri 200 döndü. Hesap **Free**, plan kredisi **300**, otomatik kredi alımı kapalı. API'nin bildirdiği sonraki kullanım dönemi **26 Kasım 2026**. Ücretli plan/kredi alınmadı, ikinci hesap açılmadı, kota farklı bir yayın yolu üzerinden aşılmaya çalışılmadı.
+
+Mevcut canlı yayın **`6ae478617a7a5cad24ec3c71`** olarak kaldı. Türkçe, İngilizce, İspanyolca, Arapça, Almanca ana sayfaları ve `/admin` doğrudan HTTPS HEAD kontrollerinde **200** döndü; bunlar yeni eşitleme kodunun canlıya alındığı anlamına gelmez. Yayın öncesi kalıcı CMS kopyası ayrı özel dizinde saklandı: **sürüm 6, 187 ürün/kategori**. Denemeler CMS içeriğine veya hesaba yazmadı.
+
+Yeni otomatik eşitleme kodu ve önceki **112 kontrol** sonucu geçerlidir; bu istekte uygulama kodu değiştirilmedi. Gerçek çeviri kontrolü geliştirme ortamının alan adı engeli nedeniyle hâlâ doğrulanamadı; bu, Netlify'ın kredi engelinden ayrı bir konudur. Yeni yayından sonra çalıştırılmak üzere hazırlanmış canlı özellik/tarayıcı doğrulamaları, yayın gerçekleşmediği için yeni sürüm doğrulaması olarak sunulmaz.
+
+Mevcut hedefte yayın için Netlify kredi engelinin kalkması gerekir. Kullanıcının ücretsiz deneme tercihi korunur. Başka bir ücretsiz sağlayıcıya geçilirse ilgili hesabın bağlanması gerekir; DNS veya mevcut `kivancgroup.com` sitesi değiştirilmedi. Yeni sağlayıcıya yayın ya da hesap bağlantısı yapılmış değildir.
+
 ## Türkçeden bütün dillere otomatik güncelleme · 30 Ekim 2026
 
 **Durum: uygulama kodu ve yerel doğrulama hazır; bu değişiklik henüz canlıya yayımlanmadı.** Gerçek çeviri bağlantısı geliştirme ortamının ağ geçidinde CONNECT 403 ile engellendi. Kullanıcı `translate.googleapis.com` erişimine açıkça izin verdi. Mevcut özel ağ listesi korunarak yalnızca bu alan adı ortam taslağına eklendi; araç `status:saved, requires_publish:true` döndürdü. Bu kayıt etkin ağ erişimi veya ortam yayını değildir. Gerçek hizmet kontrolü ve canlı yayın, iznin ortam ayarlarından uygulanmasından sonra tamamlanmalıdır. Mevcut canlı beş dilin ve yönetimin yayını korunur.
