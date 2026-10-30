@@ -1,5 +1,30 @@
 # Yayın hazırlığı ve doğrulama
 
+## Görsel sayfa ve ürün yönetimi · 30 Ekim 2026
+
+Yeni yönetim stüdyosu mevcut ücretsiz deneme sitesinde yayında: **https://kivancgroup-deneme.netlify.app/admin**. Kod yayını **`cbe5153`**, Netlify yayını **`6ae44aba8d362228daec3bd0`**. Yönetici hesabı/parolası, alan adı ve ücretsiz plan değiştirilmedi.
+
+**Sayfalar ve görseller** ekranı standart sayfaları, faaliyet bölümlerini, haberleri, özel sayfaları ve ürünleri adresleriyle listeler. Sayfanın bannerı bağımsız değiştirilebilir/gizlenebilir; mevcut görseller/video alanları doğrudan yükleme ve kütüphane seçimiyle düzenlenir. Metin ve ayarlar aynı sayfanın diğer sekmesindedir. Ek fotoğraflı bloklar üç yerleşimde oluşturulabilir, sıralanabilir, gizlenebilir veya kaldırılabilir. İsteğe bağlı tam blok düzeni asıl form/listeleri gizler; kapatılınca eski sayfa geri gelir. Ortak bileşenler panelde işaretlidir.
+
+**Ürün detayları** ekranında her ürün için görünür fotoğraf ve 360° sekmeleri vardır; bu alanlar artık isteğe bağlı alan menüsünün arkasında değildir. Gerçek dosyalar topluca yüklenebilir; kapak seçilir, galeri sıralanır ve fotoğraflar ürün kaydından kaldırılır. Her ürüne ayrı dönüş serisi eklenir/değiştirilir; ceket, pantolon ve renklerin fotoğraf/dönüşleri bağımsızdır. Kare açıları, sıra, silme, seriye ekleme, önizleme ve 360° açma/kapatma desteklenir. Özel açılı seriye eklemede eski açılar korunur ve yeni açılar tamamlanmadan yayınlanamaz. Yükleme sırasında sayfa/ürün değişimi ve yayınlama engellenir. Tek fotoğraftan sahte dönüş karesi üretilmez; kaldırılan dosyalar yeniden kullanım için kütüphanede kalır.
+
+Katalog, aile kartları ve gerçek ürün sayfası aynı görsel seçimini kullanır; bilerek boşaltılan galeri eski varsayılan fotoğrafı geri getirmez. Yeni ürün tek formdan katalog ve detay kaydıyla oluşturulur. Her sayfa/ürün kendi taslak adresinde önizlenir. Kütüphane hem yüklenen dosyaları hem sitede kullanılan görselleri sunar. Boşaltılan ana sayfa/kurumsal görselleri ve logo için kırık görsel yerine uygun boş durum sağlanır. Eski içeriklerle uyumlu, isteğe bağlı `pageLayouts` alanı eklenmiştir; veri tabanı göçü gerekmez.
+
+Doğrulama:
+
+- Üretim derlemesi, `npm run typecheck` ve Netlify üretim paketlemesi başarılı.
+- Playwright ile `npm run test:cms`: **56 kontrol geçti**. Yeni akışlar gerçek PNG yüklemesi, doğal dosya sırası, yükleme sırasında yanlış ürüne geçişin engellenmesi, kapak/silme, gerçek açılarla kare ekleme/sıralama, yayınlanan 360° açma/kapatma, ayrı parça/renk görselleri, boşaltılan görselin geri gelmemesi, sayfaya özgü banner/blok, gizleme/sıralama, tam sayfa düzeni ve geri dönüş, doğru taslak önizlemesi ve telefondan yeni ürün oluşturmayı kapsar. Test hesapları ve dosyaları izole geçici alanlarda kullanılıp temizlendi.
+- `npm run test:video`: **13 kontrol geçti**; ana sayfa görsel ekranından video düzenleme, yükleme, kütüphane ve oynatma davranışları doğrulandı.
+- `npm run test:cloud`: **12 kontrol geçti**. Bu otomatik testler yerel PostgreSQL/Supabase sözleşme servisi kullanır; gerçek canlı veriye yazmaz.
+- Gerçek içerik kopyasıyla yerel üretim sunucusunda masaüstü galeri, 360° önizleme, sayfa bannerı ve 390 px mobil galeri ekranları incelendi. Yalnızca görüntüleme sırasında taslak kirlenmedi; taşma veya tarayıcı çalışma hatası yoktu.
+- Yayından sonra canlı Maximus sayfasında **7 kontrol grubu** geçti: tam ürün metni, yedi gerçek WebP açı karesi, fare/klavye/dokunma, açı halkası, oynatma/durdurma, galeri ve tam ekran, mobil teklif/ücretsiz hosting rozeti yerleşimi. Tarayıcı çalışma hatası yoktu.
+- Canlıda ek **4 kontrol grubu** geçti: yönetici giriş ekranı ve beş yeni özellik için yayımlanan JavaScript, girişsiz içerik API'sinin 401 vermesi, sekiz ana sayfa adresinin açılması, altı kıyafet ailesinin doğru model sayıları. Gerçek hesaba girilip örnek içerik yayımlanmadı; yeni yazma akışları izole testte doğrulandı.
+- Yayından sonra gerçek Supabase satırı işlem öncesi kopyayla birebir aynı: taslak/yayın içeriği ve **sürüm 6** korundu, **187 ürün/kategori adresi** değişmedi. Kimlik API'si `configured:true, backend:supabase` döndürür. İncelenen **913 kaynak dosyasında** özel anahtar, hesap özeti veya test parolası eşleşmesi bulunmadı.
+
+Canlı tarayıcı doğrulaması yalnızca GET/HEAD aktaran yerel bağlantı ve tam eşleşen herkese açık Supabase medya adresleri üzerinden yapıldı; üst bağlantının HTTPS sertifika denetimi korundu. Yönetici oturumu atlatılmadı, canlı içerik/veri hesabı değiştirilmedi. Kullanım adımları [ADMIN-KILAVUZU.md](ADMIN-KILAVUZU.md) içinde güncellendi.
+
+## Önceki çalışmaların kayıtları
+
 26 Ekim 2026 tarihinde geliştirme ortamında tamamlandı. Uygulama Vercel için hazırlandı; gerçek Vercel ve Supabase hesabına erişim bulunmadığından yayın ve gerçek proje bağlantısı bu ortamdan yapılmadı.
 
 ## Tamamlananlar
