@@ -1,6 +1,10 @@
 // Exercises the Supabase adapter with real PostgreSQL semantics in PGlite.
 // The local HTTP service implements the provider's REST/storage contract, not a live cloud account.
 import assert from "node:assert/strict";
+import {
+  translationFixtureOptions,
+  publishWithTranslations,
+} from "./translation-test-helpers.mjs";
 import { createServer } from "node:http";
 import { PGlite } from "@electric-sql/pglite";
 import { createClient } from "@supabase/supabase-js";
@@ -260,6 +264,7 @@ async function start(extraEnv = {}) {
     {
       env: {
         ...process.env,
+        NODE_OPTIONS: translationFixtureOptions,
         VERCEL: hosting === "vercel" ? "1" : "",
         VERCEL_ENV: hosting === "vercel" ? "preview" : "",
         VERCEL_URL: hosting === "vercel" ? "preview.example.test" : "",
@@ -297,8 +302,29 @@ let cookie = "";
 async function request(
   base,
   url,
-  { method = "GET", body, authenticated = true, ip = "192.0.2.10" } = {},
+  {
+    method = "GET",
+    body,
+    authenticated = true,
+    ip = "192.0.2.10",
+    translationPrepared = false,
+  } = {},
 ) {
+  if (
+    url === "/api/admin/content" &&
+    body?.action === "publish" &&
+    authenticated &&
+    !translationPrepared
+  )
+    return publishWithTranslations(
+      (target, data) =>
+        request(base, target, {
+          method: "POST",
+          body: data,
+          translationPrepared: true,
+        }),
+      body,
+    );
   return fetch(base + url, {
     method,
     headers: {

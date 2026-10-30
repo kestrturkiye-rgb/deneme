@@ -5,7 +5,7 @@ import defaults from "@/cms/defaults.json";
 import { fieldLabels, schemas } from "@/cms/schema";
 import { Editor } from "./FormEditor";
 import { UploadProvider, useUploads, type Picker } from "./MediaEditor";
-import type { Content, State } from "@/cms/store";
+import type { Content, EditorState as State } from "@/cms/store";
 import "./admin.css";
 import "./studio.css";
 import { uploadMedia } from "@/lib/upload-media";
@@ -13,6 +13,8 @@ import Inbox from "./Inbox";
 import ProductStudio, { type UpdateContent } from "./ProductStudio";
 import PageWorkspace from "./PageWorkspace";
 import TranslationStudio from "./TranslationStudio";
+import { translationPlan, type SyncScope } from "@/i18n/sync";
+import { splitLocale } from "@/i18n/locales";
 
 type Media = {
   name: string;
@@ -268,6 +270,7 @@ function AdminClientInner() {
     [notice, setNotice] = useState(""),
     [error, setError] = useState(""),
     [sidebar, setSidebar] = useState(false);
+  const [syncProgress, setSyncProgress] = useState("");
   const [media, setMedia] = useState<Media[]>([]),
     [mediaPage, setMediaPage] = useState(0),
     [mediaHasMore, setMediaHasMore] = useState(false),
@@ -310,14 +313,14 @@ function AdminClientInner() {
   }, [acceptState]);
   useEffect(() => {
     const handler = (e: BeforeUnloadEvent) => {
-      if (dirty || pendingUploads) {
+      if (dirty || pendingUploads || busy) {
         e.preventDefault();
         e.returnValue = "";
       }
     };
     window.addEventListener("beforeunload", handler);
     return () => window.removeEventListener("beforeunload", handler);
-  }, [dirty, pendingUploads]);
+  }, [dirty, pendingUploads, busy]);
   useEffect(() => {
     if (!auth || (active !== "media" && !picker)) return;
     const controller = new AbortController();
@@ -396,31 +399,74 @@ function AdminClientInner() {
     }
   }
   async function action(kind: string, extra: Record<string, unknown> = {}) {
-    if (!state || !content) return false;
+    if (!state || !content || busy) return false;
     setBusy(true);
     setNotice("");
     setError("");
     try {
-      const data = await post("/api/admin/content", {
-        action: kind,
+      const sync = ["publish", "translate-all", "translate-changes"].includes(
+        kind,
+      );
+      let data: State = await post("/api/admin/content", {
+        action: sync ? "save" : kind,
         content,
         version: state.version,
         ...extra,
       });
       acceptState(data);
+      if (sync) {
+        const scope: SyncScope = kind === "translate-all" ? "all" : "changes",
+          total = translationPlan(data.draft, data.published, scope).length;
+        let remaining = total;
+        while (remaining) {
+          setSyncProgress(
+            `Dört dil hazırlanıyor: ${total - remaining} / ${total} çeviri tamamlandı. Bu sekmeyi açık tutun.`,
+          );
+          const result = await post("/api/admin/translations", {
+            version: data.version,
+            scope,
+          });
+          data = result.state;
+          acceptState(data);
+          remaining = result.sync.remaining;
+          if (result.sync.error) throw Error(result.sync.error);
+          if (!result.sync.completed && remaining)
+            throw Error(
+              "Çeviri tamamlanamadı. Türkçe taslağınız kaydedildi; yayın korundu. Yeniden deneyin.",
+            );
+        }
+        if (kind === "publish") {
+          setSyncProgress("Beş dil birlikte yayınlanıyor…");
+          data = await post("/api/admin/content", {
+            action: "publish",
+            content: data.draft,
+            version: data.version,
+          });
+          acceptState(data);
+        }
+      }
       setNotice(
-        kind === "publish" ? "Değişiklikler yayınlandı." : "Taslak kaydedildi.",
+        kind === "publish"
+          ? "Türkçe ve dört dildeki değişiklikler birlikte yayınlandı."
+          : sync
+            ? "Dört dilin çevirileri taslağa kaydedildi. Önizleyebilir veya yayınlayabilirsiniz."
+            : "Taslak kaydedildi.",
       );
       return true;
     } catch (e) {
       setError((e as Error).message);
       return false;
     } finally {
+      setSyncProgress("");
       setBusy(false);
     }
   }
   async function preview(targetPath = previewPath) {
-    if (await action("save")) {
+    if (
+      await action(
+        splitLocale(targetPath).locale === "tr" ? "save" : "translate-changes",
+      )
+    ) {
       setBusy(true);
       try {
         await post("/api/admin/content", { action: "preview", enabled: true });
@@ -433,6 +479,7 @@ function AdminClientInner() {
     }
   }
   async function logout() {
+    if (busy) return;
     if (pendingUploads) {
       setError("Dosya yüklemesinin tamamlanmasını bekleyin.");
       return;
@@ -641,7 +688,7 @@ function AdminClientInner() {
   const updateContent: UpdateContent = (change) =>
     setContent((previous) => (previous ? change(previous) : previous));
   const selectProduct = (slug: string, path: string) => {
-    if (pendingUploads) return;
+    if (pendingUploads || busy) return;
     setSelectedProduct(slug);
     setPreviewPath(path);
     setActive("data-details");
@@ -653,6 +700,7 @@ function AdminClientInner() {
     );
   };
   const navigate = (key: string) => {
+    if (busy) return;
     if (pendingUploads) {
       setError("Dosya yüklemesinin tamamlanmasını bekleyin.");
       return;
@@ -951,6 +999,7 @@ function AdminClientInner() {
             href="/"
             onClick={async (e) => {
               e.preventDefault();
+              if (busy) return;
               if (
                 dirty &&
                 !confirm(
@@ -1242,8 +1291,10 @@ function AdminClientInner() {
             <div className="adm-editor-card">
               <TranslationStudio
                 content={content}
+                published={state.published}
                 update={updateContent}
                 onPreview={preview}
+                onSynchronize={() => action("translate-all")}
               />
             </div>
           )}
@@ -1364,8 +1415,21 @@ function AdminClientInner() {
           <div>
             <span className={"adm-live-dot " + (dirty ? "is-orange" : "")} />
             <strong>
-              {dirty ? "Değişiklikler yayınlanmadı" : "Yayınlamaya hazır"}
+              {busy
+                ? "Değişiklikler hazırlanıyor"
+                : dirty
+                  ? "Değişiklikler yayınlanmadı"
+                  : "Yayınlamaya hazır"}
             </strong>
+            {syncProgress ? (
+              <p className="adm-sync-progress" role="status" aria-live="polite">
+                {syncProgress}
+              </p>
+            ) : (
+              <small>
+                Türkçe tek kaynak · Yayınla ile beş dil birlikte güncellenir.
+              </small>
+            )}
             <small>
               Son kayıt:{" "}
               {state.updatedAt ? formatDate(state.updatedAt) : "Henüz yok"}

@@ -13,6 +13,17 @@ export type State = {
   publishedAt: string | null;
   history: Revision[];
 };
+export type EditorState = Omit<State, "history"> & {
+  history: Array<Omit<Revision, "content">>;
+};
+// Revisions stay durable on the server. Transferring ten complete multilingual
+// snapshots on every batch would exceed serverless response limits.
+export function editorState(state: State): EditorState {
+  return {
+    ...state,
+    history: state.history.map(({ id, date }) => ({ id, date })),
+  };
+}
 export async function readState(): Promise<State> {
   const saved = await readDocument<State>("content");
   if (!saved)

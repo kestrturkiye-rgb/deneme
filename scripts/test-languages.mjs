@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { translationFixtureOptions } from "./translation-test-helpers.mjs";
 import { mkdtemp, writeFile, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -69,6 +70,7 @@ try {
     {
       env: {
         ...process.env,
+        NODE_OPTIONS: translationFixtureOptions,
         CMS_DATA_DIR: dataDir,
         SITE_ORIGIN: origin,
         SITE_NOINDEX: "true",

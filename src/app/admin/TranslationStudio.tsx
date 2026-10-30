@@ -14,14 +14,19 @@ import {
 } from "@/i18n/locales";
 import type { UpdateContent } from "./ProductStudio";
 import manifest from "@/cms/manifest.json";
+import { translationPlan } from "@/i18n/sync";
 export default function TranslationStudio({
   content,
+  published,
   update,
   onPreview,
+  onSynchronize,
 }: {
   content: Content;
+  published: Content;
   update: UpdateContent;
   onPreview: (path: string) => void;
+  onSynchronize: () => void;
 }) {
   const [locale, setLocale] = useState<ForeignLocale>("en"),
     [query, setQuery] = useState(""),
@@ -30,6 +35,14 @@ export default function TranslationStudio({
     [limit, setLimit] = useState(40),
     [previewPath, setPreviewPath] = useState("/");
   const entries = useMemo(() => textEntries(content), [content]);
+  const pending = useMemo(
+    () => translationPlan(content, published).length,
+    [content, published],
+  );
+  const allPending = useMemo(
+    () => translationPlan(content, published, "all").length,
+    [content, published],
+  );
   const translations =
       (content.localization as unknown as Localization)?.translations || {},
     overrides = translations[locale] || {};
@@ -73,10 +86,36 @@ export default function TranslationStudio({
     <section className="adm-translation-studio adm-padded">
       <h2>Diller ve çeviriler</h2>
       <p className="adm-muted">
-        Türkçe ana içerik korunur. Aynı Türkçe metnin çevirisi kullanıldığı
-        bütün sayfalara yansır. Model adlarını, standartları ve ürün kodlarını
-        koruyun. Belgelerin dosya dili bu ayarla değişmez.
+        Sitenin tek kaynağı Türkçedir. Ürün ekleme/silme, fotoğraflar, 360°,
+        bannerlar, sayfa düzeni ve görünürlük bütün dillerde ortaktır. Yayınla
+        düğmesi yeni veya değişen Türkçe metinleri İngilizce, İspanyolca, Arapça
+        ve Almancaya otomatik çevirir, ardından beş dili birlikte yayınlar.
       </p>
+      <div className="adm-language-sync">
+        <strong>Türkçeden otomatik güncelleme etkin</strong>
+        <p>
+          {pending
+            ? `${pending} dil karşılığı yayınlama sırasında hazırlanacak.`
+            : "Yeni Türkçe değişiklikler için bekleyen çeviri yok."}
+        </p>
+        <p>
+          Eski içeriklerde {allPending} eksik dil karşılığı var. İsterseniz
+          bunları da tek işlemle taslağa hazırlayabilirsiniz.
+        </p>
+        <button
+          className="adm-btn"
+          disabled={!allPending}
+          onClick={onSynchronize}
+        >
+          Eksik çevirileri tamamla
+        </button>
+        <small>
+          Metinler ücretsiz Google çeviri bağlantısıyla işlenip saklanır;
+          ziyaretçiler için çeviri isteği yapılmaz. Hizmet sınırı veya bağlantı
+          hatasında taslak korunur; yeniden denenebilir. PDF ve görsellerin
+          içindeki yazılar özgün dilinde kalır.
+        </small>
+      </div>
       <div className="adm-translation-controls">
         <label>
           Düzenlenecek dil
@@ -159,9 +198,9 @@ export default function TranslationStudio({
         </button>
       </div>
       <p className="adm-muted">
-        {filtered.length} farklı metin · Çeviri yazılmamış yeni içerikte Türkçe
-        kaynak gösterilir. Değişiklikleri kaydedip önizleyin, ardından
-        yayınlayın.
+        {filtered.length} farklı metin · Aşağıdaki alanlar isteğe bağlı çeviri
+        düzeltmeleri içindir. Her dili ayrı ayrı düzenlemeniz gerekmez. Türkçe
+        kaynak değişirse yeni metin otomatik çevrilir.
       </p>
       <div className="adm-translation-list">
         {filtered.slice(0, limit).map((entry) => {
@@ -184,7 +223,9 @@ export default function TranslationStudio({
                   <span>
                     {languageNames[locale]} ·{" "}
                     {own
-                      ? "Özel çeviri"
+                      ? overrides[entry.id].automatic
+                        ? "Otomatik çeviri"
+                        : "Özel çeviri"
                       : Object.hasOwn(dictionaries[locale], entry.source)
                         ? "Hazır çeviri"
                         : "Çeviri bekliyor"}

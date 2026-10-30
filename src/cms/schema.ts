@@ -242,7 +242,11 @@ schemas.localization = {
           locale,
           {
             type: "record" as const,
-            item: object({ source: string, text: string }),
+            item: object({
+              source: string,
+              text: string,
+              automatic: { type: "boolean", optional: true },
+            }),
           },
         ]),
       ),

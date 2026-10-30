@@ -1,5 +1,25 @@
 # Yayın hazırlığı ve doğrulama
 
+## Türkçeden bütün dillere otomatik güncelleme · 30 Ekim 2026
+
+**Durum: uygulama kodu ve yerel doğrulama hazır; bu değişiklik henüz canlıya yayımlanmadı.** Gerçek çeviri bağlantısı geliştirme ortamının ağ geçidinde CONNECT 403 ile engellendi. Kullanıcı `translate.googleapis.com` erişimine açıkça izin verdi. Mevcut özel ağ listesi korunarak yalnızca bu alan adı ortam taslağına eklendi; araç `status:saved, requires_publish:true` döndürdü. Bu kayıt etkin ağ erişimi veya ortam yayını değildir. Gerçek hizmet kontrolü ve canlı yayın, iznin ortam ayarlarından uygulanmasından sonra tamamlanmalıdır. Mevcut canlı beş dilin ve yönetimin yayını korunur.
+
+Türkçe tek içerik ağacıdır; diller yalnızca metin karşılıklarını saklar. Yeni yayın akışı Türkçe taslağı kaydeder, yeni/değişen metinlerin eksik İngilizce/İspanyolca/Arapça/Almanca karşılıklarını dörtlü istekler halinde hazırlayıp kalıcı taslağa ekler ve beş dili tek yayın işleminde açar. Sabit HTTPS çeviri hedefi anahtar veya ücretli hesap istemeyen Google çeviri bağlantısıdır; ziyaretçi isteğinde çeviri çalıştırılmaz. Hizmetin erişim/kullanım sınırları vardır; başarısı gerçek bağlantıyla ayrıca doğrulanmalıdır.
+
+Yayın API'si de hazırlık tamamlanmadan yayını reddeder. Hata veya sekmenin kapanması Türkçe taslağı ve tamamlanmış karşılıkları silmez; yeniden deneme yalnızca eksikleri işler. Başka bir oturumun yeni kaydı sürüm karşılaştırmasıyla korunur. Elle düzeltilmiş çeviri, Türkçe kaynak aynı kaldığı sürece korunur; kaynak değişince eski karşılık kullanılmaz. Aynı metin bir dilde kullanıldığı bütün yerlerde birlikte güncellenir. Ürün/sayfa/blok ekleme ve silme bütün dillere aynı yapıdan yansır. Görsel, 360° kare/açı, görünürlük veya yalnızca sıralama değişikliği harici çeviri isteği oluşturmaz. Model/standart/kod, URL ve değişkenler korunur; uzun metin parçaları sınırlı isteklerle çevrilip paragraf yapısı tekrar birleştirilir.
+
+Panelde erişilebilir ilerleme sayacı, işlem sırasında düzenleme/gezinme koruması ve **Eksik çevirileri tamamla** düğmesi eklendi. Bu düğme geçmişte çevrilmemiş metinleri taslakta tamamlar; canlı içeriği kendi başına değiştirmez. Yeni değişiklikleri yayınlama, eski arşivin bütününü çevirmeyi beklemez. PDF/görsel içindeki yazılar özgün dilinde kalır. Geçmiş sürümlerin tam içerikleri sunucuda korunup geri yüklenebilir; tekrarlanan yönetim API yanıtlarında yalnızca sürüm kimliği/tarihi taşınarak serverless yanıtlarının büyümesi önlendi.
+
+Bu değişiklik için tamamlanan doğrulama:
+
+- `npm run build`, `npm run typecheck`, `git diff --check` ve Netlify üretim paketlemesi başarılı; ek Edge işlevi gerekmedi.
+- **16 eşitleme kontrolü:** oturum/CSRF/sürüm koruması, yayın hazırlığını atlamanın reddi, gerçek beş dil HTML'i, kısmi hata ve tek dilde devam, kota/bozuk yanıt, teknik kod/URL/değişken/paragraf koruması, elle düzeltme ve yeniden üretim, eşzamanlı oturum çakışması, tek ürünün beş dilde eklenmesi/silinmesi ve site haritası, görsel/360°/sıralama/görünürlük için sıfır çeviri isteği, uzun metinler, geçmiş eksikleri tamamlama, gerçek panelde ilerleme/kilitleme/yayın ve hata sonrası yeniden deneme geçti.
+- **56 CMS, 15 dil, 12 bulut ve 13 video kontrolü** yeniden geçti. Toplam **112 kontrol** tamamlandı. Bütün hesaplar, dosyalar ve veriler geçici/izole tutuldu. Dış çeviri yanıtları testlerde açıkça etiketlenmiş HTTP sözleşme fikstürüdür; bunlar gerçek Google hizmetinin çalıştığına ilişkin kanıt değildir.
+- `npm run check:translation-provider` gerçek uygulama çeviri modülünü sabit örnek metinle dört dil ve korunan teknik belirteçler için doğrulayan, CMS'ye yazmayan ayrı kontroldür. Ağ engeli nedeniyle bu kontrol **başarılı değildir**; yayın öncesi geçmelidir.
+- Canlı Supabase kayıtları salt okunur doğrulamada önceki kopyayla birebir aynı: **sürüm 6, 187 ürün/kategori**. Hesap/yayın/taslak değiştirilmedi, üretime deneme ürünü veya çeviri yazılmadı. İncelenen **937 kaynak dosyasında** özel anahtar/yerel hesap özeti eşleşmesi yoktu; bu kontrol rapor ve son yardımcı dosyalar eklenmeden önce çalıştırıldı.
+
+Kullanım akışı [ADMIN-KILAVUZU.md](ADMIN-KILAVUZU.md) içindeki **Diller ve çeviriler** bölümünde açıklanır. İzin uygulandıktan sonra `npm run check:translation-provider` komutunu çalıştırın; sonucu ve gerekiyorsa korunan belirteç davranışını gerçek yanıtlarla düzeltip Netlify paketini yeniden hazırlayın. Ancak bundan sonra mevcut ücretsiz deneme sitesine yayın yapıp beş dil ve yönetim işlevlerini canlıda doğrulayın. Hazır paket veya taslak ağ kaydı canlıya alınmış özellik olarak sunulmamalıdır.
+
 ## Beş dil ve çeviri yönetimi · 30 Ekim 2026
 
 Türkçeye ek olarak **İngilizce `/en`, İspanyolca `/es`, Arapça `/ar` ve Almanca `/de`** mevcut ücretsiz deneme sitesinde yayında. Kod **`6f1c222`**, Netlify yayını **`6ae478617a7a5cad24ec3c71`**. Üst menüdeki dünya simgesi beş dili açar. Dil değiştirme aynı sayfayı, URL sorgusunu ve bölüm işaretini korur; teklif sepeti sıfırlanmaz. Türkçe adresler değişmedi.

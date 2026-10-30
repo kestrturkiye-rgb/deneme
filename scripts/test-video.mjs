@@ -1,5 +1,9 @@
 // End-to-end video checks use generated test patterns, never company footage.
 import assert from "node:assert/strict";
+import {
+  translationFixtureOptions,
+  publishWithTranslations,
+} from "./translation-test-helpers.mjs";
 import { mkdtemp, writeFile, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -79,6 +83,7 @@ try {
     {
       env: {
         ...process.env,
+        NODE_OPTIONS: translationFixtureOptions,
         CMS_DATA_DIR: dataDir,
         SITE_ORIGIN: origin,
         VERCEL: "",
@@ -125,11 +130,14 @@ try {
   async function publish(change) {
     const state = await (await api("/api/admin/content")).json();
     change(state.draft);
-    const res = await api("/api/admin/content", {
-      action: "publish",
-      version: state.version,
-      content: state.draft,
-    });
+    const res = await publishWithTranslations(
+      (target, data) => api(target, data),
+      {
+        action: "publish",
+        version: state.version,
+        content: state.draft,
+      },
+    );
     assert.equal(res.status, 200, await res.text());
   }
   const urls = {};

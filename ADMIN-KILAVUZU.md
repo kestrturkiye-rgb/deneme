@@ -93,24 +93,32 @@ Faaliyet görselleri sayfanın iki kenarına uzanır. **Ana sayfa · Faaliyet al
 
 Sitenin üstündeki dünya simgesinden Türkçe, English, Español, العربية ve Deutsch seçilebilir. Türkçe mevcut adreslerini korur. Diğer diller `/en`, `/es`, `/ar`, `/de` ön ekini kullanır; örneğin `/de/is-guvenligi/maximus-2-0-832551`. Dil geçişi bulunduğunuz sayfayı, URL sorgusunu ve bölüm işaretini korur. Dil değiştirmek sepeti silmez. Arapça görünüm sağdan sola akar; ürün fotoğrafları ve 360° kareleri aynalanmaz.
 
-**Diller ve çeviriler** bölümünde:
+**Türkçe tek ana kaynaktır.** Ürün ekleme/çıkarma, fotoğraflar, 360° kareleri/açıları, bannerlar, sayfa düzeni, bağlantılar ve görünürlük bütün dillerde aynı kayıttan okunur. Bunları yalnızca Türkçe panelden düzenleyin.
+
+Normal kullanımda Türkçe değişikliğinizi yapıp **Yayınla** düğmesine basmanız yeterlidir. Panel önce Türkçe taslağı kaydeder, yeni/değişen metinlerin İngilizce, İspanyolca, Arapça ve Almanca karşılıklarını otomatik hazırlar ve ardından beş dili tek işlemde yayınlar. Ayrı ayrı dört dilde ürün oluşturmanız veya aynı fotoğrafları yeniden yüklemeniz gerekmez. Metin değişmeyen görsel, açı, sıralama, görünürlük veya silme işlemlerinde çeviri hizmetine istek yapılmaz. Yeni ürünler, haberler, özel sayfalar ve sayfa blokları da aynı akışı kullanır.
+
+İşlem sırasında ilerleme sayacı görünür; sekmeyi açık tutun. Bağlantı/hizmet sınırı hatasında Türkçe taslak ve tamamlanan çeviriler saklanır, önceki yayın korunur. **Yayınla** düğmesine tekrar basmak yalnızca eksik karşılıkları tamamlar. Başka bir oturum bu sırada içeriği değiştirirse eski işlem yeni taslağı ezemez. Doğrudan yayın API'si de yeni metinlerin çevirisi tamamlanmadan yayına izin vermez.
+
+**Diller ve çeviriler** bölümündeki alanlar isteğe bağlı düzeltme ve eski içerikleri tamamlama içindir:
 
 1. Düzenlemek istediğiniz dili ve içerik bölümünü seçin. Ürün çevirileri **Ürün detayları**, ana sayfa açılışı **Ana sayfa · Karşılama** başlığındadır.
 2. Kaynak metni, ürün kodunu veya alan yolunu arayın. Türkçe kaynak solda; seçtiğiniz dilin metni sağdadır. Aynı kaynak metnin çevirisi, o dilde kullanıldığı bütün alanlara yansır.
-3. Çeviriyi yazın. `{count}`, `{query}`, `{name}` gibi değişkenleri olduğu gibi koruyun; hatalı değişkenlerle kayıt reddedilir. Ürün/model kodlarını, standart numaralarını ve marka adlarını değiştirmeyin.
-4. **Taslağı kaydet** ile kaydedin. İlgili sayfanın Türkçe adresini önizleme alanına yazıp **Bu dilde taslağı önizle** düğmesini kullanın. Önizleme kaydı yeniden kaydeder; bu, ziyaretçiye yayın yapmaz.
-5. Kontrolden sonra **Yayınla** düğmesini kullanın. Türkçe kaynak ve diğer dillerin özel çevirileri korunur. **Varsayılana dön** özel çeviriyi kaldırır ve hazır karşılığı kullanır.
+3. Gerekirse otomatik çeviriyi düzeltin. `{count}`, `{query}`, `{name}` gibi değişkenleri olduğu gibi koruyun; hatalı değişkenlerle kayıt reddedilir. Ürün/model kodlarını, standart numaralarını ve marka adlarını değiştirmeyin. Türkçe kaynak değişmediği sürece elle düzelttiğiniz çeviri korunur.
+4. **Taslağı kaydet** ile kaydedin. İlgili sayfanın Türkçe adresini önizleme alanına yazıp **Bu dilde taslağı önizle** düğmesini kullanın. Yabancı dil önizlemesi yeni Türkçe metinleri de dört dile hazırlayıp gerçek taslak görünümünü açar; ziyaretçiye yayın yapmaz. Türkçe önizleme harici çeviri beklemez.
+5. Kontrolden sonra **Yayınla** düğmesini kullanın. Türkçe kaynak ve diğer dillerin özel çevirileri korunur. **Varsayılana dön** özel çeviriyi kaldırıp hazır karşılığı kullanır; hazır karşılık yoksa kaldırılan eski çeviri bir sonraki yayın sırasında yeniden üretilir.
 
-Başlangıç çevirileri site içinde saklanır; ücretli bir çeviri API'si veya ziyaretçi başına harici çeviri isteği yoktur. Menü, ana sayfa, ortak kontrol metinleri, teklif/iletişim/aramanın temel alanları, katalog adları ve Maximus içeriği için hazır karşılıklar vardır. Eski uzun teknik ve arşiv içeriklerinin tamamı çevrilmiş değildir. **Yalnızca çeviri eklenmemiş metinler** seçeneği bu alanları ve aynı kalabilecek marka/model adlarını bulmayı sağlar. Çevirisi olmayan kaynak korunur; ayrıntılı özgün Türkçe metin gösterilen sayfalarda Türkçe sayfaya bağlantı bulunur. PDF ve görsel dosyalarının içindeki yazılar bu ayarla çevrilmez.
+Başlangıç çevirileri site içinde saklanır. Dinamik çeviriler ücretsiz Google çeviri bağlantısıyla (`translate.googleapis.com`) hazırlanıp aynı kalıcı taslağa kaydedilir; ücretli API anahtarı/faturalama hesabı gerekmez, ziyaretçi başına harici çeviri isteği yapılmaz. Hizmet bağlantısı ve kullanım sınırları nedeniyle bazı işlemler yeniden deneme gerektirebilir. Yalnızca sitenin düzenlenebilir metinleri işlenir; yönetici bilgileri ve gelen özel form talepleri çeviri hizmetine gönderilmez. Model/standart/kodlar, URL'ler ve `{count}` gibi değişkenler korunur. Otomatik çeviriler özellikle teknik ifadeler için bu ekrandan gözden geçirilebilir.
 
-Kaynak metin değiştiğinde eski özel çeviri yeni metne yanlışlıkla uygulanmaz. Yeni kaynağı bu bölümde yeniden çevirin. Görsel yükleme, ürün ailesi, adres, renk kodu ve 360° açı/kare verileri çeviri alanlarına dahil edilmez. Yönetim panelinin dili Türkçedir.
+Eski uzun teknik ve arşiv içeriklerinin tamamı başlangıçta çevrilmiş değildir. **Eksik çevirileri tamamla** bu eski alanları dört dil için taslağa hazırlar; yarım kalırsa aynı düğme kaldığı yerden devam eder. Önizledikten sonra **Yayınla** ile açın. **Yalnızca çeviri eklenmemiş metinler** seçeneği kalan alanları ve aynı kalabilecek marka/model adlarını bulmayı sağlar. PDF ve görsel dosyalarının içindeki yazılar bu ayarla çevrilmez.
+
+Kaynak metin değiştiğinde eski özel çeviri yeni metne yanlışlıkla uygulanmaz; yeni karşılık yayın sırasında otomatik hazırlanır. Görsel yükleme, ürün ailesi, adres, renk kodu ve 360° açı/kare verileri çeviri alanlarına dahil edilmez ve bütün dillerde ortak kalır. Yönetim panelinin dili Türkçedir. Bu özelliği kurarken geliştirme ortamının ağ izni değiştirildiyse taslak izni kaydetmek tek başına erişimi açmaz; ortam ayarlarından uygulanması ve gerçek bağlantının ayrıca doğrulanması gerekir.
 
 ## Taslak ve yayın
 
 1. Alanları düzenleyin. Değişiklikler bu aşamada yalnızca tarayıcıdadır.
 2. **Taslağı kaydet:** sunucuya kaydeder, ziyaretçilerin gördüğü içeriği değiştirmez.
 3. **Taslağı önizle:** taslağı kaydedip gerçek site üzerinde, yalnızca giriş yaptığınız oturumda gösterir. Banttan yönetime dönün. Paneldeki “Siteye git” önizlemeyi kapatır.
-4. **Yayınla:** içeriği ziyaretçilere açar. Yeni metinler, ürünler ve özel sayfalar için tekrar derleme gerekmez.
+4. **Yayınla:** yeni/değişen Türkçe metinleri dört dile hazırlar ve beş dili birlikte ziyaretçilere açar. Yeni metinler, ürünler ve özel sayfalar için tekrar derleme gerekmez.
 
 Aynı anda iki oturum düzenlerse eski sürümün yeni kaydı ezmesi engellenir. Çalışmanızı JSON olarak indirdikten sonra “Sunucudaki taslağı yükle” ile güncel kaydı alın.
 

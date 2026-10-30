@@ -1,4 +1,8 @@
 import assert from "node:assert/strict";
+import {
+  translationFixtureOptions,
+  publishWithTranslations,
+} from "./translation-test-helpers.mjs";
 import { runAdminStudio } from "./test-admin-studio.mjs";
 import { deflateSync } from "node:zlib";
 import {
@@ -81,6 +85,7 @@ const server = spawn(
   {
     env: {
       ...process.env,
+      NODE_OPTIONS: translationFixtureOptions,
       CMS_DATA_DIR: dataDir,
       SITE_ORIGIN: origin,
       VERCEL: "",
@@ -108,6 +113,7 @@ async function request(
     authenticated = true,
     originHeader = origin,
     ip,
+    translationPrepared = false,
   } = {},
 ) {
   const headers = {};
@@ -118,6 +124,22 @@ async function request(
     if (!(body instanceof FormData))
       headers["Content-Type"] = "application/json";
   }
+  if (
+    url === "/api/admin/content" &&
+    body?.action === "publish" &&
+    authenticated &&
+    originHeader === origin &&
+    !translationPrepared
+  )
+    return publishWithTranslations(
+      (target, data) =>
+        request(target, {
+          method: "POST",
+          body: data,
+          translationPrepared: true,
+        }),
+      body,
+    );
   return fetch(origin + url, {
     method,
     headers,

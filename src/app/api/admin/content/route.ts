@@ -2,13 +2,14 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { randomUUID } from "node:crypto";
 import { authenticated, sameOrigin } from "@/cms/auth";
-import { readState, saveState, type Content } from "@/cms/store";
+import { readState, saveState, editorState, type Content } from "@/cms/store";
 import { validateContent } from "@/cms/schema";
+import { translationPlan } from "@/i18n/sync";
 export const runtime = "nodejs";
 export async function GET() {
   if (!(await authenticated()))
     return NextResponse.json({ error: "Oturum gerekli." }, { status: 401 });
-  return NextResponse.json(await readState(), {
+  return NextResponse.json(editorState(await readState()), {
     headers: { "Cache-Control": "no-store" },
   });
 }
@@ -53,6 +54,19 @@ export async function POST(request: Request) {
     const errors = validateContent(body.content);
     if (errors.length)
       return NextResponse.json({ error: errors.join("\n") }, { status: 400 });
+    if (body.action === "publish") {
+      const pending = translationPlan(body.content as Content, state.published);
+      if (pending.length)
+        return NextResponse.json(
+          {
+            code: "TRANSLATIONS_REQUIRED",
+            remaining: pending.length,
+            error:
+              "Yeni Türkçe metinlerin dört dilde çevirisi tamamlanmalı. Panelde Yayınla düğmesi bu işlemi otomatik yapar; mevcut yayın korundu.",
+          },
+          { status: 422 },
+        );
+    }
     state.draft = body.content as Content;
     state.updatedAt = now;
     if (body.action === "publish") {
@@ -86,5 +100,7 @@ export async function POST(request: Request) {
       );
     throw error;
   }
-  return NextResponse.json(state, { headers: { "Cache-Control": "no-store" } });
+  return NextResponse.json(editorState(state), {
+    headers: { "Cache-Control": "no-store" },
+  });
 }

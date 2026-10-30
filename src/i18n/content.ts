@@ -7,7 +7,7 @@ import es from "./dictionaries/es.json";
 import ar from "./dictionaries/ar.json";
 import de from "./dictionaries/de.json";
 import type { Locale, ForeignLocale } from "./locales";
-export type Translation = { source: string; text: string };
+export type Translation = { source: string; text: string; automatic?: boolean };
 export type TranslationOverrides = Record<string, Translation>;
 export type Localization = {
   translations: Partial<Record<ForeignLocale, TranslationOverrides>>;
@@ -85,7 +85,7 @@ export function translateText(
     ? dictionaries[locale][source]
     : source;
 }
-export function textEntries(content: Content) {
+export function textEntries(content: Content, stablePaths = false) {
   const result = new Map<
     string,
     { id: string; source: string; paths: string[] }
@@ -100,7 +100,23 @@ export function textEntries(content: Content) {
       entry.paths.push(path.join("."));
       result.set(value, entry);
     } else if (Array.isArray(value))
-      value.forEach((v, i) => walk(v, [...path, String(i)]));
+      value.forEach((v, i) => {
+        let key = String(i);
+        if (stablePaths) {
+          if (typeof v === "string") key = "@" + textId(v);
+          else if (v && typeof v === "object") {
+            const object = v as Record<string, unknown>,
+              identity =
+                object.id ||
+                object.slug ||
+                object.href ||
+                object.title ||
+                object.name;
+            if (typeof identity === "string") key = "@" + textId(identity);
+          }
+        }
+        walk(v, [...path, key]);
+      });
     else if (value && typeof value === "object" && path[0] !== "localization")
       for (const [k, v] of Object.entries(value)) walk(v, [...path, k]);
   }
