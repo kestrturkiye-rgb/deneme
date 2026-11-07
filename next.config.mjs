@@ -2,6 +2,12 @@ import { readFileSync } from "node:fs";
 const legacyPaths = JSON.parse(
   readFileSync(new URL("./src/cms/legacy-paths.json", import.meta.url), "utf8"),
 );
+// Cloudflare build only: PDFs over the 25 MiB asset limit redirect to kivancgroup.com.
+const largeDocuments = process.env.CLOUDFLARE_BUILD
+  ? JSON.parse(
+      readFileSync(new URL("./cloudflare/large-documents.json", import.meta.url), "utf8"),
+    ).documents.map((d) => ({ source: d.path, destination: d.url, permanent: false }))
+  : [];
 /** @type {import('next').NextConfig} */
 const mediaHost = process.env.SUPABASE_URL
   ? new URL(process.env.SUPABASE_URL).hostname
@@ -37,6 +43,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      ...largeDocuments,
       { source: "/tr/:path*", destination: "/:path*", permanent: true },
       ...legacyPaths.map((entry) => ({ ...entry, permanent: true })),
     ];

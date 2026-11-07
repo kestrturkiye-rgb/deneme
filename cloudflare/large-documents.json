@@ -1,0 +1,10 @@
+{
+  "_note": "Cloudflare Workers static assets are limited to 25 MiB per file. These PDFs are larger, so on Cloudflare they are not uploaded and their addresses redirect (302) to the same document on kivancgroup.com (source URLs from SOURCE-MIGRATION.json).",
+  "documents": [
+    { "path": "/docs/2022-MILSTAR-Askeriye-ve-Polis-Urunleri-LR.pdf", "url": "https://kivancgroup.com/wp-content/uploads/2022/04/2022-MILSTAR-Askeriye-ve-Polis-Urunleri-LR.pdf" },
+    { "path": "/docs/Arcstar-TR-LR.pdf", "url": "https://kivancgroup.com/wp-content/uploads/2023/02/Arcstar-TR-LR.pdf" },
+    { "path": "/docs/Industar-TR-LR.pdf", "url": "https://kivancgroup.com/wp-content/uploads/2023/02/Industar-TR-LR.pdf" },
+    { "path": "/docs/KIVANC-GROUP-Firestar-Firefighting-Garments-Equipments-LR.pdf", "url": "https://kivancgroup.com/wp-content/uploads/2021/10/KIVANC-GROUP-Firestar-Firefighting-Garments-Equipments-LR.pdf" },
+    { "path": "/docs/source/0cbaf52bec-18-industar-benson-tr.pdf", "url": "https://kivancgroup.com/wp-content/uploads/2020/11/18-industar-benson-tr.pdf" }
+  ]
+}

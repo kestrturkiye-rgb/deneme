@@ -1,6 +1,7 @@
 import { readdirSync } from "node:fs";
 import path from "node:path";
 import type { SpinConfig } from "./spin";
+import manifest from "./product-media.manifest.json";
 
 // Klasör düzeni (klasör adı = ürünün web adresindeki son bölüm):
 //   public/products/<ürün>/        -> sayfadaki fotoğraflar (alfabetik sırayla)
@@ -13,6 +14,12 @@ const naturalCompare = (a: string, b: string) =>
   a.localeCompare(b, "tr", { numeric: true, sensitivity: "base" });
 
 function listImages(dir: string) {
+  // Cloudflare Workers cannot read public/ at runtime; use the build-time list
+  // written by scripts/product-media-manifest.mjs.
+  if (process.env.CLOUDFLARE_WORKER) {
+    const key = path.relative(ROOT, dir).split(path.sep).join("/");
+    return (manifest as Record<string, string[]>)[key] ?? [];
+  }
   try {
     return readdirSync(dir, { withFileTypes: true })
       .filter((entry) => entry.isFile() && IMAGE_EXT.test(entry.name))

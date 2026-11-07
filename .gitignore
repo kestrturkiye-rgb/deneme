@@ -19,3 +19,8 @@ next-env.d.ts
 
 # Netlify local build output and site link
 .netlify/
+
+# Cloudflare (OpenNext / wrangler)
+.open-next/
+.wrangler/
+.dev.vars*

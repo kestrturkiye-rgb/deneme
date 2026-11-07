@@ -19,7 +19,10 @@
     "test:product-images": "node --use-env-proxy scripts/test-product-images.mjs",
     "test:languages": "node scripts/test-languages.mjs",
     "test:translation-sync": "node scripts/test-translation-sync.mjs",
-    "check:translation-provider": "node --use-env-proxy scripts/check-translation-provider.mjs"
+    "check:translation-provider": "node --use-env-proxy scripts/check-translation-provider.mjs",
+    "cf:build": "node scripts/cloudflare-build.mjs",
+    "cf:preview": "npx opennextjs-cloudflare preview",
+    "cf:deploy": "npx opennextjs-cloudflare deploy"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
@@ -30,6 +33,7 @@
   "devDependencies": {
     "@electric-sql/pglite": "^0.5.11",
     "@netlify/plugin-nextjs": "5.16.4",
+    "@opennextjs/cloudflare": "1.20.13",
     "@types/node": "^20",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
@@ -37,7 +41,8 @@
     "postcss": "^8.4.47",
     "sharp": "0.35.5",
     "tailwindcss": "^3.4.14",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "4.152.0"
   },
   "engines": {
     "node": "24.x"

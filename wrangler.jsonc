@@ -1,0 +1,27 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "kivancgroup",
+	"main": ".open-next/worker.js",
+	"compatibility_date": "2026-10-20",
+	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	},
+	"services": [
+		// Self-reference used by OpenNext for internal requests; must match "name".
+		{ "binding": "WORKER_SELF_REFERENCE", "service": "kivancgroup" }
+	],
+	// Next.js image optimisation through Cloudflare Images.
+	"images": { "binding": "IMAGES" },
+	"observability": { "enabled": true },
+	// Public, non-secret settings. Secrets (SUPABASE_SERVICE_ROLE_KEY,
+	// CMS_BOOTSTRAP_PASSWORD) are added in the Cloudflare dashboard, never here.
+	"vars": {
+		"CLOUDFLARE_WORKER": "1",
+		"SUPABASE_URL": "https://lptosaejlowasrbcyqnu.supabase.co",
+		"SUPABASE_STORAGE_BUCKET": "site-media",
+		"SITE_NOINDEX": "true",
+		"CMS_BOOTSTRAP_USERNAME": "yonetici"
+	}
+}

@@ -3,6 +3,20 @@ import { localizeContent } from "@/i18n/content";
 import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+
+/** Reads a file from public/. Cloudflare Workers have no disk: use the static assets binding. */
+async function readPublic(rel: string): Promise<Buffer> {
+  if (process.env.CLOUDFLARE_WORKER) {
+    const { getCloudflareContext } = await import("@opennextjs/cloudflare");
+    const { env } = await getCloudflareContext({ async: true });
+    const res = await (env as { ASSETS: { fetch: typeof fetch } }).ASSETS.fetch(
+      new URL("/" + rel, "https://assets.local"),
+    );
+    if (!res.ok) throw new Error(`asset ${rel}: ${res.status}`);
+    return Buffer.from(await res.arrayBuffer());
+  }
+  return readFile(path.join(process.cwd(), "public", rel));
+}
 import { readState } from "@/cms/store";
 import { slugify } from "@/cms/schema";
 export const runtime = "nodejs";
@@ -74,10 +88,8 @@ export async function GET(request: Request) {
       routes["/" + item.slug] = { title: item.title, subtitle: item.intro };
   const item = routes[target];
   if (!item) return new Response("Bulunamadı", { status: 404 });
-  const font = await readFile(
-    path.join(process.cwd(), "public/fonts/OpenSans-ExtraBold.ttf"),
-  );
-  const logo = await readFile(path.join(process.cwd(), "public/logo.png"));
+  const font = await readPublic("fonts/OpenSans-ExtraBold.ttf");
+  const logo = await readPublic("logo.png");
   return new ImageResponse(
     (
       <div

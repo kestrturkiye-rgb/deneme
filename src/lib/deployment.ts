@@ -3,6 +3,7 @@ export function isServerlessDeployment() {
   return Boolean(
     process.env.VERCEL ||
     process.env.NETLIFY ||
+    process.env.CLOUDFLARE_WORKER ||
     process.env.AWS_LAMBDA_FUNCTION_NAME,
   );
 }
