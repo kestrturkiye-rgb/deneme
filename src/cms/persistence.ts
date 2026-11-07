@@ -51,6 +51,27 @@ export async function readDocument<T>(key: string): Promise<T | null> {
     );
   return (data?.value as T) || null;
 }
+/** Reads one top-level field of a stored JSON document (e.g. content.published). */
+export async function readDocumentField<T>(
+  key: string,
+  field: string,
+): Promise<T | null> {
+  if (!/^[a-z]+$/.test(field)) throw new Error("Geçersiz alan.");
+  if (backend() !== "supabase") {
+    const doc = await readDocument<Record<string, unknown>>(key);
+    return (doc?.[field] as T) ?? null;
+  }
+  const { data, error } = await database()
+    .from("cms_records")
+    .select(`field:value->${field}`)
+    .eq("key", key)
+    .maybeSingle();
+  if (error)
+    throw new Error(
+      "Kalıcı veri deposu okunamadı. Sunucu bağlantısını kontrol edin.",
+    );
+  return ((data as { field?: T } | null)?.field as T) ?? null;
+}
 export async function writeDocument(
   key: string,
   value: unknown,

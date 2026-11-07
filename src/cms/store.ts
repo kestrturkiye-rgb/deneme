@@ -1,5 +1,9 @@
 import "server-only";
-import { readDocument, writeDocument } from "./persistence";
+import {
+  readDocument,
+  readDocumentField,
+  writeDocument,
+} from "./persistence";
 export { dataDir, atomicWrite } from "./paths";
 import defaults from "./defaults.json";
 
@@ -24,6 +28,28 @@ export function editorState(state: State): EditorState {
     history: state.history.map(({ id, date }) => ({ id, date })),
   };
 }
+/** Fills sections missing from a stored snapshot with the bundled defaults. */
+function hydrate(content: Content): Content {
+  const result = { ...structuredClone(defaults), ...content };
+  for (const key of Object.keys(defaults) as Array<keyof Content>) {
+    if (!key.startsWith("data-") && key !== "home" && key !== "customPages")
+      (result as unknown as Record<string, unknown>)[key] = {
+        ...defaults[key],
+        ...content[key],
+      };
+  }
+  return result;
+}
+
+/**
+ * Public pages only need the published snapshot. Reading just that field avoids
+ * downloading and parsing the draft and up to ten history revisions per request.
+ */
+export async function readPublished(): Promise<Content> {
+  const saved = await readDocumentField<Content>("content", "published");
+  return saved ? hydrate(saved) : structuredClone(defaults);
+}
+
 export async function readState(): Promise<State> {
   const saved = await readDocument<State>("content");
   if (!saved)
@@ -35,17 +61,6 @@ export async function readState(): Promise<State> {
       publishedAt: null,
       history: [],
     };
-  const hydrate = (content: Content): Content => {
-    const result = { ...structuredClone(defaults), ...content };
-    for (const key of Object.keys(defaults) as Array<keyof Content>) {
-      if (!key.startsWith("data-") && key !== "home" && key !== "customPages")
-        (result as unknown as Record<string, unknown>)[key] = {
-          ...defaults[key],
-          ...content[key],
-        };
-    }
-    return result;
-  };
   return {
     ...saved,
     draft: hydrate(saved.draft),
